@@ -24,7 +24,9 @@ namespace OPD_Section
         public MainFrame()
         {
             InitializeComponent();
+
             DateTimeTimer.Start();
+
             LoadDefaultTblVillage();
             LoadDefaultTblHouse();
             LoadDefaultTblPerson();
@@ -458,13 +460,7 @@ namespace OPD_Section
             Application.Run(new ViewDetails(VISITID, ""));
         }
 
-
-        private void TblVillage_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-
+        /*******************************************************************************************************************************************************************/
 
         private void DateTimeTImer_Tick(object sender, EventArgs e)
         {
@@ -482,7 +478,8 @@ namespace OPD_Section
             Application.Exit();
         }
 
-        /**********************************************************************************************************/
+        /*******************************************************************************************************************************************************************/
+
 
         // DataGridView Load Events
         private void LoadDefaultTblVillage()
@@ -910,7 +907,7 @@ namespace OPD_Section
                                                   "Confirmation Box",
                                                   MessageBoxButtons.YesNo);
 
-            int vid;
+            int vid = -1;
 
             using (var context = new sampledbEntities())
             {
@@ -930,6 +927,8 @@ namespace OPD_Section
                 {
                     House h = context.HOUSES.Find(hid);
 
+                    h.VILLAGE_ID = vid;
+
                     var res = await context.SaveChangesAsync();
 
                     if (res == 1)
@@ -943,10 +942,11 @@ namespace OPD_Section
                     {
                         MessageBox.Show("\t\t!! Database Error !!\n" +
                                         "\t!! House Update Operation Failed !!");
+                        Console.WriteLine("res = " + res);
                     }
 
                 }
-                LoadDefaultTblVillage();
+                LoadDefaultTblHouse();
             }
         }
         private async void BtnHouseDelete_Click(object sender, EventArgs e)
@@ -1155,6 +1155,7 @@ namespace OPD_Section
                                     "\n2. Phone Number must be 10 digits long and contain only numbers\n" +
                                     "\n3. Age Must be Greater than 0\n",
                                     "Form Error");
+                    LoadDefaultTblPerson();
                 }
 
                 LoadDefaultTblPerson();
@@ -1230,9 +1231,9 @@ namespace OPD_Section
             int hid = Convert.ToInt32(TblPerson[1, row].Value);
             string village = Convert.ToString(TblPerson[2, row].Value);
             string name = Convert.ToString(TblPerson[3, row].Value);
-            int age = Convert.ToInt32(TblPerson[1, row].Value);
-            string gender = Convert.ToString(TblPerson[2, row].Value);
-            string phoneno = Convert.ToString(TblPerson[3, row].Value);
+            int age = Convert.ToInt32(TblPerson[4, row].Value);
+            string gender = Convert.ToString(TblPerson[5, row].Value);
+            string phoneno = Convert.ToString(TblPerson[6, row].Value);
 
             DialogResult result = MessageBox.Show("!! Do You want to Delete the Following Record !!\n" +
                                                   "\n\tVillage Id    = " + pid +
@@ -1254,7 +1255,16 @@ namespace OPD_Section
                     context.PERSONS.Remove(p);
                     var res = await context.SaveChangesAsync();
 
-                    MessageBox.Show("Person Record Deleted Successfully !!");
+                    if (res == 1)
+                    {
+                        MessageBox.Show("Person Record Deleted Successfully !!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("\t\t!! Database Error !!\n" +
+                                        "\t!! House Update Operation Failed !!");
+                        Console.WriteLine("res = " + res);
+                    }
 
                     LoadDefaultTblPerson();
                 }
@@ -1354,7 +1364,7 @@ namespace OPD_Section
                     else
                     {
                         MessageBox.Show("No Record To Display!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        TabHouse_Reset();
+                        TabPerson_Reset();
                     }
                 }
             }
@@ -1494,12 +1504,7 @@ namespace OPD_Section
         }
         private void TxtVillageName_TextChanged(object sender, EventArgs e)
         {
-            if (!Regex.IsMatch(TxtVillageName.Text, @"[\p{L} ]+$") && TxtVillageName.Text != "")
-            {
-                MessageBox.Show("Enter only Alphabet and Spaces!!");
-                TxtVillageName.Text = TxtVillageName.Text.Remove(TxtVillageName.Text.Length - 1);
 
-            }
         }
         private void TxtVillageCode_TextChanged(object sender, EventArgs e)
         {
@@ -1546,14 +1551,11 @@ namespace OPD_Section
         // Custom Function to Print Table Data to Excel Sheet
         private void PrintToExcel(DataGridView Tbl)
         {
-            Console.WriteLine("1");
             SaveFileDialog FileDialog = new SaveFileDialog
             {
                 Filter = "Excel files (*.xlsx)|*.xlsx|Excel 2007 (*.xls)|*.xls",
                 FilterIndex = 1
             };
-
-            Console.WriteLine("2");
 
             if (FileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -1563,8 +1565,6 @@ namespace OPD_Section
                 {
                     File.Delete(ExcelFilePath);
                 }
-
-                Console.WriteLine("3");
 
                 Tbl.RowHeadersVisible = false;
 
@@ -1595,13 +1595,7 @@ namespace OPD_Section
             Tbl.RowHeadersVisible = true;
         }
 
-
         /**********************************************************************************************************/
-
-
-
-
-
 
     }
 }

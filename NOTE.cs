@@ -12,13 +12,12 @@ namespace OPD_Section
     using System;
     using System.Collections.Generic;
     
-    public partial class ITEM
+    public partial class NOTE
     {
-        public int ITEM_ID { get; set; }
-        public string ITEM_NAME { get; set; }
-        public int ITEM_TYPE_ID { get; set; }
-        public Nullable<System.DateTime> ITEM_EXPIRY { get; set; }
+        public int NOTE_ID { get; set; }
+        public int VISIT_ID { get; set; }
+        public string DESCRIPTION { get; set; }
     
-        public virtual ITEMTYPE ITEMTYPE { get; set; }
+        public virtual VISIT VISIT { get; set; }
     }
 }

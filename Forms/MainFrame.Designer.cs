@@ -560,6 +560,7 @@
             this.BtnVillageReset.TabIndex = 4;
             this.BtnVillageReset.Text = "RESET";
             this.BtnVillageReset.UseVisualStyleBackColor = true;
+            this.BtnVillageReset.Click += new System.EventHandler(this.BtnVillageReset_Click);
             // 
             // BtnVillageSearch
             // 
@@ -571,6 +572,7 @@
             this.BtnVillageSearch.TabIndex = 4;
             this.BtnVillageSearch.Text = "SEARCH";
             this.BtnVillageSearch.UseVisualStyleBackColor = true;
+            this.BtnVillageSearch.Click += new System.EventHandler(this.BtnVillageSearch_Click);
             // 
             // BtnVillageUpdate
             // 
@@ -582,6 +584,7 @@
             this.BtnVillageUpdate.TabIndex = 4;
             this.BtnVillageUpdate.Text = "UPDATE";
             this.BtnVillageUpdate.UseVisualStyleBackColor = true;
+            this.BtnVillageUpdate.Click += new System.EventHandler(this.BtnVillageUpdate_Click);
             // 
             // BtnVillageDelete
             // 
@@ -592,6 +595,7 @@
             this.BtnVillageDelete.TabIndex = 4;
             this.BtnVillageDelete.Text = "DELETE";
             this.BtnVillageDelete.UseVisualStyleBackColor = true;
+            this.BtnVillageDelete.Click += new System.EventHandler(this.BtnVillageDelete_Click);
             // 
             // BtnVillageInsert
             // 
@@ -602,6 +606,7 @@
             this.BtnVillageInsert.TabIndex = 4;
             this.BtnVillageInsert.Text = "INSERT";
             this.BtnVillageInsert.UseVisualStyleBackColor = true;
+            this.BtnVillageInsert.Click += new System.EventHandler(this.BtnVillageInsert_Click);
             // 
             // panel4
             // 
@@ -669,6 +674,7 @@
             this.TxtVillageCode.Name = "TxtVillageCode";
             this.TxtVillageCode.Size = new System.Drawing.Size(240, 27);
             this.TxtVillageCode.TabIndex = 0;
+            this.TxtVillageCode.TextChanged += new System.EventHandler(this.TxtVillageCode_TextChanged);
             // 
             // TxtVillageName
             // 
@@ -682,6 +688,7 @@
             this.TxtVillageName.Name = "TxtVillageName";
             this.TxtVillageName.Size = new System.Drawing.Size(240, 27);
             this.TxtVillageName.TabIndex = 0;
+            this.TxtVillageName.TextChanged += new System.EventHandler(this.TxtVillageName_TextChanged);
             // 
             // TxtVillageId
             // 
@@ -695,6 +702,7 @@
             this.TxtVillageId.Name = "TxtVillageId";
             this.TxtVillageId.Size = new System.Drawing.Size(240, 27);
             this.TxtVillageId.TabIndex = 0;
+            this.TxtVillageId.TextChanged += new System.EventHandler(this.TxtVillageId_TextChanged);
             // 
             // label5
             // 
@@ -764,6 +772,7 @@
             this.TblVillage.MultiSelect = false;
             this.TblVillage.Name = "TblVillage";
             this.TblVillage.ReadOnly = true;
+            this.TblVillage.RowHeadersVisible = false;
             this.TblVillage.RowHeadersWidth = 51;
             this.TblVillage.RowTemplate.DividerHeight = 2;
             this.TblVillage.RowTemplate.Height = 50;
@@ -772,6 +781,7 @@
             this.TblVillage.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TblVillage.Size = new System.Drawing.Size(1078, 799);
             this.TblVillage.TabIndex = 0;
+            this.TblVillage.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TblVillage_CellMouseDoubleClick);
             // 
             // VillageIdColumn
             // 
@@ -893,6 +903,7 @@
             this.BtnHouseReset.TabIndex = 4;
             this.BtnHouseReset.Text = "RESET";
             this.BtnHouseReset.UseVisualStyleBackColor = true;
+            this.BtnHouseReset.Click += new System.EventHandler(this.BtnHouseReset_Click);
             // 
             // BtnHouseSearch
             // 
@@ -904,6 +915,7 @@
             this.BtnHouseSearch.TabIndex = 4;
             this.BtnHouseSearch.Text = "SEARCH";
             this.BtnHouseSearch.UseVisualStyleBackColor = true;
+            this.BtnHouseSearch.Click += new System.EventHandler(this.BtnHouseSearch_Click);
             // 
             // BtnHouseUpdate
             // 
@@ -915,6 +927,7 @@
             this.BtnHouseUpdate.TabIndex = 4;
             this.BtnHouseUpdate.Text = "UPDATE";
             this.BtnHouseUpdate.UseVisualStyleBackColor = true;
+            this.BtnHouseUpdate.Click += new System.EventHandler(this.BtnHouseUpdate_Click);
             // 
             // BtnHouseDelete
             // 
@@ -925,6 +938,7 @@
             this.BtnHouseDelete.TabIndex = 4;
             this.BtnHouseDelete.Text = "DELETE";
             this.BtnHouseDelete.UseVisualStyleBackColor = true;
+            this.BtnHouseDelete.Click += new System.EventHandler(this.BtnHouseDelete_Click);
             // 
             // BtnHouseInsert
             // 
@@ -935,6 +949,7 @@
             this.BtnHouseInsert.TabIndex = 4;
             this.BtnHouseInsert.Text = "INSERT";
             this.BtnHouseInsert.UseVisualStyleBackColor = true;
+            this.BtnHouseInsert.Click += new System.EventHandler(this.BtnHouseInsert_Click);
             // 
             // panel7
             // 
@@ -992,6 +1007,7 @@
             this.TxtHouseId.Name = "TxtHouseId";
             this.TxtHouseId.Size = new System.Drawing.Size(240, 27);
             this.TxtHouseId.TabIndex = 0;
+            this.TxtHouseId.TextChanged += new System.EventHandler(this.TxtHouseId_TextChanged);
             // 
             // label11
             // 
@@ -1049,11 +1065,13 @@
             this.TblHouse.Location = new System.Drawing.Point(0, 0);
             this.TblHouse.Name = "TblHouse";
             this.TblHouse.ReadOnly = true;
+            this.TblHouse.RowHeadersVisible = false;
             this.TblHouse.RowHeadersWidth = 51;
             this.TblHouse.RowTemplate.Height = 50;
             this.TblHouse.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TblHouse.Size = new System.Drawing.Size(1078, 799);
             this.TblHouse.TabIndex = 0;
+            this.TblHouse.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TblHouse_CellMouseDoubleClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -1178,10 +1196,11 @@
             this.TxtPersonVillageName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtPersonVillageName.FormattingEnabled = true;
-            this.TxtPersonVillageName.Location = new System.Drawing.Point(22, 198);
+            this.TxtPersonVillageName.Location = new System.Drawing.Point(22, 199);
             this.TxtPersonVillageName.Name = "TxtPersonVillageName";
             this.TxtPersonVillageName.Size = new System.Drawing.Size(239, 33);
             this.TxtPersonVillageName.TabIndex = 10;
+            this.TxtPersonVillageName.SelectedIndexChanged += new System.EventHandler(this.TxtPersonVillageName_SelectedIndexChanged);
             // 
             // panel13
             // 
@@ -1207,7 +1226,7 @@
             // 
             this.TxtPersonAge.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtPersonAge.Location = new System.Drawing.Point(20, 412);
+            this.TxtPersonAge.Location = new System.Drawing.Point(20, 413);
             this.TxtPersonAge.Name = "TxtPersonAge";
             this.TxtPersonAge.Size = new System.Drawing.Size(240, 34);
             this.TxtPersonAge.TabIndex = 6;
@@ -1231,7 +1250,7 @@
             "MALE",
             "FEMALE",
             "OTHER"});
-            this.TxtPersonGender.Location = new System.Drawing.Point(20, 484);
+            this.TxtPersonGender.Location = new System.Drawing.Point(20, 485);
             this.TxtPersonGender.Name = "TxtPersonGender";
             this.TxtPersonGender.Size = new System.Drawing.Size(240, 33);
             this.TxtPersonGender.TabIndex = 5;
@@ -1247,28 +1266,31 @@
             this.BtnPersonReset.TabIndex = 4;
             this.BtnPersonReset.Text = "RESET";
             this.BtnPersonReset.UseVisualStyleBackColor = true;
+            this.BtnPersonReset.Click += new System.EventHandler(this.BtnPersonReset_Click);
             // 
             // BtnPersonSearch
             // 
             this.BtnPersonSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnPersonSearch.AutoSize = true;
-            this.BtnPersonSearch.Location = new System.Drawing.Point(20, 675);
+            this.BtnPersonSearch.Location = new System.Drawing.Point(121, 675);
             this.BtnPersonSearch.Name = "BtnPersonSearch";
             this.BtnPersonSearch.Size = new System.Drawing.Size(244, 41);
             this.BtnPersonSearch.TabIndex = 4;
             this.BtnPersonSearch.Text = "SEARCH";
             this.BtnPersonSearch.UseVisualStyleBackColor = true;
+            this.BtnPersonSearch.Click += new System.EventHandler(this.BtnPersonSearch_Click);
             // 
             // BtnPersonUpdate
             // 
             this.BtnPersonUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnPersonUpdate.AutoSize = true;
-            this.BtnPersonUpdate.Location = new System.Drawing.Point(20, 616);
+            this.BtnPersonUpdate.Location = new System.Drawing.Point(88, 616);
             this.BtnPersonUpdate.Name = "BtnPersonUpdate";
             this.BtnPersonUpdate.Size = new System.Drawing.Size(244, 41);
             this.BtnPersonUpdate.TabIndex = 4;
             this.BtnPersonUpdate.Text = "UPDATE";
             this.BtnPersonUpdate.UseVisualStyleBackColor = true;
+            this.BtnPersonUpdate.Click += new System.EventHandler(this.BtnPersonUpdate_Click);
             // 
             // BtnPersonDelete
             // 
@@ -1279,6 +1301,7 @@
             this.BtnPersonDelete.TabIndex = 4;
             this.BtnPersonDelete.Text = "DELETE";
             this.BtnPersonDelete.UseVisualStyleBackColor = true;
+            this.BtnPersonDelete.Click += new System.EventHandler(this.BtnPersonDelete_Click);
             // 
             // BtnPersonInsert
             // 
@@ -1289,6 +1312,7 @@
             this.BtnPersonInsert.TabIndex = 4;
             this.BtnPersonInsert.Text = "INSERT";
             this.BtnPersonInsert.UseVisualStyleBackColor = true;
+            this.BtnPersonInsert.Click += new System.EventHandler(this.BtnPersonInsert_Click);
             // 
             // panel10
             // 
@@ -1352,6 +1376,7 @@
             this.TxtPersonPhoneNo.Name = "TxtPersonPhoneNo";
             this.TxtPersonPhoneNo.Size = new System.Drawing.Size(240, 27);
             this.TxtPersonPhoneNo.TabIndex = 0;
+            this.TxtPersonPhoneNo.TextChanged += new System.EventHandler(this.TxtPersonPhoneNo_TextChanged);
             // 
             // TxtPersonName
             // 
@@ -1365,6 +1390,7 @@
             this.TxtPersonName.Name = "TxtPersonName";
             this.TxtPersonName.Size = new System.Drawing.Size(240, 27);
             this.TxtPersonName.TabIndex = 0;
+            this.TxtPersonName.TextChanged += new System.EventHandler(this.TxtPersonName_TextChanged);
             // 
             // TxtPersonId
             // 
@@ -1378,6 +1404,7 @@
             this.TxtPersonId.Name = "TxtPersonId";
             this.TxtPersonId.Size = new System.Drawing.Size(240, 27);
             this.TxtPersonId.TabIndex = 0;
+            this.TxtPersonId.TextChanged += new System.EventHandler(this.TxtPersonId_TextChanged);
             // 
             // label15
             // 
@@ -1478,11 +1505,13 @@
             this.TblPerson.MultiSelect = false;
             this.TblPerson.Name = "TblPerson";
             this.TblPerson.ReadOnly = true;
+            this.TblPerson.RowHeadersVisible = false;
             this.TblPerson.RowHeadersWidth = 51;
             this.TblPerson.RowTemplate.Height = 50;
             this.TblPerson.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TblPerson.Size = new System.Drawing.Size(1078, 799);
             this.TblPerson.TabIndex = 0;
+            this.TblPerson.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TblPerson_CellMouseDoubleClick);
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -1542,7 +1571,7 @@
             this.TblPersonContextMenuStrip.Name = "contextMenuStrip1";
             this.TblPersonContextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.TblPersonContextMenuStrip.ShowImageMargin = false;
-            this.TblPersonContextMenuStrip.Size = new System.Drawing.Size(186, 80);
+            this.TblPersonContextMenuStrip.Size = new System.Drawing.Size(140, 52);
             // 
             // TblPersonPrintAsPDF
             // 
@@ -1810,7 +1839,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PERSON_NAME;
         private System.Windows.Forms.DataGridViewTextBoxColumn DATE;
         private System.Windows.Forms.DataGridViewTextBoxColumn TIME;
-        private System.Windows.Forms.TabPage DBTab;
         private System.Windows.Forms.TabPage InventoryTab;
         private System.Windows.Forms.Panel UpperPanel;
         private System.Windows.Forms.Button BtnExit;
@@ -1834,6 +1862,10 @@
         private System.Windows.Forms.ImageList imageList2;
         private System.Windows.Forms.ImageList imageList3;
         private System.Windows.Forms.ImageList imageList4;
+        private System.Windows.Forms.ImageList imageList5;
+        private System.Windows.Forms.ImageList imageList6;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TabPage DBTab;
         private System.Windows.Forms.TabControl InnerTabControl;
         private System.Windows.Forms.TabPage VillagesTab;
         private System.Windows.Forms.SplitContainer VillagesSplitContainer;
@@ -1918,8 +1950,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.ImageList imageList5;
-        private System.Windows.Forms.ImageList imageList6;
-        private System.Windows.Forms.Timer timer1;
     }
 }

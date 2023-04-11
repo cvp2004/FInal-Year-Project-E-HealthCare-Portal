@@ -17,6 +17,7 @@ namespace OPD_Section
         public int SYMPTOM_ID { get; set; }
         public int VISIT_ID { get; set; }
         public string DESCRIPTION { get; set; }
+        public string SYMPTOM_NAME { get; set; }
     
         public virtual VISIT VISIT { get; set; }
     }

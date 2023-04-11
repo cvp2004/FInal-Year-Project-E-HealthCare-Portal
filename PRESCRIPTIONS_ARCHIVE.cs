@@ -18,5 +18,6 @@ namespace OPD_Section
         public int VISIT_ID { get; set; }
         public int MEDICINE_ID { get; set; }
         public int QUANTITY { get; set; }
+        public string MEDICINE_NAME { get; set; }
     }
 }
