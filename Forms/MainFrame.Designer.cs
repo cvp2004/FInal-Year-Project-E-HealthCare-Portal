@@ -146,6 +146,7 @@
             this.TblPersonContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.TblPersonPrintAsPDF = new System.Windows.Forms.ToolStripMenuItem();
             this.TblPersonPrintAsExcel = new System.Windows.Forms.ToolStripMenuItem();
+            this.LogsTab = new System.Windows.Forms.TabPage();
             this.InnerImageList = new System.Windows.Forms.ImageList(this.components);
             this.InventoryTab = new System.Windows.Forms.TabPage();
             this.UpperPanel = new System.Windows.Forms.Panel();
@@ -160,9 +161,91 @@
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.imageList3 = new System.Windows.Forms.ImageList(this.components);
             this.imageList4 = new System.Windows.Forms.ImageList(this.components);
-            this.imageList5 = new System.Windows.Forms.ImageList(this.components);
-            this.imageList6 = new System.Windows.Forms.ImageList(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.LowerPanel.SuspendLayout();
             this.OuterTabControl.SuspendLayout();
             this.OPDTab.SuspendLayout();
@@ -197,11 +280,32 @@
             ((System.ComponentModel.ISupportInitialize)(this.TxtPersonAge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TblPerson)).BeginInit();
             this.TblPersonContextMenuStrip.SuspendLayout();
+            this.LogsTab.SuspendLayout();
             this.UpperPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SplitContainer)).BeginInit();
             this.SplitContainer.Panel1.SuspendLayout();
             this.SplitContainer.Panel2.SuspendLayout();
             this.SplitContainer.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
+            this.splitContainer4.Panel1.SuspendLayout();
+            this.splitContainer4.Panel2.SuspendLayout();
+            this.splitContainer4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
+            this.splitContainer3.Panel1.SuspendLayout();
+            this.splitContainer3.Panel2.SuspendLayout();
+            this.splitContainer3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // LowerPanel
@@ -212,7 +316,7 @@
             this.LowerPanel.Location = new System.Drawing.Point(0, 0);
             this.LowerPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LowerPanel.Name = "LowerPanel";
-            this.LowerPanel.Size = new System.Drawing.Size(1540, 904);
+            this.LowerPanel.Size = new System.Drawing.Size(1770, 904);
             this.LowerPanel.TabIndex = 0;
             // 
             // OuterTabControl
@@ -228,7 +332,7 @@
             this.OuterTabControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OuterTabControl.Name = "OuterTabControl";
             this.OuterTabControl.SelectedIndex = 0;
-            this.OuterTabControl.Size = new System.Drawing.Size(1540, 904);
+            this.OuterTabControl.Size = new System.Drawing.Size(1770, 904);
             this.OuterTabControl.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.OuterTabControl.TabIndex = 0;
             // 
@@ -238,7 +342,7 @@
             this.HomeTab.Location = new System.Drawing.Point(4, 44);
             this.HomeTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.HomeTab.Name = "HomeTab";
-            this.HomeTab.Size = new System.Drawing.Size(1532, 856);
+            this.HomeTab.Size = new System.Drawing.Size(1762, 856);
             this.HomeTab.TabIndex = 3;
             this.HomeTab.Text = "   Home Page   ";
             this.HomeTab.UseVisualStyleBackColor = true;
@@ -251,7 +355,7 @@
             this.OPDTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OPDTab.Name = "OPDTab";
             this.OPDTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.OPDTab.Size = new System.Drawing.Size(1532, 856);
+            this.OPDTab.Size = new System.Drawing.Size(1762, 856);
             this.OPDTab.TabIndex = 1;
             this.OPDTab.Text = "   OPD Clinic   ";
             this.OPDTab.UseVisualStyleBackColor = true;
@@ -263,7 +367,7 @@
             this.panel5.Location = new System.Drawing.Point(3, 2);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1526, 852);
+            this.panel5.Size = new System.Drawing.Size(1756, 852);
             this.panel5.TabIndex = 1;
             // 
             // splitContainer1
@@ -287,8 +391,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
-            this.splitContainer1.Size = new System.Drawing.Size(1526, 852);
-            this.splitContainer1.SplitterDistance = 395;
+            this.splitContainer1.Size = new System.Drawing.Size(1756, 852);
+            this.splitContainer1.SplitterDistance = 454;
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -299,7 +403,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel6.Location = new System.Drawing.Point(0, 629);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(395, 223);
+            this.panel6.Size = new System.Drawing.Size(454, 223);
             this.panel6.TabIndex = 40;
             // 
             // btn_newrecord
@@ -321,7 +425,7 @@
             this.btn_archieve.BackColor = System.Drawing.Color.Gold;
             this.btn_archieve.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_archieve.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btn_archieve.Location = new System.Drawing.Point(7, 0);
+            this.btn_archieve.Location = new System.Drawing.Point(66, 0);
             this.btn_archieve.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_archieve.Name = "btn_archieve";
             this.btn_archieve.Size = new System.Drawing.Size(388, 223);
@@ -339,7 +443,7 @@
             this.txt_personname.Location = new System.Drawing.Point(29, 394);
             this.txt_personname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_personname.Name = "txt_personname";
-            this.txt_personname.Size = new System.Drawing.Size(96, 34);
+            this.txt_personname.Size = new System.Drawing.Size(155, 34);
             this.txt_personname.TabIndex = 35;
             this.txt_personname.TextChanged += new System.EventHandler(this.txt_personname_TextChanged);
             // 
@@ -361,7 +465,7 @@
             this.txt_personid.Location = new System.Drawing.Point(29, 271);
             this.txt_personid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_personid.Name = "txt_personid";
-            this.txt_personid.Size = new System.Drawing.Size(96, 34);
+            this.txt_personid.Size = new System.Drawing.Size(155, 34);
             this.txt_personid.TabIndex = 33;
             this.txt_personid.TextChanged += new System.EventHandler(this.txt_personid_TextChanged);
             // 
@@ -384,7 +488,7 @@
             this.txt_visitid.Location = new System.Drawing.Point(29, 144);
             this.txt_visitid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_visitid.Name = "txt_visitid";
-            this.txt_visitid.Size = new System.Drawing.Size(96, 34);
+            this.txt_visitid.Size = new System.Drawing.Size(155, 34);
             this.txt_visitid.TabIndex = 31;
             this.txt_visitid.TextChanged += new System.EventHandler(this.txt_visitid_TextChanged);
             // 
@@ -405,7 +509,7 @@
             this.label6.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(21, 49);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(167, 37);
+            this.label6.Size = new System.Drawing.Size(226, 37);
             this.label6.TabIndex = 29;
             this.label6.Text = "OPD Section";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -431,7 +535,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 50;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1126, 852);
+            this.dataGridView1.Size = new System.Drawing.Size(1297, 852);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
@@ -478,7 +582,7 @@
             this.DBTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DBTab.Name = "DBTab";
             this.DBTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.DBTab.Size = new System.Drawing.Size(1532, 856);
+            this.DBTab.Size = new System.Drawing.Size(1762, 856);
             this.DBTab.TabIndex = 0;
             this.DBTab.Text = "   Database Records   ";
             this.DBTab.UseVisualStyleBackColor = true;
@@ -488,13 +592,14 @@
             this.InnerTabControl.Controls.Add(this.VillagesTab);
             this.InnerTabControl.Controls.Add(this.HousesTab);
             this.InnerTabControl.Controls.Add(this.PeopleTab);
+            this.InnerTabControl.Controls.Add(this.LogsTab);
             this.InnerTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InnerTabControl.ImageList = this.InnerImageList;
             this.InnerTabControl.ItemSize = new System.Drawing.Size(71, 35);
             this.InnerTabControl.Location = new System.Drawing.Point(3, 2);
             this.InnerTabControl.Name = "InnerTabControl";
             this.InnerTabControl.SelectedIndex = 0;
-            this.InnerTabControl.Size = new System.Drawing.Size(1526, 852);
+            this.InnerTabControl.Size = new System.Drawing.Size(1756, 852);
             this.InnerTabControl.TabIndex = 1;
             // 
             // VillagesTab
@@ -505,7 +610,7 @@
             this.VillagesTab.Location = new System.Drawing.Point(4, 39);
             this.VillagesTab.Name = "VillagesTab";
             this.VillagesTab.Padding = new System.Windows.Forms.Padding(3);
-            this.VillagesTab.Size = new System.Drawing.Size(1518, 809);
+            this.VillagesTab.Size = new System.Drawing.Size(1748, 809);
             this.VillagesTab.TabIndex = 0;
             this.VillagesTab.Text = "   Villages   ";
             this.VillagesTab.UseVisualStyleBackColor = true;
@@ -545,7 +650,7 @@
             // 
             this.VillagesSplitContainer.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.VillagesSplitContainer.Panel2.Controls.Add(this.TblVillage);
-            this.VillagesSplitContainer.Size = new System.Drawing.Size(1512, 803);
+            this.VillagesSplitContainer.Size = new System.Drawing.Size(1742, 803);
             this.VillagesSplitContainer.SplitterDistance = 425;
             this.VillagesSplitContainer.SplitterWidth = 5;
             this.VillagesSplitContainer.TabIndex = 0;
@@ -583,7 +688,8 @@
             this.BtnVillageUpdate.Size = new System.Drawing.Size(244, 41);
             this.BtnVillageUpdate.TabIndex = 4;
             this.BtnVillageUpdate.Text = "UPDATE";
-            this.BtnVillageUpdate.UseVisualStyleBackColor = true;
+            this.BtnVillageUpdate.UseMnemonic = false;
+            this.BtnVillageUpdate.UseVisualStyleBackColor = false;
             this.BtnVillageUpdate.Click += new System.EventHandler(this.BtnVillageUpdate_Click);
             // 
             // BtnVillageDelete
@@ -772,14 +878,13 @@
             this.TblVillage.MultiSelect = false;
             this.TblVillage.Name = "TblVillage";
             this.TblVillage.ReadOnly = true;
-            this.TblVillage.RowHeadersVisible = false;
             this.TblVillage.RowHeadersWidth = 51;
             this.TblVillage.RowTemplate.DividerHeight = 2;
             this.TblVillage.RowTemplate.Height = 50;
             this.TblVillage.RowTemplate.ReadOnly = true;
             this.TblVillage.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.TblVillage.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TblVillage.Size = new System.Drawing.Size(1078, 799);
+            this.TblVillage.Size = new System.Drawing.Size(1308, 799);
             this.TblVillage.TabIndex = 0;
             this.TblVillage.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TblVillage_CellMouseDoubleClick);
             // 
@@ -841,7 +946,7 @@
             this.HousesTab.Location = new System.Drawing.Point(4, 39);
             this.HousesTab.Name = "HousesTab";
             this.HousesTab.Padding = new System.Windows.Forms.Padding(3);
-            this.HousesTab.Size = new System.Drawing.Size(1518, 809);
+            this.HousesTab.Size = new System.Drawing.Size(1748, 809);
             this.HousesTab.TabIndex = 1;
             this.HousesTab.Text = "   Houses   ";
             this.HousesTab.UseVisualStyleBackColor = true;
@@ -878,7 +983,7 @@
             // 
             this.HousesSplitContainer.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.HousesSplitContainer.Panel2.Controls.Add(this.TblHouse);
-            this.HousesSplitContainer.Size = new System.Drawing.Size(1512, 803);
+            this.HousesSplitContainer.Size = new System.Drawing.Size(1742, 803);
             this.HousesSplitContainer.SplitterDistance = 425;
             this.HousesSplitContainer.SplitterWidth = 5;
             this.HousesSplitContainer.TabIndex = 1;
@@ -1065,11 +1170,10 @@
             this.TblHouse.Location = new System.Drawing.Point(0, 0);
             this.TblHouse.Name = "TblHouse";
             this.TblHouse.ReadOnly = true;
-            this.TblHouse.RowHeadersVisible = false;
             this.TblHouse.RowHeadersWidth = 51;
             this.TblHouse.RowTemplate.Height = 50;
             this.TblHouse.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TblHouse.Size = new System.Drawing.Size(1078, 799);
+            this.TblHouse.Size = new System.Drawing.Size(1308, 799);
             this.TblHouse.TabIndex = 0;
             this.TblHouse.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TblHouse_CellMouseDoubleClick);
             // 
@@ -1126,7 +1230,7 @@
             this.PeopleTab.Location = new System.Drawing.Point(4, 39);
             this.PeopleTab.Name = "PeopleTab";
             this.PeopleTab.Padding = new System.Windows.Forms.Padding(3);
-            this.PeopleTab.Size = new System.Drawing.Size(1518, 809);
+            this.PeopleTab.Size = new System.Drawing.Size(1748, 809);
             this.PeopleTab.TabIndex = 2;
             this.PeopleTab.Text = "   People   ";
             this.PeopleTab.UseVisualStyleBackColor = true;
@@ -1176,7 +1280,7 @@
             this.PeopleSplitContainer.Panel2.AutoScroll = true;
             this.PeopleSplitContainer.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.PeopleSplitContainer.Panel2.Controls.Add(this.TblPerson);
-            this.PeopleSplitContainer.Size = new System.Drawing.Size(1512, 803);
+            this.PeopleSplitContainer.Size = new System.Drawing.Size(1742, 803);
             this.PeopleSplitContainer.SplitterDistance = 425;
             this.PeopleSplitContainer.SplitterWidth = 5;
             this.PeopleSplitContainer.TabIndex = 1;
@@ -1196,7 +1300,7 @@
             this.TxtPersonVillageName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtPersonVillageName.FormattingEnabled = true;
-            this.TxtPersonVillageName.Location = new System.Drawing.Point(22, 199);
+            this.TxtPersonVillageName.Location = new System.Drawing.Point(22, 198);
             this.TxtPersonVillageName.Name = "TxtPersonVillageName";
             this.TxtPersonVillageName.Size = new System.Drawing.Size(239, 33);
             this.TxtPersonVillageName.TabIndex = 10;
@@ -1226,7 +1330,7 @@
             // 
             this.TxtPersonAge.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtPersonAge.Location = new System.Drawing.Point(20, 413);
+            this.TxtPersonAge.Location = new System.Drawing.Point(20, 412);
             this.TxtPersonAge.Name = "TxtPersonAge";
             this.TxtPersonAge.Size = new System.Drawing.Size(240, 34);
             this.TxtPersonAge.TabIndex = 6;
@@ -1250,7 +1354,7 @@
             "MALE",
             "FEMALE",
             "OTHER"});
-            this.TxtPersonGender.Location = new System.Drawing.Point(20, 485);
+            this.TxtPersonGender.Location = new System.Drawing.Point(20, 484);
             this.TxtPersonGender.Name = "TxtPersonGender";
             this.TxtPersonGender.Size = new System.Drawing.Size(240, 33);
             this.TxtPersonGender.TabIndex = 5;
@@ -1272,7 +1376,7 @@
             // 
             this.BtnPersonSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnPersonSearch.AutoSize = true;
-            this.BtnPersonSearch.Location = new System.Drawing.Point(121, 675);
+            this.BtnPersonSearch.Location = new System.Drawing.Point(22, 675);
             this.BtnPersonSearch.Name = "BtnPersonSearch";
             this.BtnPersonSearch.Size = new System.Drawing.Size(244, 41);
             this.BtnPersonSearch.TabIndex = 4;
@@ -1284,7 +1388,7 @@
             // 
             this.BtnPersonUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnPersonUpdate.AutoSize = true;
-            this.BtnPersonUpdate.Location = new System.Drawing.Point(88, 616);
+            this.BtnPersonUpdate.Location = new System.Drawing.Point(22, 616);
             this.BtnPersonUpdate.Name = "BtnPersonUpdate";
             this.BtnPersonUpdate.Size = new System.Drawing.Size(244, 41);
             this.BtnPersonUpdate.TabIndex = 4;
@@ -1505,11 +1609,10 @@
             this.TblPerson.MultiSelect = false;
             this.TblPerson.Name = "TblPerson";
             this.TblPerson.ReadOnly = true;
-            this.TblPerson.RowHeadersVisible = false;
             this.TblPerson.RowHeadersWidth = 51;
             this.TblPerson.RowTemplate.Height = 50;
             this.TblPerson.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TblPerson.Size = new System.Drawing.Size(1078, 799);
+            this.TblPerson.Size = new System.Drawing.Size(1308, 799);
             this.TblPerson.TabIndex = 0;
             this.TblPerson.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TblPerson_CellMouseDoubleClick);
             // 
@@ -1587,6 +1690,17 @@
             this.TblPersonPrintAsExcel.Text = "Print as Excel";
             this.TblPersonPrintAsExcel.Click += new System.EventHandler(this.TblPersonPrintAsExcel_Click);
             // 
+            // LogsTab
+            // 
+            this.LogsTab.Controls.Add(this.tabControl1);
+            this.LogsTab.Location = new System.Drawing.Point(4, 39);
+            this.LogsTab.Name = "LogsTab";
+            this.LogsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.LogsTab.Size = new System.Drawing.Size(1748, 809);
+            this.LogsTab.TabIndex = 3;
+            this.LogsTab.Text = "Logs";
+            this.LogsTab.UseVisualStyleBackColor = true;
+            // 
             // InnerImageList
             // 
             this.InnerImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("InnerImageList.ImageStream")));
@@ -1601,7 +1715,7 @@
             this.InventoryTab.Location = new System.Drawing.Point(4, 44);
             this.InventoryTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.InventoryTab.Name = "InventoryTab";
-            this.InventoryTab.Size = new System.Drawing.Size(1532, 856);
+            this.InventoryTab.Size = new System.Drawing.Size(1762, 856);
             this.InventoryTab.TabIndex = 2;
             this.InventoryTab.Text = "   Inventory   ";
             this.InventoryTab.UseVisualStyleBackColor = true;
@@ -1618,7 +1732,7 @@
             this.UpperPanel.Location = new System.Drawing.Point(0, 0);
             this.UpperPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.UpperPanel.Name = "UpperPanel";
-            this.UpperPanel.Size = new System.Drawing.Size(1540, 150);
+            this.UpperPanel.Size = new System.Drawing.Size(1770, 150);
             this.UpperPanel.TabIndex = 2;
             // 
             // BtnExit
@@ -1626,7 +1740,7 @@
             this.BtnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.BtnExit.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnExit.Location = new System.Drawing.Point(1346, 89);
+            this.BtnExit.Location = new System.Drawing.Point(1576, 89);
             this.BtnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Size = new System.Drawing.Size(167, 44);
@@ -1663,7 +1777,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 64.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(64, 0);
+            this.label1.Location = new System.Drawing.Point(179, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1393, 121);
             this.label1.TabIndex = 0;
@@ -1687,7 +1801,7 @@
             // 
             this.SplitContainer.Panel2.AutoScroll = true;
             this.SplitContainer.Panel2.Controls.Add(this.LowerPanel);
-            this.SplitContainer.Size = new System.Drawing.Size(1540, 1055);
+            this.SplitContainer.Size = new System.Drawing.Size(1770, 1055);
             this.SplitContainer.SplitterDistance = 150;
             this.SplitContainer.SplitterWidth = 1;
             this.SplitContainer.TabIndex = 1;
@@ -1707,60 +1821,1036 @@
             // 
             // imageList1
             // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "icons8-village-60.png");
-            this.imageList1.Images.SetKeyName(1, "icons8-home-page-48.png");
-            this.imageList1.Images.SetKeyName(2, "icons8-account-48.png");
             // 
             // imageList2
             // 
-            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
+            this.imageList2.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList2.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList2.Images.SetKeyName(0, "icons8-home-page-48.png");
-            this.imageList2.Images.SetKeyName(1, "icons8-clinic-50.png");
-            this.imageList2.Images.SetKeyName(2, "icons8-database-50.png");
-            this.imageList2.Images.SetKeyName(3, "icons8-warehouse-50.png");
             // 
             // imageList3
             // 
-            this.imageList3.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList3.ImageStream")));
+            this.imageList3.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList3.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList3.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList3.Images.SetKeyName(0, "icons8-village-60.png");
-            this.imageList3.Images.SetKeyName(1, "icons8-home-page-48.png");
-            this.imageList3.Images.SetKeyName(2, "icons8-account-48.png");
             // 
             // imageList4
             // 
-            this.imageList4.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList4.ImageStream")));
+            this.imageList4.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList4.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList4.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList4.Images.SetKeyName(0, "icons8-home-page-48.png");
-            this.imageList4.Images.SetKeyName(1, "icons8-clinic-50.png");
-            this.imageList4.Images.SetKeyName(2, "icons8-database-50.png");
-            this.imageList4.Images.SetKeyName(3, "icons8-warehouse-50.png");
             // 
-            // imageList5
+            // tabPage3
             // 
-            this.imageList5.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList5.ImageStream")));
-            this.imageList5.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList5.Images.SetKeyName(0, "icons8-village-60.png");
-            this.imageList5.Images.SetKeyName(1, "icons8-home-page-48.png");
-            this.imageList5.Images.SetKeyName(2, "icons8-account-48.png");
+            this.tabPage3.Controls.Add(this.splitContainer4);
+            this.tabPage3.ImageKey = "icons8-account-48.png";
+            this.tabPage3.Location = new System.Drawing.Point(4, 39);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1734, 760);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "   People Logs";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // imageList6
+            // splitContainer4
             // 
-            this.imageList6.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList6.ImageStream")));
-            this.imageList6.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList6.Images.SetKeyName(0, "icons8-home-page-48.png");
-            this.imageList6.Images.SetKeyName(1, "icons8-clinic-50.png");
-            this.imageList6.Images.SetKeyName(2, "icons8-database-50.png");
-            this.imageList6.Images.SetKeyName(3, "icons8-warehouse-50.png");
+            this.splitContainer4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer4.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer4.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer4.Name = "splitContainer4";
+            // 
+            // splitContainer4.Panel1
+            // 
+            this.splitContainer4.Panel1.AutoScroll = true;
+            this.splitContainer4.Panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer4.Panel1.Controls.Add(this.comboBox2);
+            this.splitContainer4.Panel1.Controls.Add(this.comboBox3);
+            this.splitContainer4.Panel1.Controls.Add(this.panel24);
+            this.splitContainer4.Panel1.Controls.Add(this.panel25);
+            this.splitContainer4.Panel1.Controls.Add(this.numericUpDown1);
+            this.splitContainer4.Panel1.Controls.Add(this.comboBox4);
+            this.splitContainer4.Panel1.Controls.Add(this.button11);
+            this.splitContainer4.Panel1.Controls.Add(this.button12);
+            this.splitContainer4.Panel1.Controls.Add(this.button13);
+            this.splitContainer4.Panel1.Controls.Add(this.button14);
+            this.splitContainer4.Panel1.Controls.Add(this.button15);
+            this.splitContainer4.Panel1.Controls.Add(this.panel26);
+            this.splitContainer4.Panel1.Controls.Add(this.panel27);
+            this.splitContainer4.Panel1.Controls.Add(this.panel28);
+            this.splitContainer4.Panel1.Controls.Add(this.panel29);
+            this.splitContainer4.Panel1.Controls.Add(this.panel30);
+            this.splitContainer4.Panel1.Controls.Add(this.textBox7);
+            this.splitContainer4.Panel1.Controls.Add(this.textBox8);
+            this.splitContainer4.Panel1.Controls.Add(this.textBox9);
+            this.splitContainer4.Panel1.Controls.Add(this.label31);
+            this.splitContainer4.Panel1.Controls.Add(this.label32);
+            this.splitContainer4.Panel1.Controls.Add(this.label33);
+            this.splitContainer4.Panel1.Controls.Add(this.label34);
+            this.splitContainer4.Panel1.Controls.Add(this.label35);
+            this.splitContainer4.Panel1.Controls.Add(this.label36);
+            this.splitContainer4.Panel1.Controls.Add(this.label37);
+            this.splitContainer4.Panel1.Controls.Add(this.label38);
+            // 
+            // splitContainer4.Panel2
+            // 
+            this.splitContainer4.Panel2.AutoScroll = true;
+            this.splitContainer4.Panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer4.Panel2.Controls.Add(this.dataGridView4);
+            this.splitContainer4.Size = new System.Drawing.Size(1728, 754);
+            this.splitContainer4.SplitterDistance = 425;
+            this.splitContainer4.SplitterWidth = 5;
+            this.splitContainer4.TabIndex = 1;
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.AllowUserToAddRows = false;
+            this.dataGridView4.AllowUserToDeleteRows = false;
+            this.dataGridView4.AllowUserToOrderColumns = true;
+            this.dataGridView4.AllowUserToResizeRows = false;
+            this.dataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewTextBoxColumn20});
+            this.dataGridView4.ContextMenuStrip = this.TblPersonContextMenuStrip;
+            this.dataGridView4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView4.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView4.MultiSelect = false;
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.ReadOnly = true;
+            this.dataGridView4.RowHeadersWidth = 51;
+            this.dataGridView4.RowTemplate.Height = 50;
+            this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView4.Size = new System.Drawing.Size(1294, 750);
+            this.dataGridView4.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.HeaderText = "PHONE NO.";
+            this.dataGridViewTextBoxColumn20.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.HeaderText = "GENDER";
+            this.dataGridViewTextBoxColumn19.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.HeaderText = "AGE";
+            this.dataGridViewTextBoxColumn18.MinimumWidth = 100;
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.HeaderText = "NAME";
+            this.dataGridViewTextBoxColumn17.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.HeaderText = "VILLAGE";
+            this.dataGridViewTextBoxColumn16.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.HeaderText = "HOUSE ID";
+            this.dataGridViewTextBoxColumn15.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.HeaderText = "PERSON ID";
+            this.dataGridViewTextBoxColumn14.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // label38
+            // 
+            this.label38.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label38.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(2, 30);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(262, 37);
+            this.label38.TabIndex = 1;
+            this.label38.Text = "PERSON DETAILS";
+            this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(11, 98);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(114, 25);
+            this.label37.TabIndex = 2;
+            this.label37.Text = "Person ID";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(15, 243);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(107, 25);
+            this.label36.TabIndex = 2;
+            this.label36.Text = "House ID";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(15, 170);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(77, 25);
+            this.label35.TabIndex = 2;
+            this.label35.Text = "Village";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(15, 318);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(71, 25);
+            this.label34.TabIndex = 2;
+            this.label34.Text = "Name";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(15, 531);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(165, 25);
+            this.label33.TabIndex = 2;
+            this.label33.Text = "Phone Number";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(15, 384);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(51, 25);
+            this.label32.TabIndex = 2;
+            this.label32.Text = "Age";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(15, 458);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(88, 25);
+            this.label31.TabIndex = 2;
+            this.label31.Text = "Gender";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox9.BackColor = System.Drawing.Color.White;
+            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox9.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox9.HideSelection = false;
+            this.textBox9.Location = new System.Drawing.Point(20, 129);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(198, 27);
+            this.textBox9.TabIndex = 0;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox8.BackColor = System.Drawing.Color.White;
+            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox8.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox8.HideSelection = false;
+            this.textBox8.Location = new System.Drawing.Point(20, 347);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(198, 27);
+            this.textBox8.TabIndex = 0;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox7.BackColor = System.Drawing.Color.White;
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox7.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox7.HideSelection = false;
+            this.textBox7.Location = new System.Drawing.Point(20, 560);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(198, 27);
+            this.textBox7.TabIndex = 0;
+            // 
+            // panel30
+            // 
+            this.panel30.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel30.Location = new System.Drawing.Point(20, 158);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(198, 2);
+            this.panel30.TabIndex = 3;
+            // 
+            // panel29
+            // 
+            this.panel29.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel29.Location = new System.Drawing.Point(20, 376);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(198, 2);
+            this.panel29.TabIndex = 3;
+            // 
+            // panel28
+            // 
+            this.panel28.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel28.Location = new System.Drawing.Point(20, 589);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(198, 2);
+            this.panel28.TabIndex = 3;
+            // 
+            // panel27
+            // 
+            this.panel27.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel27.Location = new System.Drawing.Point(20, 447);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(198, 2);
+            this.panel27.TabIndex = 3;
+            // 
+            // panel26
+            // 
+            this.panel26.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel26.Location = new System.Drawing.Point(20, 518);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(198, 2);
+            this.panel26.TabIndex = 3;
+            // 
+            // button15
+            // 
+            this.button15.AutoSize = true;
+            this.button15.Location = new System.Drawing.Point(19, 616);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(244, 41);
+            this.button15.TabIndex = 4;
+            this.button15.Text = "INSERT";
+            this.button15.UseVisualStyleBackColor = true;
+            // 
+            // button14
+            // 
+            this.button14.AutoSize = true;
+            this.button14.Location = new System.Drawing.Point(19, 675);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(244, 41);
+            this.button14.TabIndex = 4;
+            this.button14.Text = "DELETE";
+            this.button14.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            this.button13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button13.AutoSize = true;
+            this.button13.Location = new System.Drawing.Point(-20, 616);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(244, 41);
+            this.button13.TabIndex = 4;
+            this.button13.Text = "UPDATE";
+            this.button13.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            this.button12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button12.AutoSize = true;
+            this.button12.Location = new System.Drawing.Point(-20, 675);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(244, 41);
+            this.button12.TabIndex = 4;
+            this.button12.Text = "SEARCH";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button11.AutoSize = true;
+            this.button11.Location = new System.Drawing.Point(1, 730);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(244, 41);
+            this.button11.TabIndex = 4;
+            this.button11.Text = "RESET";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox4.DisplayMember = "HOUSE_ID";
+            this.comboBox4.DropDownHeight = 100;
+            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.IntegralHeight = false;
+            this.comboBox4.Items.AddRange(new object[] {
+            "MALE",
+            "FEMALE",
+            "OTHER"});
+            this.comboBox4.Location = new System.Drawing.Point(20, 484);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(198, 33);
+            this.comboBox4.TabIndex = 5;
+            this.comboBox4.ValueMember = "HOUSE_ID";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericUpDown1.Location = new System.Drawing.Point(20, 412);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(198, 34);
+            this.numericUpDown1.TabIndex = 6;
+            this.numericUpDown1.ThousandsSeparator = true;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // panel25
+            // 
+            this.panel25.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel25.Location = new System.Drawing.Point(20, 305);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(198, 2);
+            this.panel25.TabIndex = 7;
+            // 
+            // panel24
+            // 
+            this.panel24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel24.Location = new System.Drawing.Point(21, 232);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(198, 2);
+            this.panel24.TabIndex = 9;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(22, 198);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(197, 33);
+            this.comboBox3.TabIndex = 10;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(21, 272);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(197, 33);
+            this.comboBox2.TabIndex = 11;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.splitContainer3);
+            this.tabPage2.ImageKey = "icons8-home-page-48.png";
+            this.tabPage2.Location = new System.Drawing.Point(4, 39);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1734, 760);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "   House Logs  ";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer3
+            // 
+            this.splitContainer3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer3.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer3.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer3.Name = "splitContainer3";
+            // 
+            // splitContainer3.Panel1
+            // 
+            this.splitContainer3.Panel1.AutoScroll = true;
+            this.splitContainer3.Panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer3.Panel1.Controls.Add(this.comboBox1);
+            this.splitContainer3.Panel1.Controls.Add(this.button6);
+            this.splitContainer3.Panel1.Controls.Add(this.button7);
+            this.splitContainer3.Panel1.Controls.Add(this.button8);
+            this.splitContainer3.Panel1.Controls.Add(this.button9);
+            this.splitContainer3.Panel1.Controls.Add(this.button10);
+            this.splitContainer3.Panel1.Controls.Add(this.panel21);
+            this.splitContainer3.Panel1.Controls.Add(this.panel22);
+            this.splitContainer3.Panel1.Controls.Add(this.panel23);
+            this.splitContainer3.Panel1.Controls.Add(this.textBox5);
+            this.splitContainer3.Panel1.Controls.Add(this.textBox6);
+            this.splitContainer3.Panel1.Controls.Add(this.label27);
+            this.splitContainer3.Panel1.Controls.Add(this.label28);
+            this.splitContainer3.Panel1.Controls.Add(this.label29);
+            this.splitContainer3.Panel1.Controls.Add(this.label30);
+            // 
+            // splitContainer3.Panel2
+            // 
+            this.splitContainer3.Panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer3.Panel2.Controls.Add(this.dataGridView3);
+            this.splitContainer3.Size = new System.Drawing.Size(1728, 754);
+            this.splitContainer3.SplitterDistance = 425;
+            this.splitContainer3.SplitterWidth = 5;
+            this.splitContainer3.TabIndex = 1;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.AllowUserToDeleteRows = false;
+            this.dataGridView3.AllowUserToOrderColumns = true;
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13});
+            this.dataGridView3.ContextMenuStrip = this.TblHouseContextMenuStrip;
+            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView3.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.ReadOnly = true;
+            this.dataGridView3.RowHeadersWidth = 51;
+            this.dataGridView3.RowTemplate.Height = 50;
+            this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView3.Size = new System.Drawing.Size(1294, 750);
+            this.dataGridView3.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.HeaderText = "NO. OF PEOPLE";
+            this.dataGridViewTextBoxColumn13.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.HeaderText = "VILLAGE";
+            this.dataGridViewTextBoxColumn12.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.HeaderText = "HOUSE ID";
+            this.dataGridViewTextBoxColumn11.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // label30
+            // 
+            this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label30.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(2, 30);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(284, 37);
+            this.label30.TabIndex = 1;
+            this.label30.Text = "HOUSE DETAILS";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(11, 111);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(107, 25);
+            this.label29.TabIndex = 2;
+            this.label29.Text = "House ID";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(11, 201);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(77, 25);
+            this.label28.TabIndex = 2;
+            this.label28.Text = "Village";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(11, 288);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(146, 25);
+            this.label27.TabIndex = 2;
+            this.label27.Text = "No. of People";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox6.BackColor = System.Drawing.Color.White;
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox6.HideSelection = false;
+            this.textBox6.Location = new System.Drawing.Point(16, 147);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(240, 27);
+            this.textBox6.TabIndex = 0;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox5.BackColor = System.Drawing.Color.White;
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox5.HideSelection = false;
+            this.textBox5.Location = new System.Drawing.Point(16, 316);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(240, 27);
+            this.textBox5.TabIndex = 0;
+            // 
+            // panel23
+            // 
+            this.panel23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel23.Location = new System.Drawing.Point(16, 176);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(240, 2);
+            this.panel23.TabIndex = 3;
+            // 
+            // panel22
+            // 
+            this.panel22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel22.Location = new System.Drawing.Point(16, 260);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(240, 2);
+            this.panel22.TabIndex = 3;
+            // 
+            // panel21
+            // 
+            this.panel21.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel21.Location = new System.Drawing.Point(16, 345);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(240, 2);
+            this.panel21.TabIndex = 3;
+            // 
+            // button10
+            // 
+            this.button10.AutoSize = true;
+            this.button10.Location = new System.Drawing.Point(16, 400);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(244, 41);
+            this.button10.TabIndex = 4;
+            this.button10.Text = "INSERT";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.AutoSize = true;
+            this.button9.Location = new System.Drawing.Point(16, 476);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(244, 41);
+            this.button9.TabIndex = 4;
+            this.button9.Text = "DELETE";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button8.AutoSize = true;
+            this.button8.Location = new System.Drawing.Point(16, 400);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(244, 41);
+            this.button8.TabIndex = 4;
+            this.button8.Text = "UPDATE";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button7.AutoSize = true;
+            this.button7.Location = new System.Drawing.Point(16, 476);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(244, 41);
+            this.button7.TabIndex = 4;
+            this.button7.Text = "SEARCH";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button6.AutoSize = true;
+            this.button6.Location = new System.Drawing.Point(16, 546);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(244, 41);
+            this.button6.TabIndex = 4;
+            this.button6.Text = "RESET";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(16, 227);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(240, 33);
+            this.comboBox1.TabIndex = 5;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tabPage1.Controls.Add(this.splitContainer2);
+            this.tabPage1.ImageKey = "icons8-village-60.png";
+            this.tabPage1.Location = new System.Drawing.Point(4, 39);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1734, 760);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "   Village Logs   ";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer2.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer2.Name = "splitContainer2";
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.AutoScroll = true;
+            this.splitContainer2.Panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer2.Panel1.Controls.Add(this.button1);
+            this.splitContainer2.Panel1.Controls.Add(this.button2);
+            this.splitContainer2.Panel1.Controls.Add(this.button3);
+            this.splitContainer2.Panel1.Controls.Add(this.button4);
+            this.splitContainer2.Panel1.Controls.Add(this.button5);
+            this.splitContainer2.Panel1.Controls.Add(this.panel17);
+            this.splitContainer2.Panel1.Controls.Add(this.panel18);
+            this.splitContainer2.Panel1.Controls.Add(this.panel19);
+            this.splitContainer2.Panel1.Controls.Add(this.panel20);
+            this.splitContainer2.Panel1.Controls.Add(this.textBox1);
+            this.splitContainer2.Panel1.Controls.Add(this.textBox2);
+            this.splitContainer2.Panel1.Controls.Add(this.textBox3);
+            this.splitContainer2.Panel1.Controls.Add(this.textBox4);
+            this.splitContainer2.Panel1.Controls.Add(this.label22);
+            this.splitContainer2.Panel1.Controls.Add(this.label23);
+            this.splitContainer2.Panel1.Controls.Add(this.label24);
+            this.splitContainer2.Panel1.Controls.Add(this.label25);
+            this.splitContainer2.Panel1.Controls.Add(this.label26);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer2.Panel2.Controls.Add(this.dataGridView2);
+            this.splitContainer2.Size = new System.Drawing.Size(1728, 754);
+            this.splitContainer2.SplitterDistance = 425;
+            this.splitContainer2.SplitterWidth = 5;
+            this.splitContainer2.TabIndex = 0;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AllowUserToOrderColumns = true;
+            this.dataGridView2.AllowUserToResizeRows = false;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10});
+            this.dataGridView2.ContextMenuStrip = this.TblVillageContextMenuStrip;
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView2.MultiSelect = false;
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.DividerHeight = 2;
+            this.dataGridView2.RowTemplate.Height = 50;
+            this.dataGridView2.RowTemplate.ReadOnly = true;
+            this.dataGridView2.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(1294, 750);
+            this.dataGridView2.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.HeaderText = "NO. OF HOUSES";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.HeaderText = "VILLAGE CODE";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.HeaderText = "VILLAGE NAME";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "VILLAGE ID";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // label26
+            // 
+            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label26.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(2, 30);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(321, 37);
+            this.label26.TabIndex = 1;
+            this.label26.Text = "VILLAGE DETAILS";
+            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(11, 112);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(109, 25);
+            this.label25.TabIndex = 2;
+            this.label25.Text = "Village ID";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(11, 199);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(142, 25);
+            this.label24.TabIndex = 2;
+            this.label24.Text = "Village Name";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(11, 282);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(136, 25);
+            this.label23.TabIndex = 2;
+            this.label23.Text = "Village Code";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(11, 365);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(151, 25);
+            this.label22.TabIndex = 2;
+            this.label22.Text = "No. of Houses";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox4.BackColor = System.Drawing.Color.White;
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox4.HideSelection = false;
+            this.textBox4.Location = new System.Drawing.Point(16, 147);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(240, 27);
+            this.textBox4.TabIndex = 0;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox3.BackColor = System.Drawing.Color.White;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox3.HideSelection = false;
+            this.textBox3.Location = new System.Drawing.Point(16, 231);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(240, 27);
+            this.textBox3.TabIndex = 0;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.BackColor = System.Drawing.Color.White;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox2.HideSelection = false;
+            this.textBox2.Location = new System.Drawing.Point(16, 314);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(240, 27);
+            this.textBox2.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox1.HideSelection = false;
+            this.textBox1.Location = new System.Drawing.Point(16, 397);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(240, 27);
+            this.textBox1.TabIndex = 0;
+            // 
+            // panel20
+            // 
+            this.panel20.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel20.Location = new System.Drawing.Point(16, 176);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(240, 2);
+            this.panel20.TabIndex = 3;
+            // 
+            // panel19
+            // 
+            this.panel19.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel19.Location = new System.Drawing.Point(16, 260);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(240, 2);
+            this.panel19.TabIndex = 3;
+            // 
+            // panel18
+            // 
+            this.panel18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel18.Location = new System.Drawing.Point(16, 343);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(240, 2);
+            this.panel18.TabIndex = 3;
+            // 
+            // panel17
+            // 
+            this.panel17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel17.Location = new System.Drawing.Point(16, 426);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(240, 2);
+            this.panel17.TabIndex = 3;
+            // 
+            // button5
+            // 
+            this.button5.AutoSize = true;
+            this.button5.Location = new System.Drawing.Point(16, 459);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(244, 41);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "INSERT";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.AutoSize = true;
+            this.button4.Location = new System.Drawing.Point(16, 535);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(244, 41);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "DELETE";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.AutoSize = true;
+            this.button3.Location = new System.Drawing.Point(16, 459);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(244, 41);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "UPDATE";
+            this.button3.UseMnemonic = false;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.AutoSize = true;
+            this.button2.Location = new System.Drawing.Point(16, 535);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(244, 41);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "SEARCH";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button1.AutoSize = true;
+            this.button1.Location = new System.Drawing.Point(16, 610);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(244, 41);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "RESET";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.ImageList = this.InnerImageList;
+            this.tabControl1.ItemSize = new System.Drawing.Size(71, 35);
+            this.tabControl1.Location = new System.Drawing.Point(3, 3);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1742, 803);
+            this.tabControl1.TabIndex = 2;
             // 
             // MainFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1540, 1055);
+            this.ClientSize = new System.Drawing.Size(1770, 1055);
             this.Controls.Add(this.SplitContainer);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainFrame";
@@ -1806,12 +2896,36 @@
             ((System.ComponentModel.ISupportInitialize)(this.TxtPersonAge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TblPerson)).EndInit();
             this.TblPersonContextMenuStrip.ResumeLayout(false);
+            this.LogsTab.ResumeLayout(false);
             this.UpperPanel.ResumeLayout(false);
             this.UpperPanel.PerformLayout();
             this.SplitContainer.Panel1.ResumeLayout(false);
             this.SplitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SplitContainer)).EndInit();
             this.SplitContainer.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.splitContainer4.Panel1.ResumeLayout(false);
+            this.splitContainer4.Panel1.PerformLayout();
+            this.splitContainer4.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
+            this.splitContainer4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.splitContainer3.Panel1.ResumeLayout(false);
+            this.splitContainer3.Panel1.PerformLayout();
+            this.splitContainer3.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
+            this.splitContainer3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel1.PerformLayout();
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1862,8 +2976,6 @@
         private System.Windows.Forms.ImageList imageList2;
         private System.Windows.Forms.ImageList imageList3;
         private System.Windows.Forms.ImageList imageList4;
-        private System.Windows.Forms.ImageList imageList5;
-        private System.Windows.Forms.ImageList imageList6;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TabPage DBTab;
         private System.Windows.Forms.TabControl InnerTabControl;
@@ -1950,5 +3062,90 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.TabPage LogsTab;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.SplitContainer splitContainer3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.SplitContainer splitContainer4;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.Panel panel25;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.Panel panel27;
+        private System.Windows.Forms.Panel panel28;
+        private System.Windows.Forms.Panel panel29;
+        private System.Windows.Forms.Panel panel30;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
     }
 }

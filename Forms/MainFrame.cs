@@ -737,7 +737,8 @@ namespace OPD_Section
                         else
                         {
                             MessageBox.Show("\t\t!! Database Error !!\n" +
-                                            "\t!! Village Insert Operation Failed !!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                            "\t!! Village Update Operation Failed !!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            Console.WriteLine("res = " + res);
                         }
 
                     }
@@ -1594,6 +1595,7 @@ namespace OPD_Section
 
             Tbl.RowHeadersVisible = true;
         }
+
 
         /**********************************************************************************************************/
 
