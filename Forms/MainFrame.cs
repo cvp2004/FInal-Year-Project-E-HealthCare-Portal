@@ -31,6 +31,10 @@ namespace OPD_Section
             LoadDefaultTblHouse();
             LoadDefaultTblPerson();
 
+            LoadDefaultTblVillageLogs();
+            LoadDefaultTblHouseLogs();
+            LoadDefaultTblPersonLogs();
+
             LoadTxtHouseVillageName();
             LoadTxtPersonVillageName();
         }
@@ -438,8 +442,6 @@ namespace OPD_Section
 
         }
 
-
-
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
 
@@ -521,6 +523,7 @@ namespace OPD_Section
                         if (v.VILLAGE_ID == h.VILLAGE_ID)
                         {
                             row.Cells[1].Value = v.VILLAGE_NAME;
+                            break;
                         }
                     }
 
@@ -552,6 +555,104 @@ namespace OPD_Section
                     row.Cells[5].Value = p.GENDER;
                     row.Cells[6].Value = p.PHONE_NO;
                     TblPerson.Rows.Add(row);
+                }
+            }
+        }
+
+        private void LoadDefaultTblVillageLogs()
+        {
+
+            TblVillageLogs.Rows.Clear();
+
+            using (var context = new sampledbEntities())
+            {
+                foreach (LOGS_VILLAGES v in context.LOGS_VILLAGES)
+                {
+                    DataGridViewRow row = new DataGridViewRow();
+                    row.CreateCells(TblVillageLogs);
+                    row.Cells[0].Value = v.LOG_ID;
+                    row.Cells[1].Value = v.OP_TYPE;
+                    row.Cells[2].Value = v.VILLAGE_ID;
+                    row.Cells[3].Value = v.VILLAGE_NAME;
+                    row.Cells[4].Value = v.VILLAGE_CODE;
+                    row.Cells[5].Value = v.NO_OF_HOUSES;
+                    TblVillageLogs.Rows.Add(row);
+                }
+            }
+
+        }
+        private void LoadDefaultTblHouseLogs()
+        {
+
+            TblHouseLogs.Rows.Clear();
+
+            using (var context = new sampledbEntities())
+            {
+                foreach (LOGS_HOUSES h in context.LOGS_HOUSES)
+                {
+                    DataGridViewRow row = new DataGridViewRow();
+                    row.CreateCells(TblHouseLogs);
+                    row.Cells[0].Value = h.LOG_ID;
+                    row.Cells[1].Value = h.OP_TYPE;
+                    row.Cells[2].Value = h.HOUSE_ID;
+
+                    foreach (LOGS_VILLAGES v in context.LOGS_VILLAGES)
+                    {
+                        if (v.VILLAGE_ID == h.VILLAGE_ID)
+                        {
+                            row.Cells[3].Value = v.VILLAGE_NAME;
+                        }
+                    }
+
+                    row.Cells[4].Value = h.NO_OF_PEOPLE;
+                    TblHouseLogs.Rows.Add(row);
+                }
+            }
+        }
+        private void LoadDefaultTblPersonLogs()
+        {
+
+            TblPersonLogs.Rows.Clear();
+
+            using (var context = new sampledbEntities())
+            {
+                foreach (LOGS_PERSONS p in context.LOGS_PERSONS)
+                {
+                    DataGridViewRow row = new DataGridViewRow();
+                    row.CreateCells(TblPersonLogs);
+
+                    int vid = -1;
+
+                    foreach (var h in context.LOGS_HOUSES)
+                    {
+                        if (h.HOUSE_ID == p.HOUSE_ID)
+                        {
+                            vid = h.VILLAGE_ID;
+                            break;
+                        }
+                    }
+
+                    string vname = "";
+
+                    foreach (var v in context.LOGS_VILLAGES)
+                    {
+                        if (v.VILLAGE_ID == vid)
+                        {
+                            vname = v.VILLAGE_NAME;
+                            break;
+                        }
+                    }
+
+                    row.Cells[0].Value = p.LOG_ID;
+                    row.Cells[1].Value = p.OP_TYPE;
+                    row.Cells[2].Value = p.PERSON_ID;
+                    row.Cells[3].Value = p.HOUSE_ID;
+                    row.Cells[4].Value = vname;
+                    row.Cells[5].Value = p.NAME;
+                    row.Cells[6].Value = p.AGE;
+                    row.Cells[7].Value = p.GENDER;
+                    row.Cells[8].Value = p.PHONE_NO;
+                    TblPersonLogs.Rows.Add(row);
                 }
             }
         }
@@ -627,6 +728,35 @@ namespace OPD_Section
             TxtPersonPhoneNo.Text = "";
 
             LoadDefaultTblPerson();
+        }
+        private void TabVillageLogs_Reset()
+        {
+            TxtVillageLogsVillageId.Text = "";
+            TxtVillageLogsVillageName.Text = "";
+            TxtVillageLogsVillageCode.Text = "";
+            TxtVillageLogsNoOfHouses.Text = "";
+
+            LoadDefaultTblVillageLogs();
+        }
+        private void TabHouseLogs_Reset()
+        {
+            TxtHouseLogsHouseId.Text = "";
+            TxtHouseLogsVillageName.Text = "";
+            TxtHouseLogsNoOfPeople.Text = "";
+
+            LoadDefaultTblHouseLogs();
+        }
+        private void TabPersonLogs_Reset()
+        {
+            TxtPersonLogsPersonId.Text = "";
+            TxtPersonLogsVillageName.Text = "";
+            TxtPersonLogsHouseId.Text = "";
+            TxtPersonLogsName.Text = "";
+            TxtPersonLogsAge.Text = "";
+            TxtPersonLogsGender.Text = "";
+            TxtPersonLogsPhoneNo.Text = "";
+
+            LoadDefaultTblPersonLogs();
         }
 
         /**********************************************************************************************************/
@@ -842,6 +972,61 @@ namespace OPD_Section
         private void BtnVillageReset_Click(object sender, EventArgs e)
         {
             TabVillage_Reset();
+        }
+
+        /**********************************************************************************************************/
+
+        // Village Logs Tab button Events
+        private void BtnVillageLogsSearch_Click(object sender, EventArgs e)
+        {
+
+            TblVillageLogs.Rows.Clear();
+
+            string vid = TxtVillageLogsVillageId.Text.Trim().ToUpper();
+            string vname = TxtVillageLogsVillageName.Text.Trim().ToUpper();
+            string vcode = TxtVillageLogsVillageCode.Text.Trim().ToUpper();
+
+            string sql = "SELECT * FROM LOGS_VILLAGES WHERE VILLAGE_ID LIKE '%" + vid + "%' AND VILLAGE_NAME LIKE '%" + vname + "%' AND VILLAGE_CODE LIKE '%" + vcode + "%'";
+
+            string connstring = "data source=.;initial catalog=sampledb; integrated security=True; MultipleActiveResultSets=True;";
+
+            using (var Conn = new SqlConnection(connstring))
+            {
+                Conn.Open();
+
+                SqlCommand cmd = new SqlCommand(sql, Conn);
+
+                using (SqlDataReader dr = cmd.ExecuteReader())
+                {
+                    if (dr.HasRows)
+                    {
+                        while (dr.Read())
+                        {
+                            DataGridViewRow row = new DataGridViewRow();
+                            row.CreateCells(TblVillageLogs);
+                            row.Cells[0].Value = dr["LOG_ID"];
+                            row.Cells[1].Value = dr["OP_TYPE"];
+                            row.Cells[2].Value = dr["VILLAGE_ID"];
+                            row.Cells[3].Value = dr["VILLAGE_NAME"];
+                            row.Cells[4].Value = dr["VILLAGE_CODE"];
+                            row.Cells[5].Value = dr["NO_OF_HOUSES"];
+                            TblVillageLogs.Rows.Add(row);
+
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("No Record To Display!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        TabVillageLogs_Reset();
+                    }
+                }
+            }
+
+        }
+        private void BtnVillageLogsReset_Click(object sender, EventArgs e)
+        {
+            TabVillageLogs_Reset();
         }
 
         /**********************************************************************************************************/
@@ -1076,6 +1261,86 @@ namespace OPD_Section
         private void BtnHouseReset_Click(object sender, EventArgs e)
         {
             TabHouse_Reset();
+        }
+
+        /**********************************************************************************************************/
+
+        // House Logs Tab button Events
+        private void BtnHouseLogsSearch_Click(object sender, EventArgs e)
+        {
+            TblHouseLogs.Rows.Clear();
+
+            string hid = TxtHouseLogsHouseId.Text.Trim().ToUpper();
+            string vname = TxtHouseLogsVillageName.Text.Trim().ToUpper();
+            string vid = "";
+
+            using (var context = new sampledbEntities())
+            {
+                foreach (var v in context.LOGS_VILLAGES)
+                {
+                    if (v.VILLAGE_NAME == vname)
+                    {
+                        vid = v.VILLAGE_ID.ToString();
+                        break;
+                    }
+                }
+            }
+
+            string sql = "SELECT * FROM LOGS_HOUSES WHERE HOUSE_ID LIKE '%" + hid + "%' AND VILLAGE_ID LIKE '%" + vid + "%'";
+
+            string connstring = "data source=.;initial catalog=sampledb; integrated security=True; MultipleActiveResultSets=True;";
+
+            using (var Conn = new SqlConnection(connstring))
+            {
+                Conn.Open();
+
+                SqlCommand cmd = new SqlCommand(sql, Conn);
+
+                using (SqlDataReader dr = cmd.ExecuteReader())
+                {
+                    if (dr.HasRows)
+                    {
+                        while (dr.Read())
+                        {
+                            DataGridViewRow row = new DataGridViewRow();
+                            row.CreateCells(TblHouseLogs);
+
+                            row.Cells[0].Value = dr["LOG_ID"];
+                            row.Cells[1].Value = dr["OP_TYPE"];
+                            row.Cells[2].Value = dr["HOUSE_ID"];
+
+                            string vname1 = "";
+
+                            using (var context = new sampledbEntities())
+                            {
+                                foreach (var v in context.LOGS_VILLAGES)
+                                {
+                                    if (v.VILLAGE_ID == Convert.ToInt32(dr["VILLAGE_ID"]))
+                                    {
+                                        vname1 = v.VILLAGE_NAME;
+                                        break;
+                                    }
+                                }
+                            }
+
+                            row.Cells[3].Value = vname1;
+                            row.Cells[4].Value = dr["NO_OF_PEOPLE"];
+                            TblHouseLogs.Rows.Add(row);
+
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("No Record To Display!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        TabHouseLogs_Reset();
+                    }
+                }
+            }
+        }
+        private void BtnHouseLogsReset_Click(object sender, EventArgs e)
+        {
+            TabHouseLogs_Reset();
         }
 
         /**********************************************************************************************************/
@@ -1377,6 +1642,110 @@ namespace OPD_Section
 
         /**********************************************************************************************************/
 
+        // House Logs Tab button Events
+        private void BtnPersonLogsSearch_Click(object sender, EventArgs e)
+        {
+            TblPersonLogs.Rows.Clear();
+
+            string pid = TxtPersonLogsPersonId.Text.Trim().ToUpper();
+
+            string vname = TxtPersonLogsVillageName.Text.Trim().ToUpper();
+            string vid = "";
+            if (TxtPersonLogsVillageName.Text != "")
+            {
+                using (var context = new sampledbEntities())
+                {
+                    foreach (var v in context.LOGS_VILLAGES)
+                    {
+                        if (v.VILLAGE_NAME == vname)
+                        {
+                            vid = v.VILLAGE_ID.ToString();
+                            break;
+                        }
+                    }
+                }
+            }
+
+            string hid = TxtPersonLogsHouseId.Text.Trim().ToUpper();
+            string name = TxtPersonLogsName.Text.Trim().ToUpper();
+            string age = TxtPersonLogsAge.Text;
+            string gender = TxtPersonLogsGender.Text.Trim().ToUpper();
+            string phoneno = TxtPersonLogsPhoneNo.Text.Trim().ToUpper();
+
+            string sql = "SELECT * FROM LOGS_PERSONS WHERE PERSON_ID LIKE '%" + pid + "%' AND HOUSE_ID IN (select TOP 1 HOUSE_ID from LOGS_HOUSES where VILLAGE_ID LIKE '%" + vid + "%') AND HOUSE_ID LIKE '%" + hid + "%'" +
+                         "AND NAME LIKE '%" + name + "%' AND AGE LIKE '%" + age + "%' AND GENDER LIKE '%" + gender + "%' AND PHONE_NO LIKE '%" + phoneno + "%'";
+
+            string connstring = "data source=.;initial catalog=sampledb; integrated security=True; MultipleActiveResultSets=True;";
+
+            using (var Conn = new SqlConnection(connstring))
+            {
+                Conn.Open();
+
+                SqlCommand cmd = new SqlCommand(sql, Conn);
+
+                using (SqlDataReader dr = cmd.ExecuteReader())
+                {
+                    if (dr.HasRows)
+                    {
+                        while (dr.Read())
+                        {
+                            DataGridViewRow row = new DataGridViewRow();
+                            row.CreateCells(TblPersonLogs);
+
+                            using (var context = new sampledbEntities())
+                            {
+                                int hid1 = Convert.ToInt32(dr["HOUSE_ID"]);
+                                int vid1 = -1;
+
+                                foreach (var h in context.LOGS_HOUSES)
+                                {
+                                    if (hid1 == h.HOUSE_ID)
+                                    {
+                                        vid1 = h.HOUSE_ID;
+                                        break;
+                                    }
+                                }
+
+                                string vname1 = "";
+
+                                foreach (var v in context.LOGS_VILLAGES)
+                                {
+                                    if (vid1 == v.VILLAGE_ID)
+                                    {
+                                        vname = v.VILLAGE_NAME;
+                                        break;
+                                    }
+                                }
+
+                                row.Cells[0].Value = dr["LOG_ID"];
+                                row.Cells[1].Value = dr["OP_TYPE"];
+                                row.Cells[2].Value = dr["PERSON_ID"];
+                                row.Cells[3].Value = dr["HOUSE_ID"];
+                                row.Cells[4].Value = vname1;
+                                row.Cells[5].Value = dr["NAME"];
+                                row.Cells[6].Value = dr["AGE"];
+                                row.Cells[7].Value = dr["GENDER"];
+                                row.Cells[8].Value = dr["PHONE_NO"];
+                                TblPersonLogs.Rows.Add(row);
+                            }
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("No Record To Display!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        TabPersonLogs_Reset();
+                    }
+                }
+            }
+        }
+        private void BtnPersonLogsReset_Click(object sender, EventArgs e)
+        {
+            TabPersonLogs_Reset();
+        }
+
+        /**********************************************************************************************************/
+
         // DataGridView Cell Mouse Double Click Events
         private void TblVillage_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -1505,7 +1874,12 @@ namespace OPD_Section
         }
         private void TxtVillageName_TextChanged(object sender, EventArgs e)
         {
+            if (!Regex.IsMatch(TxtVillageName.Text, @"[\p{L} ]+$") && TxtVillageName.Text != "")
+            {
+                MessageBox.Show("Enter only Alphabet and Spaces!!");
+                TxtVillageName.Text = TxtVillageName.Text.Remove(TxtVillageName.Text.Length - 1);
 
+            }
         }
         private void TxtVillageCode_TextChanged(object sender, EventArgs e)
         {
@@ -1549,6 +1923,37 @@ namespace OPD_Section
             PrintToExcel(TblVillage);
         }
 
+        // TblVillageLogs ContextMenu Event
+        private void TblVillageLogsPrintAsPDF_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void TblVillageLogsPrintAsExcel_Click(object sender, EventArgs e)
+        {
+            PrintToExcel(TblVillageLogs);
+        }
+
+        // TblPersonLogs ContextMenu Event
+        private void TblHouseLogsPrintAsPDF_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void TblHouseLogsPrintAsExcel_Click(object sender, EventArgs e)
+        {
+            PrintToExcel(TblHouseLogs);
+        }
+
+        // TblPersonLogs ContextMenu Event
+        private void TblPersonLogsPrintAsPDF_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void TblPersonLogsPrintAsExcel_Click(object sender, EventArgs e)
+        {
+            PrintToExcel(TblPersonLogs);
+        }
+
+
         // Custom Function to Print Table Data to Excel Sheet
         private void PrintToExcel(DataGridView Tbl)
         {
@@ -1567,8 +1972,6 @@ namespace OPD_Section
                     File.Delete(ExcelFilePath);
                 }
 
-                Tbl.RowHeadersVisible = false;
-
                 if (TblVillage.Rows.Count > 0)
                 {
                     Microsoft.Office.Interop.Excel.Application XcelApp = new Microsoft.Office.Interop.Excel.Application();
@@ -1582,6 +1985,9 @@ namespace OPD_Section
                     {
                         for (int j = 0; j < Tbl.Columns.Count; j++)
                         {
+
+                            Console.WriteLine("i = " + i + " j = " + j);
+
                             XcelApp.Cells[i + 2, j + 1] = Tbl.Rows[i].Cells[j].Value.ToString();
                         }
                     }
@@ -1592,8 +1998,6 @@ namespace OPD_Section
                     MessageBox.Show("Excel file saved!");
                 }
             }
-
-            Tbl.RowHeadersVisible = true;
         }
 
 
