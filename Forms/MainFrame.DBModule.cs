@@ -1,4 +1,6 @@
-﻿using System;
+﻿using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.IO;
@@ -15,6 +17,7 @@ namespace OPD_Section
         /*******************************************************************************************************************************************************************/
 
         // DataGridView Load Events
+
         private void LoadDefaultTblVillage()
         {
 
@@ -35,6 +38,7 @@ namespace OPD_Section
             }
 
         }
+
         private void LoadDefaultTblHouse()
         {
 
@@ -63,6 +67,7 @@ namespace OPD_Section
                 }
             }
         }
+
         private void LoadDefaultTblPerson()
         {
 
@@ -191,6 +196,7 @@ namespace OPD_Section
         /**********************************************************************************************************/
 
         // Combobox Load Events
+
         private void LoadTxtHouseVillageName()
         {
             TxtHouseVillageName.DataSource = null;
@@ -208,6 +214,7 @@ namespace OPD_Section
 
             TxtHouseVillageName.DataSource = new BindingSource(comboSource, null);
         }
+
         private void LoadTxtPersonVillageName()
         {
             TxtPersonVillageName.Items.Clear();
@@ -1427,7 +1434,7 @@ namespace OPD_Section
         // TblPerson ContextMenu Events
         private void TblPersonPrintAsPDF_Click(object sender, EventArgs e)
         {
-
+            PrintToPDF(TblPerson);
         }
         private void TblPersonPrintAsExcel_Click(object sender, EventArgs e)
         {
@@ -1437,7 +1444,7 @@ namespace OPD_Section
         // TblHouse ContextMenu Events
         private void TblHousePrintAsPDF_Click(object sender, EventArgs e)
         {
-
+            PrintToPDF(TblHouse);
         }
         private void TblHousePrintAsExcel_Click(object sender, EventArgs e)
         {
@@ -1447,7 +1454,7 @@ namespace OPD_Section
         // TblVillage ContextMenu Events
         private void TblVillagePrintAsPDF_Click(object sender, EventArgs e)
         {
-
+            PrintToPDF(TblVillage);
         }
         private void TblVillagePrintAsExcel_Click(object sender, EventArgs e)
         {
@@ -1457,7 +1464,7 @@ namespace OPD_Section
         // TblVillageLogs ContextMenu Event
         private void TblVillageLogsPrintAsPDF_Click(object sender, EventArgs e)
         {
-
+            PrintToPDF(TblVillageLogs);
         }
         private void TblVillageLogsPrintAsExcel_Click(object sender, EventArgs e)
         {
@@ -1467,7 +1474,7 @@ namespace OPD_Section
         // TblPersonLogs ContextMenu Event
         private void TblHouseLogsPrintAsPDF_Click(object sender, EventArgs e)
         {
-
+            PrintToPDF(TblHouseLogs);
         }
         private void TblHouseLogsPrintAsExcel_Click(object sender, EventArgs e)
         {
@@ -1477,7 +1484,7 @@ namespace OPD_Section
         // TblPersonLogs ContextMenu Event
         private void TblPersonLogsPrintAsPDF_Click(object sender, EventArgs e)
         {
-
+            PrintToPDF(TblPersonLogs);
         }
         private void TblPersonLogsPrintAsExcel_Click(object sender, EventArgs e)
         {
@@ -1485,7 +1492,7 @@ namespace OPD_Section
         }
 
 
-        // Custom Function to Print Table Data to Excel Sheet
+
         private void PrintToExcel(DataGridView Tbl)
         {
             SaveFileDialog FileDialog = new SaveFileDialog
@@ -1507,7 +1514,7 @@ namespace OPD_Section
                 {
                     Microsoft.Office.Interop.Excel.Application XcelApp = new Microsoft.Office.Interop.Excel.Application();
                     XcelApp.Application.Workbooks.Add();
-                    Microsoft.Office.Interop.Excel._Worksheet Worksheet = XcelApp.ActiveSheet;
+                    Microsoft.Office.Interop.Excel._Worksheet Worksheet = (Microsoft.Office.Interop.Excel._Worksheet)XcelApp.ActiveSheet;
                     for (int i = 1; i < Tbl.Columns.Count + 1; i++)
                     {
                         XcelApp.Cells[1, i] = Tbl.Columns[i - 1].HeaderText;
@@ -1528,6 +1535,76 @@ namespace OPD_Section
                     XcelApp.Quit();
                     MessageBox.Show("Excel file saved!");
                 }
+            }
+        }
+
+        private void PrintToPDF(DataGridView Tbl)
+        {
+            if (dataGridView1.Rows.Count > 0)
+            {
+                SaveFileDialog save = new SaveFileDialog();
+                save.Filter = "PDF (*.pdf)|*.pdf";
+                bool ErrorMessage = false;
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    if (File.Exists(save.FileName))
+                    {
+                        try
+                        {
+                            File.Delete(save.FileName);
+                        }
+                        catch (Exception ex)
+                        {
+
+                            ErrorMessage = true;
+                            MessageBox.Show("Unable to Write Data on Disk!" + ex.Message);
+                        }
+                    }
+                    if (!ErrorMessage)
+                    {
+                        try
+                        {
+                            PdfPTable pTable = new PdfPTable(Tbl.Columns.Count);
+                            pTable.DefaultCell.Padding = 2;
+                            pTable.WidthPercentage = 100;
+                            pTable.HorizontalAlignment = Element.ALIGN_LEFT;
+
+                            foreach (DataGridViewColumn col in Tbl.Columns)
+                            {
+                                PdfPCell pCell = new PdfPCell(new Phrase(col.HeaderText));
+                                pTable.AddCell(pCell);
+                            }
+                            foreach (DataGridViewRow viewRow in Tbl.Rows)
+                            {
+                                foreach (DataGridViewCell dcell in viewRow.Cells)
+                                {
+                                    pTable.AddCell(dcell.Value.ToString());
+                                }
+                            }
+
+                            using (FileStream fileStream = new FileStream(save.FileName, FileMode.Create))
+                            {
+                                Document document = new Document(PageSize.A4, 12f, 20f, 20f, 12f);
+                                document.Open();
+                                document.Add(pTable);
+                                document.Close();
+                                fileStream.Close();
+                            }
+                            MessageBox.Show("Operation Successfully Performed", "Information");
+
+                        }
+                        catch (Exception ex)
+                        {
+
+                            MessageBox.Show("An Error Occurred While Exporting Data!" + ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("No Record Found", "Information");
+
             }
         }
 

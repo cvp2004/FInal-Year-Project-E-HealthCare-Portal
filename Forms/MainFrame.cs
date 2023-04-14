@@ -475,7 +475,5 @@ namespace OPD_Section
             Application.Exit();
         }
 
-
-
     }
 }
