@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="sampledbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DISPOSABLES">
+    <Key>
+      <PropertyRef Name="DISPOSABLE_ID" />
+    </Key>
+    <Property Name="DISPOSABLE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DISPOSABLE_NAME" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="QUANTITY" Type="int" Nullable="false" />
+  </EntityType>
   <EntityType Name="HOUSES">
     <Key>
       <PropertyRef Name="HOUSE_ID" />
@@ -8,21 +16,39 @@
     <Property Name="VILLAGE_ID" Type="int" Nullable="false" />
     <Property Name="NO_OF_PEOPLE" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="ITEMS">
+  <EntityType Name="LOGS_HOUSES">
     <Key>
-      <PropertyRef Name="ITEM_ID" />
+      <PropertyRef Name="LOG_ID" />
     </Key>
-    <Property Name="ITEM_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ITEM_NAME" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="ITEM_TYPE_ID" Type="int" Nullable="false" />
-    <Property Name="ITEM_EXPIRY" Type="date" />
+    <Property Name="LOG_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OP_TYPE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="HOUSE_ID" Type="int" Nullable="false" />
+    <Property Name="VILLAGE_ID" Type="int" Nullable="false" />
+    <Property Name="NO_OF_PEOPLE" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="ITEMTYPES">
+  <EntityType Name="LOGS_PERSONS">
     <Key>
-      <PropertyRef Name="ITEM_TYPE_ID" />
+      <PropertyRef Name="LOG_ID" />
     </Key>
-    <Property Name="ITEM_TYPE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ITEM_TYPE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LOG_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OP_TYPE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PERSON_ID" Type="int" Nullable="false" />
+    <Property Name="HOUSE_ID" Type="int" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AGE" Type="int" Nullable="false" />
+    <Property Name="GENDER" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PHONE_NO" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LOGS_VILLAGES">
+    <Key>
+      <PropertyRef Name="LOG_ID" />
+    </Key>
+    <Property Name="LOG_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OP_TYPE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="VILLAGE_ID" Type="int" Nullable="false" />
+    <Property Name="VILLAGE_NAME" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="VILLAGE_CODE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NO_OF_HOUSES" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="MEDICINES">
     <Key>
@@ -33,6 +59,33 @@
     <Property Name="QUANTITY" Type="int" />
     <Property Name="EXPIRY" Type="date" Nullable="false" />
   </EntityType>
+  <EntityType Name="MISCELLANEOUS">
+    <Key>
+      <PropertyRef Name="MISCELLANEOUS_ID" />
+    </Key>
+    <Property Name="MISCELLANEOUS_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MISCELLANEOUS_NAME" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="QUANTITY" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NOTES">
+    <Key>
+      <PropertyRef Name="NOTE_ID" />
+    </Key>
+    <Property Name="NOTE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VISIT_ID" Type="int" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SAMPLEDB.dbo.NOTES_ARCHIVE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="NOTES_ARCHIVE">
+    <Key>
+      <PropertyRef Name="NOTE_ID" />
+      <PropertyRef Name="VISIT_ID" />
+    </Key>
+    <Property Name="NOTE_ID" Type="int" Nullable="false" />
+    <Property Name="VISIT_ID" Type="int" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="varchar(max)" />
+  </EntityType>
   <EntityType Name="PERSONS">
     <Key>
       <PropertyRef Name="PERSON_ID" />
@@ -42,7 +95,7 @@
     <Property Name="NAME" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="AGE" Type="int" Nullable="false" />
     <Property Name="GENDER" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="PHONE_NO" Type="varchar" MaxLength="15" />
+    <Property Name="PHONE_NO" Type="varchar" MaxLength="15" Nullable="false" />
   </EntityType>
   <EntityType Name="PRESCRIPTIONS">
     <Key>
@@ -52,19 +105,30 @@
     <Property Name="VISIT_ID" Type="int" Nullable="false" />
     <Property Name="MEDICINE_ID" Type="int" Nullable="false" />
     <Property Name="QUANTITY" Type="int" Nullable="false" />
+    <Property Name="MEDICINE_NAME" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'sampledb1.dbo.PRESCRIPTIONS_ARCHIVE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'SAMPLEDB.dbo.PRESCRIPTIONS_ARCHIVE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="PRESCRIPTIONS_ARCHIVE">
     <Key>
       <PropertyRef Name="PRESCRIPTION_ID" />
       <PropertyRef Name="VISIT_ID" />
       <PropertyRef Name="MEDICINE_ID" />
       <PropertyRef Name="QUANTITY" />
+      <PropertyRef Name="MEDICINE_NAME" />
     </Key>
     <Property Name="PRESCRIPTION_ID" Type="int" Nullable="false" />
     <Property Name="VISIT_ID" Type="int" Nullable="false" />
     <Property Name="MEDICINE_ID" Type="int" Nullable="false" />
+    <Property Name="QUANTITY" Type="int" Nullable="false" />
+    <Property Name="MEDICINE_NAME" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="STATIONARY">
+    <Key>
+      <PropertyRef Name="STATIONARY_ID" />
+    </Key>
+    <Property Name="STATIONARY_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="STATIONARY_NAME" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="QUANTITY" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="SYMPTOMS">
@@ -74,17 +138,20 @@ warning 6002: The table/view 'sampledb1.dbo.PRESCRIPTIONS_ARCHIVE' does not have
     <Property Name="SYMPTOM_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="VISIT_ID" Type="int" Nullable="false" />
     <Property Name="DESCRIPTION" Type="varchar(max)" />
+    <Property Name="SYMPTOM_NAME" Type="varchar(max)" Nullable="false" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'sampledb1.dbo.SYMPTOMS_ARCHIVE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'SAMPLEDB.dbo.SYMPTOMS_ARCHIVE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="SYMPTOMS_ARCHIVE">
     <Key>
       <PropertyRef Name="SYMPTOM_ID" />
       <PropertyRef Name="VISIT_ID" />
+      <PropertyRef Name="SYMPTOM_NAME" />
     </Key>
     <Property Name="SYMPTOM_ID" Type="int" Nullable="false" />
     <Property Name="VISIT_ID" Type="int" Nullable="false" />
     <Property Name="DESCRIPTION" Type="varchar(max)" />
+    <Property Name="SYMPTOM_NAME" Type="varchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -116,7 +183,7 @@ warning 6002: The table/view 'sampledb1.dbo.SYMPTOMS_ARCHIVE' does not have a pr
     <Property Name="TIME" Type="time" Precision="7" Nullable="false" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'sampledb1.dbo.VISITS_ARCHIVE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'SAMPLEDB.dbo.VISITS_ARCHIVE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="VISITS_ARCHIVE">
     <Key>
       <PropertyRef Name="VISIT_ID" />
@@ -132,7 +199,7 @@ warning 6002: The table/view 'sampledb1.dbo.VISITS_ARCHIVE' does not have a prim
     <Property Name="TIME" Type="time" Precision="7" Nullable="false" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'sampledb1.dbo.VIEW_PERSON_UID' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="VIEW_PERSON_UID">
     <Key>
       <PropertyRef Name="PERSON_ID" />
@@ -152,15 +219,15 @@ warning 6002: The table/view 'sampledb1.dbo.VIEW_PERSON_UID' does not have a pri
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_ITEMS_ITEM_TYPE_ID">
-    <End Role="ITEMTYPES" Type="Self.ITEMTYPES" Multiplicity="1" />
-    <End Role="ITEMS" Type="Self.ITEMS" Multiplicity="*" />
+  <Association Name="FK_NOTES_VISIT_ID">
+    <End Role="VISITS" Type="Self.VISITS" Multiplicity="1" />
+    <End Role="NOTES" Type="Self.NOTES" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="ITEMTYPES">
-        <PropertyRef Name="ITEM_TYPE_ID" />
+      <Principal Role="VISITS">
+        <PropertyRef Name="VISIT_ID" />
       </Principal>
-      <Dependent Role="ITEMS">
-        <PropertyRef Name="ITEM_TYPE_ID" />
+      <Dependent Role="NOTES">
+        <PropertyRef Name="VISIT_ID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -224,30 +291,75 @@ warning 6002: The table/view 'sampledb1.dbo.VIEW_PERSON_UID' does not have a pri
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="sampledbModelStoreContainer">
+    <EntitySet Name="DISPOSABLES" EntityType="Self.DISPOSABLES" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HOUSES" EntityType="Self.HOUSES" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="ITEMS" EntityType="Self.ITEMS" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="ITEMTYPES" EntityType="Self.ITEMTYPES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LOGS_HOUSES" EntityType="Self.LOGS_HOUSES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LOGS_PERSONS" EntityType="Self.LOGS_PERSONS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LOGS_VILLAGES" EntityType="Self.LOGS_VILLAGES" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MEDICINES" EntityType="Self.MEDICINES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MISCELLANEOUS" EntityType="Self.MISCELLANEOUS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NOTES" EntityType="Self.NOTES" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PERSONS" EntityType="Self.PERSONS" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PRESCRIPTIONS" EntityType="Self.PRESCRIPTIONS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="STATIONARY" EntityType="Self.STATIONARY" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SYMPTOMS" EntityType="Self.SYMPTOMS" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="VILLAGES" EntityType="Self.VILLAGES" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="VISITS" EntityType="Self.VISITS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NOTES_ARCHIVE" EntityType="Self.NOTES_ARCHIVE" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [NOTES_ARCHIVE].[NOTE_ID] AS [NOTE_ID], 
+    [NOTES_ARCHIVE].[VISIT_ID] AS [VISIT_ID], 
+    [NOTES_ARCHIVE].[DESCRIPTION] AS [DESCRIPTION]
+    FROM [dbo].[NOTES_ARCHIVE] AS [NOTES_ARCHIVE]</DefiningQuery>
+    </EntitySet>
     <EntitySet Name="PRESCRIPTIONS_ARCHIVE" EntityType="Self.PRESCRIPTIONS_ARCHIVE" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [PRESCRIPTIONS_ARCHIVE].[PRESCRIPTION_ID] AS [PRESCRIPTION_ID], 
     [PRESCRIPTIONS_ARCHIVE].[VISIT_ID] AS [VISIT_ID], 
     [PRESCRIPTIONS_ARCHIVE].[MEDICINE_ID] AS [MEDICINE_ID], 
-    [PRESCRIPTIONS_ARCHIVE].[QUANTITY] AS [QUANTITY]
+    [PRESCRIPTIONS_ARCHIVE].[QUANTITY] AS [QUANTITY], 
+    [PRESCRIPTIONS_ARCHIVE].[MEDICINE_NAME] AS [MEDICINE_NAME]
     FROM [dbo].[PRESCRIPTIONS_ARCHIVE] AS [PRESCRIPTIONS_ARCHIVE]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="SYMPTOMS_ARCHIVE" EntityType="Self.SYMPTOMS_ARCHIVE" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [SYMPTOMS_ARCHIVE].[SYMPTOM_ID] AS [SYMPTOM_ID], 
     [SYMPTOMS_ARCHIVE].[VISIT_ID] AS [VISIT_ID], 
-    [SYMPTOMS_ARCHIVE].[DESCRIPTION] AS [DESCRIPTION]
+    [SYMPTOMS_ARCHIVE].[DESCRIPTION] AS [DESCRIPTION], 
+    [SYMPTOMS_ARCHIVE].[SYMPTOM_NAME] AS [SYMPTOM_NAME]
     FROM [dbo].[SYMPTOMS_ARCHIVE] AS [SYMPTOMS_ARCHIVE]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="VISITS_ARCHIVE" EntityType="Self.VISITS_ARCHIVE" store:Type="Tables" store:Schema="dbo">
@@ -269,9 +381,9 @@ warning 6002: The table/view 'sampledb1.dbo.VIEW_PERSON_UID' does not have a pri
       <End Role="VILLAGES" EntitySet="VILLAGES" />
       <End Role="HOUSES" EntitySet="HOUSES" />
     </AssociationSet>
-    <AssociationSet Name="FK_ITEMS_ITEM_TYPE_ID" Association="Self.FK_ITEMS_ITEM_TYPE_ID">
-      <End Role="ITEMTYPES" EntitySet="ITEMTYPES" />
-      <End Role="ITEMS" EntitySet="ITEMS" />
+    <AssociationSet Name="FK_NOTES_VISIT_ID" Association="Self.FK_NOTES_VISIT_ID">
+      <End Role="VISITS" EntitySet="VISITS" />
+      <End Role="NOTES" EntitySet="NOTES" />
     </AssociationSet>
     <AssociationSet Name="FK_PERSONS_HOUSE_ID" Association="Self.FK_PERSONS_HOUSE_ID">
       <End Role="HOUSES" EntitySet="HOUSES" />

@@ -12,15 +12,10 @@ namespace OPD_Section
     using System;
     using System.Collections.Generic;
     
-    public partial class PRESCRIPTION
+    public partial class STATIONARY
     {
-        public int PRESCRIPTION_ID { get; set; }
-        public int VISIT_ID { get; set; }
-        public int MEDICINE_ID { get; set; }
+        public int STATIONARY_ID { get; set; }
+        public string STATIONARY_NAME { get; set; }
         public int QUANTITY { get; set; }
-        public string MEDICINE_NAME { get; set; }
-    
-        public virtual MEDICINE MEDICINE { get; set; }
-        public virtual VISIT VISIT { get; set; }
     }
 }

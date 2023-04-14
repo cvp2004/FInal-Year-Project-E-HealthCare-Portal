@@ -146,6 +146,97 @@
             this.TblPersonContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.TblPersonPrintAsPDF = new System.Windows.Forms.ToolStripMenuItem();
             this.TblPersonPrintAsExcel = new System.Windows.Forms.ToolStripMenuItem();
+            this.LogsTab = new System.Windows.Forms.TabPage();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.BtnVillageLogsReset = new System.Windows.Forms.Button();
+            this.BtnVillageLogsSearch = new System.Windows.Forms.Button();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.TxtVillageLogsNoOfHouses = new System.Windows.Forms.TextBox();
+            this.TxtVillageLogsVillageCode = new System.Windows.Forms.TextBox();
+            this.TxtVillageLogsVillageName = new System.Windows.Forms.TextBox();
+            this.TxtVillageLogsVillageId = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.TblVillageLogs = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TblVillageLogsContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.TblVillageLogsPrintAsPDF = new System.Windows.Forms.ToolStripMenuItem();
+            this.TblVillageLogsPrintAsExcel = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.BtnHouseLogsReset = new System.Windows.Forms.Button();
+            this.BtnHouseLogsSearch = new System.Windows.Forms.Button();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.TxtHouseLogsNoOfPeople = new System.Windows.Forms.TextBox();
+            this.TxtHouseLogsVillageName = new System.Windows.Forms.TextBox();
+            this.TxtHouseLogsHouseId = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.TblHouseLogs = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TblHouseLogsContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.TblHouseLogsPrintAsPDF = new System.Windows.Forms.ToolStripMenuItem();
+            this.TblHouseLogsPrintAsExcel = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.BtnPersonLogsReset = new System.Windows.Forms.Button();
+            this.BtnPersonLogsSearch = new System.Windows.Forms.Button();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.TxtPersonLogsPhoneNo = new System.Windows.Forms.TextBox();
+            this.TxtPersonLogsName = new System.Windows.Forms.TextBox();
+            this.TxtPersonLogsGender = new System.Windows.Forms.TextBox();
+            this.TxtPersonLogsAge = new System.Windows.Forms.TextBox();
+            this.TxtPersonLogsVillageName = new System.Windows.Forms.TextBox();
+            this.TxtPersonLogsHouseId = new System.Windows.Forms.TextBox();
+            this.TxtPersonLogsPersonId = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.TblPersonLogs = new System.Windows.Forms.DataGridView();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TblPersonLogsContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.TblPersonLogsPrintAsPDF = new System.Windows.Forms.ToolStripMenuItem();
+            this.TblPersonLogsPrintAsExcel = new System.Windows.Forms.ToolStripMenuItem();
             this.InnerImageList = new System.Windows.Forms.ImageList(this.components);
             this.InventoryTab = new System.Windows.Forms.TabPage();
             this.UpperPanel = new System.Windows.Forms.Panel();
@@ -160,9 +251,6 @@
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.imageList3 = new System.Windows.Forms.ImageList(this.components);
             this.imageList4 = new System.Windows.Forms.ImageList(this.components);
-            this.imageList5 = new System.Windows.Forms.ImageList(this.components);
-            this.imageList6 = new System.Windows.Forms.ImageList(this.components);
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.LowerPanel.SuspendLayout();
             this.OuterTabControl.SuspendLayout();
             this.OPDTab.SuspendLayout();
@@ -197,6 +285,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.TxtPersonAge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TblPerson)).BeginInit();
             this.TblPersonContextMenuStrip.SuspendLayout();
+            this.LogsTab.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TblVillageLogs)).BeginInit();
+            this.TblVillageLogsContextMenuStrip.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
+            this.splitContainer3.Panel1.SuspendLayout();
+            this.splitContainer3.Panel2.SuspendLayout();
+            this.splitContainer3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TblHouseLogs)).BeginInit();
+            this.TblHouseLogsContextMenuStrip.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
+            this.splitContainer4.Panel1.SuspendLayout();
+            this.splitContainer4.Panel2.SuspendLayout();
+            this.splitContainer4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TblPersonLogs)).BeginInit();
+            this.TblPersonLogsContextMenuStrip.SuspendLayout();
             this.UpperPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SplitContainer)).BeginInit();
             this.SplitContainer.Panel1.SuspendLayout();
@@ -212,7 +323,7 @@
             this.LowerPanel.Location = new System.Drawing.Point(0, 0);
             this.LowerPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LowerPanel.Name = "LowerPanel";
-            this.LowerPanel.Size = new System.Drawing.Size(1540, 904);
+            this.LowerPanel.Size = new System.Drawing.Size(1770, 904);
             this.LowerPanel.TabIndex = 0;
             // 
             // OuterTabControl
@@ -228,7 +339,7 @@
             this.OuterTabControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OuterTabControl.Name = "OuterTabControl";
             this.OuterTabControl.SelectedIndex = 0;
-            this.OuterTabControl.Size = new System.Drawing.Size(1540, 904);
+            this.OuterTabControl.Size = new System.Drawing.Size(1770, 904);
             this.OuterTabControl.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.OuterTabControl.TabIndex = 0;
             // 
@@ -238,7 +349,7 @@
             this.HomeTab.Location = new System.Drawing.Point(4, 44);
             this.HomeTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.HomeTab.Name = "HomeTab";
-            this.HomeTab.Size = new System.Drawing.Size(1532, 856);
+            this.HomeTab.Size = new System.Drawing.Size(1762, 856);
             this.HomeTab.TabIndex = 3;
             this.HomeTab.Text = "   Home Page   ";
             this.HomeTab.UseVisualStyleBackColor = true;
@@ -251,7 +362,7 @@
             this.OPDTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OPDTab.Name = "OPDTab";
             this.OPDTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.OPDTab.Size = new System.Drawing.Size(1532, 856);
+            this.OPDTab.Size = new System.Drawing.Size(1762, 856);
             this.OPDTab.TabIndex = 1;
             this.OPDTab.Text = "   OPD Clinic   ";
             this.OPDTab.UseVisualStyleBackColor = true;
@@ -263,7 +374,7 @@
             this.panel5.Location = new System.Drawing.Point(3, 2);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1526, 852);
+            this.panel5.Size = new System.Drawing.Size(1756, 852);
             this.panel5.TabIndex = 1;
             // 
             // splitContainer1
@@ -287,8 +398,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
-            this.splitContainer1.Size = new System.Drawing.Size(1526, 852);
-            this.splitContainer1.SplitterDistance = 395;
+            this.splitContainer1.Size = new System.Drawing.Size(1756, 852);
+            this.splitContainer1.SplitterDistance = 454;
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -299,7 +410,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel6.Location = new System.Drawing.Point(0, 629);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(395, 223);
+            this.panel6.Size = new System.Drawing.Size(454, 223);
             this.panel6.TabIndex = 40;
             // 
             // btn_newrecord
@@ -321,7 +432,7 @@
             this.btn_archieve.BackColor = System.Drawing.Color.Gold;
             this.btn_archieve.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_archieve.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btn_archieve.Location = new System.Drawing.Point(7, 0);
+            this.btn_archieve.Location = new System.Drawing.Point(66, 0);
             this.btn_archieve.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_archieve.Name = "btn_archieve";
             this.btn_archieve.Size = new System.Drawing.Size(388, 223);
@@ -339,7 +450,7 @@
             this.txt_personname.Location = new System.Drawing.Point(29, 394);
             this.txt_personname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_personname.Name = "txt_personname";
-            this.txt_personname.Size = new System.Drawing.Size(96, 34);
+            this.txt_personname.Size = new System.Drawing.Size(155, 34);
             this.txt_personname.TabIndex = 35;
             this.txt_personname.TextChanged += new System.EventHandler(this.txt_personname_TextChanged);
             // 
@@ -361,7 +472,7 @@
             this.txt_personid.Location = new System.Drawing.Point(29, 271);
             this.txt_personid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_personid.Name = "txt_personid";
-            this.txt_personid.Size = new System.Drawing.Size(96, 34);
+            this.txt_personid.Size = new System.Drawing.Size(155, 34);
             this.txt_personid.TabIndex = 33;
             this.txt_personid.TextChanged += new System.EventHandler(this.txt_personid_TextChanged);
             // 
@@ -384,7 +495,7 @@
             this.txt_visitid.Location = new System.Drawing.Point(29, 144);
             this.txt_visitid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_visitid.Name = "txt_visitid";
-            this.txt_visitid.Size = new System.Drawing.Size(96, 34);
+            this.txt_visitid.Size = new System.Drawing.Size(155, 34);
             this.txt_visitid.TabIndex = 31;
             this.txt_visitid.TextChanged += new System.EventHandler(this.txt_visitid_TextChanged);
             // 
@@ -405,7 +516,7 @@
             this.label6.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(21, 49);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(167, 37);
+            this.label6.Size = new System.Drawing.Size(226, 37);
             this.label6.TabIndex = 29;
             this.label6.Text = "OPD Section";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -431,7 +542,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 50;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1126, 852);
+            this.dataGridView1.Size = new System.Drawing.Size(1297, 852);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
@@ -478,7 +589,7 @@
             this.DBTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DBTab.Name = "DBTab";
             this.DBTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.DBTab.Size = new System.Drawing.Size(1532, 856);
+            this.DBTab.Size = new System.Drawing.Size(1762, 856);
             this.DBTab.TabIndex = 0;
             this.DBTab.Text = "   Database Records   ";
             this.DBTab.UseVisualStyleBackColor = true;
@@ -488,13 +599,14 @@
             this.InnerTabControl.Controls.Add(this.VillagesTab);
             this.InnerTabControl.Controls.Add(this.HousesTab);
             this.InnerTabControl.Controls.Add(this.PeopleTab);
+            this.InnerTabControl.Controls.Add(this.LogsTab);
             this.InnerTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InnerTabControl.ImageList = this.InnerImageList;
             this.InnerTabControl.ItemSize = new System.Drawing.Size(71, 35);
             this.InnerTabControl.Location = new System.Drawing.Point(3, 2);
             this.InnerTabControl.Name = "InnerTabControl";
             this.InnerTabControl.SelectedIndex = 0;
-            this.InnerTabControl.Size = new System.Drawing.Size(1526, 852);
+            this.InnerTabControl.Size = new System.Drawing.Size(1756, 852);
             this.InnerTabControl.TabIndex = 1;
             // 
             // VillagesTab
@@ -505,7 +617,7 @@
             this.VillagesTab.Location = new System.Drawing.Point(4, 39);
             this.VillagesTab.Name = "VillagesTab";
             this.VillagesTab.Padding = new System.Windows.Forms.Padding(3);
-            this.VillagesTab.Size = new System.Drawing.Size(1518, 809);
+            this.VillagesTab.Size = new System.Drawing.Size(1748, 809);
             this.VillagesTab.TabIndex = 0;
             this.VillagesTab.Text = "   Villages   ";
             this.VillagesTab.UseVisualStyleBackColor = true;
@@ -515,6 +627,7 @@
             this.VillagesSplitContainer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.VillagesSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.VillagesSplitContainer.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.VillagesSplitContainer.IsSplitterFixed = true;
             this.VillagesSplitContainer.Location = new System.Drawing.Point(3, 3);
             this.VillagesSplitContainer.Name = "VillagesSplitContainer";
             // 
@@ -545,43 +658,44 @@
             // 
             this.VillagesSplitContainer.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.VillagesSplitContainer.Panel2.Controls.Add(this.TblVillage);
-            this.VillagesSplitContainer.Size = new System.Drawing.Size(1512, 803);
-            this.VillagesSplitContainer.SplitterDistance = 425;
+            this.VillagesSplitContainer.Size = new System.Drawing.Size(1742, 803);
+            this.VillagesSplitContainer.SplitterDistance = 420;
             this.VillagesSplitContainer.SplitterWidth = 5;
             this.VillagesSplitContainer.TabIndex = 0;
             // 
             // BtnVillageReset
             // 
-            this.BtnVillageReset.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnVillageReset.AutoSize = true;
-            this.BtnVillageReset.Location = new System.Drawing.Point(16, 610);
+            this.BtnVillageReset.Location = new System.Drawing.Point(151, 608);
             this.BtnVillageReset.Name = "BtnVillageReset";
             this.BtnVillageReset.Size = new System.Drawing.Size(244, 41);
             this.BtnVillageReset.TabIndex = 4;
             this.BtnVillageReset.Text = "RESET";
             this.BtnVillageReset.UseVisualStyleBackColor = true;
+            this.BtnVillageReset.Click += new System.EventHandler(this.BtnVillageReset_Click);
             // 
             // BtnVillageSearch
             // 
-            this.BtnVillageSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnVillageSearch.AutoSize = true;
-            this.BtnVillageSearch.Location = new System.Drawing.Point(16, 535);
+            this.BtnVillageSearch.Location = new System.Drawing.Point(288, 535);
             this.BtnVillageSearch.Name = "BtnVillageSearch";
             this.BtnVillageSearch.Size = new System.Drawing.Size(244, 41);
             this.BtnVillageSearch.TabIndex = 4;
             this.BtnVillageSearch.Text = "SEARCH";
             this.BtnVillageSearch.UseVisualStyleBackColor = true;
+            this.BtnVillageSearch.Click += new System.EventHandler(this.BtnVillageSearch_Click);
             // 
             // BtnVillageUpdate
             // 
-            this.BtnVillageUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnVillageUpdate.AutoSize = true;
-            this.BtnVillageUpdate.Location = new System.Drawing.Point(16, 459);
+            this.BtnVillageUpdate.Location = new System.Drawing.Point(288, 459);
             this.BtnVillageUpdate.Name = "BtnVillageUpdate";
             this.BtnVillageUpdate.Size = new System.Drawing.Size(244, 41);
             this.BtnVillageUpdate.TabIndex = 4;
             this.BtnVillageUpdate.Text = "UPDATE";
-            this.BtnVillageUpdate.UseVisualStyleBackColor = true;
+            this.BtnVillageUpdate.UseMnemonic = false;
+            this.BtnVillageUpdate.UseVisualStyleBackColor = false;
+            this.BtnVillageUpdate.Click += new System.EventHandler(this.BtnVillageUpdate_Click);
             // 
             // BtnVillageDelete
             // 
@@ -592,6 +706,7 @@
             this.BtnVillageDelete.TabIndex = 4;
             this.BtnVillageDelete.Text = "DELETE";
             this.BtnVillageDelete.UseVisualStyleBackColor = true;
+            this.BtnVillageDelete.Click += new System.EventHandler(this.BtnVillageDelete_Click);
             // 
             // BtnVillageInsert
             // 
@@ -602,51 +717,42 @@
             this.BtnVillageInsert.TabIndex = 4;
             this.BtnVillageInsert.Text = "INSERT";
             this.BtnVillageInsert.UseVisualStyleBackColor = true;
+            this.BtnVillageInsert.Click += new System.EventHandler(this.BtnVillageInsert_Click);
             // 
             // panel4
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Location = new System.Drawing.Point(16, 426);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(240, 2);
+            this.panel4.Size = new System.Drawing.Size(516, 2);
             this.panel4.TabIndex = 3;
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Location = new System.Drawing.Point(16, 343);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(240, 2);
+            this.panel3.Size = new System.Drawing.Size(516, 2);
             this.panel3.TabIndex = 3;
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Location = new System.Drawing.Point(16, 260);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(240, 2);
+            this.panel2.Size = new System.Drawing.Size(516, 2);
             this.panel2.TabIndex = 3;
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Location = new System.Drawing.Point(16, 176);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(240, 2);
+            this.panel1.Size = new System.Drawing.Size(516, 2);
             this.panel1.TabIndex = 3;
             // 
             // TxtVillageNoOfHouses
             // 
-            this.TxtVillageNoOfHouses.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtVillageNoOfHouses.BackColor = System.Drawing.Color.White;
             this.TxtVillageNoOfHouses.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtVillageNoOfHouses.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -654,47 +760,44 @@
             this.TxtVillageNoOfHouses.Location = new System.Drawing.Point(16, 397);
             this.TxtVillageNoOfHouses.Name = "TxtVillageNoOfHouses";
             this.TxtVillageNoOfHouses.ReadOnly = true;
-            this.TxtVillageNoOfHouses.Size = new System.Drawing.Size(240, 27);
+            this.TxtVillageNoOfHouses.Size = new System.Drawing.Size(516, 27);
             this.TxtVillageNoOfHouses.TabIndex = 0;
             // 
             // TxtVillageCode
             // 
-            this.TxtVillageCode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtVillageCode.BackColor = System.Drawing.Color.White;
             this.TxtVillageCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtVillageCode.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtVillageCode.HideSelection = false;
             this.TxtVillageCode.Location = new System.Drawing.Point(16, 314);
             this.TxtVillageCode.Name = "TxtVillageCode";
-            this.TxtVillageCode.Size = new System.Drawing.Size(240, 27);
+            this.TxtVillageCode.Size = new System.Drawing.Size(516, 27);
             this.TxtVillageCode.TabIndex = 0;
+            this.TxtVillageCode.TextChanged += new System.EventHandler(this.TxtVillageCode_TextChanged);
             // 
             // TxtVillageName
             // 
-            this.TxtVillageName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtVillageName.BackColor = System.Drawing.Color.White;
             this.TxtVillageName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtVillageName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtVillageName.HideSelection = false;
             this.TxtVillageName.Location = new System.Drawing.Point(16, 231);
             this.TxtVillageName.Name = "TxtVillageName";
-            this.TxtVillageName.Size = new System.Drawing.Size(240, 27);
+            this.TxtVillageName.Size = new System.Drawing.Size(516, 27);
             this.TxtVillageName.TabIndex = 0;
+            this.TxtVillageName.TextChanged += new System.EventHandler(this.TxtVillageName_TextChanged);
             // 
             // TxtVillageId
             // 
-            this.TxtVillageId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtVillageId.BackColor = System.Drawing.Color.White;
             this.TxtVillageId.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtVillageId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtVillageId.HideSelection = false;
             this.TxtVillageId.Location = new System.Drawing.Point(16, 147);
             this.TxtVillageId.Name = "TxtVillageId";
-            this.TxtVillageId.Size = new System.Drawing.Size(240, 27);
+            this.TxtVillageId.Size = new System.Drawing.Size(516, 27);
             this.TxtVillageId.TabIndex = 0;
+            this.TxtVillageId.TextChanged += new System.EventHandler(this.TxtVillageId_TextChanged);
             // 
             // label5
             // 
@@ -734,12 +837,10 @@
             // 
             // label10
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(2, 30);
+            this.label10.Location = new System.Drawing.Point(43, 30);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(321, 37);
+            this.label10.Size = new System.Drawing.Size(446, 37);
             this.label10.TabIndex = 1;
             this.label10.Text = "VILLAGE DETAILS";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -764,14 +865,16 @@
             this.TblVillage.MultiSelect = false;
             this.TblVillage.Name = "TblVillage";
             this.TblVillage.ReadOnly = true;
+            this.TblVillage.RowHeadersVisible = false;
             this.TblVillage.RowHeadersWidth = 51;
             this.TblVillage.RowTemplate.DividerHeight = 2;
             this.TblVillage.RowTemplate.Height = 50;
             this.TblVillage.RowTemplate.ReadOnly = true;
             this.TblVillage.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.TblVillage.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TblVillage.Size = new System.Drawing.Size(1078, 799);
+            this.TblVillage.Size = new System.Drawing.Size(1313, 799);
             this.TblVillage.TabIndex = 0;
+            this.TblVillage.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TblVillage_CellMouseDoubleClick);
             // 
             // VillageIdColumn
             // 
@@ -831,7 +934,7 @@
             this.HousesTab.Location = new System.Drawing.Point(4, 39);
             this.HousesTab.Name = "HousesTab";
             this.HousesTab.Padding = new System.Windows.Forms.Padding(3);
-            this.HousesTab.Size = new System.Drawing.Size(1518, 809);
+            this.HousesTab.Size = new System.Drawing.Size(1748, 809);
             this.HousesTab.TabIndex = 1;
             this.HousesTab.Text = "   Houses   ";
             this.HousesTab.UseVisualStyleBackColor = true;
@@ -841,6 +944,7 @@
             this.HousesSplitContainer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.HousesSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.HousesSplitContainer.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.HousesSplitContainer.IsSplitterFixed = true;
             this.HousesSplitContainer.Location = new System.Drawing.Point(3, 3);
             this.HousesSplitContainer.Name = "HousesSplitContainer";
             // 
@@ -868,53 +972,51 @@
             // 
             this.HousesSplitContainer.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.HousesSplitContainer.Panel2.Controls.Add(this.TblHouse);
-            this.HousesSplitContainer.Size = new System.Drawing.Size(1512, 803);
-            this.HousesSplitContainer.SplitterDistance = 425;
+            this.HousesSplitContainer.Size = new System.Drawing.Size(1742, 803);
+            this.HousesSplitContainer.SplitterDistance = 420;
             this.HousesSplitContainer.SplitterWidth = 5;
             this.HousesSplitContainer.TabIndex = 1;
             // 
             // TxtHouseVillageName
             // 
-            this.TxtHouseVillageName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtHouseVillageName.FormattingEnabled = true;
             this.TxtHouseVillageName.Location = new System.Drawing.Point(16, 227);
             this.TxtHouseVillageName.Name = "TxtHouseVillageName";
-            this.TxtHouseVillageName.Size = new System.Drawing.Size(240, 33);
+            this.TxtHouseVillageName.Size = new System.Drawing.Size(516, 33);
             this.TxtHouseVillageName.TabIndex = 5;
             // 
             // BtnHouseReset
             // 
-            this.BtnHouseReset.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnHouseReset.AutoSize = true;
-            this.BtnHouseReset.Location = new System.Drawing.Point(16, 546);
+            this.BtnHouseReset.Location = new System.Drawing.Point(145, 546);
             this.BtnHouseReset.Name = "BtnHouseReset";
             this.BtnHouseReset.Size = new System.Drawing.Size(244, 41);
             this.BtnHouseReset.TabIndex = 4;
             this.BtnHouseReset.Text = "RESET";
             this.BtnHouseReset.UseVisualStyleBackColor = true;
+            this.BtnHouseReset.Click += new System.EventHandler(this.BtnHouseReset_Click);
             // 
             // BtnHouseSearch
             // 
-            this.BtnHouseSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnHouseSearch.AutoSize = true;
-            this.BtnHouseSearch.Location = new System.Drawing.Point(16, 476);
+            this.BtnHouseSearch.Location = new System.Drawing.Point(288, 476);
             this.BtnHouseSearch.Name = "BtnHouseSearch";
             this.BtnHouseSearch.Size = new System.Drawing.Size(244, 41);
             this.BtnHouseSearch.TabIndex = 4;
             this.BtnHouseSearch.Text = "SEARCH";
             this.BtnHouseSearch.UseVisualStyleBackColor = true;
+            this.BtnHouseSearch.Click += new System.EventHandler(this.BtnHouseSearch_Click);
             // 
             // BtnHouseUpdate
             // 
-            this.BtnHouseUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnHouseUpdate.AutoSize = true;
-            this.BtnHouseUpdate.Location = new System.Drawing.Point(16, 400);
+            this.BtnHouseUpdate.Location = new System.Drawing.Point(288, 400);
             this.BtnHouseUpdate.Name = "BtnHouseUpdate";
             this.BtnHouseUpdate.Size = new System.Drawing.Size(244, 41);
             this.BtnHouseUpdate.TabIndex = 4;
             this.BtnHouseUpdate.Text = "UPDATE";
             this.BtnHouseUpdate.UseVisualStyleBackColor = true;
+            this.BtnHouseUpdate.Click += new System.EventHandler(this.BtnHouseUpdate_Click);
             // 
             // BtnHouseDelete
             // 
@@ -925,6 +1027,7 @@
             this.BtnHouseDelete.TabIndex = 4;
             this.BtnHouseDelete.Text = "DELETE";
             this.BtnHouseDelete.UseVisualStyleBackColor = true;
+            this.BtnHouseDelete.Click += new System.EventHandler(this.BtnHouseDelete_Click);
             // 
             // BtnHouseInsert
             // 
@@ -935,41 +1038,34 @@
             this.BtnHouseInsert.TabIndex = 4;
             this.BtnHouseInsert.Text = "INSERT";
             this.BtnHouseInsert.UseVisualStyleBackColor = true;
+            this.BtnHouseInsert.Click += new System.EventHandler(this.BtnHouseInsert_Click);
             // 
             // panel7
             // 
-            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Location = new System.Drawing.Point(16, 345);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(240, 2);
+            this.panel7.Size = new System.Drawing.Size(516, 2);
             this.panel7.TabIndex = 3;
             // 
             // panel8
             // 
-            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Location = new System.Drawing.Point(16, 260);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(240, 2);
+            this.panel8.Size = new System.Drawing.Size(516, 2);
             this.panel8.TabIndex = 3;
             // 
             // panel9
             // 
-            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel9.Location = new System.Drawing.Point(16, 176);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(240, 2);
+            this.panel9.Size = new System.Drawing.Size(516, 2);
             this.panel9.TabIndex = 3;
             // 
             // TxtHouseNoOfPeople
             // 
-            this.TxtHouseNoOfPeople.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtHouseNoOfPeople.BackColor = System.Drawing.Color.White;
             this.TxtHouseNoOfPeople.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtHouseNoOfPeople.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -977,21 +1073,20 @@
             this.TxtHouseNoOfPeople.Location = new System.Drawing.Point(16, 316);
             this.TxtHouseNoOfPeople.Name = "TxtHouseNoOfPeople";
             this.TxtHouseNoOfPeople.ReadOnly = true;
-            this.TxtHouseNoOfPeople.Size = new System.Drawing.Size(240, 27);
+            this.TxtHouseNoOfPeople.Size = new System.Drawing.Size(516, 27);
             this.TxtHouseNoOfPeople.TabIndex = 0;
             // 
             // TxtHouseId
             // 
-            this.TxtHouseId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtHouseId.BackColor = System.Drawing.Color.White;
             this.TxtHouseId.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtHouseId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtHouseId.HideSelection = false;
             this.TxtHouseId.Location = new System.Drawing.Point(16, 147);
             this.TxtHouseId.Name = "TxtHouseId";
-            this.TxtHouseId.Size = new System.Drawing.Size(240, 27);
+            this.TxtHouseId.Size = new System.Drawing.Size(516, 27);
             this.TxtHouseId.TabIndex = 0;
+            this.TxtHouseId.TextChanged += new System.EventHandler(this.TxtHouseId_TextChanged);
             // 
             // label11
             // 
@@ -1022,12 +1117,10 @@
             // 
             // label14
             // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(2, 30);
+            this.label14.Location = new System.Drawing.Point(43, 30);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(284, 37);
+            this.label14.Size = new System.Drawing.Size(446, 37);
             this.label14.TabIndex = 1;
             this.label14.Text = "HOUSE DETAILS";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1049,11 +1142,13 @@
             this.TblHouse.Location = new System.Drawing.Point(0, 0);
             this.TblHouse.Name = "TblHouse";
             this.TblHouse.ReadOnly = true;
+            this.TblHouse.RowHeadersVisible = false;
             this.TblHouse.RowHeadersWidth = 51;
             this.TblHouse.RowTemplate.Height = 50;
             this.TblHouse.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TblHouse.Size = new System.Drawing.Size(1078, 799);
+            this.TblHouse.Size = new System.Drawing.Size(1313, 799);
             this.TblHouse.TabIndex = 0;
+            this.TblHouse.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TblHouse_CellMouseDoubleClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -1108,7 +1203,7 @@
             this.PeopleTab.Location = new System.Drawing.Point(4, 39);
             this.PeopleTab.Name = "PeopleTab";
             this.PeopleTab.Padding = new System.Windows.Forms.Padding(3);
-            this.PeopleTab.Size = new System.Drawing.Size(1518, 809);
+            this.PeopleTab.Size = new System.Drawing.Size(1748, 809);
             this.PeopleTab.TabIndex = 2;
             this.PeopleTab.Text = "   People   ";
             this.PeopleTab.UseVisualStyleBackColor = true;
@@ -1158,58 +1253,49 @@
             this.PeopleSplitContainer.Panel2.AutoScroll = true;
             this.PeopleSplitContainer.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.PeopleSplitContainer.Panel2.Controls.Add(this.TblPerson);
-            this.PeopleSplitContainer.Size = new System.Drawing.Size(1512, 803);
+            this.PeopleSplitContainer.Size = new System.Drawing.Size(1742, 803);
             this.PeopleSplitContainer.SplitterDistance = 425;
             this.PeopleSplitContainer.SplitterWidth = 5;
             this.PeopleSplitContainer.TabIndex = 1;
             // 
             // TxtPersonHouseId
             // 
-            this.TxtPersonHouseId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtPersonHouseId.FormattingEnabled = true;
             this.TxtPersonHouseId.Location = new System.Drawing.Point(21, 272);
             this.TxtPersonHouseId.Name = "TxtPersonHouseId";
-            this.TxtPersonHouseId.Size = new System.Drawing.Size(239, 33);
+            this.TxtPersonHouseId.Size = new System.Drawing.Size(515, 33);
             this.TxtPersonHouseId.TabIndex = 11;
             // 
             // TxtPersonVillageName
             // 
-            this.TxtPersonVillageName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtPersonVillageName.FormattingEnabled = true;
-            this.TxtPersonVillageName.Location = new System.Drawing.Point(22, 198);
+            this.TxtPersonVillageName.Location = new System.Drawing.Point(22, 199);
             this.TxtPersonVillageName.Name = "TxtPersonVillageName";
-            this.TxtPersonVillageName.Size = new System.Drawing.Size(239, 33);
+            this.TxtPersonVillageName.Size = new System.Drawing.Size(515, 33);
             this.TxtPersonVillageName.TabIndex = 10;
+            this.TxtPersonVillageName.SelectedIndexChanged += new System.EventHandler(this.TxtPersonVillageName_SelectedIndexChanged);
             // 
             // panel13
             // 
-            this.panel13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel13.Location = new System.Drawing.Point(21, 232);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(240, 2);
+            this.panel13.Size = new System.Drawing.Size(515, 2);
             this.panel13.TabIndex = 9;
             // 
             // panel11
             // 
-            this.panel11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel11.Location = new System.Drawing.Point(20, 305);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(240, 2);
+            this.panel11.Size = new System.Drawing.Size(515, 2);
             this.panel11.TabIndex = 7;
             // 
             // TxtPersonAge
             // 
-            this.TxtPersonAge.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtPersonAge.Location = new System.Drawing.Point(20, 412);
             this.TxtPersonAge.Name = "TxtPersonAge";
-            this.TxtPersonAge.Size = new System.Drawing.Size(240, 34);
+            this.TxtPersonAge.Size = new System.Drawing.Size(515, 34);
             this.TxtPersonAge.TabIndex = 6;
             this.TxtPersonAge.ThousandsSeparator = true;
             this.TxtPersonAge.Value = new decimal(new int[] {
@@ -1220,8 +1306,6 @@
             // 
             // TxtPersonGender
             // 
-            this.TxtPersonGender.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtPersonGender.DisplayMember = "HOUSE_ID";
             this.TxtPersonGender.DropDownHeight = 100;
             this.TxtPersonGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1233,42 +1317,42 @@
             "OTHER"});
             this.TxtPersonGender.Location = new System.Drawing.Point(20, 484);
             this.TxtPersonGender.Name = "TxtPersonGender";
-            this.TxtPersonGender.Size = new System.Drawing.Size(240, 33);
+            this.TxtPersonGender.Size = new System.Drawing.Size(515, 33);
             this.TxtPersonGender.TabIndex = 5;
             this.TxtPersonGender.ValueMember = "HOUSE_ID";
             // 
             // BtnPersonReset
             // 
-            this.BtnPersonReset.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnPersonReset.AutoSize = true;
-            this.BtnPersonReset.Location = new System.Drawing.Point(21, 730);
+            this.BtnPersonReset.Location = new System.Drawing.Point(156, 734);
             this.BtnPersonReset.Name = "BtnPersonReset";
             this.BtnPersonReset.Size = new System.Drawing.Size(244, 41);
             this.BtnPersonReset.TabIndex = 4;
             this.BtnPersonReset.Text = "RESET";
             this.BtnPersonReset.UseVisualStyleBackColor = true;
+            this.BtnPersonReset.Click += new System.EventHandler(this.BtnPersonReset_Click);
             // 
             // BtnPersonSearch
             // 
-            this.BtnPersonSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnPersonSearch.AutoSize = true;
-            this.BtnPersonSearch.Location = new System.Drawing.Point(20, 675);
+            this.BtnPersonSearch.Location = new System.Drawing.Point(290, 675);
             this.BtnPersonSearch.Name = "BtnPersonSearch";
-            this.BtnPersonSearch.Size = new System.Drawing.Size(244, 41);
+            this.BtnPersonSearch.Size = new System.Drawing.Size(247, 41);
             this.BtnPersonSearch.TabIndex = 4;
             this.BtnPersonSearch.Text = "SEARCH";
             this.BtnPersonSearch.UseVisualStyleBackColor = true;
+            this.BtnPersonSearch.Click += new System.EventHandler(this.BtnPersonSearch_Click);
             // 
             // BtnPersonUpdate
             // 
-            this.BtnPersonUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnPersonUpdate.AutoSize = true;
-            this.BtnPersonUpdate.Location = new System.Drawing.Point(20, 616);
+            this.BtnPersonUpdate.Location = new System.Drawing.Point(290, 616);
             this.BtnPersonUpdate.Name = "BtnPersonUpdate";
-            this.BtnPersonUpdate.Size = new System.Drawing.Size(244, 41);
+            this.BtnPersonUpdate.Size = new System.Drawing.Size(247, 41);
             this.BtnPersonUpdate.TabIndex = 4;
             this.BtnPersonUpdate.Text = "UPDATE";
             this.BtnPersonUpdate.UseVisualStyleBackColor = true;
+            this.BtnPersonUpdate.Click += new System.EventHandler(this.BtnPersonUpdate_Click);
             // 
             // BtnPersonDelete
             // 
@@ -1279,6 +1363,7 @@
             this.BtnPersonDelete.TabIndex = 4;
             this.BtnPersonDelete.Text = "DELETE";
             this.BtnPersonDelete.UseVisualStyleBackColor = true;
+            this.BtnPersonDelete.Click += new System.EventHandler(this.BtnPersonDelete_Click);
             // 
             // BtnPersonInsert
             // 
@@ -1289,95 +1374,83 @@
             this.BtnPersonInsert.TabIndex = 4;
             this.BtnPersonInsert.Text = "INSERT";
             this.BtnPersonInsert.UseVisualStyleBackColor = true;
+            this.BtnPersonInsert.Click += new System.EventHandler(this.BtnPersonInsert_Click);
             // 
             // panel10
             // 
-            this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel10.Location = new System.Drawing.Point(20, 518);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(240, 2);
+            this.panel10.Size = new System.Drawing.Size(515, 2);
             this.panel10.TabIndex = 3;
             // 
             // panel12
             // 
-            this.panel12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel12.Location = new System.Drawing.Point(20, 447);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(240, 2);
+            this.panel12.Size = new System.Drawing.Size(515, 2);
             this.panel12.TabIndex = 3;
             // 
             // panel14
             // 
-            this.panel14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel14.Location = new System.Drawing.Point(20, 589);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(240, 2);
+            this.panel14.Size = new System.Drawing.Size(515, 2);
             this.panel14.TabIndex = 3;
             // 
             // panel15
             // 
-            this.panel15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel15.Location = new System.Drawing.Point(20, 376);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(240, 2);
+            this.panel15.Size = new System.Drawing.Size(515, 2);
             this.panel15.TabIndex = 3;
             // 
             // panel16
             // 
-            this.panel16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel16.Location = new System.Drawing.Point(20, 158);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(240, 2);
+            this.panel16.Size = new System.Drawing.Size(515, 2);
             this.panel16.TabIndex = 3;
             // 
             // TxtPersonPhoneNo
             // 
-            this.TxtPersonPhoneNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtPersonPhoneNo.BackColor = System.Drawing.Color.White;
             this.TxtPersonPhoneNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtPersonPhoneNo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtPersonPhoneNo.HideSelection = false;
             this.TxtPersonPhoneNo.Location = new System.Drawing.Point(20, 560);
             this.TxtPersonPhoneNo.Name = "TxtPersonPhoneNo";
-            this.TxtPersonPhoneNo.Size = new System.Drawing.Size(240, 27);
+            this.TxtPersonPhoneNo.Size = new System.Drawing.Size(515, 27);
             this.TxtPersonPhoneNo.TabIndex = 0;
+            this.TxtPersonPhoneNo.TextChanged += new System.EventHandler(this.TxtPersonPhoneNo_TextChanged);
             // 
             // TxtPersonName
             // 
-            this.TxtPersonName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtPersonName.BackColor = System.Drawing.Color.White;
             this.TxtPersonName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtPersonName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtPersonName.HideSelection = false;
             this.TxtPersonName.Location = new System.Drawing.Point(20, 347);
             this.TxtPersonName.Name = "TxtPersonName";
-            this.TxtPersonName.Size = new System.Drawing.Size(240, 27);
+            this.TxtPersonName.Size = new System.Drawing.Size(515, 27);
             this.TxtPersonName.TabIndex = 0;
+            this.TxtPersonName.TextChanged += new System.EventHandler(this.TxtPersonName_TextChanged);
             // 
             // TxtPersonId
             // 
-            this.TxtPersonId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtPersonId.BackColor = System.Drawing.Color.White;
             this.TxtPersonId.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtPersonId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtPersonId.HideSelection = false;
             this.TxtPersonId.Location = new System.Drawing.Point(20, 129);
             this.TxtPersonId.Name = "TxtPersonId";
-            this.TxtPersonId.Size = new System.Drawing.Size(240, 27);
+            this.TxtPersonId.Size = new System.Drawing.Size(516, 27);
             this.TxtPersonId.TabIndex = 0;
+            this.TxtPersonId.TextChanged += new System.EventHandler(this.TxtPersonId_TextChanged);
             // 
             // label15
             // 
@@ -1444,12 +1517,10 @@
             // 
             // label21
             // 
-            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label21.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(2, 30);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(304, 37);
+            this.label21.Size = new System.Drawing.Size(534, 37);
             this.label21.TabIndex = 1;
             this.label21.Text = "PERSON DETAILS";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1478,11 +1549,13 @@
             this.TblPerson.MultiSelect = false;
             this.TblPerson.Name = "TblPerson";
             this.TblPerson.ReadOnly = true;
+            this.TblPerson.RowHeadersVisible = false;
             this.TblPerson.RowHeadersWidth = 51;
             this.TblPerson.RowTemplate.Height = 50;
             this.TblPerson.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TblPerson.Size = new System.Drawing.Size(1078, 799);
+            this.TblPerson.Size = new System.Drawing.Size(1308, 799);
             this.TblPerson.TabIndex = 0;
+            this.TblPerson.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TblPerson_CellMouseDoubleClick);
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -1542,7 +1615,7 @@
             this.TblPersonContextMenuStrip.Name = "contextMenuStrip1";
             this.TblPersonContextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.TblPersonContextMenuStrip.ShowImageMargin = false;
-            this.TblPersonContextMenuStrip.Size = new System.Drawing.Size(186, 80);
+            this.TblPersonContextMenuStrip.Size = new System.Drawing.Size(140, 52);
             // 
             // TblPersonPrintAsPDF
             // 
@@ -1558,6 +1631,999 @@
             this.TblPersonPrintAsExcel.Text = "Print as Excel";
             this.TblPersonPrintAsExcel.Click += new System.EventHandler(this.TblPersonPrintAsExcel_Click);
             // 
+            // LogsTab
+            // 
+            this.LogsTab.Controls.Add(this.tabControl1);
+            this.LogsTab.Location = new System.Drawing.Point(4, 39);
+            this.LogsTab.Name = "LogsTab";
+            this.LogsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.LogsTab.Size = new System.Drawing.Size(1748, 809);
+            this.LogsTab.TabIndex = 3;
+            this.LogsTab.Text = "Logs";
+            this.LogsTab.UseVisualStyleBackColor = true;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.ImageList = this.InnerImageList;
+            this.tabControl1.ItemSize = new System.Drawing.Size(71, 35);
+            this.tabControl1.Location = new System.Drawing.Point(3, 3);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1742, 803);
+            this.tabControl1.TabIndex = 2;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tabPage1.Controls.Add(this.splitContainer2);
+            this.tabPage1.ImageKey = "icons8-village-60.png";
+            this.tabPage1.Location = new System.Drawing.Point(4, 39);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1734, 760);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "   Village Logs   ";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer2.IsSplitterFixed = true;
+            this.splitContainer2.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer2.Name = "splitContainer2";
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.AutoScroll = true;
+            this.splitContainer2.Panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer2.Panel1.Controls.Add(this.BtnVillageLogsReset);
+            this.splitContainer2.Panel1.Controls.Add(this.BtnVillageLogsSearch);
+            this.splitContainer2.Panel1.Controls.Add(this.panel17);
+            this.splitContainer2.Panel1.Controls.Add(this.panel18);
+            this.splitContainer2.Panel1.Controls.Add(this.panel19);
+            this.splitContainer2.Panel1.Controls.Add(this.panel20);
+            this.splitContainer2.Panel1.Controls.Add(this.TxtVillageLogsNoOfHouses);
+            this.splitContainer2.Panel1.Controls.Add(this.TxtVillageLogsVillageCode);
+            this.splitContainer2.Panel1.Controls.Add(this.TxtVillageLogsVillageName);
+            this.splitContainer2.Panel1.Controls.Add(this.TxtVillageLogsVillageId);
+            this.splitContainer2.Panel1.Controls.Add(this.label22);
+            this.splitContainer2.Panel1.Controls.Add(this.label23);
+            this.splitContainer2.Panel1.Controls.Add(this.label24);
+            this.splitContainer2.Panel1.Controls.Add(this.label25);
+            this.splitContainer2.Panel1.Controls.Add(this.label26);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer2.Panel2.Controls.Add(this.TblVillageLogs);
+            this.splitContainer2.Size = new System.Drawing.Size(1728, 754);
+            this.splitContainer2.SplitterDistance = 420;
+            this.splitContainer2.SplitterWidth = 5;
+            this.splitContainer2.TabIndex = 0;
+            // 
+            // BtnVillageLogsReset
+            // 
+            this.BtnVillageLogsReset.AutoSize = true;
+            this.BtnVillageLogsReset.Location = new System.Drawing.Point(151, 550);
+            this.BtnVillageLogsReset.Name = "BtnVillageLogsReset";
+            this.BtnVillageLogsReset.Size = new System.Drawing.Size(244, 41);
+            this.BtnVillageLogsReset.TabIndex = 4;
+            this.BtnVillageLogsReset.Text = "RESET";
+            this.BtnVillageLogsReset.UseVisualStyleBackColor = true;
+            this.BtnVillageLogsReset.Click += new System.EventHandler(this.BtnVillageLogsReset_Click);
+            // 
+            // BtnVillageLogsSearch
+            // 
+            this.BtnVillageLogsSearch.AutoSize = true;
+            this.BtnVillageLogsSearch.Location = new System.Drawing.Point(151, 474);
+            this.BtnVillageLogsSearch.Name = "BtnVillageLogsSearch";
+            this.BtnVillageLogsSearch.Size = new System.Drawing.Size(244, 41);
+            this.BtnVillageLogsSearch.TabIndex = 4;
+            this.BtnVillageLogsSearch.Text = "SEARCH";
+            this.BtnVillageLogsSearch.UseVisualStyleBackColor = true;
+            this.BtnVillageLogsSearch.Click += new System.EventHandler(this.BtnVillageLogsSearch_Click);
+            // 
+            // panel17
+            // 
+            this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel17.Location = new System.Drawing.Point(16, 426);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(516, 2);
+            this.panel17.TabIndex = 3;
+            // 
+            // panel18
+            // 
+            this.panel18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel18.Location = new System.Drawing.Point(16, 343);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(516, 2);
+            this.panel18.TabIndex = 3;
+            // 
+            // panel19
+            // 
+            this.panel19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel19.Location = new System.Drawing.Point(16, 260);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(516, 2);
+            this.panel19.TabIndex = 3;
+            // 
+            // panel20
+            // 
+            this.panel20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel20.Location = new System.Drawing.Point(16, 176);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(516, 2);
+            this.panel20.TabIndex = 3;
+            // 
+            // TxtVillageLogsNoOfHouses
+            // 
+            this.TxtVillageLogsNoOfHouses.BackColor = System.Drawing.Color.White;
+            this.TxtVillageLogsNoOfHouses.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtVillageLogsNoOfHouses.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtVillageLogsNoOfHouses.HideSelection = false;
+            this.TxtVillageLogsNoOfHouses.Location = new System.Drawing.Point(16, 397);
+            this.TxtVillageLogsNoOfHouses.Name = "TxtVillageLogsNoOfHouses";
+            this.TxtVillageLogsNoOfHouses.ReadOnly = true;
+            this.TxtVillageLogsNoOfHouses.Size = new System.Drawing.Size(516, 27);
+            this.TxtVillageLogsNoOfHouses.TabIndex = 0;
+            // 
+            // TxtVillageLogsVillageCode
+            // 
+            this.TxtVillageLogsVillageCode.BackColor = System.Drawing.Color.White;
+            this.TxtVillageLogsVillageCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtVillageLogsVillageCode.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtVillageLogsVillageCode.HideSelection = false;
+            this.TxtVillageLogsVillageCode.Location = new System.Drawing.Point(16, 314);
+            this.TxtVillageLogsVillageCode.Name = "TxtVillageLogsVillageCode";
+            this.TxtVillageLogsVillageCode.Size = new System.Drawing.Size(516, 27);
+            this.TxtVillageLogsVillageCode.TabIndex = 0;
+            // 
+            // TxtVillageLogsVillageName
+            // 
+            this.TxtVillageLogsVillageName.BackColor = System.Drawing.Color.White;
+            this.TxtVillageLogsVillageName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtVillageLogsVillageName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtVillageLogsVillageName.HideSelection = false;
+            this.TxtVillageLogsVillageName.Location = new System.Drawing.Point(16, 231);
+            this.TxtVillageLogsVillageName.Name = "TxtVillageLogsVillageName";
+            this.TxtVillageLogsVillageName.Size = new System.Drawing.Size(516, 27);
+            this.TxtVillageLogsVillageName.TabIndex = 0;
+            // 
+            // TxtVillageLogsVillageId
+            // 
+            this.TxtVillageLogsVillageId.BackColor = System.Drawing.Color.White;
+            this.TxtVillageLogsVillageId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtVillageLogsVillageId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtVillageLogsVillageId.HideSelection = false;
+            this.TxtVillageLogsVillageId.Location = new System.Drawing.Point(16, 147);
+            this.TxtVillageLogsVillageId.Name = "TxtVillageLogsVillageId";
+            this.TxtVillageLogsVillageId.Size = new System.Drawing.Size(516, 27);
+            this.TxtVillageLogsVillageId.TabIndex = 0;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(11, 365);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(151, 25);
+            this.label22.TabIndex = 2;
+            this.label22.Text = "No. of Houses";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(11, 282);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(136, 25);
+            this.label23.TabIndex = 2;
+            this.label23.Text = "Village Code";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(11, 199);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(142, 25);
+            this.label24.TabIndex = 2;
+            this.label24.Text = "Village Name";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(11, 112);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(109, 25);
+            this.label25.TabIndex = 2;
+            this.label25.Text = "Village ID";
+            // 
+            // label26
+            // 
+            this.label26.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(43, 30);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(446, 37);
+            this.label26.TabIndex = 1;
+            this.label26.Text = "VILLAGE DETAILS";
+            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TblVillageLogs
+            // 
+            this.TblVillageLogs.AllowUserToAddRows = false;
+            this.TblVillageLogs.AllowUserToDeleteRows = false;
+            this.TblVillageLogs.AllowUserToOrderColumns = true;
+            this.TblVillageLogs.AllowUserToResizeRows = false;
+            this.TblVillageLogs.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.TblVillageLogs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TblVillageLogs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn23,
+            this.dataGridViewTextBoxColumn24});
+            this.TblVillageLogs.ContextMenuStrip = this.TblVillageLogsContextMenuStrip;
+            this.TblVillageLogs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TblVillageLogs.Location = new System.Drawing.Point(0, 0);
+            this.TblVillageLogs.MultiSelect = false;
+            this.TblVillageLogs.Name = "TblVillageLogs";
+            this.TblVillageLogs.ReadOnly = true;
+            this.TblVillageLogs.RowHeadersVisible = false;
+            this.TblVillageLogs.RowHeadersWidth = 51;
+            this.TblVillageLogs.RowTemplate.DividerHeight = 2;
+            this.TblVillageLogs.RowTemplate.Height = 50;
+            this.TblVillageLogs.RowTemplate.ReadOnly = true;
+            this.TblVillageLogs.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.TblVillageLogs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.TblVillageLogs.Size = new System.Drawing.Size(1299, 750);
+            this.TblVillageLogs.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn7.HeaderText = "LOG ID";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn8.HeaderText = "OPERATION";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn9.HeaderText = "VILLAGE ID";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn10.HeaderText = "VILLAGE NAME";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn23.HeaderText = "VILLAGE CODE";
+            this.dataGridViewTextBoxColumn23.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn24.HeaderText = "NO. OF HOUSES";
+            this.dataGridViewTextBoxColumn24.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn24.ReadOnly = true;
+            // 
+            // TblVillageLogsContextMenuStrip
+            // 
+            this.TblVillageLogsContextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.TblVillageLogsContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TblVillageLogsPrintAsPDF,
+            this.TblVillageLogsPrintAsExcel});
+            this.TblVillageLogsContextMenuStrip.Name = "contextMenuStrip1";
+            this.TblVillageLogsContextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.TblVillageLogsContextMenuStrip.ShowImageMargin = false;
+            this.TblVillageLogsContextMenuStrip.Size = new System.Drawing.Size(140, 52);
+            // 
+            // TblVillageLogsPrintAsPDF
+            // 
+            this.TblVillageLogsPrintAsPDF.Name = "TblVillageLogsPrintAsPDF";
+            this.TblVillageLogsPrintAsPDF.Size = new System.Drawing.Size(139, 24);
+            this.TblVillageLogsPrintAsPDF.Text = "Print as PDF";
+            this.TblVillageLogsPrintAsPDF.Click += new System.EventHandler(this.TblVillageLogsPrintAsPDF_Click);
+            // 
+            // TblVillageLogsPrintAsExcel
+            // 
+            this.TblVillageLogsPrintAsExcel.Name = "TblVillageLogsPrintAsExcel";
+            this.TblVillageLogsPrintAsExcel.Size = new System.Drawing.Size(139, 24);
+            this.TblVillageLogsPrintAsExcel.Text = "Print as Excel";
+            this.TblVillageLogsPrintAsExcel.Click += new System.EventHandler(this.TblVillageLogsPrintAsExcel_Click);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.splitContainer3);
+            this.tabPage2.ImageKey = "icons8-home-page-48.png";
+            this.tabPage2.Location = new System.Drawing.Point(4, 39);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1734, 760);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "   House Logs   ";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer3
+            // 
+            this.splitContainer3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer3.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer3.IsSplitterFixed = true;
+            this.splitContainer3.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer3.Name = "splitContainer3";
+            // 
+            // splitContainer3.Panel1
+            // 
+            this.splitContainer3.Panel1.AutoScroll = true;
+            this.splitContainer3.Panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer3.Panel1.Controls.Add(this.BtnHouseLogsReset);
+            this.splitContainer3.Panel1.Controls.Add(this.BtnHouseLogsSearch);
+            this.splitContainer3.Panel1.Controls.Add(this.panel21);
+            this.splitContainer3.Panel1.Controls.Add(this.panel22);
+            this.splitContainer3.Panel1.Controls.Add(this.panel23);
+            this.splitContainer3.Panel1.Controls.Add(this.TxtHouseLogsNoOfPeople);
+            this.splitContainer3.Panel1.Controls.Add(this.TxtHouseLogsVillageName);
+            this.splitContainer3.Panel1.Controls.Add(this.TxtHouseLogsHouseId);
+            this.splitContainer3.Panel1.Controls.Add(this.label27);
+            this.splitContainer3.Panel1.Controls.Add(this.label28);
+            this.splitContainer3.Panel1.Controls.Add(this.label29);
+            this.splitContainer3.Panel1.Controls.Add(this.label30);
+            // 
+            // splitContainer3.Panel2
+            // 
+            this.splitContainer3.Panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer3.Panel2.Controls.Add(this.TblHouseLogs);
+            this.splitContainer3.Size = new System.Drawing.Size(1728, 754);
+            this.splitContainer3.SplitterDistance = 420;
+            this.splitContainer3.SplitterWidth = 5;
+            this.splitContainer3.TabIndex = 1;
+            // 
+            // BtnHouseLogsReset
+            // 
+            this.BtnHouseLogsReset.AutoSize = true;
+            this.BtnHouseLogsReset.Location = new System.Drawing.Point(145, 469);
+            this.BtnHouseLogsReset.Name = "BtnHouseLogsReset";
+            this.BtnHouseLogsReset.Size = new System.Drawing.Size(244, 41);
+            this.BtnHouseLogsReset.TabIndex = 4;
+            this.BtnHouseLogsReset.Text = "RESET";
+            this.BtnHouseLogsReset.UseVisualStyleBackColor = true;
+            this.BtnHouseLogsReset.Click += new System.EventHandler(this.BtnHouseLogsReset_Click);
+            // 
+            // BtnHouseLogsSearch
+            // 
+            this.BtnHouseLogsSearch.AutoSize = true;
+            this.BtnHouseLogsSearch.Location = new System.Drawing.Point(145, 393);
+            this.BtnHouseLogsSearch.Name = "BtnHouseLogsSearch";
+            this.BtnHouseLogsSearch.Size = new System.Drawing.Size(244, 41);
+            this.BtnHouseLogsSearch.TabIndex = 4;
+            this.BtnHouseLogsSearch.Text = "SEARCH";
+            this.BtnHouseLogsSearch.UseVisualStyleBackColor = true;
+            this.BtnHouseLogsSearch.Click += new System.EventHandler(this.BtnHouseLogsSearch_Click);
+            // 
+            // panel21
+            // 
+            this.panel21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel21.Location = new System.Drawing.Point(16, 345);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(516, 2);
+            this.panel21.TabIndex = 3;
+            // 
+            // panel22
+            // 
+            this.panel22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel22.Location = new System.Drawing.Point(16, 260);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(516, 2);
+            this.panel22.TabIndex = 3;
+            // 
+            // panel23
+            // 
+            this.panel23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel23.Location = new System.Drawing.Point(16, 176);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(516, 2);
+            this.panel23.TabIndex = 3;
+            // 
+            // TxtHouseLogsNoOfPeople
+            // 
+            this.TxtHouseLogsNoOfPeople.BackColor = System.Drawing.Color.White;
+            this.TxtHouseLogsNoOfPeople.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtHouseLogsNoOfPeople.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtHouseLogsNoOfPeople.HideSelection = false;
+            this.TxtHouseLogsNoOfPeople.Location = new System.Drawing.Point(16, 316);
+            this.TxtHouseLogsNoOfPeople.Name = "TxtHouseLogsNoOfPeople";
+            this.TxtHouseLogsNoOfPeople.ReadOnly = true;
+            this.TxtHouseLogsNoOfPeople.Size = new System.Drawing.Size(516, 27);
+            this.TxtHouseLogsNoOfPeople.TabIndex = 0;
+            // 
+            // TxtHouseLogsVillageName
+            // 
+            this.TxtHouseLogsVillageName.BackColor = System.Drawing.Color.White;
+            this.TxtHouseLogsVillageName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtHouseLogsVillageName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtHouseLogsVillageName.HideSelection = false;
+            this.TxtHouseLogsVillageName.Location = new System.Drawing.Point(18, 230);
+            this.TxtHouseLogsVillageName.Name = "TxtHouseLogsVillageName";
+            this.TxtHouseLogsVillageName.Size = new System.Drawing.Size(516, 27);
+            this.TxtHouseLogsVillageName.TabIndex = 0;
+            // 
+            // TxtHouseLogsHouseId
+            // 
+            this.TxtHouseLogsHouseId.BackColor = System.Drawing.Color.White;
+            this.TxtHouseLogsHouseId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtHouseLogsHouseId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtHouseLogsHouseId.HideSelection = false;
+            this.TxtHouseLogsHouseId.Location = new System.Drawing.Point(16, 147);
+            this.TxtHouseLogsHouseId.Name = "TxtHouseLogsHouseId";
+            this.TxtHouseLogsHouseId.Size = new System.Drawing.Size(516, 27);
+            this.TxtHouseLogsHouseId.TabIndex = 0;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(11, 288);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(146, 25);
+            this.label27.TabIndex = 2;
+            this.label27.Text = "No. of People";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(11, 201);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(77, 25);
+            this.label28.TabIndex = 2;
+            this.label28.Text = "Village";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(11, 111);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(107, 25);
+            this.label29.TabIndex = 2;
+            this.label29.Text = "House ID";
+            // 
+            // label30
+            // 
+            this.label30.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(43, 30);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(446, 37);
+            this.label30.TabIndex = 1;
+            this.label30.Text = "HOUSE DETAILS";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TblHouseLogs
+            // 
+            this.TblHouseLogs.AllowUserToAddRows = false;
+            this.TblHouseLogs.AllowUserToDeleteRows = false;
+            this.TblHouseLogs.AllowUserToOrderColumns = true;
+            this.TblHouseLogs.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.TblHouseLogs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TblHouseLogs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn22});
+            this.TblHouseLogs.ContextMenuStrip = this.TblHouseLogsContextMenuStrip;
+            this.TblHouseLogs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TblHouseLogs.Location = new System.Drawing.Point(0, 0);
+            this.TblHouseLogs.Name = "TblHouseLogs";
+            this.TblHouseLogs.ReadOnly = true;
+            this.TblHouseLogs.RowHeadersVisible = false;
+            this.TblHouseLogs.RowHeadersWidth = 51;
+            this.TblHouseLogs.RowTemplate.Height = 50;
+            this.TblHouseLogs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.TblHouseLogs.Size = new System.Drawing.Size(1299, 750);
+            this.TblHouseLogs.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.HeaderText = "LOG ID";
+            this.dataGridViewTextBoxColumn11.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            this.dataGridViewTextBoxColumn11.Width = 249;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.HeaderText = "OPERATION";
+            this.dataGridViewTextBoxColumn12.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            this.dataGridViewTextBoxColumn12.Width = 249;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.HeaderText = "HOUSE ID";
+            this.dataGridViewTextBoxColumn13.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            this.dataGridViewTextBoxColumn13.Width = 250;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.HeaderText = "VILLAGE";
+            this.dataGridViewTextBoxColumn21.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.ReadOnly = true;
+            this.dataGridViewTextBoxColumn21.Width = 249;
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.HeaderText = "NO. OF PEOPLE";
+            this.dataGridViewTextBoxColumn22.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.ReadOnly = true;
+            this.dataGridViewTextBoxColumn22.Width = 249;
+            // 
+            // TblHouseLogsContextMenuStrip
+            // 
+            this.TblHouseLogsContextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.TblHouseLogsContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TblHouseLogsPrintAsPDF,
+            this.TblHouseLogsPrintAsExcel});
+            this.TblHouseLogsContextMenuStrip.Name = "TblVillageContextMenuStrip";
+            this.TblHouseLogsContextMenuStrip.Size = new System.Drawing.Size(165, 52);
+            // 
+            // TblHouseLogsPrintAsPDF
+            // 
+            this.TblHouseLogsPrintAsPDF.Name = "TblHouseLogsPrintAsPDF";
+            this.TblHouseLogsPrintAsPDF.Size = new System.Drawing.Size(164, 24);
+            this.TblHouseLogsPrintAsPDF.Text = "Print as PDF";
+            this.TblHouseLogsPrintAsPDF.Click += new System.EventHandler(this.TblHouseLogsPrintAsPDF_Click);
+            // 
+            // TblHouseLogsPrintAsExcel
+            // 
+            this.TblHouseLogsPrintAsExcel.Name = "TblHouseLogsPrintAsExcel";
+            this.TblHouseLogsPrintAsExcel.Size = new System.Drawing.Size(164, 24);
+            this.TblHouseLogsPrintAsExcel.Text = "Print as Excel";
+            this.TblHouseLogsPrintAsExcel.Click += new System.EventHandler(this.TblHouseLogsPrintAsExcel_Click);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.splitContainer4);
+            this.tabPage3.ImageKey = "icons8-account-48.png";
+            this.tabPage3.Location = new System.Drawing.Point(4, 39);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1734, 760);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "   People Logs   ";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer4
+            // 
+            this.splitContainer4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer4.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer4.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer4.Name = "splitContainer4";
+            // 
+            // splitContainer4.Panel1
+            // 
+            this.splitContainer4.Panel1.AutoScroll = true;
+            this.splitContainer4.Panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer4.Panel1.Controls.Add(this.panel24);
+            this.splitContainer4.Panel1.Controls.Add(this.panel25);
+            this.splitContainer4.Panel1.Controls.Add(this.BtnPersonLogsReset);
+            this.splitContainer4.Panel1.Controls.Add(this.BtnPersonLogsSearch);
+            this.splitContainer4.Panel1.Controls.Add(this.panel26);
+            this.splitContainer4.Panel1.Controls.Add(this.panel27);
+            this.splitContainer4.Panel1.Controls.Add(this.panel28);
+            this.splitContainer4.Panel1.Controls.Add(this.panel29);
+            this.splitContainer4.Panel1.Controls.Add(this.panel30);
+            this.splitContainer4.Panel1.Controls.Add(this.TxtPersonLogsPhoneNo);
+            this.splitContainer4.Panel1.Controls.Add(this.TxtPersonLogsName);
+            this.splitContainer4.Panel1.Controls.Add(this.TxtPersonLogsGender);
+            this.splitContainer4.Panel1.Controls.Add(this.TxtPersonLogsAge);
+            this.splitContainer4.Panel1.Controls.Add(this.TxtPersonLogsVillageName);
+            this.splitContainer4.Panel1.Controls.Add(this.TxtPersonLogsHouseId);
+            this.splitContainer4.Panel1.Controls.Add(this.TxtPersonLogsPersonId);
+            this.splitContainer4.Panel1.Controls.Add(this.label31);
+            this.splitContainer4.Panel1.Controls.Add(this.label32);
+            this.splitContainer4.Panel1.Controls.Add(this.label33);
+            this.splitContainer4.Panel1.Controls.Add(this.label34);
+            this.splitContainer4.Panel1.Controls.Add(this.label35);
+            this.splitContainer4.Panel1.Controls.Add(this.label36);
+            this.splitContainer4.Panel1.Controls.Add(this.label37);
+            this.splitContainer4.Panel1.Controls.Add(this.label38);
+            // 
+            // splitContainer4.Panel2
+            // 
+            this.splitContainer4.Panel2.AutoScroll = true;
+            this.splitContainer4.Panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer4.Panel2.Controls.Add(this.TblPersonLogs);
+            this.splitContainer4.Size = new System.Drawing.Size(1728, 754);
+            this.splitContainer4.SplitterDistance = 425;
+            this.splitContainer4.SplitterWidth = 5;
+            this.splitContainer4.TabIndex = 1;
+            // 
+            // panel24
+            // 
+            this.panel24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel24.Location = new System.Drawing.Point(21, 232);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(515, 2);
+            this.panel24.TabIndex = 9;
+            // 
+            // panel25
+            // 
+            this.panel25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel25.Location = new System.Drawing.Point(20, 305);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(515, 2);
+            this.panel25.TabIndex = 7;
+            // 
+            // BtnPersonLogsReset
+            // 
+            this.BtnPersonLogsReset.AutoSize = true;
+            this.BtnPersonLogsReset.Location = new System.Drawing.Point(156, 703);
+            this.BtnPersonLogsReset.Name = "BtnPersonLogsReset";
+            this.BtnPersonLogsReset.Size = new System.Drawing.Size(244, 41);
+            this.BtnPersonLogsReset.TabIndex = 4;
+            this.BtnPersonLogsReset.Text = "RESET";
+            this.BtnPersonLogsReset.UseVisualStyleBackColor = true;
+            this.BtnPersonLogsReset.Click += new System.EventHandler(this.BtnPersonLogsReset_Click);
+            // 
+            // BtnPersonLogsSearch
+            // 
+            this.BtnPersonLogsSearch.AutoSize = true;
+            this.BtnPersonLogsSearch.Location = new System.Drawing.Point(156, 627);
+            this.BtnPersonLogsSearch.Name = "BtnPersonLogsSearch";
+            this.BtnPersonLogsSearch.Size = new System.Drawing.Size(247, 41);
+            this.BtnPersonLogsSearch.TabIndex = 4;
+            this.BtnPersonLogsSearch.Text = "SEARCH";
+            this.BtnPersonLogsSearch.UseVisualStyleBackColor = true;
+            this.BtnPersonLogsSearch.Click += new System.EventHandler(this.BtnPersonLogsSearch_Click);
+            // 
+            // panel26
+            // 
+            this.panel26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel26.Location = new System.Drawing.Point(20, 518);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(515, 2);
+            this.panel26.TabIndex = 3;
+            // 
+            // panel27
+            // 
+            this.panel27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel27.Location = new System.Drawing.Point(20, 447);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(515, 2);
+            this.panel27.TabIndex = 3;
+            // 
+            // panel28
+            // 
+            this.panel28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel28.Location = new System.Drawing.Point(20, 589);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(515, 2);
+            this.panel28.TabIndex = 3;
+            // 
+            // panel29
+            // 
+            this.panel29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel29.Location = new System.Drawing.Point(20, 376);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(515, 2);
+            this.panel29.TabIndex = 3;
+            // 
+            // panel30
+            // 
+            this.panel30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel30.Location = new System.Drawing.Point(20, 158);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(515, 2);
+            this.panel30.TabIndex = 3;
+            // 
+            // TxtPersonLogsPhoneNo
+            // 
+            this.TxtPersonLogsPhoneNo.BackColor = System.Drawing.Color.White;
+            this.TxtPersonLogsPhoneNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtPersonLogsPhoneNo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtPersonLogsPhoneNo.HideSelection = false;
+            this.TxtPersonLogsPhoneNo.Location = new System.Drawing.Point(20, 561);
+            this.TxtPersonLogsPhoneNo.Name = "TxtPersonLogsPhoneNo";
+            this.TxtPersonLogsPhoneNo.Size = new System.Drawing.Size(515, 27);
+            this.TxtPersonLogsPhoneNo.TabIndex = 0;
+            // 
+            // TxtPersonLogsName
+            // 
+            this.TxtPersonLogsName.BackColor = System.Drawing.Color.White;
+            this.TxtPersonLogsName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtPersonLogsName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtPersonLogsName.HideSelection = false;
+            this.TxtPersonLogsName.Location = new System.Drawing.Point(20, 348);
+            this.TxtPersonLogsName.Name = "TxtPersonLogsName";
+            this.TxtPersonLogsName.Size = new System.Drawing.Size(515, 27);
+            this.TxtPersonLogsName.TabIndex = 0;
+            // 
+            // TxtPersonLogsGender
+            // 
+            this.TxtPersonLogsGender.BackColor = System.Drawing.Color.White;
+            this.TxtPersonLogsGender.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtPersonLogsGender.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtPersonLogsGender.HideSelection = false;
+            this.TxtPersonLogsGender.Location = new System.Drawing.Point(21, 489);
+            this.TxtPersonLogsGender.Name = "TxtPersonLogsGender";
+            this.TxtPersonLogsGender.Size = new System.Drawing.Size(515, 27);
+            this.TxtPersonLogsGender.TabIndex = 0;
+            // 
+            // TxtPersonLogsAge
+            // 
+            this.TxtPersonLogsAge.BackColor = System.Drawing.Color.White;
+            this.TxtPersonLogsAge.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtPersonLogsAge.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtPersonLogsAge.HideSelection = false;
+            this.TxtPersonLogsAge.Location = new System.Drawing.Point(22, 418);
+            this.TxtPersonLogsAge.Name = "TxtPersonLogsAge";
+            this.TxtPersonLogsAge.Size = new System.Drawing.Size(515, 27);
+            this.TxtPersonLogsAge.TabIndex = 0;
+            // 
+            // TxtPersonLogsVillageName
+            // 
+            this.TxtPersonLogsVillageName.BackColor = System.Drawing.Color.White;
+            this.TxtPersonLogsVillageName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtPersonLogsVillageName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtPersonLogsVillageName.HideSelection = false;
+            this.TxtPersonLogsVillageName.Location = new System.Drawing.Point(21, 203);
+            this.TxtPersonLogsVillageName.Name = "TxtPersonLogsVillageName";
+            this.TxtPersonLogsVillageName.Size = new System.Drawing.Size(515, 27);
+            this.TxtPersonLogsVillageName.TabIndex = 0;
+            // 
+            // TxtPersonLogsHouseId
+            // 
+            this.TxtPersonLogsHouseId.BackColor = System.Drawing.Color.White;
+            this.TxtPersonLogsHouseId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtPersonLogsHouseId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtPersonLogsHouseId.HideSelection = false;
+            this.TxtPersonLogsHouseId.Location = new System.Drawing.Point(20, 277);
+            this.TxtPersonLogsHouseId.Name = "TxtPersonLogsHouseId";
+            this.TxtPersonLogsHouseId.Size = new System.Drawing.Size(515, 27);
+            this.TxtPersonLogsHouseId.TabIndex = 0;
+            // 
+            // TxtPersonLogsPersonId
+            // 
+            this.TxtPersonLogsPersonId.BackColor = System.Drawing.Color.White;
+            this.TxtPersonLogsPersonId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtPersonLogsPersonId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtPersonLogsPersonId.HideSelection = false;
+            this.TxtPersonLogsPersonId.Location = new System.Drawing.Point(20, 130);
+            this.TxtPersonLogsPersonId.Name = "TxtPersonLogsPersonId";
+            this.TxtPersonLogsPersonId.Size = new System.Drawing.Size(516, 27);
+            this.TxtPersonLogsPersonId.TabIndex = 0;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(15, 458);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(88, 25);
+            this.label31.TabIndex = 2;
+            this.label31.Text = "Gender";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(15, 384);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(51, 25);
+            this.label32.TabIndex = 2;
+            this.label32.Text = "Age";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(15, 531);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(165, 25);
+            this.label33.TabIndex = 2;
+            this.label33.Text = "Phone Number";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(15, 318);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(71, 25);
+            this.label34.TabIndex = 2;
+            this.label34.Text = "Name";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(15, 170);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(77, 25);
+            this.label35.TabIndex = 2;
+            this.label35.Text = "Village";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(15, 243);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(107, 25);
+            this.label36.TabIndex = 2;
+            this.label36.Text = "House ID";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(11, 98);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(114, 25);
+            this.label37.TabIndex = 2;
+            this.label37.Text = "Person ID";
+            // 
+            // label38
+            // 
+            this.label38.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(2, 30);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(534, 37);
+            this.label38.TabIndex = 1;
+            this.label38.Text = "PERSON DETAILS";
+            this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TblPersonLogs
+            // 
+            this.TblPersonLogs.AllowUserToAddRows = false;
+            this.TblPersonLogs.AllowUserToDeleteRows = false;
+            this.TblPersonLogs.AllowUserToOrderColumns = true;
+            this.TblPersonLogs.AllowUserToResizeRows = false;
+            this.TblPersonLogs.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.TblPersonLogs.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TblPersonLogs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TblPersonLogs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column8,
+            this.Column9,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewTextBoxColumn20});
+            this.TblPersonLogs.ContextMenuStrip = this.TblPersonLogsContextMenuStrip;
+            this.TblPersonLogs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TblPersonLogs.Location = new System.Drawing.Point(0, 0);
+            this.TblPersonLogs.MultiSelect = false;
+            this.TblPersonLogs.Name = "TblPersonLogs";
+            this.TblPersonLogs.ReadOnly = true;
+            this.TblPersonLogs.RowHeadersVisible = false;
+            this.TblPersonLogs.RowHeadersWidth = 51;
+            this.TblPersonLogs.RowTemplate.Height = 50;
+            this.TblPersonLogs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.TblPersonLogs.Size = new System.Drawing.Size(1294, 750);
+            this.TblPersonLogs.TabIndex = 0;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "LOG ID";
+            this.Column8.MinimumWidth = 150;
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 150;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "OPERATION";
+            this.Column9.MinimumWidth = 200;
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.HeaderText = "PERSON ID";
+            this.dataGridViewTextBoxColumn14.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            this.dataGridViewTextBoxColumn14.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.HeaderText = "HOUSE ID";
+            this.dataGridViewTextBoxColumn15.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            this.dataGridViewTextBoxColumn15.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.HeaderText = "VILLAGE";
+            this.dataGridViewTextBoxColumn16.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            this.dataGridViewTextBoxColumn16.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.HeaderText = "NAME";
+            this.dataGridViewTextBoxColumn17.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            this.dataGridViewTextBoxColumn17.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.HeaderText = "AGE";
+            this.dataGridViewTextBoxColumn18.MinimumWidth = 100;
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            this.dataGridViewTextBoxColumn18.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.HeaderText = "GENDER";
+            this.dataGridViewTextBoxColumn19.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.ReadOnly = true;
+            this.dataGridViewTextBoxColumn19.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.HeaderText = "PHONE NO.";
+            this.dataGridViewTextBoxColumn20.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.ReadOnly = true;
+            this.dataGridViewTextBoxColumn20.Width = 150;
+            // 
+            // TblPersonLogsContextMenuStrip
+            // 
+            this.TblPersonLogsContextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.TblPersonLogsContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TblPersonLogsPrintAsPDF,
+            this.TblPersonLogsPrintAsExcel});
+            this.TblPersonLogsContextMenuStrip.Name = "TblHouseContextMenuStrip";
+            this.TblPersonLogsContextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.TblPersonLogsContextMenuStrip.ShowImageMargin = false;
+            this.TblPersonLogsContextMenuStrip.Size = new System.Drawing.Size(142, 52);
+            // 
+            // TblPersonLogsPrintAsPDF
+            // 
+            this.TblPersonLogsPrintAsPDF.Name = "TblPersonLogsPrintAsPDF";
+            this.TblPersonLogsPrintAsPDF.Size = new System.Drawing.Size(141, 24);
+            this.TblPersonLogsPrintAsPDF.Text = "Print as PDF";
+            this.TblPersonLogsPrintAsPDF.Click += new System.EventHandler(this.TblPersonLogsPrintAsPDF_Click);
+            // 
+            // TblPersonLogsPrintAsExcel
+            // 
+            this.TblPersonLogsPrintAsExcel.Name = "TblPersonLogsPrintAsExcel";
+            this.TblPersonLogsPrintAsExcel.Size = new System.Drawing.Size(141, 24);
+            this.TblPersonLogsPrintAsExcel.Text = "Print As Excel";
+            this.TblPersonLogsPrintAsExcel.Click += new System.EventHandler(this.TblPersonLogsPrintAsExcel_Click);
+            // 
             // InnerImageList
             // 
             this.InnerImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("InnerImageList.ImageStream")));
@@ -1572,7 +2638,7 @@
             this.InventoryTab.Location = new System.Drawing.Point(4, 44);
             this.InventoryTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.InventoryTab.Name = "InventoryTab";
-            this.InventoryTab.Size = new System.Drawing.Size(1532, 856);
+            this.InventoryTab.Size = new System.Drawing.Size(1762, 856);
             this.InventoryTab.TabIndex = 2;
             this.InventoryTab.Text = "   Inventory   ";
             this.InventoryTab.UseVisualStyleBackColor = true;
@@ -1589,7 +2655,7 @@
             this.UpperPanel.Location = new System.Drawing.Point(0, 0);
             this.UpperPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.UpperPanel.Name = "UpperPanel";
-            this.UpperPanel.Size = new System.Drawing.Size(1540, 150);
+            this.UpperPanel.Size = new System.Drawing.Size(1770, 150);
             this.UpperPanel.TabIndex = 2;
             // 
             // BtnExit
@@ -1597,7 +2663,7 @@
             this.BtnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.BtnExit.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnExit.Location = new System.Drawing.Point(1346, 89);
+            this.BtnExit.Location = new System.Drawing.Point(1576, 89);
             this.BtnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Size = new System.Drawing.Size(167, 44);
@@ -1634,7 +2700,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 64.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(64, 0);
+            this.label1.Location = new System.Drawing.Point(179, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1393, 121);
             this.label1.TabIndex = 0;
@@ -1658,7 +2724,7 @@
             // 
             this.SplitContainer.Panel2.AutoScroll = true;
             this.SplitContainer.Panel2.Controls.Add(this.LowerPanel);
-            this.SplitContainer.Size = new System.Drawing.Size(1540, 1055);
+            this.SplitContainer.Size = new System.Drawing.Size(1770, 1055);
             this.SplitContainer.SplitterDistance = 150;
             this.SplitContainer.SplitterWidth = 1;
             this.SplitContainer.TabIndex = 1;
@@ -1678,60 +2744,33 @@
             // 
             // imageList1
             // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "icons8-village-60.png");
-            this.imageList1.Images.SetKeyName(1, "icons8-home-page-48.png");
-            this.imageList1.Images.SetKeyName(2, "icons8-account-48.png");
             // 
             // imageList2
             // 
-            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
+            this.imageList2.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList2.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList2.Images.SetKeyName(0, "icons8-home-page-48.png");
-            this.imageList2.Images.SetKeyName(1, "icons8-clinic-50.png");
-            this.imageList2.Images.SetKeyName(2, "icons8-database-50.png");
-            this.imageList2.Images.SetKeyName(3, "icons8-warehouse-50.png");
             // 
             // imageList3
             // 
-            this.imageList3.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList3.ImageStream")));
+            this.imageList3.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList3.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList3.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList3.Images.SetKeyName(0, "icons8-village-60.png");
-            this.imageList3.Images.SetKeyName(1, "icons8-home-page-48.png");
-            this.imageList3.Images.SetKeyName(2, "icons8-account-48.png");
             // 
             // imageList4
             // 
-            this.imageList4.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList4.ImageStream")));
+            this.imageList4.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList4.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList4.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList4.Images.SetKeyName(0, "icons8-home-page-48.png");
-            this.imageList4.Images.SetKeyName(1, "icons8-clinic-50.png");
-            this.imageList4.Images.SetKeyName(2, "icons8-database-50.png");
-            this.imageList4.Images.SetKeyName(3, "icons8-warehouse-50.png");
-            // 
-            // imageList5
-            // 
-            this.imageList5.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList5.ImageStream")));
-            this.imageList5.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList5.Images.SetKeyName(0, "icons8-village-60.png");
-            this.imageList5.Images.SetKeyName(1, "icons8-home-page-48.png");
-            this.imageList5.Images.SetKeyName(2, "icons8-account-48.png");
-            // 
-            // imageList6
-            // 
-            this.imageList6.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList6.ImageStream")));
-            this.imageList6.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList6.Images.SetKeyName(0, "icons8-home-page-48.png");
-            this.imageList6.Images.SetKeyName(1, "icons8-clinic-50.png");
-            this.imageList6.Images.SetKeyName(2, "icons8-database-50.png");
-            this.imageList6.Images.SetKeyName(3, "icons8-warehouse-50.png");
             // 
             // MainFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1540, 1055);
+            this.ClientSize = new System.Drawing.Size(1770, 1055);
             this.Controls.Add(this.SplitContainer);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainFrame";
@@ -1777,6 +2816,32 @@
             ((System.ComponentModel.ISupportInitialize)(this.TxtPersonAge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TblPerson)).EndInit();
             this.TblPersonContextMenuStrip.ResumeLayout(false);
+            this.LogsTab.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel1.PerformLayout();
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TblVillageLogs)).EndInit();
+            this.TblVillageLogsContextMenuStrip.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.splitContainer3.Panel1.ResumeLayout(false);
+            this.splitContainer3.Panel1.PerformLayout();
+            this.splitContainer3.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
+            this.splitContainer3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TblHouseLogs)).EndInit();
+            this.TblHouseLogsContextMenuStrip.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.splitContainer4.Panel1.ResumeLayout(false);
+            this.splitContainer4.Panel1.PerformLayout();
+            this.splitContainer4.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
+            this.splitContainer4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TblPersonLogs)).EndInit();
+            this.TblPersonLogsContextMenuStrip.ResumeLayout(false);
             this.UpperPanel.ResumeLayout(false);
             this.UpperPanel.PerformLayout();
             this.SplitContainer.Panel1.ResumeLayout(false);
@@ -1810,7 +2875,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PERSON_NAME;
         private System.Windows.Forms.DataGridViewTextBoxColumn DATE;
         private System.Windows.Forms.DataGridViewTextBoxColumn TIME;
-        private System.Windows.Forms.TabPage DBTab;
         private System.Windows.Forms.TabPage InventoryTab;
         private System.Windows.Forms.Panel UpperPanel;
         private System.Windows.Forms.Button BtnExit;
@@ -1834,6 +2898,7 @@
         private System.Windows.Forms.ImageList imageList2;
         private System.Windows.Forms.ImageList imageList3;
         private System.Windows.Forms.ImageList imageList4;
+        private System.Windows.Forms.TabPage DBTab;
         private System.Windows.Forms.TabControl InnerTabControl;
         private System.Windows.Forms.TabPage VillagesTab;
         private System.Windows.Forms.SplitContainer VillagesSplitContainer;
@@ -1918,8 +2983,96 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.ImageList imageList5;
-        private System.Windows.Forms.ImageList imageList6;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TabPage LogsTab;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.Button BtnVillageLogsReset;
+        private System.Windows.Forms.Button BtnVillageLogsSearch;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.TextBox TxtVillageLogsNoOfHouses;
+        private System.Windows.Forms.TextBox TxtVillageLogsVillageCode;
+        private System.Windows.Forms.TextBox TxtVillageLogsVillageName;
+        private System.Windows.Forms.TextBox TxtVillageLogsVillageId;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.DataGridView TblVillageLogs;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.SplitContainer splitContainer3;
+        private System.Windows.Forms.Button BtnHouseLogsReset;
+        private System.Windows.Forms.Button BtnHouseLogsSearch;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.TextBox TxtHouseLogsNoOfPeople;
+        private System.Windows.Forms.TextBox TxtHouseLogsHouseId;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.DataGridView TblHouseLogs;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.SplitContainer splitContainer4;
+        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.Panel panel25;
+        private System.Windows.Forms.Button BtnPersonLogsReset;
+        private System.Windows.Forms.Button BtnPersonLogsSearch;
+        private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.Panel panel27;
+        private System.Windows.Forms.Panel panel28;
+        private System.Windows.Forms.Panel panel29;
+        private System.Windows.Forms.Panel panel30;
+        private System.Windows.Forms.TextBox TxtPersonLogsPhoneNo;
+        private System.Windows.Forms.TextBox TxtPersonLogsName;
+        private System.Windows.Forms.TextBox TxtPersonLogsPersonId;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.DataGridView TblPersonLogs;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.ContextMenuStrip TblVillageLogsContextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem TblVillageLogsPrintAsPDF;
+        private System.Windows.Forms.ToolStripMenuItem TblVillageLogsPrintAsExcel;
+        private System.Windows.Forms.ContextMenuStrip TblHouseLogsContextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem TblHouseLogsPrintAsPDF;
+        private System.Windows.Forms.ToolStripMenuItem TblHouseLogsPrintAsExcel;
+        private System.Windows.Forms.ContextMenuStrip TblPersonLogsContextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem TblPersonLogsPrintAsPDF;
+        private System.Windows.Forms.ToolStripMenuItem TblPersonLogsPrintAsExcel;
+        private System.Windows.Forms.TextBox TxtHouseLogsVillageName;
+        private System.Windows.Forms.TextBox TxtPersonLogsVillageName;
+        private System.Windows.Forms.TextBox TxtPersonLogsHouseId;
+        private System.Windows.Forms.TextBox TxtPersonLogsAge;
+        private System.Windows.Forms.TextBox TxtPersonLogsGender;
     }
 }
