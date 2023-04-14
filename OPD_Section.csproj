@@ -144,6 +144,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DISPOSABLE.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Archieve.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,13 +195,19 @@
     <Compile Include="House.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="ITEM.cs">
+    <Compile Include="LOGS_HOUSES.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="ITEMTYPE.cs">
+    <Compile Include="LOGS_PERSONS.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LOGS_VILLAGES.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="MEDICINE.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MISCELLANEOU.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Model1.Context.cs">
@@ -216,6 +225,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="NOTE.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NOTES_ARCHIVE.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="PERSON.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -232,6 +247,15 @@
     </Compile>
     <Compile Include="Forms\Symptoms.Designer.cs">
       <DependentUpon>Symptoms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="STATIONARY.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="SYMPTOM.cs">
       <DependentUpon>Model1.tt</DependentUpon>

@@ -1,6 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="sampledbModelStoreContainer" CdmEntityContainer="sampledbEntities">
+    <EntitySetMapping Name="DISPOSABLES">
+      <EntityTypeMapping TypeName="sampledbModel.DISPOSABLE">
+        <MappingFragment StoreEntitySet="DISPOSABLES">
+          <ScalarProperty Name="DISPOSABLE_ID" ColumnName="DISPOSABLE_ID" />
+          <ScalarProperty Name="DISPOSABLE_NAME" ColumnName="DISPOSABLE_NAME" />
+          <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="HOUSES">
       <EntityTypeMapping TypeName="sampledbModel.House">
         <MappingFragment StoreEntitySet="HOUSES">
@@ -10,21 +19,40 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="ITEMS">
-      <EntityTypeMapping TypeName="sampledbModel.ITEM">
-        <MappingFragment StoreEntitySet="ITEMS">
-          <ScalarProperty Name="ITEM_ID" ColumnName="ITEM_ID" />
-          <ScalarProperty Name="ITEM_NAME" ColumnName="ITEM_NAME" />
-          <ScalarProperty Name="ITEM_TYPE_ID" ColumnName="ITEM_TYPE_ID" />
-          <ScalarProperty Name="ITEM_EXPIRY" ColumnName="ITEM_EXPIRY" />
+    <EntitySetMapping Name="LOGS_HOUSES">
+      <EntityTypeMapping TypeName="sampledbModel.LOGS_HOUSES">
+        <MappingFragment StoreEntitySet="LOGS_HOUSES">
+          <ScalarProperty Name="LOG_ID" ColumnName="LOG_ID" />
+          <ScalarProperty Name="OP_TYPE" ColumnName="OP_TYPE" />
+          <ScalarProperty Name="HOUSE_ID" ColumnName="HOUSE_ID" />
+          <ScalarProperty Name="VILLAGE_ID" ColumnName="VILLAGE_ID" />
+          <ScalarProperty Name="NO_OF_PEOPLE" ColumnName="NO_OF_PEOPLE" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="ITEMTYPES">
-      <EntityTypeMapping TypeName="sampledbModel.ITEMTYPE">
-        <MappingFragment StoreEntitySet="ITEMTYPES">
-          <ScalarProperty Name="ITEM_TYPE_ID" ColumnName="ITEM_TYPE_ID" />
-          <ScalarProperty Name="ITEM_TYPE" ColumnName="ITEM_TYPE" />
+    <EntitySetMapping Name="LOGS_PERSONS">
+      <EntityTypeMapping TypeName="sampledbModel.LOGS_PERSONS">
+        <MappingFragment StoreEntitySet="LOGS_PERSONS">
+          <ScalarProperty Name="LOG_ID" ColumnName="LOG_ID" />
+          <ScalarProperty Name="OP_TYPE" ColumnName="OP_TYPE" />
+          <ScalarProperty Name="PERSON_ID" ColumnName="PERSON_ID" />
+          <ScalarProperty Name="HOUSE_ID" ColumnName="HOUSE_ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="AGE" ColumnName="AGE" />
+          <ScalarProperty Name="GENDER" ColumnName="GENDER" />
+          <ScalarProperty Name="PHONE_NO" ColumnName="PHONE_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOGS_VILLAGES">
+      <EntityTypeMapping TypeName="sampledbModel.LOGS_VILLAGES">
+        <MappingFragment StoreEntitySet="LOGS_VILLAGES">
+          <ScalarProperty Name="LOG_ID" ColumnName="LOG_ID" />
+          <ScalarProperty Name="OP_TYPE" ColumnName="OP_TYPE" />
+          <ScalarProperty Name="VILLAGE_ID" ColumnName="VILLAGE_ID" />
+          <ScalarProperty Name="VILLAGE_NAME" ColumnName="VILLAGE_NAME" />
+          <ScalarProperty Name="VILLAGE_CODE" ColumnName="VILLAGE_CODE" />
+          <ScalarProperty Name="NO_OF_HOUSES" ColumnName="NO_OF_HOUSES" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -35,6 +63,24 @@
           <ScalarProperty Name="MEDICINE_NAME" ColumnName="MEDICINE_NAME" />
           <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
           <ScalarProperty Name="EXPIRY" ColumnName="EXPIRY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MISCELLANEOUS">
+      <EntityTypeMapping TypeName="sampledbModel.MISCELLANEOU">
+        <MappingFragment StoreEntitySet="MISCELLANEOUS">
+          <ScalarProperty Name="MISCELLANEOUS_ID" ColumnName="MISCELLANEOUS_ID" />
+          <ScalarProperty Name="MISCELLANEOUS_NAME" ColumnName="MISCELLANEOUS_NAME" />
+          <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NOTES">
+      <EntityTypeMapping TypeName="sampledbModel.NOTE">
+        <MappingFragment StoreEntitySet="NOTES">
+          <ScalarProperty Name="NOTE_ID" ColumnName="NOTE_ID" />
+          <ScalarProperty Name="VISIT_ID" ColumnName="VISIT_ID" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -57,6 +103,16 @@
           <ScalarProperty Name="VISIT_ID" ColumnName="VISIT_ID" />
           <ScalarProperty Name="MEDICINE_ID" ColumnName="MEDICINE_ID" />
           <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
+          <ScalarProperty Name="MEDICINE_NAME" ColumnName="MEDICINE_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STATIONARies">
+      <EntityTypeMapping TypeName="sampledbModel.STATIONARY">
+        <MappingFragment StoreEntitySet="STATIONARY">
+          <ScalarProperty Name="STATIONARY_ID" ColumnName="STATIONARY_ID" />
+          <ScalarProperty Name="STATIONARY_NAME" ColumnName="STATIONARY_NAME" />
+          <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -66,6 +122,7 @@
           <ScalarProperty Name="SYMPTOM_ID" ColumnName="SYMPTOM_ID" />
           <ScalarProperty Name="VISIT_ID" ColumnName="VISIT_ID" />
           <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="SYMPTOM_NAME" ColumnName="SYMPTOM_NAME" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -101,6 +158,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="NOTES_ARCHIVE">
+      <EntityTypeMapping TypeName="sampledbModel.NOTES_ARCHIVE">
+        <MappingFragment StoreEntitySet="NOTES_ARCHIVE">
+          <ScalarProperty Name="NOTE_ID" ColumnName="NOTE_ID" />
+          <ScalarProperty Name="VISIT_ID" ColumnName="VISIT_ID" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="PRESCRIPTIONS_ARCHIVE">
       <EntityTypeMapping TypeName="sampledbModel.PRESCRIPTIONS_ARCHIVE">
         <MappingFragment StoreEntitySet="PRESCRIPTIONS_ARCHIVE">
@@ -108,6 +174,7 @@
           <ScalarProperty Name="VISIT_ID" ColumnName="VISIT_ID" />
           <ScalarProperty Name="MEDICINE_ID" ColumnName="MEDICINE_ID" />
           <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
+          <ScalarProperty Name="MEDICINE_NAME" ColumnName="MEDICINE_NAME" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -117,6 +184,7 @@
           <ScalarProperty Name="SYMPTOM_ID" ColumnName="SYMPTOM_ID" />
           <ScalarProperty Name="VISIT_ID" ColumnName="VISIT_ID" />
           <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="SYMPTOM_NAME" ColumnName="SYMPTOM_NAME" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -139,5 +207,29 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="sampledbModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="sampledbModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="sampledbModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="sampledbModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="sampledbModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="sampledbModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="sampledbModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="sampledbModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="sampledbModel.Store.sp_upgraddiagrams" />
   </EntityContainerMapping>
 </Mapping>

@@ -10,17 +10,13 @@
 namespace OPD_Section
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class PRESCRIPTION
+    public partial class sp_helpdiagrams_Result
     {
-        public int PRESCRIPTION_ID { get; set; }
-        public int VISIT_ID { get; set; }
-        public int MEDICINE_ID { get; set; }
-        public int QUANTITY { get; set; }
-        public string MEDICINE_NAME { get; set; }
-    
-        public virtual MEDICINE MEDICINE { get; set; }
-        public virtual VISIT VISIT { get; set; }
+        public string Database { get; set; }
+        public string Name { get; set; }
+        public int ID { get; set; }
+        public string Owner { get; set; }
+        public int OwnerID { get; set; }
     }
 }

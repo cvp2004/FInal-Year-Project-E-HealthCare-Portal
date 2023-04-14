@@ -5,6 +5,14 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="sampledbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DISPOSABLES">
+          <Key>
+            <PropertyRef Name="DISPOSABLE_ID" />
+          </Key>
+          <Property Name="DISPOSABLE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DISPOSABLE_NAME" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="QUANTITY" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="HOUSES">
           <Key>
             <PropertyRef Name="HOUSE_ID" />
@@ -13,21 +21,39 @@
           <Property Name="VILLAGE_ID" Type="int" Nullable="false" />
           <Property Name="NO_OF_PEOPLE" Type="int" Nullable="false" />
         </EntityType>
-        <EntityType Name="ITEMS">
+        <EntityType Name="LOGS_HOUSES">
           <Key>
-            <PropertyRef Name="ITEM_ID" />
+            <PropertyRef Name="LOG_ID" />
           </Key>
-          <Property Name="ITEM_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ITEM_NAME" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="ITEM_TYPE_ID" Type="int" Nullable="false" />
-          <Property Name="ITEM_EXPIRY" Type="date" />
+          <Property Name="LOG_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OP_TYPE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="HOUSE_ID" Type="int" Nullable="false" />
+          <Property Name="VILLAGE_ID" Type="int" Nullable="false" />
+          <Property Name="NO_OF_PEOPLE" Type="int" Nullable="false" />
         </EntityType>
-        <EntityType Name="ITEMTYPES">
+        <EntityType Name="LOGS_PERSONS">
           <Key>
-            <PropertyRef Name="ITEM_TYPE_ID" />
+            <PropertyRef Name="LOG_ID" />
           </Key>
-          <Property Name="ITEM_TYPE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ITEM_TYPE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="LOG_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OP_TYPE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PERSON_ID" Type="int" Nullable="false" />
+          <Property Name="HOUSE_ID" Type="int" Nullable="false" />
+          <Property Name="NAME" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="AGE" Type="int" Nullable="false" />
+          <Property Name="GENDER" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PHONE_NO" Type="varchar" MaxLength="15" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LOGS_VILLAGES">
+          <Key>
+            <PropertyRef Name="LOG_ID" />
+          </Key>
+          <Property Name="LOG_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OP_TYPE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="VILLAGE_ID" Type="int" Nullable="false" />
+          <Property Name="VILLAGE_NAME" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="VILLAGE_CODE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NO_OF_HOUSES" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="MEDICINES">
           <Key>
@@ -38,6 +64,33 @@
           <Property Name="QUANTITY" Type="int" />
           <Property Name="EXPIRY" Type="date" Nullable="false" />
         </EntityType>
+        <EntityType Name="MISCELLANEOUS">
+          <Key>
+            <PropertyRef Name="MISCELLANEOUS_ID" />
+          </Key>
+          <Property Name="MISCELLANEOUS_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MISCELLANEOUS_NAME" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="QUANTITY" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NOTES">
+          <Key>
+            <PropertyRef Name="NOTE_ID" />
+          </Key>
+          <Property Name="NOTE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VISIT_ID" Type="int" Nullable="false" />
+          <Property Name="DESCRIPTION" Type="varchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SAMPLEDB.dbo.NOTES_ARCHIVE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="NOTES_ARCHIVE">
+          <Key>
+            <PropertyRef Name="NOTE_ID" />
+            <PropertyRef Name="VISIT_ID" />
+          </Key>
+          <Property Name="NOTE_ID" Type="int" Nullable="false" />
+          <Property Name="VISIT_ID" Type="int" Nullable="false" />
+          <Property Name="DESCRIPTION" Type="varchar(max)" />
+        </EntityType>
         <EntityType Name="PERSONS">
           <Key>
             <PropertyRef Name="PERSON_ID" />
@@ -47,7 +100,7 @@
           <Property Name="NAME" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="AGE" Type="int" Nullable="false" />
           <Property Name="GENDER" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="PHONE_NO" Type="varchar" MaxLength="15" />
+          <Property Name="PHONE_NO" Type="varchar" MaxLength="15" Nullable="false" />
         </EntityType>
         <EntityType Name="PRESCRIPTIONS">
           <Key>
@@ -57,19 +110,30 @@
           <Property Name="VISIT_ID" Type="int" Nullable="false" />
           <Property Name="MEDICINE_ID" Type="int" Nullable="false" />
           <Property Name="QUANTITY" Type="int" Nullable="false" />
+          <Property Name="MEDICINE_NAME" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'sampledb1.dbo.PRESCRIPTIONS_ARCHIVE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'SAMPLEDB.dbo.PRESCRIPTIONS_ARCHIVE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PRESCRIPTIONS_ARCHIVE">
           <Key>
             <PropertyRef Name="PRESCRIPTION_ID" />
             <PropertyRef Name="VISIT_ID" />
             <PropertyRef Name="MEDICINE_ID" />
             <PropertyRef Name="QUANTITY" />
+            <PropertyRef Name="MEDICINE_NAME" />
           </Key>
           <Property Name="PRESCRIPTION_ID" Type="int" Nullable="false" />
           <Property Name="VISIT_ID" Type="int" Nullable="false" />
           <Property Name="MEDICINE_ID" Type="int" Nullable="false" />
+          <Property Name="QUANTITY" Type="int" Nullable="false" />
+          <Property Name="MEDICINE_NAME" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="STATIONARY">
+          <Key>
+            <PropertyRef Name="STATIONARY_ID" />
+          </Key>
+          <Property Name="STATIONARY_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="STATIONARY_NAME" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="QUANTITY" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="SYMPTOMS">
@@ -79,17 +143,20 @@ warning 6002: The table/view 'sampledb1.dbo.PRESCRIPTIONS_ARCHIVE' does not have
           <Property Name="SYMPTOM_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="VISIT_ID" Type="int" Nullable="false" />
           <Property Name="DESCRIPTION" Type="varchar(max)" />
+          <Property Name="SYMPTOM_NAME" Type="varchar(max)" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'sampledb1.dbo.SYMPTOMS_ARCHIVE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'SAMPLEDB.dbo.SYMPTOMS_ARCHIVE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="SYMPTOMS_ARCHIVE">
           <Key>
             <PropertyRef Name="SYMPTOM_ID" />
             <PropertyRef Name="VISIT_ID" />
+            <PropertyRef Name="SYMPTOM_NAME" />
           </Key>
           <Property Name="SYMPTOM_ID" Type="int" Nullable="false" />
           <Property Name="VISIT_ID" Type="int" Nullable="false" />
           <Property Name="DESCRIPTION" Type="varchar(max)" />
+          <Property Name="SYMPTOM_NAME" Type="varchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -121,7 +188,7 @@ warning 6002: The table/view 'sampledb1.dbo.SYMPTOMS_ARCHIVE' does not have a pr
           <Property Name="TIME" Type="time" Precision="7" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'sampledb1.dbo.VISITS_ARCHIVE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'SAMPLEDB.dbo.VISITS_ARCHIVE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="VISITS_ARCHIVE">
           <Key>
             <PropertyRef Name="VISIT_ID" />
@@ -137,7 +204,7 @@ warning 6002: The table/view 'sampledb1.dbo.VISITS_ARCHIVE' does not have a prim
           <Property Name="TIME" Type="time" Precision="7" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'sampledb1.dbo.VIEW_PERSON_UID' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="VIEW_PERSON_UID">
           <Key>
             <PropertyRef Name="PERSON_ID" />
@@ -157,15 +224,15 @@ warning 6002: The table/view 'sampledb1.dbo.VIEW_PERSON_UID' does not have a pri
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ITEMS_ITEM_TYPE_ID">
-          <End Role="ITEMTYPES" Type="Self.ITEMTYPES" Multiplicity="1" />
-          <End Role="ITEMS" Type="Self.ITEMS" Multiplicity="*" />
+        <Association Name="FK_NOTES_VISIT_ID">
+          <End Role="VISITS" Type="Self.VISITS" Multiplicity="1" />
+          <End Role="NOTES" Type="Self.NOTES" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="ITEMTYPES">
-              <PropertyRef Name="ITEM_TYPE_ID" />
+            <Principal Role="VISITS">
+              <PropertyRef Name="VISIT_ID" />
             </Principal>
-            <Dependent Role="ITEMS">
-              <PropertyRef Name="ITEM_TYPE_ID" />
+            <Dependent Role="NOTES">
+              <PropertyRef Name="VISIT_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -229,30 +296,75 @@ warning 6002: The table/view 'sampledb1.dbo.VIEW_PERSON_UID' does not have a pri
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="sampledbModelStoreContainer">
+          <EntitySet Name="DISPOSABLES" EntityType="Self.DISPOSABLES" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HOUSES" EntityType="Self.HOUSES" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="ITEMS" EntityType="Self.ITEMS" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="ITEMTYPES" EntityType="Self.ITEMTYPES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LOGS_HOUSES" EntityType="Self.LOGS_HOUSES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LOGS_PERSONS" EntityType="Self.LOGS_PERSONS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LOGS_VILLAGES" EntityType="Self.LOGS_VILLAGES" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MEDICINES" EntityType="Self.MEDICINES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MISCELLANEOUS" EntityType="Self.MISCELLANEOUS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NOTES" EntityType="Self.NOTES" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PERSONS" EntityType="Self.PERSONS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PRESCRIPTIONS" EntityType="Self.PRESCRIPTIONS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="STATIONARY" EntityType="Self.STATIONARY" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SYMPTOMS" EntityType="Self.SYMPTOMS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VILLAGES" EntityType="Self.VILLAGES" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VISITS" EntityType="Self.VISITS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NOTES_ARCHIVE" EntityType="Self.NOTES_ARCHIVE" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [NOTES_ARCHIVE].[NOTE_ID] AS [NOTE_ID], 
+    [NOTES_ARCHIVE].[VISIT_ID] AS [VISIT_ID], 
+    [NOTES_ARCHIVE].[DESCRIPTION] AS [DESCRIPTION]
+    FROM [dbo].[NOTES_ARCHIVE] AS [NOTES_ARCHIVE]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="PRESCRIPTIONS_ARCHIVE" EntityType="Self.PRESCRIPTIONS_ARCHIVE" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [PRESCRIPTIONS_ARCHIVE].[PRESCRIPTION_ID] AS [PRESCRIPTION_ID], 
     [PRESCRIPTIONS_ARCHIVE].[VISIT_ID] AS [VISIT_ID], 
     [PRESCRIPTIONS_ARCHIVE].[MEDICINE_ID] AS [MEDICINE_ID], 
-    [PRESCRIPTIONS_ARCHIVE].[QUANTITY] AS [QUANTITY]
+    [PRESCRIPTIONS_ARCHIVE].[QUANTITY] AS [QUANTITY], 
+    [PRESCRIPTIONS_ARCHIVE].[MEDICINE_NAME] AS [MEDICINE_NAME]
     FROM [dbo].[PRESCRIPTIONS_ARCHIVE] AS [PRESCRIPTIONS_ARCHIVE]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="SYMPTOMS_ARCHIVE" EntityType="Self.SYMPTOMS_ARCHIVE" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [SYMPTOMS_ARCHIVE].[SYMPTOM_ID] AS [SYMPTOM_ID], 
     [SYMPTOMS_ARCHIVE].[VISIT_ID] AS [VISIT_ID], 
-    [SYMPTOMS_ARCHIVE].[DESCRIPTION] AS [DESCRIPTION]
+    [SYMPTOMS_ARCHIVE].[DESCRIPTION] AS [DESCRIPTION], 
+    [SYMPTOMS_ARCHIVE].[SYMPTOM_NAME] AS [SYMPTOM_NAME]
     FROM [dbo].[SYMPTOMS_ARCHIVE] AS [SYMPTOMS_ARCHIVE]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="VISITS_ARCHIVE" EntityType="Self.VISITS_ARCHIVE" store:Type="Tables" store:Schema="dbo">
@@ -274,9 +386,9 @@ warning 6002: The table/view 'sampledb1.dbo.VIEW_PERSON_UID' does not have a pri
             <End Role="VILLAGES" EntitySet="VILLAGES" />
             <End Role="HOUSES" EntitySet="HOUSES" />
           </AssociationSet>
-          <AssociationSet Name="FK_ITEMS_ITEM_TYPE_ID" Association="Self.FK_ITEMS_ITEM_TYPE_ID">
-            <End Role="ITEMTYPES" EntitySet="ITEMTYPES" />
-            <End Role="ITEMS" EntitySet="ITEMS" />
+          <AssociationSet Name="FK_NOTES_VISIT_ID" Association="Self.FK_NOTES_VISIT_ID">
+            <End Role="VISITS" EntitySet="VISITS" />
+            <End Role="NOTES" EntitySet="NOTES" />
           </AssociationSet>
           <AssociationSet Name="FK_PERSONS_HOUSE_ID" Association="Self.FK_PERSONS_HOUSE_ID">
             <End Role="HOUSES" EntitySet="HOUSES" />
@@ -304,6 +416,14 @@ warning 6002: The table/view 'sampledb1.dbo.VIEW_PERSON_UID' does not have a pri
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="sampledbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="DISPOSABLE">
+          <Key>
+            <PropertyRef Name="DISPOSABLE_ID" />
+          </Key>
+          <Property Name="DISPOSABLE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DISPOSABLE_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="QUANTITY" Type="Int32" Nullable="false" />
+        </EntityType>
         <EntityType Name="House">
           <Key>
             <PropertyRef Name="HOUSE_ID" />
@@ -314,23 +434,39 @@ warning 6002: The table/view 'sampledb1.dbo.VIEW_PERSON_UID' does not have a pri
           <NavigationProperty Name="VILLAGE" Relationship="Self.FK_HOUSES_VILLAGE_ID" FromRole="HOUSES" ToRole="VILLAGES" />
           <NavigationProperty Name="PERSONS" Relationship="Self.FK_PERSONS_HOUSE_ID" FromRole="HOUSES" ToRole="PERSONS" />
         </EntityType>
-        <EntityType Name="ITEM">
+        <EntityType Name="LOGS_HOUSES">
           <Key>
-            <PropertyRef Name="ITEM_ID" />
+            <PropertyRef Name="LOG_ID" />
           </Key>
-          <Property Name="ITEM_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ITEM_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ITEM_TYPE_ID" Type="Int32" Nullable="false" />
-          <Property Name="ITEM_EXPIRY" Type="DateTime" Precision="0" />
-          <NavigationProperty Name="ITEMTYPE" Relationship="Self.FK_ITEMS_ITEM_TYPE_ID" FromRole="ITEMS" ToRole="ITEMTYPES" />
+          <Property Name="LOG_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OP_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HOUSE_ID" Type="Int32" Nullable="false" />
+          <Property Name="VILLAGE_ID" Type="Int32" Nullable="false" />
+          <Property Name="NO_OF_PEOPLE" Type="Int32" Nullable="false" />
         </EntityType>
-        <EntityType Name="ITEMTYPE">
+        <EntityType Name="LOGS_PERSONS">
           <Key>
-            <PropertyRef Name="ITEM_TYPE_ID" />
+            <PropertyRef Name="LOG_ID" />
           </Key>
-          <Property Name="ITEM_TYPE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ITEM_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="ITEMS" Relationship="Self.FK_ITEMS_ITEM_TYPE_ID" FromRole="ITEMTYPES" ToRole="ITEMS" />
+          <Property Name="LOG_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OP_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PERSON_ID" Type="Int32" Nullable="false" />
+          <Property Name="HOUSE_ID" Type="Int32" Nullable="false" />
+          <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AGE" Type="Int32" Nullable="false" />
+          <Property Name="GENDER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PHONE_NO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LOGS_VILLAGES">
+          <Key>
+            <PropertyRef Name="LOG_ID" />
+          </Key>
+          <Property Name="LOG_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OP_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VILLAGE_ID" Type="Int32" Nullable="false" />
+          <Property Name="VILLAGE_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VILLAGE_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NO_OF_HOUSES" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="MEDICINE">
           <Key>
@@ -342,6 +478,23 @@ warning 6002: The table/view 'sampledb1.dbo.VIEW_PERSON_UID' does not have a pri
           <Property Name="EXPIRY" Type="DateTime" Nullable="false" Precision="0" />
           <NavigationProperty Name="PRESCRIPTIONS" Relationship="Self.FK_PRESCRIPTIONS_MEDICINE_ID" FromRole="MEDICINES" ToRole="PRESCRIPTIONS" />
         </EntityType>
+        <EntityType Name="MISCELLANEOU">
+          <Key>
+            <PropertyRef Name="MISCELLANEOUS_ID" />
+          </Key>
+          <Property Name="MISCELLANEOUS_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MISCELLANEOUS_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="QUANTITY" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NOTE">
+          <Key>
+            <PropertyRef Name="NOTE_ID" />
+          </Key>
+          <Property Name="NOTE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VISIT_ID" Type="Int32" Nullable="false" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="VISIT" Relationship="Self.FK_NOTES_VISIT_ID" FromRole="NOTES" ToRole="VISITS" />
+        </EntityType>
         <EntityType Name="PERSON">
           <Key>
             <PropertyRef Name="PERSON_ID" />
@@ -351,7 +504,7 @@ warning 6002: The table/view 'sampledb1.dbo.VIEW_PERSON_UID' does not have a pri
           <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="AGE" Type="Int32" Nullable="false" />
           <Property Name="GENDER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="PHONE_NO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="PHONE_NO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="House" Relationship="Self.FK_PERSONS_HOUSE_ID" FromRole="PERSONS" ToRole="HOUSES" />
           <NavigationProperty Name="VISITS" Relationship="Self.FK_VISITS_PERSON_ID" FromRole="PERSONS" ToRole="VISITS" />
         </EntityType>
@@ -363,8 +516,17 @@ warning 6002: The table/view 'sampledb1.dbo.VIEW_PERSON_UID' does not have a pri
           <Property Name="VISIT_ID" Type="Int32" Nullable="false" />
           <Property Name="MEDICINE_ID" Type="Int32" Nullable="false" />
           <Property Name="QUANTITY" Type="Int32" Nullable="false" />
+          <Property Name="MEDICINE_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="MEDICINE" Relationship="Self.FK_PRESCRIPTIONS_MEDICINE_ID" FromRole="PRESCRIPTIONS" ToRole="MEDICINES" />
           <NavigationProperty Name="VISIT" Relationship="Self.FK_PRESCRIPTIONS_VISIT_ID" FromRole="PRESCRIPTIONS" ToRole="VISITS" />
+        </EntityType>
+        <EntityType Name="STATIONARY">
+          <Key>
+            <PropertyRef Name="STATIONARY_ID" />
+          </Key>
+          <Property Name="STATIONARY_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="STATIONARY_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="QUANTITY" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="SYMPTOM">
           <Key>
@@ -373,6 +535,7 @@ warning 6002: The table/view 'sampledb1.dbo.VIEW_PERSON_UID' does not have a pri
           <Property Name="SYMPTOM_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="VISIT_ID" Type="Int32" Nullable="false" />
           <Property Name="DESCRIPTION" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="SYMPTOM_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="VISIT" Relationship="Self.FK_SYMPTOMS_VISIT_ID" FromRole="SYMPTOMS" ToRole="VISITS" />
         </EntityType>
         <EntityType Name="sysdiagram">
@@ -404,9 +567,19 @@ warning 6002: The table/view 'sampledb1.dbo.VIEW_PERSON_UID' does not have a pri
           <Property Name="PERSON_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DATE" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="TIME" Type="Time" Nullable="false" Precision="7" />
+          <NavigationProperty Name="NOTES" Relationship="Self.FK_NOTES_VISIT_ID" FromRole="VISITS" ToRole="NOTES" />
           <NavigationProperty Name="PERSON" Relationship="Self.FK_VISITS_PERSON_ID" FromRole="VISITS" ToRole="PERSONS" />
           <NavigationProperty Name="PRESCRIPTIONS" Relationship="Self.FK_PRESCRIPTIONS_VISIT_ID" FromRole="VISITS" ToRole="PRESCRIPTIONS" />
           <NavigationProperty Name="SYMPTOMS" Relationship="Self.FK_SYMPTOMS_VISIT_ID" FromRole="VISITS" ToRole="SYMPTOMS" />
+        </EntityType>
+        <EntityType Name="NOTES_ARCHIVE">
+          <Key>
+            <PropertyRef Name="NOTE_ID" />
+            <PropertyRef Name="VISIT_ID" />
+          </Key>
+          <Property Name="NOTE_ID" Type="Int32" Nullable="false" />
+          <Property Name="VISIT_ID" Type="Int32" Nullable="false" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="PRESCRIPTIONS_ARCHIVE">
           <Key>
@@ -414,20 +587,24 @@ warning 6002: The table/view 'sampledb1.dbo.VIEW_PERSON_UID' does not have a pri
             <PropertyRef Name="VISIT_ID" />
             <PropertyRef Name="MEDICINE_ID" />
             <PropertyRef Name="QUANTITY" />
+            <PropertyRef Name="MEDICINE_NAME" />
           </Key>
           <Property Name="PRESCRIPTION_ID" Type="Int32" Nullable="false" />
           <Property Name="VISIT_ID" Type="Int32" Nullable="false" />
           <Property Name="MEDICINE_ID" Type="Int32" Nullable="false" />
           <Property Name="QUANTITY" Type="Int32" Nullable="false" />
+          <Property Name="MEDICINE_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityType Name="SYMPTOMS_ARCHIVE">
           <Key>
             <PropertyRef Name="SYMPTOM_ID" />
             <PropertyRef Name="VISIT_ID" />
+            <PropertyRef Name="SYMPTOM_NAME" />
           </Key>
           <Property Name="SYMPTOM_ID" Type="Int32" Nullable="false" />
           <Property Name="VISIT_ID" Type="Int32" Nullable="false" />
           <Property Name="DESCRIPTION" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="SYMPTOM_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityType Name="VISITS_ARCHIVE">
           <Key>
@@ -474,18 +651,6 @@ warning 6002: The table/view 'sampledb1.dbo.VIEW_PERSON_UID' does not have a pri
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ITEMS_ITEM_TYPE_ID">
-          <End Role="ITEMTYPES" Type="Self.ITEMTYPE" Multiplicity="1" />
-          <End Role="ITEMS" Type="Self.ITEM" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ITEMTYPES">
-              <PropertyRef Name="ITEM_TYPE_ID" />
-            </Principal>
-            <Dependent Role="ITEMS">
-              <PropertyRef Name="ITEM_TYPE_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_PRESCRIPTIONS_MEDICINE_ID">
           <End Role="MEDICINES" Type="Self.MEDICINE" Multiplicity="1" />
           <End Role="PRESCRIPTIONS" Type="Self.PRESCRIPTION" Multiplicity="*" />
@@ -495,6 +660,18 @@ warning 6002: The table/view 'sampledb1.dbo.VIEW_PERSON_UID' does not have a pri
             </Principal>
             <Dependent Role="PRESCRIPTIONS">
               <PropertyRef Name="MEDICINE_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NOTES_VISIT_ID">
+          <End Role="VISITS" Type="Self.VISIT" Multiplicity="1" />
+          <End Role="NOTES" Type="Self.NOTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VISITS">
+              <PropertyRef Name="VISIT_ID" />
+            </Principal>
+            <Dependent Role="NOTES">
+              <PropertyRef Name="VISIT_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -535,16 +712,22 @@ warning 6002: The table/view 'sampledb1.dbo.VIEW_PERSON_UID' does not have a pri
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="sampledbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DISPOSABLES" EntityType="Self.DISPOSABLE" />
           <EntitySet Name="HOUSES" EntityType="Self.House" />
-          <EntitySet Name="ITEMS" EntityType="Self.ITEM" />
-          <EntitySet Name="ITEMTYPES" EntityType="Self.ITEMTYPE" />
+          <EntitySet Name="LOGS_HOUSES" EntityType="Self.LOGS_HOUSES" />
+          <EntitySet Name="LOGS_PERSONS" EntityType="Self.LOGS_PERSONS" />
+          <EntitySet Name="LOGS_VILLAGES" EntityType="Self.LOGS_VILLAGES" />
           <EntitySet Name="MEDICINES" EntityType="Self.MEDICINE" />
+          <EntitySet Name="MISCELLANEOUS" EntityType="Self.MISCELLANEOU" />
+          <EntitySet Name="NOTES" EntityType="Self.NOTE" />
           <EntitySet Name="PERSONS" EntityType="Self.PERSON" />
           <EntitySet Name="PRESCRIPTIONS" EntityType="Self.PRESCRIPTION" />
+          <EntitySet Name="STATIONARies" EntityType="Self.STATIONARY" />
           <EntitySet Name="SYMPTOMS" EntityType="Self.SYMPTOM" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="VILLAGES" EntityType="Self.VILLAGE" />
           <EntitySet Name="VISITS" EntityType="Self.VISIT" />
+          <EntitySet Name="NOTES_ARCHIVE" EntityType="Self.NOTES_ARCHIVE" />
           <EntitySet Name="PRESCRIPTIONS_ARCHIVE" EntityType="Self.PRESCRIPTIONS_ARCHIVE" />
           <EntitySet Name="SYMPTOMS_ARCHIVE" EntityType="Self.SYMPTOMS_ARCHIVE" />
           <EntitySet Name="VISITS_ARCHIVE" EntityType="Self.VISITS_ARCHIVE" />
@@ -557,13 +740,13 @@ warning 6002: The table/view 'sampledb1.dbo.VIEW_PERSON_UID' does not have a pri
             <End Role="HOUSES" EntitySet="HOUSES" />
             <End Role="PERSONS" EntitySet="PERSONS" />
           </AssociationSet>
-          <AssociationSet Name="FK_ITEMS_ITEM_TYPE_ID" Association="Self.FK_ITEMS_ITEM_TYPE_ID">
-            <End Role="ITEMTYPES" EntitySet="ITEMTYPES" />
-            <End Role="ITEMS" EntitySet="ITEMS" />
-          </AssociationSet>
           <AssociationSet Name="FK_PRESCRIPTIONS_MEDICINE_ID" Association="Self.FK_PRESCRIPTIONS_MEDICINE_ID">
             <End Role="MEDICINES" EntitySet="MEDICINES" />
             <End Role="PRESCRIPTIONS" EntitySet="PRESCRIPTIONS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NOTES_VISIT_ID" Association="Self.FK_NOTES_VISIT_ID">
+            <End Role="VISITS" EntitySet="VISITS" />
+            <End Role="NOTES" EntitySet="NOTES" />
           </AssociationSet>
           <AssociationSet Name="FK_VISITS_PERSON_ID" Association="Self.FK_VISITS_PERSON_ID">
             <End Role="PERSONS" EntitySet="PERSONS" />
@@ -577,13 +760,63 @@ warning 6002: The table/view 'sampledb1.dbo.VIEW_PERSON_UID' does not have a pri
             <End Role="VISITS" EntitySet="VISITS" />
             <End Role="SYMPTOMS" EntitySet="SYMPTOMS" />
           </AssociationSet>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(sampledbModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(sampledbModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
         </EntityContainer>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="sampledbModelStoreContainer" CdmEntityContainer="sampledbEntities">
+          <EntitySetMapping Name="DISPOSABLES">
+            <EntityTypeMapping TypeName="sampledbModel.DISPOSABLE">
+              <MappingFragment StoreEntitySet="DISPOSABLES">
+                <ScalarProperty Name="DISPOSABLE_ID" ColumnName="DISPOSABLE_ID" />
+                <ScalarProperty Name="DISPOSABLE_NAME" ColumnName="DISPOSABLE_NAME" />
+                <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="HOUSES">
             <EntityTypeMapping TypeName="sampledbModel.House">
               <MappingFragment StoreEntitySet="HOUSES">
@@ -593,21 +826,40 @@ warning 6002: The table/view 'sampledb1.dbo.VIEW_PERSON_UID' does not have a pri
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="ITEMS">
-            <EntityTypeMapping TypeName="sampledbModel.ITEM">
-              <MappingFragment StoreEntitySet="ITEMS">
-                <ScalarProperty Name="ITEM_ID" ColumnName="ITEM_ID" />
-                <ScalarProperty Name="ITEM_NAME" ColumnName="ITEM_NAME" />
-                <ScalarProperty Name="ITEM_TYPE_ID" ColumnName="ITEM_TYPE_ID" />
-                <ScalarProperty Name="ITEM_EXPIRY" ColumnName="ITEM_EXPIRY" />
+          <EntitySetMapping Name="LOGS_HOUSES">
+            <EntityTypeMapping TypeName="sampledbModel.LOGS_HOUSES">
+              <MappingFragment StoreEntitySet="LOGS_HOUSES">
+                <ScalarProperty Name="LOG_ID" ColumnName="LOG_ID" />
+                <ScalarProperty Name="OP_TYPE" ColumnName="OP_TYPE" />
+                <ScalarProperty Name="HOUSE_ID" ColumnName="HOUSE_ID" />
+                <ScalarProperty Name="VILLAGE_ID" ColumnName="VILLAGE_ID" />
+                <ScalarProperty Name="NO_OF_PEOPLE" ColumnName="NO_OF_PEOPLE" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="ITEMTYPES">
-            <EntityTypeMapping TypeName="sampledbModel.ITEMTYPE">
-              <MappingFragment StoreEntitySet="ITEMTYPES">
-                <ScalarProperty Name="ITEM_TYPE_ID" ColumnName="ITEM_TYPE_ID" />
-                <ScalarProperty Name="ITEM_TYPE" ColumnName="ITEM_TYPE" />
+          <EntitySetMapping Name="LOGS_PERSONS">
+            <EntityTypeMapping TypeName="sampledbModel.LOGS_PERSONS">
+              <MappingFragment StoreEntitySet="LOGS_PERSONS">
+                <ScalarProperty Name="LOG_ID" ColumnName="LOG_ID" />
+                <ScalarProperty Name="OP_TYPE" ColumnName="OP_TYPE" />
+                <ScalarProperty Name="PERSON_ID" ColumnName="PERSON_ID" />
+                <ScalarProperty Name="HOUSE_ID" ColumnName="HOUSE_ID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="AGE" ColumnName="AGE" />
+                <ScalarProperty Name="GENDER" ColumnName="GENDER" />
+                <ScalarProperty Name="PHONE_NO" ColumnName="PHONE_NO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LOGS_VILLAGES">
+            <EntityTypeMapping TypeName="sampledbModel.LOGS_VILLAGES">
+              <MappingFragment StoreEntitySet="LOGS_VILLAGES">
+                <ScalarProperty Name="LOG_ID" ColumnName="LOG_ID" />
+                <ScalarProperty Name="OP_TYPE" ColumnName="OP_TYPE" />
+                <ScalarProperty Name="VILLAGE_ID" ColumnName="VILLAGE_ID" />
+                <ScalarProperty Name="VILLAGE_NAME" ColumnName="VILLAGE_NAME" />
+                <ScalarProperty Name="VILLAGE_CODE" ColumnName="VILLAGE_CODE" />
+                <ScalarProperty Name="NO_OF_HOUSES" ColumnName="NO_OF_HOUSES" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -618,6 +870,24 @@ warning 6002: The table/view 'sampledb1.dbo.VIEW_PERSON_UID' does not have a pri
                 <ScalarProperty Name="MEDICINE_NAME" ColumnName="MEDICINE_NAME" />
                 <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
                 <ScalarProperty Name="EXPIRY" ColumnName="EXPIRY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MISCELLANEOUS">
+            <EntityTypeMapping TypeName="sampledbModel.MISCELLANEOU">
+              <MappingFragment StoreEntitySet="MISCELLANEOUS">
+                <ScalarProperty Name="MISCELLANEOUS_ID" ColumnName="MISCELLANEOUS_ID" />
+                <ScalarProperty Name="MISCELLANEOUS_NAME" ColumnName="MISCELLANEOUS_NAME" />
+                <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NOTES">
+            <EntityTypeMapping TypeName="sampledbModel.NOTE">
+              <MappingFragment StoreEntitySet="NOTES">
+                <ScalarProperty Name="NOTE_ID" ColumnName="NOTE_ID" />
+                <ScalarProperty Name="VISIT_ID" ColumnName="VISIT_ID" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -640,6 +910,16 @@ warning 6002: The table/view 'sampledb1.dbo.VIEW_PERSON_UID' does not have a pri
                 <ScalarProperty Name="VISIT_ID" ColumnName="VISIT_ID" />
                 <ScalarProperty Name="MEDICINE_ID" ColumnName="MEDICINE_ID" />
                 <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
+                <ScalarProperty Name="MEDICINE_NAME" ColumnName="MEDICINE_NAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="STATIONARies">
+            <EntityTypeMapping TypeName="sampledbModel.STATIONARY">
+              <MappingFragment StoreEntitySet="STATIONARY">
+                <ScalarProperty Name="STATIONARY_ID" ColumnName="STATIONARY_ID" />
+                <ScalarProperty Name="STATIONARY_NAME" ColumnName="STATIONARY_NAME" />
+                <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -649,6 +929,7 @@ warning 6002: The table/view 'sampledb1.dbo.VIEW_PERSON_UID' does not have a pri
                 <ScalarProperty Name="SYMPTOM_ID" ColumnName="SYMPTOM_ID" />
                 <ScalarProperty Name="VISIT_ID" ColumnName="VISIT_ID" />
                 <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="SYMPTOM_NAME" ColumnName="SYMPTOM_NAME" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -684,6 +965,15 @@ warning 6002: The table/view 'sampledb1.dbo.VIEW_PERSON_UID' does not have a pri
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="NOTES_ARCHIVE">
+            <EntityTypeMapping TypeName="sampledbModel.NOTES_ARCHIVE">
+              <MappingFragment StoreEntitySet="NOTES_ARCHIVE">
+                <ScalarProperty Name="NOTE_ID" ColumnName="NOTE_ID" />
+                <ScalarProperty Name="VISIT_ID" ColumnName="VISIT_ID" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="PRESCRIPTIONS_ARCHIVE">
             <EntityTypeMapping TypeName="sampledbModel.PRESCRIPTIONS_ARCHIVE">
               <MappingFragment StoreEntitySet="PRESCRIPTIONS_ARCHIVE">
@@ -691,6 +981,7 @@ warning 6002: The table/view 'sampledb1.dbo.VIEW_PERSON_UID' does not have a pri
                 <ScalarProperty Name="VISIT_ID" ColumnName="VISIT_ID" />
                 <ScalarProperty Name="MEDICINE_ID" ColumnName="MEDICINE_ID" />
                 <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
+                <ScalarProperty Name="MEDICINE_NAME" ColumnName="MEDICINE_NAME" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -700,6 +991,7 @@ warning 6002: The table/view 'sampledb1.dbo.VIEW_PERSON_UID' does not have a pri
                 <ScalarProperty Name="SYMPTOM_ID" ColumnName="SYMPTOM_ID" />
                 <ScalarProperty Name="VISIT_ID" ColumnName="VISIT_ID" />
                 <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="SYMPTOM_NAME" ColumnName="SYMPTOM_NAME" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -722,6 +1014,30 @@ warning 6002: The table/view 'sampledb1.dbo.VIEW_PERSON_UID' does not have a pri
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="sampledbModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="sampledbModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="sampledbModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="sampledbModel.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="sampledbModel.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="sampledbModel.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="sampledbModel.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="sampledbModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="sampledbModel.Store.sp_upgraddiagrams" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

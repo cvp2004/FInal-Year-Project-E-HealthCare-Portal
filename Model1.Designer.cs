@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'E:\6th Semister\Major Project\OPD_Section (Updated 30-03-23)\OPD_Section\OPD_Section\Model1.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\CHARU\GPA\GPA ACADEMIC DOCS\FINAL YEAR PROJECT\OPD_Section\Model1.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

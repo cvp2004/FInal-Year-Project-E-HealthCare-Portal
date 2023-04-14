@@ -17,6 +17,7 @@ namespace OPD_Section
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public VISIT()
         {
+            this.NOTES = new HashSet<NOTE>();
             this.PRESCRIPTIONS = new HashSet<PRESCRIPTION>();
             this.SYMPTOMS = new HashSet<SYMPTOM>();
         }
@@ -27,6 +28,8 @@ namespace OPD_Section
         public System.DateTime DATE { get; set; }
         public System.TimeSpan TIME { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<NOTE> NOTES { get; set; }
         public virtual PERSON PERSON { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PRESCRIPTION> PRESCRIPTIONS { get; set; }

@@ -12,15 +12,13 @@ namespace OPD_Section
     using System;
     using System.Collections.Generic;
     
-    public partial class PRESCRIPTION
+    public partial class LOGS_VILLAGES
     {
-        public int PRESCRIPTION_ID { get; set; }
-        public int VISIT_ID { get; set; }
-        public int MEDICINE_ID { get; set; }
-        public int QUANTITY { get; set; }
-        public string MEDICINE_NAME { get; set; }
-    
-        public virtual MEDICINE MEDICINE { get; set; }
-        public virtual VISIT VISIT { get; set; }
+        public int LOG_ID { get; set; }
+        public string OP_TYPE { get; set; }
+        public int VILLAGE_ID { get; set; }
+        public string VILLAGE_NAME { get; set; }
+        public string VILLAGE_CODE { get; set; }
+        public int NO_OF_HOUSES { get; set; }
     }
 }
