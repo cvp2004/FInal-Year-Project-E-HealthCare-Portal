@@ -94,7 +94,7 @@ namespace OPD_Section
         }
 
         // BUTTON  VISIT DETAILS!
-        private void btn_newrecord_Click_1(object sender, EventArgs e)
+        private void btn_newrecord_Click(object sender, EventArgs e)
         {
             this.Close();
             Th = new Thread(OpenVisistDetails);
@@ -1999,6 +1999,16 @@ namespace OPD_Section
                 }
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+
 
 
         /**********************************************************************************************************/

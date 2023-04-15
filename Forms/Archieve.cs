@@ -29,7 +29,7 @@ namespace OPD_Section.Forms
                     dataGridView1.Rows[index].Cells["VISIT_ID"].Value = res["VISIT_ID"];
                     dataGridView1.Rows[index].Cells["PERSON_ID"].Value = res["PERSON_ID"];
                     //dataGridView1.Rows[index].Cells["PERSON_NAME"].Value = res["PERSON_NAME"];
-                    dataGridView1.Rows[index].Cells["PERSON_NAME"].Value = res["PERsON_NAME"];
+                    dataGridView1.Rows[index].Cells["PERSON_NAME"].Value = res["PERSON_NAME"];
                     string datetime = res["DATE"].ToString();
                     DateTime dt = DateTime.Parse(datetime);
                     string Date = dt.Date.ToString("dd/MM/yyyy");
@@ -81,6 +81,5 @@ namespace OPD_Section.Forms
         {
             Application.Run(new ViewDetails(VISITID, "ARCHIVE"));
         }
-
     }
 }
