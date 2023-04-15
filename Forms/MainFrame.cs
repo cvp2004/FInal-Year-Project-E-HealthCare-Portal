@@ -2586,10 +2586,7 @@ namespace OPD_Section
         /// that is used to provide data for the events that are related to mouse actions on a
         /// DataGridView control. It contains information about the row and column index of the cell
         /// that was clicked, the location of the mouse pointer, and the type of mouse button that was
-        private void TblVillage_CellMouseDoubleClick(
-            object sender,
-            DataGridViewCellMouseEventArgs e
-        )
+        private void TblVillage_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             try
             {
@@ -2673,10 +2670,7 @@ namespace OPD_Section
             }
         }
 
-        private void TblVillageLogs_CellMouseDoubleClick(
-            object sender,
-            DataGridViewCellMouseEventArgs e
-        )
+        private void TblVillageLogs_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             try
             {
@@ -2702,10 +2696,7 @@ namespace OPD_Section
             }
         }
 
-        private void TblHouseLogs_CellMouseDoubleClick(
-            object sender,
-            DataGridViewCellMouseEventArgs e
-        )
+        private void TblHouseLogs_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             try
             {
@@ -2730,10 +2721,7 @@ namespace OPD_Section
             }
         }
 
-        private void TblPersonLogs_CellMouseDoubleClick(
-            object sender,
-            DataGridViewCellMouseEventArgs e
-        )
+        private void TblPersonLogs_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             try
             {
@@ -3180,7 +3168,10 @@ namespace OPD_Section
             }
         }
 
-        private void PrintToPDF(DataGridView Tbl) { }
+        private void PrintToPDF(DataGridView Tbl)
+        {
+
+        }
 
         /**********************************************************************************************************/
         /*****************************************INVENTORY-MODULE*************************************************/
