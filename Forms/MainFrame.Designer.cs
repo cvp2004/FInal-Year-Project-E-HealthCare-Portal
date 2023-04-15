@@ -239,6 +239,130 @@
             this.TblPersonLogsPrintAsExcel = new System.Windows.Forms.ToolStripMenuItem();
             this.InnerImageList = new System.Windows.Forms.ImageList(this.components);
             this.InventoryTab = new System.Windows.Forms.TabPage();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.MedicinesTab = new System.Windows.Forms.TabPage();
+            this.splitContainer5 = new System.Windows.Forms.SplitContainer();
+            this.TxtMedicineExpiryDate = new System.Windows.Forms.DateTimePicker();
+            this.TxtMedicineQuantity = new System.Windows.Forms.NumericUpDown();
+            this.BtnMedicineReset = new System.Windows.Forms.Button();
+            this.BtnMedicineSearcch = new System.Windows.Forms.Button();
+            this.BtnMedicineUpdate = new System.Windows.Forms.Button();
+            this.BtnMedicineDelete = new System.Windows.Forms.Button();
+            this.BtnMedicineInsert = new System.Windows.Forms.Button();
+            this.panel31 = new System.Windows.Forms.Panel();
+            this.panel32 = new System.Windows.Forms.Panel();
+            this.panel33 = new System.Windows.Forms.Panel();
+            this.panel34 = new System.Windows.Forms.Panel();
+            this.TxtMedicineName = new System.Windows.Forms.TextBox();
+            this.TxtMedicineId = new System.Windows.Forms.TextBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.TblMedicines = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DisposablesTab = new System.Windows.Forms.TabPage();
+            this.splitContainer6 = new System.Windows.Forms.SplitContainer();
+            this.BtnDisposableReset = new System.Windows.Forms.Button();
+            this.BtnDisposableSearch = new System.Windows.Forms.Button();
+            this.BtnDisposableUpdate = new System.Windows.Forms.Button();
+            this.BtnDisposableDelete = new System.Windows.Forms.Button();
+            this.BtnDisposableInsert = new System.Windows.Forms.Button();
+            this.panel35 = new System.Windows.Forms.Panel();
+            this.panel36 = new System.Windows.Forms.Panel();
+            this.panel37 = new System.Windows.Forms.Panel();
+            this.TxtDisposableId = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.TblDisposables = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StationaryTab = new System.Windows.Forms.TabPage();
+            this.splitContainer7 = new System.Windows.Forms.SplitContainer();
+            this.BtnStstionaryReset = new System.Windows.Forms.Button();
+            this.BtnStstionarySearch = new System.Windows.Forms.Button();
+            this.BtnStstionaryUpdate = new System.Windows.Forms.Button();
+            this.BtnStstionaryDelete = new System.Windows.Forms.Button();
+            this.BtnStstionaryInsert = new System.Windows.Forms.Button();
+            this.panel41 = new System.Windows.Forms.Panel();
+            this.panel42 = new System.Windows.Forms.Panel();
+            this.panel43 = new System.Windows.Forms.Panel();
+            this.TxtStationaryId = new System.Windows.Forms.TextBox();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.TblStationary = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MiscellaneousTab = new System.Windows.Forms.TabPage();
+            this.splitContainer9 = new System.Windows.Forms.SplitContainer();
+            this.BtnMiscellaneousReset = new System.Windows.Forms.Button();
+            this.BtnMiscellaneousSearch = new System.Windows.Forms.Button();
+            this.BtnMiscellaneousUpdate = new System.Windows.Forms.Button();
+            this.BtnMiscellaneousDelete = new System.Windows.Forms.Button();
+            this.BtnMiscellaneousInsert = new System.Windows.Forms.Button();
+            this.panel38 = new System.Windows.Forms.Panel();
+            this.panel39 = new System.Windows.Forms.Panel();
+            this.panel40 = new System.Windows.Forms.Panel();
+            this.TxtMiscellaneousId = new System.Windows.Forms.TextBox();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label71 = new System.Windows.Forms.Label();
+            this.TblMiscellaneous = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InventoryLogsTab = new System.Windows.Forms.TabPage();
+            this.splitContainer8 = new System.Windows.Forms.SplitContainer();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.panel45 = new System.Windows.Forms.Panel();
+            this.panel46 = new System.Windows.Forms.Panel();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.panel47 = new System.Windows.Forms.Panel();
+            this.panel48 = new System.Windows.Forms.Panel();
+            this.panel49 = new System.Windows.Forms.Panel();
+            this.panel50 = new System.Windows.Forms.Panel();
+            this.panel51 = new System.Windows.Forms.Panel();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UpperPanel = new System.Windows.Forms.Panel();
             this.BtnExit = new System.Windows.Forms.Button();
             this.LblTime = new System.Windows.Forms.Label();
@@ -251,6 +375,12 @@
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.imageList3 = new System.Windows.Forms.ImageList(this.components);
             this.imageList4 = new System.Windows.Forms.ImageList(this.components);
+            this.TxtDisposableName = new System.Windows.Forms.TextBox();
+            this.TxtDisposableQuantity = new System.Windows.Forms.NumericUpDown();
+            this.TxtStationaryQuantity = new System.Windows.Forms.NumericUpDown();
+            this.TxtMiscellaneousQuantity = new System.Windows.Forms.NumericUpDown();
+            this.TxtMiscellaneousName = new System.Windows.Forms.TextBox();
+            this.TxtStationaryName = new System.Windows.Forms.TextBox();
             this.LowerPanel.SuspendLayout();
             this.OuterTabControl.SuspendLayout();
             this.OPDTab.SuspendLayout();
@@ -308,11 +438,48 @@
             this.splitContainer4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TblPersonLogs)).BeginInit();
             this.TblPersonLogsContextMenuStrip.SuspendLayout();
+            this.InventoryTab.SuspendLayout();
+            this.tabControl2.SuspendLayout();
+            this.MedicinesTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
+            this.splitContainer5.Panel1.SuspendLayout();
+            this.splitContainer5.Panel2.SuspendLayout();
+            this.splitContainer5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtMedicineQuantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TblMedicines)).BeginInit();
+            this.DisposablesTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
+            this.splitContainer6.Panel1.SuspendLayout();
+            this.splitContainer6.Panel2.SuspendLayout();
+            this.splitContainer6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TblDisposables)).BeginInit();
+            this.StationaryTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).BeginInit();
+            this.splitContainer7.Panel1.SuspendLayout();
+            this.splitContainer7.Panel2.SuspendLayout();
+            this.splitContainer7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TblStationary)).BeginInit();
+            this.MiscellaneousTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).BeginInit();
+            this.splitContainer9.Panel1.SuspendLayout();
+            this.splitContainer9.Panel2.SuspendLayout();
+            this.splitContainer9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TblMiscellaneous)).BeginInit();
+            this.InventoryLogsTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).BeginInit();
+            this.splitContainer8.Panel1.SuspendLayout();
+            this.splitContainer8.Panel2.SuspendLayout();
+            this.splitContainer8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.UpperPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SplitContainer)).BeginInit();
             this.SplitContainer.Panel1.SuspendLayout();
             this.SplitContainer.Panel2.SuspendLayout();
             this.SplitContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtDisposableQuantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtStationaryQuantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtMiscellaneousQuantity)).BeginInit();
             this.SuspendLayout();
             // 
             // LowerPanel
@@ -1639,7 +1806,7 @@
             this.LogsTab.Padding = new System.Windows.Forms.Padding(3);
             this.LogsTab.Size = new System.Drawing.Size(1748, 809);
             this.LogsTab.TabIndex = 3;
-            this.LogsTab.Text = "Logs";
+            this.LogsTab.Text = "   Logs   ";
             this.LogsTab.UseVisualStyleBackColor = true;
             // 
             // tabControl1
@@ -2637,6 +2804,7 @@
             // 
             // InventoryTab
             // 
+            this.InventoryTab.Controls.Add(this.tabControl2);
             this.InventoryTab.ImageKey = "icons8-warehouse-50.png";
             this.InventoryTab.Location = new System.Drawing.Point(4, 44);
             this.InventoryTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -2645,6 +2813,1407 @@
             this.InventoryTab.TabIndex = 2;
             this.InventoryTab.Text = "   Inventory   ";
             this.InventoryTab.UseVisualStyleBackColor = true;
+            // 
+            // tabControl2
+            // 
+            this.tabControl2.Controls.Add(this.MedicinesTab);
+            this.tabControl2.Controls.Add(this.DisposablesTab);
+            this.tabControl2.Controls.Add(this.StationaryTab);
+            this.tabControl2.Controls.Add(this.MiscellaneousTab);
+            this.tabControl2.Controls.Add(this.InventoryLogsTab);
+            this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl2.ImageList = this.InnerImageList;
+            this.tabControl2.ItemSize = new System.Drawing.Size(71, 35);
+            this.tabControl2.Location = new System.Drawing.Point(0, 0);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(1762, 856);
+            this.tabControl2.TabIndex = 2;
+            // 
+            // MedicinesTab
+            // 
+            this.MedicinesTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.MedicinesTab.Controls.Add(this.splitContainer5);
+            this.MedicinesTab.ImageKey = "icons8-village-60.png";
+            this.MedicinesTab.Location = new System.Drawing.Point(4, 39);
+            this.MedicinesTab.Name = "MedicinesTab";
+            this.MedicinesTab.Padding = new System.Windows.Forms.Padding(3);
+            this.MedicinesTab.Size = new System.Drawing.Size(1754, 813);
+            this.MedicinesTab.TabIndex = 0;
+            this.MedicinesTab.Text = "   Medicines   ";
+            this.MedicinesTab.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer5
+            // 
+            this.splitContainer5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.splitContainer5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer5.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer5.IsSplitterFixed = true;
+            this.splitContainer5.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer5.Name = "splitContainer5";
+            // 
+            // splitContainer5.Panel1
+            // 
+            this.splitContainer5.Panel1.AutoScroll = true;
+            this.splitContainer5.Panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer5.Panel1.Controls.Add(this.TxtMedicineExpiryDate);
+            this.splitContainer5.Panel1.Controls.Add(this.TxtMedicineQuantity);
+            this.splitContainer5.Panel1.Controls.Add(this.BtnMedicineReset);
+            this.splitContainer5.Panel1.Controls.Add(this.BtnMedicineSearcch);
+            this.splitContainer5.Panel1.Controls.Add(this.BtnMedicineUpdate);
+            this.splitContainer5.Panel1.Controls.Add(this.BtnMedicineDelete);
+            this.splitContainer5.Panel1.Controls.Add(this.BtnMedicineInsert);
+            this.splitContainer5.Panel1.Controls.Add(this.panel31);
+            this.splitContainer5.Panel1.Controls.Add(this.panel32);
+            this.splitContainer5.Panel1.Controls.Add(this.panel33);
+            this.splitContainer5.Panel1.Controls.Add(this.panel34);
+            this.splitContainer5.Panel1.Controls.Add(this.TxtMedicineName);
+            this.splitContainer5.Panel1.Controls.Add(this.TxtMedicineId);
+            this.splitContainer5.Panel1.Controls.Add(this.label39);
+            this.splitContainer5.Panel1.Controls.Add(this.label40);
+            this.splitContainer5.Panel1.Controls.Add(this.label41);
+            this.splitContainer5.Panel1.Controls.Add(this.label42);
+            this.splitContainer5.Panel1.Controls.Add(this.label43);
+            // 
+            // splitContainer5.Panel2
+            // 
+            this.splitContainer5.Panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer5.Panel2.Controls.Add(this.TblMedicines);
+            this.splitContainer5.Size = new System.Drawing.Size(1748, 807);
+            this.splitContainer5.SplitterDistance = 420;
+            this.splitContainer5.SplitterWidth = 5;
+            this.splitContainer5.TabIndex = 0;
+            // 
+            // TxtMedicineExpiryDate
+            // 
+            this.TxtMedicineExpiryDate.Location = new System.Drawing.Point(16, 392);
+            this.TxtMedicineExpiryDate.Name = "TxtMedicineExpiryDate";
+            this.TxtMedicineExpiryDate.Size = new System.Drawing.Size(516, 34);
+            this.TxtMedicineExpiryDate.TabIndex = 6;
+            // 
+            // TxtMedicineQuantity
+            // 
+            this.TxtMedicineQuantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtMedicineQuantity.Location = new System.Drawing.Point(16, 310);
+            this.TxtMedicineQuantity.Name = "TxtMedicineQuantity";
+            this.TxtMedicineQuantity.Size = new System.Drawing.Size(516, 30);
+            this.TxtMedicineQuantity.TabIndex = 5;
+            // 
+            // BtnMedicineReset
+            // 
+            this.BtnMedicineReset.AutoSize = true;
+            this.BtnMedicineReset.Location = new System.Drawing.Point(151, 608);
+            this.BtnMedicineReset.Name = "BtnMedicineReset";
+            this.BtnMedicineReset.Size = new System.Drawing.Size(244, 41);
+            this.BtnMedicineReset.TabIndex = 4;
+            this.BtnMedicineReset.Text = "RESET";
+            this.BtnMedicineReset.UseVisualStyleBackColor = true;
+            this.BtnMedicineReset.Click += new System.EventHandler(this.BtnMedicineReset_Click);
+            // 
+            // BtnMedicineSearcch
+            // 
+            this.BtnMedicineSearcch.AutoSize = true;
+            this.BtnMedicineSearcch.Location = new System.Drawing.Point(288, 535);
+            this.BtnMedicineSearcch.Name = "BtnMedicineSearcch";
+            this.BtnMedicineSearcch.Size = new System.Drawing.Size(244, 41);
+            this.BtnMedicineSearcch.TabIndex = 4;
+            this.BtnMedicineSearcch.Text = "SEARCH";
+            this.BtnMedicineSearcch.UseVisualStyleBackColor = true;
+            this.BtnMedicineSearcch.Click += new System.EventHandler(this.BtnMedicineSearcch_Click);
+            // 
+            // BtnMedicineUpdate
+            // 
+            this.BtnMedicineUpdate.AutoSize = true;
+            this.BtnMedicineUpdate.Location = new System.Drawing.Point(288, 459);
+            this.BtnMedicineUpdate.Name = "BtnMedicineUpdate";
+            this.BtnMedicineUpdate.Size = new System.Drawing.Size(244, 41);
+            this.BtnMedicineUpdate.TabIndex = 4;
+            this.BtnMedicineUpdate.Text = "UPDATE";
+            this.BtnMedicineUpdate.UseMnemonic = false;
+            this.BtnMedicineUpdate.UseVisualStyleBackColor = false;
+            this.BtnMedicineUpdate.Click += new System.EventHandler(this.BtnMedicineUpdate_Click);
+            // 
+            // BtnMedicineDelete
+            // 
+            this.BtnMedicineDelete.AutoSize = true;
+            this.BtnMedicineDelete.Location = new System.Drawing.Point(16, 535);
+            this.BtnMedicineDelete.Name = "BtnMedicineDelete";
+            this.BtnMedicineDelete.Size = new System.Drawing.Size(244, 41);
+            this.BtnMedicineDelete.TabIndex = 4;
+            this.BtnMedicineDelete.Text = "DELETE";
+            this.BtnMedicineDelete.UseVisualStyleBackColor = true;
+            this.BtnMedicineDelete.Click += new System.EventHandler(this.BtnMedicineDelete_Click);
+            // 
+            // BtnMedicineInsert
+            // 
+            this.BtnMedicineInsert.AutoSize = true;
+            this.BtnMedicineInsert.Location = new System.Drawing.Point(16, 459);
+            this.BtnMedicineInsert.Name = "BtnMedicineInsert";
+            this.BtnMedicineInsert.Size = new System.Drawing.Size(244, 41);
+            this.BtnMedicineInsert.TabIndex = 4;
+            this.BtnMedicineInsert.Text = "INSERT";
+            this.BtnMedicineInsert.UseVisualStyleBackColor = true;
+            this.BtnMedicineInsert.Click += new System.EventHandler(this.BtnMedicineInsert_Click);
+            // 
+            // panel31
+            // 
+            this.panel31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel31.Location = new System.Drawing.Point(16, 426);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(516, 2);
+            this.panel31.TabIndex = 3;
+            // 
+            // panel32
+            // 
+            this.panel32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel32.Location = new System.Drawing.Point(16, 343);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(516, 2);
+            this.panel32.TabIndex = 3;
+            // 
+            // panel33
+            // 
+            this.panel33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel33.Location = new System.Drawing.Point(16, 260);
+            this.panel33.Name = "panel33";
+            this.panel33.Size = new System.Drawing.Size(516, 2);
+            this.panel33.TabIndex = 3;
+            // 
+            // panel34
+            // 
+            this.panel34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel34.Location = new System.Drawing.Point(16, 176);
+            this.panel34.Name = "panel34";
+            this.panel34.Size = new System.Drawing.Size(516, 2);
+            this.panel34.TabIndex = 3;
+            // 
+            // TxtMedicineName
+            // 
+            this.TxtMedicineName.BackColor = System.Drawing.Color.White;
+            this.TxtMedicineName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtMedicineName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtMedicineName.HideSelection = false;
+            this.TxtMedicineName.Location = new System.Drawing.Point(16, 231);
+            this.TxtMedicineName.Name = "TxtMedicineName";
+            this.TxtMedicineName.Size = new System.Drawing.Size(516, 27);
+            this.TxtMedicineName.TabIndex = 0;
+            // 
+            // TxtMedicineId
+            // 
+            this.TxtMedicineId.BackColor = System.Drawing.Color.White;
+            this.TxtMedicineId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtMedicineId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtMedicineId.HideSelection = false;
+            this.TxtMedicineId.Location = new System.Drawing.Point(16, 147);
+            this.TxtMedicineId.Name = "TxtMedicineId";
+            this.TxtMedicineId.Size = new System.Drawing.Size(516, 27);
+            this.TxtMedicineId.TabIndex = 0;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(11, 365);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(131, 25);
+            this.label39.TabIndex = 2;
+            this.label39.Text = "Expiry Date";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(11, 282);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(100, 25);
+            this.label40.TabIndex = 2;
+            this.label40.Text = "Quantity";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(11, 199);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(169, 25);
+            this.label41.TabIndex = 2;
+            this.label41.Text = "Medicine Name";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(11, 112);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(136, 25);
+            this.label42.TabIndex = 2;
+            this.label42.Text = "Medicine ID";
+            // 
+            // label43
+            // 
+            this.label43.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(43, 30);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(446, 37);
+            this.label43.TabIndex = 1;
+            this.label43.Text = "MEDICINES";
+            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TblMedicines
+            // 
+            this.TblMedicines.AllowUserToAddRows = false;
+            this.TblMedicines.AllowUserToDeleteRows = false;
+            this.TblMedicines.AllowUserToOrderColumns = true;
+            this.TblMedicines.AllowUserToResizeRows = false;
+            this.TblMedicines.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.TblMedicines.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.TblMedicines.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TblMedicines.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn25,
+            this.dataGridViewTextBoxColumn26,
+            this.dataGridViewTextBoxColumn27,
+            this.dataGridViewTextBoxColumn28});
+            this.TblMedicines.ContextMenuStrip = this.TblVillageContextMenuStrip;
+            this.TblMedicines.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TblMedicines.Location = new System.Drawing.Point(0, 0);
+            this.TblMedicines.MultiSelect = false;
+            this.TblMedicines.Name = "TblMedicines";
+            this.TblMedicines.ReadOnly = true;
+            this.TblMedicines.RowHeadersVisible = false;
+            this.TblMedicines.RowHeadersWidth = 51;
+            this.TblMedicines.RowTemplate.DividerHeight = 2;
+            this.TblMedicines.RowTemplate.Height = 50;
+            this.TblMedicines.RowTemplate.ReadOnly = true;
+            this.TblMedicines.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.TblMedicines.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.TblMedicines.Size = new System.Drawing.Size(1319, 803);
+            this.TblMedicines.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.HeaderText = "MEDICINE ID";
+            this.dataGridViewTextBoxColumn25.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            this.dataGridViewTextBoxColumn25.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.HeaderText = "MEDICINE NAME";
+            this.dataGridViewTextBoxColumn26.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            this.dataGridViewTextBoxColumn26.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            this.dataGridViewTextBoxColumn27.HeaderText = "QUANTITY";
+            this.dataGridViewTextBoxColumn27.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            this.dataGridViewTextBoxColumn27.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn28
+            // 
+            this.dataGridViewTextBoxColumn28.HeaderText = "EXPIRY DATE";
+            this.dataGridViewTextBoxColumn28.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
+            this.dataGridViewTextBoxColumn28.ReadOnly = true;
+            // 
+            // DisposablesTab
+            // 
+            this.DisposablesTab.Controls.Add(this.splitContainer6);
+            this.DisposablesTab.ImageKey = "icons8-home-page-48.png";
+            this.DisposablesTab.Location = new System.Drawing.Point(4, 39);
+            this.DisposablesTab.Name = "DisposablesTab";
+            this.DisposablesTab.Padding = new System.Windows.Forms.Padding(3);
+            this.DisposablesTab.Size = new System.Drawing.Size(1754, 813);
+            this.DisposablesTab.TabIndex = 1;
+            this.DisposablesTab.Text = "   Disposables   ";
+            this.DisposablesTab.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer6
+            // 
+            this.splitContainer6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.splitContainer6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer6.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer6.IsSplitterFixed = true;
+            this.splitContainer6.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer6.Name = "splitContainer6";
+            // 
+            // splitContainer6.Panel1
+            // 
+            this.splitContainer6.Panel1.AutoScroll = true;
+            this.splitContainer6.Panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer6.Panel1.Controls.Add(this.TxtDisposableQuantity);
+            this.splitContainer6.Panel1.Controls.Add(this.BtnDisposableReset);
+            this.splitContainer6.Panel1.Controls.Add(this.BtnDisposableSearch);
+            this.splitContainer6.Panel1.Controls.Add(this.BtnDisposableUpdate);
+            this.splitContainer6.Panel1.Controls.Add(this.BtnDisposableDelete);
+            this.splitContainer6.Panel1.Controls.Add(this.BtnDisposableInsert);
+            this.splitContainer6.Panel1.Controls.Add(this.panel35);
+            this.splitContainer6.Panel1.Controls.Add(this.panel36);
+            this.splitContainer6.Panel1.Controls.Add(this.panel37);
+            this.splitContainer6.Panel1.Controls.Add(this.TxtDisposableName);
+            this.splitContainer6.Panel1.Controls.Add(this.TxtDisposableId);
+            this.splitContainer6.Panel1.Controls.Add(this.label44);
+            this.splitContainer6.Panel1.Controls.Add(this.label45);
+            this.splitContainer6.Panel1.Controls.Add(this.label46);
+            this.splitContainer6.Panel1.Controls.Add(this.label47);
+            // 
+            // splitContainer6.Panel2
+            // 
+            this.splitContainer6.Panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer6.Panel2.Controls.Add(this.TblDisposables);
+            this.splitContainer6.Size = new System.Drawing.Size(1748, 807);
+            this.splitContainer6.SplitterDistance = 420;
+            this.splitContainer6.SplitterWidth = 5;
+            this.splitContainer6.TabIndex = 1;
+            // 
+            // BtnDisposableReset
+            // 
+            this.BtnDisposableReset.AutoSize = true;
+            this.BtnDisposableReset.Location = new System.Drawing.Point(145, 546);
+            this.BtnDisposableReset.Name = "BtnDisposableReset";
+            this.BtnDisposableReset.Size = new System.Drawing.Size(244, 41);
+            this.BtnDisposableReset.TabIndex = 4;
+            this.BtnDisposableReset.Text = "RESET";
+            this.BtnDisposableReset.UseVisualStyleBackColor = true;
+            this.BtnDisposableReset.Click += new System.EventHandler(this.BtnDisposableReset_Click);
+            // 
+            // BtnDisposableSearch
+            // 
+            this.BtnDisposableSearch.AutoSize = true;
+            this.BtnDisposableSearch.Location = new System.Drawing.Point(288, 476);
+            this.BtnDisposableSearch.Name = "BtnDisposableSearch";
+            this.BtnDisposableSearch.Size = new System.Drawing.Size(244, 41);
+            this.BtnDisposableSearch.TabIndex = 4;
+            this.BtnDisposableSearch.Text = "SEARCH";
+            this.BtnDisposableSearch.UseVisualStyleBackColor = true;
+            this.BtnDisposableSearch.Click += new System.EventHandler(this.BtnDisposableSearch_Click);
+            // 
+            // BtnDisposableUpdate
+            // 
+            this.BtnDisposableUpdate.AutoSize = true;
+            this.BtnDisposableUpdate.Location = new System.Drawing.Point(288, 400);
+            this.BtnDisposableUpdate.Name = "BtnDisposableUpdate";
+            this.BtnDisposableUpdate.Size = new System.Drawing.Size(244, 41);
+            this.BtnDisposableUpdate.TabIndex = 4;
+            this.BtnDisposableUpdate.Text = "UPDATE";
+            this.BtnDisposableUpdate.UseVisualStyleBackColor = true;
+            this.BtnDisposableUpdate.Click += new System.EventHandler(this.BtnDisposableUpdate_Click);
+            // 
+            // BtnDisposableDelete
+            // 
+            this.BtnDisposableDelete.AutoSize = true;
+            this.BtnDisposableDelete.Location = new System.Drawing.Point(16, 476);
+            this.BtnDisposableDelete.Name = "BtnDisposableDelete";
+            this.BtnDisposableDelete.Size = new System.Drawing.Size(244, 41);
+            this.BtnDisposableDelete.TabIndex = 4;
+            this.BtnDisposableDelete.Text = "DELETE";
+            this.BtnDisposableDelete.UseVisualStyleBackColor = true;
+            this.BtnDisposableDelete.Click += new System.EventHandler(this.BtnDisposableDelete_Click);
+            // 
+            // BtnDisposableInsert
+            // 
+            this.BtnDisposableInsert.AutoSize = true;
+            this.BtnDisposableInsert.Location = new System.Drawing.Point(16, 400);
+            this.BtnDisposableInsert.Name = "BtnDisposableInsert";
+            this.BtnDisposableInsert.Size = new System.Drawing.Size(244, 41);
+            this.BtnDisposableInsert.TabIndex = 4;
+            this.BtnDisposableInsert.Text = "INSERT";
+            this.BtnDisposableInsert.UseVisualStyleBackColor = true;
+            this.BtnDisposableInsert.Click += new System.EventHandler(this.BtnDisposableInsert_Click);
+            // 
+            // panel35
+            // 
+            this.panel35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel35.Location = new System.Drawing.Point(16, 345);
+            this.panel35.Name = "panel35";
+            this.panel35.Size = new System.Drawing.Size(516, 2);
+            this.panel35.TabIndex = 3;
+            // 
+            // panel36
+            // 
+            this.panel36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel36.Location = new System.Drawing.Point(16, 260);
+            this.panel36.Name = "panel36";
+            this.panel36.Size = new System.Drawing.Size(516, 2);
+            this.panel36.TabIndex = 3;
+            // 
+            // panel37
+            // 
+            this.panel37.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel37.Location = new System.Drawing.Point(16, 176);
+            this.panel37.Name = "panel37";
+            this.panel37.Size = new System.Drawing.Size(516, 2);
+            this.panel37.TabIndex = 3;
+            // 
+            // TxtDisposableId
+            // 
+            this.TxtDisposableId.BackColor = System.Drawing.Color.White;
+            this.TxtDisposableId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtDisposableId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtDisposableId.HideSelection = false;
+            this.TxtDisposableId.Location = new System.Drawing.Point(16, 147);
+            this.TxtDisposableId.Name = "TxtDisposableId";
+            this.TxtDisposableId.Size = new System.Drawing.Size(516, 27);
+            this.TxtDisposableId.TabIndex = 0;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(11, 288);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(100, 25);
+            this.label44.TabIndex = 2;
+            this.label44.Text = "Quantity";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(11, 201);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(183, 25);
+            this.label45.TabIndex = 2;
+            this.label45.Text = "Disposable Name";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(11, 111);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(150, 25);
+            this.label46.TabIndex = 2;
+            this.label46.Text = "Disposable ID";
+            // 
+            // label47
+            // 
+            this.label47.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.Location = new System.Drawing.Point(43, 30);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(446, 37);
+            this.label47.TabIndex = 1;
+            this.label47.Text = "DISPOSABLES";
+            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TblDisposables
+            // 
+            this.TblDisposables.AllowUserToAddRows = false;
+            this.TblDisposables.AllowUserToDeleteRows = false;
+            this.TblDisposables.AllowUserToOrderColumns = true;
+            this.TblDisposables.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.TblDisposables.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.TblDisposables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TblDisposables.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn29,
+            this.dataGridViewTextBoxColumn30,
+            this.dataGridViewTextBoxColumn31});
+            this.TblDisposables.ContextMenuStrip = this.TblHouseContextMenuStrip;
+            this.TblDisposables.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TblDisposables.Location = new System.Drawing.Point(0, 0);
+            this.TblDisposables.Name = "TblDisposables";
+            this.TblDisposables.ReadOnly = true;
+            this.TblDisposables.RowHeadersVisible = false;
+            this.TblDisposables.RowHeadersWidth = 51;
+            this.TblDisposables.RowTemplate.Height = 50;
+            this.TblDisposables.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.TblDisposables.Size = new System.Drawing.Size(1319, 803);
+            this.TblDisposables.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn29
+            // 
+            this.dataGridViewTextBoxColumn29.HeaderText = "DISPOSABLE ID";
+            this.dataGridViewTextBoxColumn29.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            this.dataGridViewTextBoxColumn29.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn30
+            // 
+            this.dataGridViewTextBoxColumn30.HeaderText = "DISPOSABLE NAME";
+            this.dataGridViewTextBoxColumn30.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
+            this.dataGridViewTextBoxColumn30.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn31
+            // 
+            this.dataGridViewTextBoxColumn31.HeaderText = "QUANTITY";
+            this.dataGridViewTextBoxColumn31.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
+            this.dataGridViewTextBoxColumn31.ReadOnly = true;
+            // 
+            // StationaryTab
+            // 
+            this.StationaryTab.Controls.Add(this.splitContainer7);
+            this.StationaryTab.ImageKey = "icons8-account-48.png";
+            this.StationaryTab.Location = new System.Drawing.Point(4, 39);
+            this.StationaryTab.Name = "StationaryTab";
+            this.StationaryTab.Padding = new System.Windows.Forms.Padding(3);
+            this.StationaryTab.Size = new System.Drawing.Size(1754, 813);
+            this.StationaryTab.TabIndex = 2;
+            this.StationaryTab.Text = "   Stationary   ";
+            this.StationaryTab.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer7
+            // 
+            this.splitContainer7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.splitContainer7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer7.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer7.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer7.Name = "splitContainer7";
+            // 
+            // splitContainer7.Panel1
+            // 
+            this.splitContainer7.Panel1.AutoScroll = true;
+            this.splitContainer7.Panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer7.Panel1.Controls.Add(this.TxtStationaryQuantity);
+            this.splitContainer7.Panel1.Controls.Add(this.BtnStstionaryReset);
+            this.splitContainer7.Panel1.Controls.Add(this.BtnStstionarySearch);
+            this.splitContainer7.Panel1.Controls.Add(this.BtnStstionaryUpdate);
+            this.splitContainer7.Panel1.Controls.Add(this.BtnStstionaryDelete);
+            this.splitContainer7.Panel1.Controls.Add(this.BtnStstionaryInsert);
+            this.splitContainer7.Panel1.Controls.Add(this.panel41);
+            this.splitContainer7.Panel1.Controls.Add(this.panel42);
+            this.splitContainer7.Panel1.Controls.Add(this.panel43);
+            this.splitContainer7.Panel1.Controls.Add(this.TxtStationaryName);
+            this.splitContainer7.Panel1.Controls.Add(this.TxtStationaryId);
+            this.splitContainer7.Panel1.Controls.Add(this.label49);
+            this.splitContainer7.Panel1.Controls.Add(this.label51);
+            this.splitContainer7.Panel1.Controls.Add(this.label53);
+            this.splitContainer7.Panel1.Controls.Add(this.label55);
+            // 
+            // splitContainer7.Panel2
+            // 
+            this.splitContainer7.Panel2.AutoScroll = true;
+            this.splitContainer7.Panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer7.Panel2.Controls.Add(this.TblStationary);
+            this.splitContainer7.Size = new System.Drawing.Size(1748, 807);
+            this.splitContainer7.SplitterDistance = 425;
+            this.splitContainer7.SplitterWidth = 5;
+            this.splitContainer7.TabIndex = 1;
+            // 
+            // BtnStstionaryReset
+            // 
+            this.BtnStstionaryReset.AutoSize = true;
+            this.BtnStstionaryReset.Location = new System.Drawing.Point(145, 546);
+            this.BtnStstionaryReset.Name = "BtnStstionaryReset";
+            this.BtnStstionaryReset.Size = new System.Drawing.Size(244, 41);
+            this.BtnStstionaryReset.TabIndex = 14;
+            this.BtnStstionaryReset.Text = "RESET";
+            this.BtnStstionaryReset.UseVisualStyleBackColor = true;
+            this.BtnStstionaryReset.Click += new System.EventHandler(this.BtnStstionaryReset_Click);
+            // 
+            // BtnStstionarySearch
+            // 
+            this.BtnStstionarySearch.AutoSize = true;
+            this.BtnStstionarySearch.Location = new System.Drawing.Point(288, 476);
+            this.BtnStstionarySearch.Name = "BtnStstionarySearch";
+            this.BtnStstionarySearch.Size = new System.Drawing.Size(244, 41);
+            this.BtnStstionarySearch.TabIndex = 15;
+            this.BtnStstionarySearch.Text = "SEARCH";
+            this.BtnStstionarySearch.UseVisualStyleBackColor = true;
+            this.BtnStstionarySearch.Click += new System.EventHandler(this.BtnStstionarySearch_Click);
+            // 
+            // BtnStstionaryUpdate
+            // 
+            this.BtnStstionaryUpdate.AutoSize = true;
+            this.BtnStstionaryUpdate.Location = new System.Drawing.Point(288, 400);
+            this.BtnStstionaryUpdate.Name = "BtnStstionaryUpdate";
+            this.BtnStstionaryUpdate.Size = new System.Drawing.Size(244, 41);
+            this.BtnStstionaryUpdate.TabIndex = 16;
+            this.BtnStstionaryUpdate.Text = "UPDATE";
+            this.BtnStstionaryUpdate.UseVisualStyleBackColor = true;
+            this.BtnStstionaryUpdate.Click += new System.EventHandler(this.BtnStstionaryUpdate_Click);
+            // 
+            // BtnStstionaryDelete
+            // 
+            this.BtnStstionaryDelete.AutoSize = true;
+            this.BtnStstionaryDelete.Location = new System.Drawing.Point(16, 476);
+            this.BtnStstionaryDelete.Name = "BtnStstionaryDelete";
+            this.BtnStstionaryDelete.Size = new System.Drawing.Size(244, 41);
+            this.BtnStstionaryDelete.TabIndex = 17;
+            this.BtnStstionaryDelete.Text = "DELETE";
+            this.BtnStstionaryDelete.UseVisualStyleBackColor = true;
+            this.BtnStstionaryDelete.Click += new System.EventHandler(this.BtnStstionaryDelete_Click);
+            // 
+            // BtnStstionaryInsert
+            // 
+            this.BtnStstionaryInsert.AutoSize = true;
+            this.BtnStstionaryInsert.Location = new System.Drawing.Point(16, 400);
+            this.BtnStstionaryInsert.Name = "BtnStstionaryInsert";
+            this.BtnStstionaryInsert.Size = new System.Drawing.Size(244, 41);
+            this.BtnStstionaryInsert.TabIndex = 18;
+            this.BtnStstionaryInsert.Text = "INSERT";
+            this.BtnStstionaryInsert.UseVisualStyleBackColor = true;
+            this.BtnStstionaryInsert.Click += new System.EventHandler(this.BtnStstionaryInsert_Click);
+            // 
+            // panel41
+            // 
+            this.panel41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel41.Location = new System.Drawing.Point(16, 345);
+            this.panel41.Name = "panel41";
+            this.panel41.Size = new System.Drawing.Size(516, 2);
+            this.panel41.TabIndex = 11;
+            // 
+            // panel42
+            // 
+            this.panel42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel42.Location = new System.Drawing.Point(16, 260);
+            this.panel42.Name = "panel42";
+            this.panel42.Size = new System.Drawing.Size(516, 2);
+            this.panel42.TabIndex = 12;
+            // 
+            // panel43
+            // 
+            this.panel43.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel43.Location = new System.Drawing.Point(16, 176);
+            this.panel43.Name = "panel43";
+            this.panel43.Size = new System.Drawing.Size(516, 2);
+            this.panel43.TabIndex = 13;
+            // 
+            // TxtStationaryId
+            // 
+            this.TxtStationaryId.BackColor = System.Drawing.Color.White;
+            this.TxtStationaryId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtStationaryId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtStationaryId.HideSelection = false;
+            this.TxtStationaryId.Location = new System.Drawing.Point(16, 147);
+            this.TxtStationaryId.Name = "TxtStationaryId";
+            this.TxtStationaryId.Size = new System.Drawing.Size(516, 27);
+            this.TxtStationaryId.TabIndex = 7;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(11, 288);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(100, 25);
+            this.label49.TabIndex = 8;
+            this.label49.Text = "Quantity";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(11, 201);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(124, 25);
+            this.label51.TabIndex = 9;
+            this.label51.Text = "Item Name";
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(11, 111);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(91, 25);
+            this.label53.TabIndex = 10;
+            this.label53.Text = "Item ID";
+            // 
+            // label55
+            // 
+            this.label55.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Location = new System.Drawing.Point(2, 30);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(534, 37);
+            this.label55.TabIndex = 1;
+            this.label55.Text = "STATIONARY";
+            this.label55.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TblStationary
+            // 
+            this.TblStationary.AllowUserToAddRows = false;
+            this.TblStationary.AllowUserToDeleteRows = false;
+            this.TblStationary.AllowUserToOrderColumns = true;
+            this.TblStationary.AllowUserToResizeRows = false;
+            this.TblStationary.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.TblStationary.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.TblStationary.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TblStationary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TblStationary.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn32,
+            this.dataGridViewTextBoxColumn33,
+            this.dataGridViewTextBoxColumn34,
+            this.dataGridViewTextBoxColumn35,
+            this.dataGridViewTextBoxColumn36,
+            this.dataGridViewTextBoxColumn37,
+            this.dataGridViewTextBoxColumn38});
+            this.TblStationary.ContextMenuStrip = this.TblPersonContextMenuStrip;
+            this.TblStationary.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TblStationary.Location = new System.Drawing.Point(0, 0);
+            this.TblStationary.MultiSelect = false;
+            this.TblStationary.Name = "TblStationary";
+            this.TblStationary.ReadOnly = true;
+            this.TblStationary.RowHeadersVisible = false;
+            this.TblStationary.RowHeadersWidth = 51;
+            this.TblStationary.RowTemplate.Height = 50;
+            this.TblStationary.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.TblStationary.Size = new System.Drawing.Size(1314, 803);
+            this.TblStationary.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn32
+            // 
+            this.dataGridViewTextBoxColumn32.HeaderText = "PERSON ID";
+            this.dataGridViewTextBoxColumn32.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
+            this.dataGridViewTextBoxColumn32.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn33
+            // 
+            this.dataGridViewTextBoxColumn33.HeaderText = "HOUSE ID";
+            this.dataGridViewTextBoxColumn33.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
+            this.dataGridViewTextBoxColumn33.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn34
+            // 
+            this.dataGridViewTextBoxColumn34.HeaderText = "VILLAGE";
+            this.dataGridViewTextBoxColumn34.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
+            this.dataGridViewTextBoxColumn34.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn35
+            // 
+            this.dataGridViewTextBoxColumn35.HeaderText = "NAME";
+            this.dataGridViewTextBoxColumn35.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
+            this.dataGridViewTextBoxColumn35.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn36
+            // 
+            this.dataGridViewTextBoxColumn36.HeaderText = "AGE";
+            this.dataGridViewTextBoxColumn36.MinimumWidth = 100;
+            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
+            this.dataGridViewTextBoxColumn36.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn37
+            // 
+            this.dataGridViewTextBoxColumn37.HeaderText = "GENDER";
+            this.dataGridViewTextBoxColumn37.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
+            this.dataGridViewTextBoxColumn37.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn38
+            // 
+            this.dataGridViewTextBoxColumn38.HeaderText = "PHONE NO.";
+            this.dataGridViewTextBoxColumn38.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
+            this.dataGridViewTextBoxColumn38.ReadOnly = true;
+            // 
+            // MiscellaneousTab
+            // 
+            this.MiscellaneousTab.Controls.Add(this.splitContainer9);
+            this.MiscellaneousTab.Location = new System.Drawing.Point(4, 39);
+            this.MiscellaneousTab.Name = "MiscellaneousTab";
+            this.MiscellaneousTab.Padding = new System.Windows.Forms.Padding(3);
+            this.MiscellaneousTab.Size = new System.Drawing.Size(1754, 813);
+            this.MiscellaneousTab.TabIndex = 4;
+            this.MiscellaneousTab.Text = "   Miscellaneous   ";
+            this.MiscellaneousTab.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer9
+            // 
+            this.splitContainer9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.splitContainer9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer9.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer9.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer9.Name = "splitContainer9";
+            // 
+            // splitContainer9.Panel1
+            // 
+            this.splitContainer9.Panel1.AutoScroll = true;
+            this.splitContainer9.Panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer9.Panel1.Controls.Add(this.TxtMiscellaneousQuantity);
+            this.splitContainer9.Panel1.Controls.Add(this.BtnMiscellaneousReset);
+            this.splitContainer9.Panel1.Controls.Add(this.BtnMiscellaneousSearch);
+            this.splitContainer9.Panel1.Controls.Add(this.BtnMiscellaneousUpdate);
+            this.splitContainer9.Panel1.Controls.Add(this.BtnMiscellaneousDelete);
+            this.splitContainer9.Panel1.Controls.Add(this.BtnMiscellaneousInsert);
+            this.splitContainer9.Panel1.Controls.Add(this.panel38);
+            this.splitContainer9.Panel1.Controls.Add(this.panel39);
+            this.splitContainer9.Panel1.Controls.Add(this.panel40);
+            this.splitContainer9.Panel1.Controls.Add(this.TxtMiscellaneousName);
+            this.splitContainer9.Panel1.Controls.Add(this.TxtMiscellaneousId);
+            this.splitContainer9.Panel1.Controls.Add(this.label48);
+            this.splitContainer9.Panel1.Controls.Add(this.label50);
+            this.splitContainer9.Panel1.Controls.Add(this.label52);
+            this.splitContainer9.Panel1.Controls.Add(this.label71);
+            // 
+            // splitContainer9.Panel2
+            // 
+            this.splitContainer9.Panel2.AutoScroll = true;
+            this.splitContainer9.Panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer9.Panel2.Controls.Add(this.TblMiscellaneous);
+            this.splitContainer9.Size = new System.Drawing.Size(1748, 807);
+            this.splitContainer9.SplitterDistance = 425;
+            this.splitContainer9.SplitterWidth = 5;
+            this.splitContainer9.TabIndex = 2;
+            // 
+            // BtnMiscellaneousReset
+            // 
+            this.BtnMiscellaneousReset.AutoSize = true;
+            this.BtnMiscellaneousReset.Location = new System.Drawing.Point(145, 546);
+            this.BtnMiscellaneousReset.Name = "BtnMiscellaneousReset";
+            this.BtnMiscellaneousReset.Size = new System.Drawing.Size(244, 41);
+            this.BtnMiscellaneousReset.TabIndex = 14;
+            this.BtnMiscellaneousReset.Text = "RESET";
+            this.BtnMiscellaneousReset.UseVisualStyleBackColor = true;
+            this.BtnMiscellaneousReset.Click += new System.EventHandler(this.BtnMiscellaneousReset_Click);
+            // 
+            // BtnMiscellaneousSearch
+            // 
+            this.BtnMiscellaneousSearch.AutoSize = true;
+            this.BtnMiscellaneousSearch.Location = new System.Drawing.Point(288, 476);
+            this.BtnMiscellaneousSearch.Name = "BtnMiscellaneousSearch";
+            this.BtnMiscellaneousSearch.Size = new System.Drawing.Size(244, 41);
+            this.BtnMiscellaneousSearch.TabIndex = 15;
+            this.BtnMiscellaneousSearch.Text = "SEARCH";
+            this.BtnMiscellaneousSearch.UseVisualStyleBackColor = true;
+            this.BtnMiscellaneousSearch.Click += new System.EventHandler(this.BtnMiscellaneousSearch_Click);
+            // 
+            // BtnMiscellaneousUpdate
+            // 
+            this.BtnMiscellaneousUpdate.AutoSize = true;
+            this.BtnMiscellaneousUpdate.Location = new System.Drawing.Point(288, 400);
+            this.BtnMiscellaneousUpdate.Name = "BtnMiscellaneousUpdate";
+            this.BtnMiscellaneousUpdate.Size = new System.Drawing.Size(244, 41);
+            this.BtnMiscellaneousUpdate.TabIndex = 16;
+            this.BtnMiscellaneousUpdate.Text = "UPDATE";
+            this.BtnMiscellaneousUpdate.UseVisualStyleBackColor = true;
+            this.BtnMiscellaneousUpdate.Click += new System.EventHandler(this.BtnMiscellaneousUpdate_Click);
+            // 
+            // BtnMiscellaneousDelete
+            // 
+            this.BtnMiscellaneousDelete.AutoSize = true;
+            this.BtnMiscellaneousDelete.Location = new System.Drawing.Point(16, 476);
+            this.BtnMiscellaneousDelete.Name = "BtnMiscellaneousDelete";
+            this.BtnMiscellaneousDelete.Size = new System.Drawing.Size(244, 41);
+            this.BtnMiscellaneousDelete.TabIndex = 17;
+            this.BtnMiscellaneousDelete.Text = "DELETE";
+            this.BtnMiscellaneousDelete.UseVisualStyleBackColor = true;
+            this.BtnMiscellaneousDelete.Click += new System.EventHandler(this.BtnMiscellaneousDelete_Click);
+            // 
+            // BtnMiscellaneousInsert
+            // 
+            this.BtnMiscellaneousInsert.AutoSize = true;
+            this.BtnMiscellaneousInsert.Location = new System.Drawing.Point(16, 400);
+            this.BtnMiscellaneousInsert.Name = "BtnMiscellaneousInsert";
+            this.BtnMiscellaneousInsert.Size = new System.Drawing.Size(244, 41);
+            this.BtnMiscellaneousInsert.TabIndex = 18;
+            this.BtnMiscellaneousInsert.Text = "INSERT";
+            this.BtnMiscellaneousInsert.UseVisualStyleBackColor = true;
+            this.BtnMiscellaneousInsert.Click += new System.EventHandler(this.BtnMiscellaneousInsert_Click);
+            // 
+            // panel38
+            // 
+            this.panel38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel38.Location = new System.Drawing.Point(16, 345);
+            this.panel38.Name = "panel38";
+            this.panel38.Size = new System.Drawing.Size(516, 2);
+            this.panel38.TabIndex = 11;
+            // 
+            // panel39
+            // 
+            this.panel39.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel39.Location = new System.Drawing.Point(16, 260);
+            this.panel39.Name = "panel39";
+            this.panel39.Size = new System.Drawing.Size(516, 2);
+            this.panel39.TabIndex = 12;
+            // 
+            // panel40
+            // 
+            this.panel40.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel40.Location = new System.Drawing.Point(16, 176);
+            this.panel40.Name = "panel40";
+            this.panel40.Size = new System.Drawing.Size(516, 2);
+            this.panel40.TabIndex = 13;
+            // 
+            // TxtMiscellaneousId
+            // 
+            this.TxtMiscellaneousId.BackColor = System.Drawing.Color.White;
+            this.TxtMiscellaneousId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtMiscellaneousId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtMiscellaneousId.HideSelection = false;
+            this.TxtMiscellaneousId.Location = new System.Drawing.Point(16, 147);
+            this.TxtMiscellaneousId.Name = "TxtMiscellaneousId";
+            this.TxtMiscellaneousId.Size = new System.Drawing.Size(516, 27);
+            this.TxtMiscellaneousId.TabIndex = 7;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(11, 288);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(100, 25);
+            this.label48.TabIndex = 8;
+            this.label48.Text = "Quantity";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(11, 201);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(124, 25);
+            this.label50.TabIndex = 9;
+            this.label50.Text = "Item Name";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(11, 111);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(91, 25);
+            this.label52.TabIndex = 10;
+            this.label52.Text = "Item ID";
+            // 
+            // label71
+            // 
+            this.label71.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label71.Location = new System.Drawing.Point(2, 30);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(534, 37);
+            this.label71.TabIndex = 1;
+            this.label71.Text = "MISCELLANEOUS";
+            this.label71.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TblMiscellaneous
+            // 
+            this.TblMiscellaneous.AllowUserToAddRows = false;
+            this.TblMiscellaneous.AllowUserToDeleteRows = false;
+            this.TblMiscellaneous.AllowUserToOrderColumns = true;
+            this.TblMiscellaneous.AllowUserToResizeRows = false;
+            this.TblMiscellaneous.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.TblMiscellaneous.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.TblMiscellaneous.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TblMiscellaneous.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TblMiscellaneous.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn46,
+            this.dataGridViewTextBoxColumn49,
+            this.Column10});
+            this.TblMiscellaneous.ContextMenuStrip = this.TblPersonContextMenuStrip;
+            this.TblMiscellaneous.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TblMiscellaneous.Location = new System.Drawing.Point(0, 0);
+            this.TblMiscellaneous.MultiSelect = false;
+            this.TblMiscellaneous.Name = "TblMiscellaneous";
+            this.TblMiscellaneous.ReadOnly = true;
+            this.TblMiscellaneous.RowHeadersVisible = false;
+            this.TblMiscellaneous.RowHeadersWidth = 51;
+            this.TblMiscellaneous.RowTemplate.Height = 50;
+            this.TblMiscellaneous.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.TblMiscellaneous.Size = new System.Drawing.Size(1314, 803);
+            this.TblMiscellaneous.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn46
+            // 
+            this.dataGridViewTextBoxColumn46.HeaderText = "ITEM ID";
+            this.dataGridViewTextBoxColumn46.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn46.Name = "dataGridViewTextBoxColumn46";
+            this.dataGridViewTextBoxColumn46.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn49
+            // 
+            this.dataGridViewTextBoxColumn49.HeaderText = "NAME";
+            this.dataGridViewTextBoxColumn49.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn49.Name = "dataGridViewTextBoxColumn49";
+            this.dataGridViewTextBoxColumn49.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "QUANTITY";
+            this.Column10.MinimumWidth = 6;
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // InventoryLogsTab
+            // 
+            this.InventoryLogsTab.Controls.Add(this.splitContainer8);
+            this.InventoryLogsTab.Location = new System.Drawing.Point(4, 39);
+            this.InventoryLogsTab.Name = "InventoryLogsTab";
+            this.InventoryLogsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.InventoryLogsTab.Size = new System.Drawing.Size(1754, 813);
+            this.InventoryLogsTab.TabIndex = 3;
+            this.InventoryLogsTab.Text = "   Logs   ";
+            this.InventoryLogsTab.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer8
+            // 
+            this.splitContainer8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.splitContainer8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer8.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer8.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer8.Name = "splitContainer8";
+            // 
+            // splitContainer8.Panel1
+            // 
+            this.splitContainer8.Panel1.AutoScroll = true;
+            this.splitContainer8.Panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer8.Panel1.Controls.Add(this.comboBox5);
+            this.splitContainer8.Panel1.Controls.Add(this.comboBox6);
+            this.splitContainer8.Panel1.Controls.Add(this.panel45);
+            this.splitContainer8.Panel1.Controls.Add(this.panel46);
+            this.splitContainer8.Panel1.Controls.Add(this.numericUpDown2);
+            this.splitContainer8.Panel1.Controls.Add(this.comboBox7);
+            this.splitContainer8.Panel1.Controls.Add(this.button16);
+            this.splitContainer8.Panel1.Controls.Add(this.button17);
+            this.splitContainer8.Panel1.Controls.Add(this.button18);
+            this.splitContainer8.Panel1.Controls.Add(this.button19);
+            this.splitContainer8.Panel1.Controls.Add(this.button20);
+            this.splitContainer8.Panel1.Controls.Add(this.panel47);
+            this.splitContainer8.Panel1.Controls.Add(this.panel48);
+            this.splitContainer8.Panel1.Controls.Add(this.panel49);
+            this.splitContainer8.Panel1.Controls.Add(this.panel50);
+            this.splitContainer8.Panel1.Controls.Add(this.panel51);
+            this.splitContainer8.Panel1.Controls.Add(this.textBox10);
+            this.splitContainer8.Panel1.Controls.Add(this.textBox11);
+            this.splitContainer8.Panel1.Controls.Add(this.textBox12);
+            this.splitContainer8.Panel1.Controls.Add(this.label56);
+            this.splitContainer8.Panel1.Controls.Add(this.label57);
+            this.splitContainer8.Panel1.Controls.Add(this.label58);
+            this.splitContainer8.Panel1.Controls.Add(this.label59);
+            this.splitContainer8.Panel1.Controls.Add(this.label60);
+            this.splitContainer8.Panel1.Controls.Add(this.label61);
+            this.splitContainer8.Panel1.Controls.Add(this.label62);
+            this.splitContainer8.Panel1.Controls.Add(this.label63);
+            // 
+            // splitContainer8.Panel2
+            // 
+            this.splitContainer8.Panel2.AutoScroll = true;
+            this.splitContainer8.Panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer8.Panel2.Controls.Add(this.dataGridView5);
+            this.splitContainer8.Size = new System.Drawing.Size(1748, 807);
+            this.splitContainer8.SplitterDistance = 425;
+            this.splitContainer8.SplitterWidth = 5;
+            this.splitContainer8.TabIndex = 2;
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(21, 272);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(515, 33);
+            this.comboBox5.TabIndex = 11;
+            // 
+            // comboBox6
+            // 
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Location = new System.Drawing.Point(22, 199);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(515, 33);
+            this.comboBox6.TabIndex = 10;
+            // 
+            // panel45
+            // 
+            this.panel45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel45.Location = new System.Drawing.Point(21, 232);
+            this.panel45.Name = "panel45";
+            this.panel45.Size = new System.Drawing.Size(515, 2);
+            this.panel45.TabIndex = 9;
+            // 
+            // panel46
+            // 
+            this.panel46.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel46.Location = new System.Drawing.Point(20, 305);
+            this.panel46.Name = "panel46";
+            this.panel46.Size = new System.Drawing.Size(515, 2);
+            this.panel46.TabIndex = 7;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(20, 412);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(515, 34);
+            this.numericUpDown2.TabIndex = 6;
+            this.numericUpDown2.ThousandsSeparator = true;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // comboBox7
+            // 
+            this.comboBox7.DisplayMember = "HOUSE_ID";
+            this.comboBox7.DropDownHeight = 100;
+            this.comboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox7.FormattingEnabled = true;
+            this.comboBox7.IntegralHeight = false;
+            this.comboBox7.Items.AddRange(new object[] {
+            "MALE",
+            "FEMALE",
+            "OTHER"});
+            this.comboBox7.Location = new System.Drawing.Point(20, 484);
+            this.comboBox7.Name = "comboBox7";
+            this.comboBox7.Size = new System.Drawing.Size(515, 33);
+            this.comboBox7.TabIndex = 5;
+            this.comboBox7.ValueMember = "HOUSE_ID";
+            // 
+            // button16
+            // 
+            this.button16.AutoSize = true;
+            this.button16.Location = new System.Drawing.Point(156, 734);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(244, 41);
+            this.button16.TabIndex = 4;
+            this.button16.Text = "RESET";
+            this.button16.UseVisualStyleBackColor = true;
+            // 
+            // button17
+            // 
+            this.button17.AutoSize = true;
+            this.button17.Location = new System.Drawing.Point(290, 675);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(247, 41);
+            this.button17.TabIndex = 4;
+            this.button17.Text = "SEARCH";
+            this.button17.UseVisualStyleBackColor = true;
+            // 
+            // button18
+            // 
+            this.button18.AutoSize = true;
+            this.button18.Location = new System.Drawing.Point(290, 616);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(247, 41);
+            this.button18.TabIndex = 4;
+            this.button18.Text = "UPDATE";
+            this.button18.UseVisualStyleBackColor = true;
+            // 
+            // button19
+            // 
+            this.button19.AutoSize = true;
+            this.button19.Location = new System.Drawing.Point(19, 675);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(244, 41);
+            this.button19.TabIndex = 4;
+            this.button19.Text = "DELETE";
+            this.button19.UseVisualStyleBackColor = true;
+            // 
+            // button20
+            // 
+            this.button20.AutoSize = true;
+            this.button20.Location = new System.Drawing.Point(19, 616);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(244, 41);
+            this.button20.TabIndex = 4;
+            this.button20.Text = "INSERT";
+            this.button20.UseVisualStyleBackColor = true;
+            // 
+            // panel47
+            // 
+            this.panel47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel47.Location = new System.Drawing.Point(20, 518);
+            this.panel47.Name = "panel47";
+            this.panel47.Size = new System.Drawing.Size(515, 2);
+            this.panel47.TabIndex = 3;
+            // 
+            // panel48
+            // 
+            this.panel48.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel48.Location = new System.Drawing.Point(20, 447);
+            this.panel48.Name = "panel48";
+            this.panel48.Size = new System.Drawing.Size(515, 2);
+            this.panel48.TabIndex = 3;
+            // 
+            // panel49
+            // 
+            this.panel49.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel49.Location = new System.Drawing.Point(20, 589);
+            this.panel49.Name = "panel49";
+            this.panel49.Size = new System.Drawing.Size(515, 2);
+            this.panel49.TabIndex = 3;
+            // 
+            // panel50
+            // 
+            this.panel50.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel50.Location = new System.Drawing.Point(20, 376);
+            this.panel50.Name = "panel50";
+            this.panel50.Size = new System.Drawing.Size(515, 2);
+            this.panel50.TabIndex = 3;
+            // 
+            // panel51
+            // 
+            this.panel51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel51.Location = new System.Drawing.Point(20, 158);
+            this.panel51.Name = "panel51";
+            this.panel51.Size = new System.Drawing.Size(515, 2);
+            this.panel51.TabIndex = 3;
+            // 
+            // textBox10
+            // 
+            this.textBox10.BackColor = System.Drawing.Color.White;
+            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox10.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox10.HideSelection = false;
+            this.textBox10.Location = new System.Drawing.Point(20, 560);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(515, 27);
+            this.textBox10.TabIndex = 0;
+            // 
+            // textBox11
+            // 
+            this.textBox11.BackColor = System.Drawing.Color.White;
+            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox11.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox11.HideSelection = false;
+            this.textBox11.Location = new System.Drawing.Point(20, 347);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(515, 27);
+            this.textBox11.TabIndex = 0;
+            // 
+            // textBox12
+            // 
+            this.textBox12.BackColor = System.Drawing.Color.White;
+            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox12.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox12.HideSelection = false;
+            this.textBox12.Location = new System.Drawing.Point(20, 129);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(516, 27);
+            this.textBox12.TabIndex = 0;
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(15, 458);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(88, 25);
+            this.label56.TabIndex = 2;
+            this.label56.Text = "Gender";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(15, 384);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(51, 25);
+            this.label57.TabIndex = 2;
+            this.label57.Text = "Age";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(15, 531);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(165, 25);
+            this.label58.TabIndex = 2;
+            this.label58.Text = "Phone Number";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Location = new System.Drawing.Point(15, 318);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(71, 25);
+            this.label59.TabIndex = 2;
+            this.label59.Text = "Name";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(15, 170);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(77, 25);
+            this.label60.TabIndex = 2;
+            this.label60.Text = "Village";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(15, 243);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(107, 25);
+            this.label61.TabIndex = 2;
+            this.label61.Text = "House ID";
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Location = new System.Drawing.Point(11, 98);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(114, 25);
+            this.label62.TabIndex = 2;
+            this.label62.Text = "Person ID";
+            // 
+            // label63
+            // 
+            this.label63.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.Location = new System.Drawing.Point(2, 30);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(534, 37);
+            this.label63.TabIndex = 1;
+            this.label63.Text = "PERSON DETAILS";
+            this.label63.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dataGridView5
+            // 
+            this.dataGridView5.AllowUserToAddRows = false;
+            this.dataGridView5.AllowUserToDeleteRows = false;
+            this.dataGridView5.AllowUserToOrderColumns = true;
+            this.dataGridView5.AllowUserToResizeRows = false;
+            this.dataGridView5.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView5.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn39,
+            this.dataGridViewTextBoxColumn40,
+            this.dataGridViewTextBoxColumn41,
+            this.dataGridViewTextBoxColumn42,
+            this.dataGridViewTextBoxColumn43,
+            this.dataGridViewTextBoxColumn44,
+            this.dataGridViewTextBoxColumn45});
+            this.dataGridView5.ContextMenuStrip = this.TblPersonContextMenuStrip;
+            this.dataGridView5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView5.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView5.MultiSelect = false;
+            this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.ReadOnly = true;
+            this.dataGridView5.RowHeadersVisible = false;
+            this.dataGridView5.RowHeadersWidth = 51;
+            this.dataGridView5.RowTemplate.Height = 50;
+            this.dataGridView5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView5.Size = new System.Drawing.Size(1314, 803);
+            this.dataGridView5.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn39
+            // 
+            this.dataGridViewTextBoxColumn39.HeaderText = "PERSON ID";
+            this.dataGridViewTextBoxColumn39.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
+            this.dataGridViewTextBoxColumn39.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn40
+            // 
+            this.dataGridViewTextBoxColumn40.HeaderText = "HOUSE ID";
+            this.dataGridViewTextBoxColumn40.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
+            this.dataGridViewTextBoxColumn40.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn41
+            // 
+            this.dataGridViewTextBoxColumn41.HeaderText = "VILLAGE";
+            this.dataGridViewTextBoxColumn41.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
+            this.dataGridViewTextBoxColumn41.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn42
+            // 
+            this.dataGridViewTextBoxColumn42.HeaderText = "NAME";
+            this.dataGridViewTextBoxColumn42.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn42.Name = "dataGridViewTextBoxColumn42";
+            this.dataGridViewTextBoxColumn42.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn43
+            // 
+            this.dataGridViewTextBoxColumn43.HeaderText = "AGE";
+            this.dataGridViewTextBoxColumn43.MinimumWidth = 100;
+            this.dataGridViewTextBoxColumn43.Name = "dataGridViewTextBoxColumn43";
+            this.dataGridViewTextBoxColumn43.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn44
+            // 
+            this.dataGridViewTextBoxColumn44.HeaderText = "GENDER";
+            this.dataGridViewTextBoxColumn44.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn44.Name = "dataGridViewTextBoxColumn44";
+            this.dataGridViewTextBoxColumn44.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn45
+            // 
+            this.dataGridViewTextBoxColumn45.HeaderText = "PHONE NO.";
+            this.dataGridViewTextBoxColumn45.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
+            this.dataGridViewTextBoxColumn45.ReadOnly = true;
             // 
             // UpperPanel
             // 
@@ -2769,6 +4338,63 @@
             this.imageList4.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList4.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // TxtDisposableName
+            // 
+            this.TxtDisposableName.BackColor = System.Drawing.Color.White;
+            this.TxtDisposableName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtDisposableName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtDisposableName.HideSelection = false;
+            this.TxtDisposableName.Location = new System.Drawing.Point(17, 229);
+            this.TxtDisposableName.Name = "TxtDisposableName";
+            this.TxtDisposableName.Size = new System.Drawing.Size(516, 27);
+            this.TxtDisposableName.TabIndex = 0;
+            // 
+            // TxtDisposableQuantity
+            // 
+            this.TxtDisposableQuantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtDisposableQuantity.Location = new System.Drawing.Point(16, 314);
+            this.TxtDisposableQuantity.Name = "TxtDisposableQuantity";
+            this.TxtDisposableQuantity.Size = new System.Drawing.Size(516, 30);
+            this.TxtDisposableQuantity.TabIndex = 6;
+            // 
+            // TxtStationaryQuantity
+            // 
+            this.TxtStationaryQuantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtStationaryQuantity.Location = new System.Drawing.Point(16, 314);
+            this.TxtStationaryQuantity.Name = "TxtStationaryQuantity";
+            this.TxtStationaryQuantity.Size = new System.Drawing.Size(516, 30);
+            this.TxtStationaryQuantity.TabIndex = 20;
+            // 
+            // TxtMiscellaneousQuantity
+            // 
+            this.TxtMiscellaneousQuantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtMiscellaneousQuantity.Location = new System.Drawing.Point(16, 315);
+            this.TxtMiscellaneousQuantity.Name = "TxtMiscellaneousQuantity";
+            this.TxtMiscellaneousQuantity.Size = new System.Drawing.Size(516, 30);
+            this.TxtMiscellaneousQuantity.TabIndex = 21;
+            // 
+            // TxtMiscellaneousName
+            // 
+            this.TxtMiscellaneousName.BackColor = System.Drawing.Color.White;
+            this.TxtMiscellaneousName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtMiscellaneousName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtMiscellaneousName.HideSelection = false;
+            this.TxtMiscellaneousName.Location = new System.Drawing.Point(16, 229);
+            this.TxtMiscellaneousName.Name = "TxtMiscellaneousName";
+            this.TxtMiscellaneousName.Size = new System.Drawing.Size(516, 27);
+            this.TxtMiscellaneousName.TabIndex = 7;
+            // 
+            // TxtStationaryName
+            // 
+            this.TxtStationaryName.BackColor = System.Drawing.Color.White;
+            this.TxtStationaryName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtStationaryName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtStationaryName.HideSelection = false;
+            this.TxtStationaryName.Location = new System.Drawing.Point(16, 229);
+            this.TxtStationaryName.Name = "TxtStationaryName";
+            this.TxtStationaryName.Size = new System.Drawing.Size(516, 27);
+            this.TxtStationaryName.TabIndex = 7;
+            // 
             // MainFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -2845,12 +4471,54 @@
             this.splitContainer4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TblPersonLogs)).EndInit();
             this.TblPersonLogsContextMenuStrip.ResumeLayout(false);
+            this.InventoryTab.ResumeLayout(false);
+            this.tabControl2.ResumeLayout(false);
+            this.MedicinesTab.ResumeLayout(false);
+            this.splitContainer5.Panel1.ResumeLayout(false);
+            this.splitContainer5.Panel1.PerformLayout();
+            this.splitContainer5.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
+            this.splitContainer5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TxtMedicineQuantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TblMedicines)).EndInit();
+            this.DisposablesTab.ResumeLayout(false);
+            this.splitContainer6.Panel1.ResumeLayout(false);
+            this.splitContainer6.Panel1.PerformLayout();
+            this.splitContainer6.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
+            this.splitContainer6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TblDisposables)).EndInit();
+            this.StationaryTab.ResumeLayout(false);
+            this.splitContainer7.Panel1.ResumeLayout(false);
+            this.splitContainer7.Panel1.PerformLayout();
+            this.splitContainer7.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
+            this.splitContainer7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TblStationary)).EndInit();
+            this.MiscellaneousTab.ResumeLayout(false);
+            this.splitContainer9.Panel1.ResumeLayout(false);
+            this.splitContainer9.Panel1.PerformLayout();
+            this.splitContainer9.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).EndInit();
+            this.splitContainer9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TblMiscellaneous)).EndInit();
+            this.InventoryLogsTab.ResumeLayout(false);
+            this.splitContainer8.Panel1.ResumeLayout(false);
+            this.splitContainer8.Panel1.PerformLayout();
+            this.splitContainer8.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).EndInit();
+            this.splitContainer8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             this.UpperPanel.ResumeLayout(false);
             this.UpperPanel.PerformLayout();
             this.SplitContainer.Panel1.ResumeLayout(false);
             this.SplitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SplitContainer)).EndInit();
             this.SplitContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TxtDisposableQuantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtStationaryQuantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtMiscellaneousQuantity)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3077,5 +4745,135 @@
         private System.Windows.Forms.TextBox TxtPersonLogsHouseId;
         private System.Windows.Forms.TextBox TxtPersonLogsAge;
         private System.Windows.Forms.TextBox TxtPersonLogsGender;
+        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabPage MedicinesTab;
+        private System.Windows.Forms.SplitContainer splitContainer5;
+        private System.Windows.Forms.Button BtnMedicineReset;
+        private System.Windows.Forms.Button BtnMedicineSearcch;
+        private System.Windows.Forms.Button BtnMedicineUpdate;
+        private System.Windows.Forms.Button BtnMedicineDelete;
+        private System.Windows.Forms.Button BtnMedicineInsert;
+        private System.Windows.Forms.Panel panel31;
+        private System.Windows.Forms.Panel panel32;
+        private System.Windows.Forms.Panel panel33;
+        private System.Windows.Forms.Panel panel34;
+        private System.Windows.Forms.TextBox TxtMedicineName;
+        private System.Windows.Forms.TextBox TxtMedicineId;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.DataGridView TblMedicines;
+        private System.Windows.Forms.TabPage DisposablesTab;
+        private System.Windows.Forms.SplitContainer splitContainer6;
+        private System.Windows.Forms.Button BtnDisposableReset;
+        private System.Windows.Forms.Button BtnDisposableSearch;
+        private System.Windows.Forms.Button BtnDisposableUpdate;
+        private System.Windows.Forms.Button BtnDisposableDelete;
+        private System.Windows.Forms.Button BtnDisposableInsert;
+        private System.Windows.Forms.Panel panel35;
+        private System.Windows.Forms.Panel panel36;
+        private System.Windows.Forms.Panel panel37;
+        private System.Windows.Forms.TextBox TxtDisposableId;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.DataGridView TblDisposables;
+        private System.Windows.Forms.TabPage StationaryTab;
+        private System.Windows.Forms.SplitContainer splitContainer7;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.DataGridView TblStationary;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn38;
+        private System.Windows.Forms.TabPage MiscellaneousTab;
+        private System.Windows.Forms.SplitContainer splitContainer9;
+        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.DataGridView TblMiscellaneous;
+        private System.Windows.Forms.TabPage InventoryLogsTab;
+        private System.Windows.Forms.SplitContainer splitContainer8;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.Panel panel45;
+        private System.Windows.Forms.Panel panel46;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Panel panel47;
+        private System.Windows.Forms.Panel panel48;
+        private System.Windows.Forms.Panel panel49;
+        private System.Windows.Forms.Panel panel50;
+        private System.Windows.Forms.Panel panel51;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn39;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn40;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn41;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn42;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn43;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn44;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn45;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
+        private System.Windows.Forms.Button BtnStstionaryReset;
+        private System.Windows.Forms.Button BtnStstionarySearch;
+        private System.Windows.Forms.Button BtnStstionaryUpdate;
+        private System.Windows.Forms.Button BtnStstionaryDelete;
+        private System.Windows.Forms.Button BtnStstionaryInsert;
+        private System.Windows.Forms.Panel panel41;
+        private System.Windows.Forms.Panel panel42;
+        private System.Windows.Forms.Panel panel43;
+        private System.Windows.Forms.TextBox TxtStationaryId;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Button BtnMiscellaneousReset;
+        private System.Windows.Forms.Button BtnMiscellaneousSearch;
+        private System.Windows.Forms.Button BtnMiscellaneousUpdate;
+        private System.Windows.Forms.Button BtnMiscellaneousDelete;
+        private System.Windows.Forms.Button BtnMiscellaneousInsert;
+        private System.Windows.Forms.Panel panel38;
+        private System.Windows.Forms.Panel panel39;
+        private System.Windows.Forms.Panel panel40;
+        private System.Windows.Forms.TextBox TxtMiscellaneousId;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.DateTimePicker TxtMedicineExpiryDate;
+        private System.Windows.Forms.NumericUpDown TxtMedicineQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn46;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn49;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.NumericUpDown TxtDisposableQuantity;
+        private System.Windows.Forms.TextBox TxtDisposableName;
+        private System.Windows.Forms.NumericUpDown TxtStationaryQuantity;
+        private System.Windows.Forms.NumericUpDown TxtMiscellaneousQuantity;
+        private System.Windows.Forms.TextBox TxtMiscellaneousName;
+        private System.Windows.Forms.TextBox TxtStationaryName;
     }
 }

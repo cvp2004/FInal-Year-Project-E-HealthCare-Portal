@@ -1,9 +1,13 @@
 ﻿using OPD_Section.Forms;
 using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
-
 
 namespace OPD_Section
 {
@@ -13,7 +17,6 @@ namespace OPD_Section
         public Thread Th;
         public DBClasses db = new DBClasses();
         public string VISITID = "";
-
 
         // CONSTRUCTOR!
         public MainFrame()
@@ -29,6 +32,11 @@ namespace OPD_Section
             LoadDefaultTblVillageLogs();
             LoadDefaultTblHouseLogs();
             LoadDefaultTblPersonLogs();
+
+            LoadDefaultTblMedicines();
+            LoadDefaultTblDisposables();
+            LoadDefaultTblStationary();
+            LoadDefaultTblMiscellaneous();
 
             LoadTxtHouseVillageName();
             LoadTxtPersonVillageName();
@@ -59,12 +67,9 @@ namespace OPD_Section
                     string Date = dt.Date.ToString("dd/MM/yyyy");
                     string Time = dt.ToString("hh:mm:ss tt");
 
-
                     dataGridView1.Rows[index].Cells["DATE"].Value = Date;
                     dataGridView1.Rows[index].Cells["TIME"].Value = res["TIME"];
-
                 }
-
             }
             else
             {
@@ -77,9 +82,7 @@ namespace OPD_Section
         // LOCADING MAIN FRAME!
         private void MainFrame_Load(object sender, EventArgs e)
         {
-
             LoadData();
-
         }
 
         // OPEN VISIT DETAILS
@@ -153,7 +156,6 @@ namespace OPD_Section
 
              db.CloseConnection();
  */
-
         }
 
         private void btn_archieve_Click(object sender, EventArgs e)
@@ -198,14 +200,10 @@ namespace OPD_Section
                     sql = "Select * from Visits where PERSON_ID Like '%" + pid + "%';";
                 }
 
-
                 if (txt_personname.Text != "")
                 {
                     sql = "Select * from Visits where PERSON_NAME Like '%" + pname + "%';";
                 }
-
-
-
 
                 SqlDataReader res = db.getData(sql);
                 if (res.HasRows)
@@ -222,9 +220,7 @@ namespace OPD_Section
                         string Time = dt.ToString("hh:mm:ss tt");
                         dataGridView1.Rows[index].Cells["DATE"].Value = Date;
                         dataGridView1.Rows[index].Cells["TIME"].Value = res["TIME"];
-
                     }
-
                 }
                 else
                 {
@@ -235,7 +231,6 @@ namespace OPD_Section
                 }
 
                 db.CloseConnection();
-
             }
             else
             {
@@ -244,23 +239,6 @@ namespace OPD_Section
                 txt_personname.Enabled = true;
                 LoadData();
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
 
         private void txt_personid_TextChanged(object sender, EventArgs e)
@@ -280,7 +258,6 @@ namespace OPD_Section
 
             if (txt_personid.Text != "")
             {
-
                 txt_visitid.Enabled = false;
                 txt_personid.Enabled = true;
                 txt_personname.Enabled = false;
@@ -303,14 +280,10 @@ namespace OPD_Section
                     sql = "Select * from Visits where PERSON_ID Like '%" + pid + "%';";
                 }
 
-
                 if (txt_personname.Text != "")
                 {
                     sql = "Select * from Visits where PERSON_NAME Like '%" + pname + "%';";
                 }
-
-
-
 
                 SqlDataReader res = db.getData(sql);
                 if (res.HasRows)
@@ -327,9 +300,7 @@ namespace OPD_Section
                         string Time = dt.ToString("hh:mm:ss tt");
                         dataGridView1.Rows[index].Cells["DATE"].Value = Date;
                         dataGridView1.Rows[index].Cells["TIME"].Value = res["TIME"];
-
                     }
-
                 }
                 else
                 {
@@ -337,32 +308,23 @@ namespace OPD_Section
                     txt_visitid.Text = "";
                     txt_personid.Text = "";
                     txt_personname.Text = "";
-
                 }
 
                 db.CloseConnection();
-
             }
             else
             {
-
                 txt_visitid.Enabled = true;
                 txt_personid.Enabled = true;
                 txt_personname.Enabled = true;
                 LoadData();
             }
-
-
-
-
-
         }
 
         private void txt_personname_TextChanged(object sender, EventArgs e)
         {
             if (txt_personname.Text != "")
             {
-
                 txt_visitid.Enabled = false;
                 txt_personid.Enabled = false;
                 txt_personname.Enabled = true;
@@ -385,14 +347,10 @@ namespace OPD_Section
                     sql = "Select * from Visits where PERSON_ID = '" + pid + "';";
                 }
 
-
                 if (txt_personname.Text != "")
                 {
                     sql = "Select * from Visits where PERSON_NAME Like '%" + pname + "%';";
                 }
-
-
-
 
                 SqlDataReader res = db.getData(sql);
                 if (res.HasRows)
@@ -409,9 +367,7 @@ namespace OPD_Section
                         string Time = dt.ToString("hh:mm:ss tt");
                         dataGridView1.Rows[index].Cells["DATE"].Value = Date;
                         dataGridView1.Rows[index].Cells["TIME"].Value = res["TIME"];
-
                     }
-
                 }
                 else
                 {
@@ -419,27 +375,24 @@ namespace OPD_Section
                     txt_visitid.Text = "";
                     txt_personid.Text = "";
                     txt_personname.Text = "";
-
                 }
 
                 db.CloseConnection();
-
             }
             else
             {
-
                 txt_visitid.Enabled = true;
                 txt_personid.Enabled = true;
                 txt_personname.Enabled = true;
                 LoadData();
             }
-
-
         }
 
-        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void dataGridView1_CellMouseDoubleClick(
+            object sender,
+            DataGridViewCellMouseEventArgs e
+        )
         {
-
             foreach (DataGridViewRow row in dataGridView1.SelectedRows)
             {
                 VISITID = row.Cells["VISIT_ID"].Value.ToString();
@@ -448,8 +401,6 @@ namespace OPD_Section
             Th = new Thread(OpenViewDetails);
             Th.SetApartmentState(ApartmentState.STA);
             Th.Start();
-
-
         }
 
         public void OpenViewDetails()
@@ -475,5 +426,2998 @@ namespace OPD_Section
             Application.Exit();
         }
 
+        /**********************************************************************************************************/
+        /*****************************************DB-RECORDS-MODULE************************************************/
+        /**********************************************************************************************************/
+
+        // DataGridView Load Events
+
+        /// These are functions that load default data into different tables in a sample database using
+        /// Entity Framework in C#.
+        private void LoadDefaultTblVillage()
+        {
+            try
+            {
+                TblVillage.Rows.Clear();
+
+                using (var context = new sampledbEntities())
+                {
+                    foreach (VILLAGE v in context.VILLAGES)
+                    {
+                        DataGridViewRow row = new DataGridViewRow();
+                        row.CreateCells(TblVillage);
+                        row.Cells[0].Value = v.VILLAGE_ID;
+                        row.Cells[1].Value = v.VILLAGE_NAME;
+                        row.Cells[2].Value = v.VILLAGE_CODE;
+                        row.Cells[3].Value = v.NO_OF_HOUSES;
+                        TblVillage.Rows.Add(row);
+                    }
+                }
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Operation Failed\nMessage : " + e.Message
+                );
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + e.Message);
+            }
+        }
+
+        private void LoadDefaultTblHouse()
+        {
+            try
+            {
+                TblHouse.Rows.Clear();
+
+                using (var context = new sampledbEntities())
+                {
+                    foreach (House h in context.HOUSES)
+                    {
+                        DataGridViewRow row = new DataGridViewRow();
+                        row.CreateCells(TblHouse);
+                        row.Cells[0].Value = h.HOUSE_ID;
+                        /*row.Cells[1].Value = h.VILLAGE_ID;*/
+
+                        foreach (VILLAGE v in context.VILLAGES)
+                        {
+                            if (v.VILLAGE_ID == h.VILLAGE_ID)
+                            {
+                                row.Cells[1].Value = v.VILLAGE_NAME;
+                                break;
+                            }
+                        }
+
+                        row.Cells[2].Value = h.NO_OF_PEOPLE;
+                        TblHouse.Rows.Add(row);
+                    }
+                }
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Operation Failed\nMessage : " + e.Message
+                );
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + e.Message);
+            }
+        }
+
+        private void LoadDefaultTblPerson()
+        {
+            try
+            {
+                TblPerson.Rows.Clear();
+
+                using (var context = new sampledbEntities())
+                {
+                    foreach (PERSON p in context.PERSONS)
+                    {
+                        DataGridViewRow row = new DataGridViewRow();
+                        row.CreateCells(TblPerson);
+
+                        int vid = context.HOUSES.Find(p.HOUSE_ID).VILLAGE_ID;
+                        string vname = context.VILLAGES.Find(vid).VILLAGE_NAME;
+
+                        row.Cells[0].Value = p.PERSON_ID;
+                        row.Cells[1].Value = p.HOUSE_ID;
+                        row.Cells[2].Value = vname;
+                        row.Cells[3].Value = p.NAME;
+                        row.Cells[4].Value = p.AGE;
+                        row.Cells[5].Value = p.GENDER;
+                        row.Cells[6].Value = p.PHONE_NO;
+                        TblPerson.Rows.Add(row);
+                    }
+                }
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Operation Failed\nMessage : " + e.Message
+                );
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + e.Message);
+            }
+        }
+
+        private void LoadDefaultTblVillageLogs()
+        {
+            try
+            {
+                TblVillageLogs.Rows.Clear();
+
+                using (var context = new sampledbEntities())
+                {
+                    foreach (LOGS_VILLAGES v in context.LOGS_VILLAGES)
+                    {
+                        DataGridViewRow row = new DataGridViewRow();
+                        row.CreateCells(TblVillageLogs);
+                        row.Cells[0].Value = v.LOG_ID;
+                        row.Cells[1].Value = v.OP_TYPE;
+                        row.Cells[2].Value = v.VILLAGE_ID;
+                        row.Cells[3].Value = v.VILLAGE_NAME;
+                        row.Cells[4].Value = v.VILLAGE_CODE;
+                        row.Cells[5].Value = v.NO_OF_HOUSES;
+                        TblVillageLogs.Rows.Add(row);
+                    }
+                }
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Operation Failed\nMessage : " + e.Message
+                );
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + e.Message);
+            }
+        }
+
+        private void LoadDefaultTblHouseLogs()
+        {
+            try
+            {
+                TblHouseLogs.Rows.Clear();
+
+                using (var context = new sampledbEntities())
+                {
+                    foreach (LOGS_HOUSES h in context.LOGS_HOUSES)
+                    {
+                        DataGridViewRow row = new DataGridViewRow();
+                        row.CreateCells(TblHouseLogs);
+                        row.Cells[0].Value = h.LOG_ID;
+                        row.Cells[1].Value = h.OP_TYPE;
+                        row.Cells[2].Value = h.HOUSE_ID;
+
+                        foreach (LOGS_VILLAGES v in context.LOGS_VILLAGES)
+                        {
+                            if (v.VILLAGE_ID == h.VILLAGE_ID)
+                            {
+                                row.Cells[3].Value = v.VILLAGE_NAME;
+                            }
+                        }
+
+                        row.Cells[4].Value = h.NO_OF_PEOPLE;
+                        TblHouseLogs.Rows.Add(row);
+                    }
+                }
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Operation Failed\nMessage : " + e.Message
+                );
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + e.Message);
+            }
+        }
+
+        private void LoadDefaultTblPersonLogs()
+        {
+            try
+            {
+                TblPersonLogs.Rows.Clear();
+
+                using (var context = new sampledbEntities())
+                {
+                    foreach (LOGS_PERSONS p in context.LOGS_PERSONS)
+                    {
+                        DataGridViewRow row = new DataGridViewRow();
+                        row.CreateCells(TblPersonLogs);
+
+                        int vid = -1;
+
+                        foreach (var h in context.LOGS_HOUSES)
+                        {
+                            if (h.HOUSE_ID == p.HOUSE_ID)
+                            {
+                                vid = h.VILLAGE_ID;
+                                break;
+                            }
+                        }
+
+                        string vname = "";
+
+                        foreach (var v in context.LOGS_VILLAGES)
+                        {
+                            if (v.VILLAGE_ID == vid)
+                            {
+                                vname = v.VILLAGE_NAME;
+                                break;
+                            }
+                        }
+
+                        row.Cells[0].Value = p.LOG_ID;
+                        row.Cells[1].Value = p.OP_TYPE;
+                        row.Cells[2].Value = p.PERSON_ID;
+                        row.Cells[3].Value = p.HOUSE_ID;
+                        row.Cells[4].Value = vname;
+                        row.Cells[5].Value = p.NAME;
+                        row.Cells[6].Value = p.AGE;
+                        row.Cells[7].Value = p.GENDER;
+                        row.Cells[8].Value = p.PHONE_NO;
+                        TblPersonLogs.Rows.Add(row);
+                    }
+                }
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Operation Failed\nMessage : " + e.Message
+                );
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + e.Message);
+            }
+        }
+
+        /**********************************************************************************************************/
+
+        // Combobox Load Events
+
+        /// These are two functions that load a list of village names into two different combo boxes.
+        private void LoadTxtHouseVillageName()
+        {
+            try
+            {
+                TxtHouseVillageName.DataSource = null;
+                TxtHouseVillageName.Items.Clear();
+
+                List<string> comboSource = new List<string>();
+
+                using (var context = new sampledbEntities())
+                {
+                    foreach (VILLAGE v in context.VILLAGES)
+                    {
+                        comboSource.Add(v.VILLAGE_NAME);
+                    }
+                }
+
+                TxtHouseVillageName.DataSource = new BindingSource(comboSource, null);
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Operation Failed\nMessage : " + e.Message
+                );
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + e.Message);
+            }
+        }
+
+        private void LoadTxtPersonVillageName()
+        {
+            try
+            {
+                TxtPersonVillageName.Items.Clear();
+
+                List<string> comboSource = new List<string>();
+
+                using (var context = new sampledbEntities())
+                {
+                    foreach (VILLAGE v in context.VILLAGES)
+                    {
+                        comboSource.Add(v.VILLAGE_NAME);
+                    }
+                }
+
+                TxtPersonVillageName.DataSource = new BindingSource(comboSource, null);
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Operation Failed\nMessage : " + e.Message
+                );
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + e.Message);
+            }
+        }
+
+        /**********************************************************************************************************/
+
+        // Tab Reset Events
+
+        /// The above code contains functions to reset the input fields and load default values for
+        /// different tabs in a database management system.
+        private void TabVillage_Reset()
+        {
+            try
+            {
+                TxtVillageId.Text = "";
+                TxtVillageName.Text = "";
+                TxtVillageCode.Text = "";
+                TxtVillageNoOfHouses.Text = "";
+
+                LoadDefaultTblVillage();
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Operation Failed\nMessage : " + e.Message
+                );
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + e.Message);
+            }
+        }
+
+        private void TabHouse_Reset()
+        {
+            try
+            {
+                LoadTxtHouseVillageName();
+
+                TxtHouseId.Text = "";
+                TxtHouseVillageName.SelectedIndex = -1;
+                TxtHouseNoOfPeople.Text = "";
+
+                LoadDefaultTblHouse();
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Operation Failed\nMessage : " + e.Message
+                );
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + e.Message);
+            }
+        }
+
+        private void TabPerson_Reset()
+        {
+            try
+            {
+                TxtPersonId.Text = "";
+                TxtPersonVillageName.SelectedIndex = -1;
+                TxtPersonHouseId.SelectedIndex = -1;
+                TxtPersonName.Text = "";
+                TxtPersonAge.Value = 0;
+                TxtPersonGender.SelectedIndex = -1;
+                TxtPersonPhoneNo.Text = "";
+
+                LoadDefaultTblPerson();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        private void TabVillageLogs_Reset()
+        {
+            try
+            {
+                TxtVillageLogsVillageId.Text = "";
+                TxtVillageLogsVillageName.Text = "";
+                TxtVillageLogsVillageCode.Text = "";
+                TxtVillageLogsNoOfHouses.Text = "";
+
+                LoadDefaultTblVillageLogs();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        private void TabHouseLogs_Reset()
+        {
+            try
+            {
+                TxtHouseLogsHouseId.Text = "";
+                TxtHouseLogsVillageName.Text = "";
+                TxtHouseLogsNoOfPeople.Text = "";
+
+                LoadDefaultTblHouseLogs();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        private void TabPersonLogs_Reset()
+        {
+            try
+            {
+                TxtPersonLogsPersonId.Text = "";
+                TxtPersonLogsVillageName.Text = "";
+                TxtPersonLogsHouseId.Text = "";
+                TxtPersonLogsName.Text = "";
+                TxtPersonLogsAge.Text = "";
+                TxtPersonLogsGender.Text = "";
+                TxtPersonLogsPhoneNo.Text = "";
+
+                LoadDefaultTblPersonLogs();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        /**********************************************************************************************************/
+
+        // Village Tab button Events
+
+        /// This code contains functions for inserting, updating, deleting, searching, and resetting
+        /// data in a database table for villages.
+        ///
+        /// Args:
+        ///   sender (object): The object that raised the event.
+        ///   EventArgs: EventArgs is a class in C# that provides data for an event. It is used as a
+        /// parameter for event handlers to provide information about the event that occurred. It does
+        /// not contain any specific data, but it is a base class for other event argument classes that
+        /// can provide more specific information about the event
+        private async void BtnVillageInsert_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MessageBox.Show(
+                    " Values for Village Id and No. of Houses is Ignored !!\n"
+                        + "   They will be automatically Generated by Database   \n",
+                    "",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+
+                var vname = TxtVillageName.Text.ToUpper().Trim();
+                var vcode = TxtVillageCode.Text.ToUpper().Trim();
+
+                DialogResult result = MessageBox.Show(
+                    "Confirm the Following Details !!\n"
+                        + "\n      Village Name = "
+                        + vname
+                        + "\n      Village Code = "
+                        + vcode,
+                    "",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+                if (result == DialogResult.Yes)
+                {
+                    if (
+                        vname.All(Char.IsLetter)
+                        && vcode.All(Char.IsLetter)
+                        && vname != ""
+                        && vcode != ""
+                    )
+                    {
+                        using (var context = new sampledbEntities())
+                        {
+                            var villageObj = new VILLAGE()
+                            {
+                                VILLAGE_NAME = vname,
+                                VILLAGE_CODE = vcode
+                            };
+
+                            context.VILLAGES.Add(villageObj);
+                            var res = await context.SaveChangesAsync();
+
+                            if (res == 1)
+                            {
+                                MessageBox.Show(
+                                    "!! New Village Added Successfully !!\n"
+                                        + "     Village Id = "
+                                        + villageObj.VILLAGE_ID
+                                        + "\n"
+                                        + "     Village Name = "
+                                        + villageObj.VILLAGE_NAME
+                                        + "\n"
+                                        + "     Village Code = "
+                                        + villageObj.VILLAGE_CODE
+                                        + "\n"
+                                        + "     No. of House = "
+                                        + villageObj.NO_OF_HOUSES
+                                        + "\n",
+                                    "",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information
+                                );
+                            }
+                            else if (res == 0)
+                            {
+                                MessageBox.Show(
+                                    "\t!! Database Error !!\n"
+                                        + "\t!! Village Insert Operation Failed !!",
+                                    "",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error
+                                );
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show(
+                            "        !! Please Input Valid Details !!\n"
+                                + "\n1. Village Name Must only contain Letters\n"
+                                + "\n2. Village Code Must only contain Letters",
+                            "",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Exclamation
+                        );
+                    }
+
+                    LoadDefaultTblVillage();
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        private async void BtnVillageUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MessageBox.Show(
+                    "Value for Village Name will be updated for Selected Village Id in the Table !!",
+                    "",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+
+                int row = TblVillage.SelectedRows[0].Index;
+
+                int vid = Convert.ToInt32(TblVillage[0, row].Value);
+                int noofhouses = Convert.ToInt32(TblVillage[3, row].Value);
+
+                string vname = TxtVillageName.Text;
+                string vcode = TxtVillageCode.Text;
+
+                DialogResult result = MessageBox.Show(
+                    "\t!! Confirm the Following Details !!\n"
+                        + "\n\t     Village Id    = "
+                        + vid
+                        + "\n\t     Village Name  = "
+                        + vname
+                        + "\n\t     Village Code  = "
+                        + vcode
+                        + "\n\t     No. of Houses = "
+                        + noofhouses,
+                    "Confirmation Box",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+                if (result == DialogResult.Yes)
+                {
+                    if (
+                        vname.All(Char.IsLetter)
+                        && vcode.All(Char.IsLetter)
+                        && vname != ""
+                        && vcode != ""
+                    )
+                    {
+                        using (var context = new sampledbEntities())
+                        {
+                            VILLAGE v = context.VILLAGES.Find(vid);
+
+                            v.VILLAGE_NAME = vname;
+                            v.VILLAGE_CODE = vcode;
+
+                            var res = await context.SaveChangesAsync();
+
+                            if (res == 1)
+                            {
+                                MessageBox.Show(
+                                    "\t!! Village Record Updated Successfully !!\n\n"
+                                        + "\t      Village Id = "
+                                        + v.VILLAGE_ID
+                                        + "\n"
+                                        + "\t      Village Name = "
+                                        + v.VILLAGE_NAME
+                                        + "\n"
+                                        + "\t      Village Code = "
+                                        + v.VILLAGE_CODE
+                                        + "\n"
+                                        + "\t      No. of House = "
+                                        + v.NO_OF_HOUSES
+                                        + "\n",
+                                    "",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information
+                                );
+                            }
+                            else
+                            {
+                                MessageBox.Show(
+                                    "\t\t!! Database Error !!\n"
+                                        + "\t!! Village Update Operation Failed !!",
+                                    "",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error
+                                );
+                                Console.WriteLine("res = " + res);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show(
+                            "\t\t!! Please Input Valid Details !!\n"
+                                + "\t1. Village Name Must only contain Letters\n"
+                                + "\t2. Village Code Must only contain Letters",
+                            "",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error
+                        );
+                    }
+
+                    LoadDefaultTblVillage();
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        private async void BtnVillageDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int row = TblVillage.SelectedRows[0].Index;
+
+                int vid = Convert.ToInt32(TblVillage[0, row].Value);
+                string vname = Convert.ToString(TblVillage[1, row].Value);
+                string vcode = Convert.ToString(TblVillage[2, row].Value);
+                int noofhouses = Convert.ToInt32(TblVillage[3, row].Value);
+
+                DialogResult result = MessageBox.Show(
+                    "!! Do You want to Delete the Following Record !!\n"
+                        + "\n\tVillage Id    = "
+                        + vid
+                        + "\n\tVillage Name  = "
+                        + vname
+                        + "\n\tVillage Code  = "
+                        + vcode
+                        + "\n\tNo. of Houses = "
+                        + noofhouses,
+                    "Confirmation Box",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+                if (result == DialogResult.Yes)
+                {
+                    if (noofhouses != 0)
+                    {
+                        MessageBox.Show(
+                            "\t\t!!Cannot Delete this Village !!"
+                                + "\nThere are "
+                                + noofhouses
+                                + " Houses in This Village !!",
+                            "",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error
+                        );
+                    }
+                    else
+                    {
+                        using (var context = new sampledbEntities())
+                        {
+                            VILLAGE v = context.VILLAGES.Find(vid);
+
+                            context.VILLAGES.Remove(v);
+                            var res = await context.SaveChangesAsync();
+
+                            MessageBox.Show(
+                                "Village Record Deleted Successfully !!",
+                                "",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information
+                            );
+
+                            LoadDefaultTblVillage();
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        private void BtnVillageSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                TblVillage.Rows.Clear();
+
+                string vid = TxtVillageId.Text.Trim().ToUpper();
+                string vname = TxtVillageName.Text.Trim().ToUpper();
+                string vcode = TxtVillageCode.Text.Trim().ToUpper();
+
+                string sql =
+                    "SELECT * FROM VILLAGES WHERE VILLAGE_ID LIKE '%"
+                    + vid
+                    + "%' AND VILLAGE_NAME LIKE '%"
+                    + vname
+                    + "%' AND VILLAGE_CODE LIKE '%"
+                    + vcode
+                    + "%'";
+
+                string connstring =
+                    "data source=.;initial catalog=sampledb; integrated security=True; MultipleActiveResultSets=True;";
+
+                using (var Conn = new SqlConnection(connstring))
+                {
+                    Conn.Open();
+
+                    SqlCommand cmd = new SqlCommand(sql, Conn);
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        if (dr.HasRows)
+                        {
+                            while (dr.Read())
+                            {
+                                DataGridViewRow row = new DataGridViewRow();
+                                row.CreateCells(TblVillage);
+                                row.Cells[0].Value = dr["VILLAGE_ID"];
+                                row.Cells[1].Value = dr["VILLAGE_NAME"];
+                                row.Cells[2].Value = dr["VILLAGE_CODE"];
+                                row.Cells[3].Value = dr["NO_OF_HOUSES"];
+                                TblVillage.Rows.Add(row);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show(
+                                "No Record To Display!",
+                                "",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information
+                            );
+                            TabVillage_Reset();
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        private void BtnVillageReset_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                TabVillage_Reset();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        /**********************************************************************************************************/
+
+        // Village Logs Tab button Events
+
+        /// This function searches for village logs based on user input and displays the results in a
+        /// DataGridView.
+        ///
+        /// Args:
+        ///   sender (object): The object that raised the event (in this case, the button that was
+        /// clicked).
+        ///   EventArgs: EventArgs is an event data class that is used to pass event data to an event
+        /// handler. It contains no data and is typically used for events that do not require additional
+        /// information to be passed to the handler. In this case, it is not used in the method itself,
+        /// but is required as a parameter
+        private void BtnVillageLogsSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                TblVillageLogs.Rows.Clear();
+
+                string vid = TxtVillageLogsVillageId.Text.Trim().ToUpper();
+                string vname = TxtVillageLogsVillageName.Text.Trim().ToUpper();
+                string vcode = TxtVillageLogsVillageCode.Text.Trim().ToUpper();
+
+                string sql =
+                    "SELECT * FROM LOGS_VILLAGES WHERE VILLAGE_ID LIKE '%"
+                    + vid
+                    + "%' AND VILLAGE_NAME LIKE '%"
+                    + vname
+                    + "%' AND VILLAGE_CODE LIKE '%"
+                    + vcode
+                    + "%'";
+
+                string connstring =
+                    "data source=.;initial catalog=sampledb; integrated security=True; MultipleActiveResultSets=True;";
+
+                using (var Conn = new SqlConnection(connstring))
+                {
+                    Conn.Open();
+
+                    SqlCommand cmd = new SqlCommand(sql, Conn);
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        if (dr.HasRows)
+                        {
+                            while (dr.Read())
+                            {
+                                DataGridViewRow row = new DataGridViewRow();
+                                row.CreateCells(TblVillageLogs);
+                                row.Cells[0].Value = dr["LOG_ID"];
+                                row.Cells[1].Value = dr["OP_TYPE"];
+                                row.Cells[2].Value = dr["VILLAGE_ID"];
+                                row.Cells[3].Value = dr["VILLAGE_NAME"];
+                                row.Cells[4].Value = dr["VILLAGE_CODE"];
+                                row.Cells[5].Value = dr["NO_OF_HOUSES"];
+                                TblVillageLogs.Rows.Add(row);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show(
+                                "No Record To Display!",
+                                "",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information
+                            );
+                            TabVillageLogs_Reset();
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        private void BtnVillageLogsReset_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                TabVillageLogs_Reset();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        /**********************************************************************************************************/
+
+        // House Tab button Events
+
+        /// The code contains button events for inserting, updating, deleting, searching, and resetting
+        /// data in a database table for houses.
+        ///
+        /// Args:
+        ///   sender (object): The object that raised the event.
+        ///   EventArgs: EventArgs is a class in C# that provides data for an event. It is used as a
+        /// parameter for event handlers to provide information about the event that occurred. It does
+        /// not contain any specific data, but is a base class for other event argument classes that can
+        /// be used to provide more specific information about
+        private async void BtnHouseInsert_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (TxtHouseVillageName.SelectedItem != null)
+                {
+                    MessageBox.Show(
+                        " Values for House Id and No. of People is Ignored !!"
+                            + "  They will be automatically Generated by Database  ",
+                        "",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
+
+                    var vname = (string)TxtHouseVillageName.SelectedItem;
+
+                    DialogResult result = MessageBox.Show(
+                        "Confirm the Following Details !!\n" + "      Village Name = " + vname,
+                        "",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question
+                    );
+
+                    if (result == DialogResult.Yes)
+                    {
+                        using (var context = new sampledbEntities())
+                        {
+                            int vid = -1;
+
+                            foreach (VILLAGE v in context.VILLAGES)
+                            {
+                                if (v.VILLAGE_NAME == vname)
+                                {
+                                    vid = v.VILLAGE_ID;
+                                }
+                            }
+
+                            var houseObj = new House() { VILLAGE_ID = vid };
+
+                            context.HOUSES.Add(houseObj);
+                            var res = await context.SaveChangesAsync();
+
+                            MessageBox.Show(
+                                "!! New House Added Successfully !!\n"
+                                    + "   House Id = "
+                                    + houseObj.HOUSE_ID
+                                    + "\n"
+                                    + "   Village Name = "
+                                    + vname
+                                    + "\n"
+                                    + "   No. of People = "
+                                    + houseObj.NO_OF_PEOPLE
+                                    + "\n"
+                            );
+                        }
+
+                        LoadDefaultTblHouse();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(
+                        "                !! Please Input Valid Details !!\n"
+                            + "\n1. Village Name must be Selected\n",
+                        "Form Error"
+                    );
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        private async void BtnHouseUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (TxtHouseVillageName.SelectedItem != null)
+                {
+                    MessageBox.Show(
+                        "Value for Village Name will be updated for Selected House Id in the Table !!"
+                    );
+
+                    int row = TblHouse.SelectedRows[0].Index;
+
+                    int hid = Convert.ToInt32(TblHouse[0, row].Value);
+                    int noofpeople = Convert.ToInt32(TblHouse[2, row].Value);
+
+                    string vname = TxtHouseVillageName.SelectedItem.ToString();
+
+                    DialogResult result = MessageBox.Show(
+                        "\t!! Confirm the Following Details !!\n"
+                            + "\n\t     House Id    = "
+                            + hid
+                            + "\n\t     Village Name  = "
+                            + vname
+                            + "\n\t     No. of People = "
+                            + noofpeople,
+                        "Confirmation Box",
+                        MessageBoxButtons.YesNo
+                    );
+
+                    int vid = -1;
+
+                    using (var context = new sampledbEntities())
+                    {
+                        foreach (var v in context.VILLAGES)
+                        {
+                            if (vname == v.VILLAGE_NAME)
+                            {
+                                vid = v.VILLAGE_ID;
+                                break;
+                            }
+                        }
+                    }
+
+                    if (result == DialogResult.Yes)
+                    {
+                        using (var context = new sampledbEntities())
+                        {
+                            House h = context.HOUSES.Find(hid);
+
+                            h.VILLAGE_ID = vid;
+
+                            var res = await context.SaveChangesAsync();
+
+                            if (res == 1)
+                            {
+                                MessageBox.Show(
+                                    "\t!! House Record Updated Successfully !!\n\n"
+                                        + "\t      House Id = "
+                                        + h.HOUSE_ID
+                                        + "\n"
+                                        + "\t      Village Name = "
+                                        + vname
+                                        + "\n"
+                                        + "\t      No. of People = "
+                                        + h.NO_OF_PEOPLE
+                                        + "\n"
+                                );
+                            }
+                            else
+                            {
+                                MessageBox.Show(
+                                    "\t\t!! Database Error !!\n"
+                                        + "\t!! House Update Operation Failed !!"
+                                );
+                                Console.WriteLine("res = " + res);
+                            }
+                        }
+                        LoadDefaultTblHouse();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(
+                        "                !! Please Input Valid Details !!\n"
+                            + "\n1. Village Name must be Selected\n",
+                        "Form Error"
+                    );
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        private async void BtnHouseDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int row = TblHouse.SelectedRows[0].Index;
+
+                int hid = Convert.ToInt32(TblHouse[0, row].Value);
+                int vid = -1;
+
+                using (var context = new sampledbEntities())
+                {
+                    foreach (var v in context.VILLAGES)
+                    {
+                        if (v.VILLAGE_NAME == Convert.ToString(TblHouse[1, row].Value))
+                        {
+                            vid = v.VILLAGE_ID;
+                            break;
+                        }
+                    }
+                }
+
+                int noofpeople = Convert.ToInt32(TblHouse[2, row].Value);
+
+                DialogResult result = MessageBox.Show(
+                    "!! Do You want to Delete the Following Record !!\n"
+                        + "\n\tHouse Id    = "
+                        + hid
+                        + "\n\tVillage Id    = "
+                        + vid
+                        + "\n\tNo. of People = "
+                        + noofpeople,
+                    "Confirmation Box",
+                    MessageBoxButtons.YesNo
+                );
+
+                if (result == DialogResult.Yes)
+                {
+                    if (noofpeople != 0)
+                    {
+                        MessageBox.Show(
+                            "\t\t!!Cannot Delete this House !!"
+                                + "\nThere are "
+                                + noofpeople
+                                + " People in This House !!"
+                        );
+                    }
+                    else
+                    {
+                        using (var context = new sampledbEntities())
+                        {
+                            House h = context.HOUSES.Find(hid);
+
+                            context.HOUSES.Remove(h);
+                            var res = await context.SaveChangesAsync();
+
+                            MessageBox.Show("House Record Deleted Successfully !!");
+
+                            LoadDefaultTblHouse();
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        private void BtnHouseSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                TblHouse.Rows.Clear();
+
+                string hid = TxtHouseId.Text.Trim().ToUpper();
+                string vname = "";
+                string vid = "";
+                if (TxtHouseVillageName.SelectedItem != null)
+                {
+                    vname = TxtHouseVillageName.SelectedItem.ToString().Trim().ToUpper();
+
+                    using (var context = new sampledbEntities())
+                    {
+                        foreach (var v in context.VILLAGES)
+                        {
+                            if (v.VILLAGE_NAME == vname)
+                            {
+                                vid = v.VILLAGE_ID.ToString();
+                                break;
+                            }
+                        }
+                    }
+                }
+
+                string sql =
+                    "SELECT * FROM HOUSES WHERE HOUSE_ID LIKE '%"
+                    + hid
+                    + "%' AND VILLAGE_ID LIKE '%"
+                    + vid
+                    + "%'";
+
+                string connstring =
+                    "data source=.;initial catalog=sampledb; integrated security=True; MultipleActiveResultSets=True;";
+
+                using (var Conn = new SqlConnection(connstring))
+                {
+                    Conn.Open();
+
+                    SqlCommand cmd = new SqlCommand(sql, Conn);
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        if (dr.HasRows)
+                        {
+                            while (dr.Read())
+                            {
+                                DataGridViewRow row = new DataGridViewRow();
+                                row.CreateCells(TblHouse);
+                                row.Cells[0].Value = dr["HOUSE_ID"];
+
+                                string vname1 = "";
+
+                                using (var context = new sampledbEntities())
+                                {
+                                    foreach (var v in context.VILLAGES)
+                                    {
+                                        if (v.VILLAGE_ID == Convert.ToInt32(dr["VILLAGE_ID"]))
+                                        {
+                                            vname1 = v.VILLAGE_NAME;
+                                            break;
+                                        }
+                                    }
+                                }
+
+                                row.Cells[1].Value = vname1;
+                                row.Cells[2].Value = dr["NO_OF_PEOPLE"];
+                                TblHouse.Rows.Add(row);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show(
+                                "No Record To Display!",
+                                "",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information
+                            );
+                            TabHouse_Reset();
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        private void BtnHouseReset_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                TabHouse_Reset();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        /**********************************************************************************************************/
+
+        // House Logs Tab button Events
+
+        /// This function searches for house logs based on the inputted house ID and village name, and
+        /// displays the results in a DataGridView.
+        ///
+        /// Args:
+        ///   sender (object): The object that raised the event (in this case, the button that was
+        /// clicked).
+        ///   EventArgs: EventArgs is a class in C# that provides data for an event. It is used as a
+        /// parameter for event handlers to provide information about the event that occurred. It does
+        /// not contain any specific data, but it is a base class for other event argument classes that
+        /// can contain specific data related to the event
+        private void BtnHouseLogsSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                TblHouseLogs.Rows.Clear();
+
+                string hid = TxtHouseLogsHouseId.Text.Trim().ToUpper();
+                string vname = TxtHouseLogsVillageName.Text.Trim().ToUpper();
+                string vid = "";
+
+                using (var context = new sampledbEntities())
+                {
+                    foreach (var v in context.LOGS_VILLAGES)
+                    {
+                        if (v.VILLAGE_NAME == vname)
+                        {
+                            vid = v.VILLAGE_ID.ToString();
+                            break;
+                        }
+                    }
+                }
+
+                string sql =
+                    "SELECT * FROM LOGS_HOUSES WHERE HOUSE_ID LIKE '%"
+                    + hid
+                    + "%' AND VILLAGE_ID LIKE '%"
+                    + vid
+                    + "%'";
+
+                string connstring =
+                    "data source=.;initial catalog=sampledb; integrated security=True; MultipleActiveResultSets=True;";
+
+                using (var Conn = new SqlConnection(connstring))
+                {
+                    Conn.Open();
+
+                    SqlCommand cmd = new SqlCommand(sql, Conn);
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        if (dr.HasRows)
+                        {
+                            while (dr.Read())
+                            {
+                                DataGridViewRow row = new DataGridViewRow();
+                                row.CreateCells(TblHouseLogs);
+
+                                row.Cells[0].Value = dr["LOG_ID"];
+                                row.Cells[1].Value = dr["OP_TYPE"];
+                                row.Cells[2].Value = dr["HOUSE_ID"];
+
+                                string vname1 = "";
+
+                                using (var context = new sampledbEntities())
+                                {
+                                    foreach (var v in context.LOGS_VILLAGES)
+                                    {
+                                        if (v.VILLAGE_ID == Convert.ToInt32(dr["VILLAGE_ID"]))
+                                        {
+                                            vname1 = v.VILLAGE_NAME;
+                                            break;
+                                        }
+                                    }
+                                }
+
+                                row.Cells[3].Value = vname1;
+                                row.Cells[4].Value = dr["NO_OF_PEOPLE"];
+                                TblHouseLogs.Rows.Add(row);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show(
+                                "No Record To Display!",
+                                "",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information
+                            );
+                            TabHouseLogs_Reset();
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        private void BtnHouseLogsReset_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                TabHouseLogs_Reset();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        /**********************************************************************************************************/
+
+        // Person Tab button Events
+
+        /// This code contains event handlers for inserting, updating, deleting, searching, and
+        /// resetting records in a database table for persons, as well as for searching and resetting
+        /// records in a log table for persons.
+        ///
+        /// Args:
+        ///   sender (object): The object that raised the event. In this case, it could be a button or
+        /// any other control that has an event handler attached to it.
+        ///   EventArgs: EventArgs is a class in C# that provides data for an event. It is used as a
+        /// parameter for event handlers to provide information about the event that occurred. It does
+        /// not contain any specific data, but is used as a base class for other event argument classes
+        /// that provide more specific information about the event
+        private async void BtnPersonInsert_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (
+                    TxtPersonVillageName.SelectedItem != null
+                    && TxtPersonGender.SelectedItem != null
+                    && TxtPersonHouseId.SelectedItem != null
+                )
+                {
+                    MessageBox.Show(
+                        "     Values for Person Id is Ignored !!       \n"
+                            + "It will be automatically Generated by Database"
+                    );
+
+                    string vname = (string)TxtPersonVillageName.SelectedItem;
+                    int houseid = (int)TxtPersonHouseId.SelectedItem;
+                    string name = TxtPersonName.Text.Trim().ToUpper();
+                    int age = (int)TxtPersonAge.Value;
+                    string gender = (string)TxtPersonGender.SelectedItem;
+                    string phoneno = TxtPersonPhoneNo.Text.Trim();
+                    gender = gender.Trim().ToUpper();
+
+                    DialogResult result = MessageBox.Show(
+                        "Confirm the Following Details !!\n"
+                            + "Village        = "
+                            + vname
+                            + "\n"
+                            + "House Id       = "
+                            + houseid
+                            + "\n"
+                            + "Name           = "
+                            + name
+                            + "\n"
+                            + "Age            = "
+                            + age
+                            + "\n"
+                            + "Gender         = "
+                            + gender
+                            + "\n"
+                            + "Phone Number   = "
+                            + phoneno
+                            + "\n",
+                        "Confirmation Box",
+                        MessageBoxButtons.YesNo
+                    );
+
+                    if (result == DialogResult.Yes)
+                    {
+                        string name_cpy = "" + name;
+
+                        StringBuilder str = new StringBuilder(name);
+
+                        str.Replace(" ", "");
+
+                        name_cpy = str.ToString();
+
+                        bool b1 = phoneno.Length >= 10;
+                        bool b2 = phoneno.All(char.IsDigit) && phoneno != "";
+                        bool b3 = name_cpy.All(char.IsLetter) && name_cpy != "";
+                        bool b4 = age > 0;
+
+                        if (b1 && b2 && b3 && b4)
+                        {
+                            using (var context = new sampledbEntities())
+                            {
+                                var personObj = new PERSON()
+                                {
+                                    HOUSE_ID = houseid,
+                                    NAME = name,
+                                    AGE = age,
+                                    GENDER = gender,
+                                    PHONE_NO = phoneno
+                                };
+
+                                context.PERSONS.Add(personObj);
+                                var res = await context.SaveChangesAsync();
+
+                                MessageBox.Show(
+                                    "!! New Person Added Successfully !!\n"
+                                        + "     Person Id    = "
+                                        + personObj.PERSON_ID
+                                        + "\n"
+                                        + "     Village      = "
+                                        + vname
+                                        + "     House Id     = "
+                                        + personObj.HOUSE_ID
+                                        + "\n"
+                                        + "     Name         = "
+                                        + personObj.NAME
+                                        + "\n"
+                                        + "     Age          = "
+                                        + personObj.AGE
+                                        + "\n"
+                                        + "     Gender       = "
+                                        + personObj.GENDER
+                                        + "\n"
+                                        + "     Phone Number = "
+                                        + personObj.PHONE_NO
+                                        + "\n"
+                                );
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show(
+                                "                !! Please Input Valid Details !!\n"
+                                    + "\n1. Name Must only contain Letters\n"
+                                    + "\n2. Phone Number must be 10 digits long and contain only numbers\n"
+                                    + "\n3. Age Must be Greater than 0\n",
+                                "Form Error"
+                            );
+                        }
+
+                        LoadDefaultTblPerson();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(
+                        "                !! Please Input Valid Details !!\n"
+                            + "\n1. Name Must only contain Letters\n"
+                            + "\n2. Phone Number must be 10 digits long and contain only numbers\n"
+                            + "\n3. Age Must be Greater than 0\n"
+                            + "\n4. Village Name must be selected\n"
+                            + "\n5. House Id must be selected\n"
+                            + "\n6. Gender must be selected\n",
+                        "Form Error"
+                    );
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        private async void BtnPersonUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MessageBox.Show(
+                    "Name, Age, Gender and Phone No. will be updated for Selected Person Id, House Id and Village Name in the Table !!"
+                );
+
+                int row = TblPerson.SelectedRows[0].Index;
+
+                int pid = Convert.ToInt32(TblPerson[0, row].Value);
+                int hid = Convert.ToInt32(TblPerson[1, row].Value);
+                string vname = (string)TblPerson[2, row].Value;
+                string name = TxtPersonName.Text.Trim();
+                int age = Convert.ToInt32(TxtPersonAge.Value);
+                string gender = (string)TxtPersonGender.SelectedItem;
+                string phoneno = TxtPersonPhoneNo.Text;
+
+                DialogResult result = MessageBox.Show(
+                    "\t!! Confirm the Following Details !!\n"
+                        + "\n\t     Person Id    = "
+                        + pid
+                        + "\n\t     House Id  = "
+                        + hid
+                        + "\n\t     Village Name  = "
+                        + vname
+                        + "\n\t     Name = "
+                        + name
+                        + "\n\t     Age    = "
+                        + age
+                        + "\n\t     Gender  = "
+                        + gender
+                        + "\n\t     Phone Number = "
+                        + phoneno,
+                    "Confirmation Box",
+                    MessageBoxButtons.YesNo
+                );
+
+                if (result == DialogResult.Yes)
+                {
+                    string name_cpy = "" + name;
+
+                    StringBuilder str = new StringBuilder(name);
+
+                    str.Replace(" ", "");
+
+                    name_cpy = str.ToString();
+
+                    bool b1 = phoneno.Length >= 10;
+                    bool b2 = phoneno.All(char.IsDigit) && phoneno != "";
+                    bool b3 = name_cpy.All(char.IsLetter) && name_cpy != "";
+                    bool b4 = age > 0;
+
+                    Console.WriteLine(
+                        "b1 = " + b1 + "\nb2 = " + b2 + "\nb3 = " + b3 + "\n b4 = " + b4
+                    );
+
+                    if (b1 && b2 && b3 && b4)
+                    {
+                        using (var context = new sampledbEntities())
+                        {
+                            PERSON p = context.PERSONS.Find(pid);
+
+                            p.NAME = name;
+                            p.AGE = age;
+                            p.GENDER = gender;
+                            p.PHONE_NO = phoneno;
+
+                            var res = await context.SaveChangesAsync();
+
+                            if (res == 1)
+                            {
+                                MessageBox.Show(
+                                    "\t!! Person Record Updated Successfully !!\n\n"
+                                        + "\n\t     Person Id    = "
+                                        + p.PERSON_ID
+                                        + "\n\t     House Id  = "
+                                        + p.HOUSE_ID
+                                        + "\n\t     Village Name  = "
+                                        + vname
+                                        + "\n\t     Name = "
+                                        + p.NAME
+                                        + "\n\t     Age    = "
+                                        + p.AGE
+                                        + "\n\t     Gender  = "
+                                        + p.GENDER
+                                        + "\n\t     Phone Number = "
+                                        + p.PHONE_NO
+                                );
+                            }
+                            else
+                            {
+                                MessageBox.Show(
+                                    "\t\t!! Database Error !!\n"
+                                        + "\t!! Person Update Operation Failed !!"
+                                );
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show(
+                            "                !! Please Input Valid Details !!\n"
+                                + "\n1. Name Must only contain Letters\n"
+                                + "\n2. Phone Number must be 10 digits long and contain only numbers\n"
+                                + "\n3. Age Must be Greater than 0\n",
+                            "Form Error"
+                        );
+                    }
+                }
+
+                LoadDefaultTblPerson();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        private async void BtnPersonDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int row = TblPerson.SelectedRows[0].Index;
+
+                int pid = Convert.ToInt32(TblPerson[0, row].Value);
+                int hid = Convert.ToInt32(TblPerson[1, row].Value);
+                string village = Convert.ToString(TblPerson[2, row].Value);
+                string name = Convert.ToString(TblPerson[3, row].Value);
+                int age = Convert.ToInt32(TblPerson[4, row].Value);
+                string gender = Convert.ToString(TblPerson[5, row].Value);
+                string phoneno = Convert.ToString(TblPerson[6, row].Value);
+
+                DialogResult result = MessageBox.Show(
+                    "!! Do You want to Delete the Following Record !!\n"
+                        + "\n\tVillage Id    = "
+                        + pid
+                        + "\n\tHouse Id      = "
+                        + hid
+                        + "\n\tVillage Name  = "
+                        + village
+                        + "\n\tName          = "
+                        + name
+                        + "\n\tAge           = "
+                        + age
+                        + "\n\tGender        = "
+                        + gender
+                        + "\n\tPhone Number  = "
+                        + phoneno,
+                    "Confirmation Box",
+                    MessageBoxButtons.YesNo
+                );
+
+                if (result == DialogResult.Yes)
+                {
+                    using (var context = new sampledbEntities())
+                    {
+                        PERSON p = context.PERSONS.Find(pid);
+
+                        context.PERSONS.Remove(p);
+                        var res = await context.SaveChangesAsync();
+
+                        if (res == 1)
+                        {
+                            MessageBox.Show("Person Record Deleted Successfully !!");
+                        }
+                        else
+                        {
+                            MessageBox.Show(
+                                "\t\t!! Database Error !!\n"
+                                    + "\t!! House Update Operation Failed !!"
+                            );
+                            Console.WriteLine("res = " + res);
+                        }
+
+                        LoadDefaultTblPerson();
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        private void BtnPersonSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                TblPerson.Rows.Clear();
+
+                string pid = TxtPersonId.Text.Trim().ToUpper();
+
+                string vname = "";
+                string vid = "";
+                if (TxtPersonVillageName.SelectedItem != null)
+                {
+                    vname = TxtPersonVillageName.SelectedItem.ToString().Trim().ToUpper();
+
+                    using (var context = new sampledbEntities())
+                    {
+                        foreach (var v in context.VILLAGES)
+                        {
+                            if (v.VILLAGE_NAME == vname)
+                            {
+                                vid = v.VILLAGE_ID.ToString();
+                                break;
+                            }
+                        }
+                    }
+                }
+
+                string hid = "";
+                if (TxtPersonHouseId.SelectedItem != null)
+                {
+                    hid = TxtPersonHouseId.SelectedItem.ToString().Trim().ToUpper();
+                }
+
+                string name = TxtPersonName.Text.Trim().ToUpper();
+                string age = TxtPersonAge.Value.ToString();
+                if (age == "0")
+                {
+                    age = "";
+                }
+                string gender = "";
+                if (TxtPersonGender.SelectedItem != null)
+                {
+                    gender = TxtPersonGender.SelectedItem.ToString().Trim().ToUpper();
+                }
+
+                string phoneno = TxtPersonPhoneNo.Text.ToString().Trim().ToUpper();
+
+                Console.WriteLine(
+                    "pid = "
+                        + pid
+                        + "\n"
+                        + "vid = "
+                        + vid
+                        + "\n"
+                        + "hid = "
+                        + hid
+                        + "\n"
+                        + "name = "
+                        + name
+                        + "\n"
+                        + "age = "
+                        + age
+                        + "\n"
+                        + "gender = "
+                        + gender
+                        + "\n"
+                        + "phoneno = "
+                        + phoneno
+                        + "\n"
+                );
+
+                string sql =
+                    "SELECT * FROM PERSONS WHERE PERSON_ID LIKE '%"
+                    + pid
+                    + "%' AND HOUSE_ID IN (select HOUSE_ID from HOUSES where VILLAGE_ID LIKE '%"
+                    + vid
+                    + "%') AND HOUSE_ID LIKE '%"
+                    + hid
+                    + "%'"
+                    + "AND NAME LIKE '%"
+                    + name
+                    + "%' AND AGE LIKE '%"
+                    + age
+                    + "%' AND GENDER LIKE '%"
+                    + gender
+                    + "%' AND PHONE_NO LIKE '%"
+                    + phoneno
+                    + "%'";
+
+                string connstring =
+                    "data source=.;initial catalog=sampledb; integrated security=True; MultipleActiveResultSets=True;";
+
+                using (var Conn = new SqlConnection(connstring))
+                {
+                    Conn.Open();
+
+                    SqlCommand cmd = new SqlCommand(sql, Conn);
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        if (dr.HasRows)
+                        {
+                            while (dr.Read())
+                            {
+                                DataGridViewRow row = new DataGridViewRow();
+                                row.CreateCells(TblPerson);
+
+                                using (var context = new sampledbEntities())
+                                {
+                                    int vid1 = context.HOUSES.Find(dr["HOUSE_ID"]).VILLAGE_ID;
+                                    string vname1 = context.VILLAGES.Find(vid1).VILLAGE_NAME;
+
+                                    row.Cells[0].Value = dr["PERSON_ID"];
+                                    row.Cells[1].Value = dr["HOUSE_ID"];
+                                    row.Cells[2].Value = vname1;
+                                    row.Cells[3].Value = dr["NAME"];
+                                    row.Cells[4].Value = dr["AGE"];
+                                    row.Cells[5].Value = dr["GENDER"];
+                                    row.Cells[6].Value = dr["PHONE_NO"];
+                                    TblPerson.Rows.Add(row);
+                                }
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show(
+                                "No Record To Display!",
+                                "",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information
+                            );
+                            TabPerson_Reset();
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        private void BtnPersonReset_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                TabPerson_Reset();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        /**********************************************************************************************************/
+
+        // House Logs Tab button Events
+
+        private void BtnPersonLogsSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                TblPersonLogs.Rows.Clear();
+
+                string pid = TxtPersonLogsPersonId.Text.Trim().ToUpper();
+
+                string vname = TxtPersonLogsVillageName.Text.Trim().ToUpper();
+                string vid = "";
+                if (TxtPersonLogsVillageName.Text != "")
+                {
+                    using (var context = new sampledbEntities())
+                    {
+                        foreach (var v in context.LOGS_VILLAGES)
+                        {
+                            if (v.VILLAGE_NAME == vname)
+                            {
+                                vid = v.VILLAGE_ID.ToString();
+                                break;
+                            }
+                        }
+                    }
+                }
+
+                string hid = TxtPersonLogsHouseId.Text.Trim().ToUpper();
+                string name = TxtPersonLogsName.Text.Trim().ToUpper();
+                string age = TxtPersonLogsAge.Text;
+                string gender = TxtPersonLogsGender.Text.Trim().ToUpper();
+                string phoneno = TxtPersonLogsPhoneNo.Text.Trim().ToUpper();
+
+                string sql =
+                    "SELECT * FROM LOGS_PERSONS WHERE PERSON_ID LIKE '%"
+                    + pid
+                    + "%' AND HOUSE_ID IN (select TOP 1 HOUSE_ID from LOGS_HOUSES where VILLAGE_ID LIKE '%"
+                    + vid
+                    + "%') AND HOUSE_ID LIKE '%"
+                    + hid
+                    + "%'"
+                    + "AND NAME LIKE '%"
+                    + name
+                    + "%' AND AGE LIKE '%"
+                    + age
+                    + "%' AND GENDER LIKE '%"
+                    + gender
+                    + "%' AND PHONE_NO LIKE '%"
+                    + phoneno
+                    + "%'";
+
+                string connstring =
+                    "data source=.;initial catalog=sampledb; integrated security=True; MultipleActiveResultSets=True;";
+
+                using (var Conn = new SqlConnection(connstring))
+                {
+                    Conn.Open();
+
+                    SqlCommand cmd = new SqlCommand(sql, Conn);
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        if (dr.HasRows)
+                        {
+                            while (dr.Read())
+                            {
+                                DataGridViewRow row = new DataGridViewRow();
+                                row.CreateCells(TblPersonLogs);
+
+                                using (var context = new sampledbEntities())
+                                {
+                                    int hid1 = Convert.ToInt32(dr["HOUSE_ID"]);
+                                    int vid1 = -1;
+
+                                    foreach (var h in context.LOGS_HOUSES)
+                                    {
+                                        if (hid1 == h.HOUSE_ID)
+                                        {
+                                            vid1 = h.HOUSE_ID;
+                                            break;
+                                        }
+                                    }
+
+                                    string vname1 = "";
+
+                                    foreach (var v in context.LOGS_VILLAGES)
+                                    {
+                                        if (vid1 == v.VILLAGE_ID)
+                                        {
+                                            vname = v.VILLAGE_NAME;
+                                            break;
+                                        }
+                                    }
+
+                                    row.Cells[0].Value = dr["LOG_ID"];
+                                    row.Cells[1].Value = dr["OP_TYPE"];
+                                    row.Cells[2].Value = dr["PERSON_ID"];
+                                    row.Cells[3].Value = dr["HOUSE_ID"];
+                                    row.Cells[4].Value = vname1;
+                                    row.Cells[5].Value = dr["NAME"];
+                                    row.Cells[6].Value = dr["AGE"];
+                                    row.Cells[7].Value = dr["GENDER"];
+                                    row.Cells[8].Value = dr["PHONE_NO"];
+                                    TblPersonLogs.Rows.Add(row);
+                                }
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show(
+                                "No Record To Display!",
+                                "",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information
+                            );
+                            TabPersonLogs_Reset();
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        private void BtnPersonLogsReset_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                TabPersonLogs_Reset();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        /**********************************************************************************************************/
+
+        // DataGridView Cell Mouse Double Click Events
+
+        /// These are event handlers for double-clicking on cells in various DataGridViews to populate
+        /// text boxes with the corresponding data.
+        ///
+        /// Args:
+        ///   sender (object): The object that raised the event. In this case, it is the DataGridView
+        /// control.
+        ///   DataGridViewCellMouseEventArgs: DataGridViewCellMouseEventArgs is an event argument class
+        /// that is used to provide data for the events that are related to mouse actions on a
+        /// DataGridView control. It contains information about the row and column index of the cell
+        /// that was clicked, the location of the mouse pointer, and the type of mouse button that was
+        private void TblVillage_CellMouseDoubleClick(
+            object sender,
+            DataGridViewCellMouseEventArgs e
+        )
+        {
+            try
+            {
+                int row = e.RowIndex;
+
+                if (row >= 0)
+                {
+                    TxtVillageId.Text = Convert.ToString(TblVillage[0, row].Value);
+                    TxtVillageName.Text = Convert.ToString(TblVillage[1, row].Value);
+                    TxtVillageCode.Text = Convert.ToString(TblVillage[2, row].Value);
+                    TxtVillageNoOfHouses.Text = Convert.ToString(TblVillage[3, row].Value);
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        private void TblHouse_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                int row = e.RowIndex;
+
+                if (row >= 0)
+                {
+                    TxtHouseId.Text = Convert.ToString(TblHouse[0, row].Value);
+                    TxtHouseVillageName.Text = Convert.ToString(TblHouse[1, row].Value);
+                    TxtHouseNoOfPeople.Text = Convert.ToString(TblHouse[2, row].Value);
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        private void TblPerson_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                int row = e.RowIndex;
+
+                if (row >= 0)
+                {
+                    TxtPersonId.Text = Convert.ToString(TblPerson[0, row].Value);
+                    TxtPersonHouseId.Text = Convert.ToString(TblPerson[1, row].Value);
+                    TxtPersonVillageName.SelectedIndex = TxtPersonVillageName.FindStringExact(
+                        Convert.ToString(TblPerson[2, row].Value)
+                    );
+                    TxtPersonName.Text = Convert.ToString(TblPerson[3, row].Value);
+                    TxtPersonAge.Value = Convert.ToInt32(TblPerson[4, row].Value);
+                    TxtPersonGender.SelectedIndex = TxtPersonGender.FindStringExact(
+                        Convert.ToString(TblPerson[5, row].Value)
+                    );
+                    TxtPersonPhoneNo.Text = Convert.ToString(TblPerson[6, row].Value);
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        private void TblVillageLogs_CellMouseDoubleClick(
+            object sender,
+            DataGridViewCellMouseEventArgs e
+        )
+        {
+            try
+            {
+                int row = e.RowIndex;
+
+                if (row >= 0)
+                {
+                    TxtVillageLogsVillageId.Text = Convert.ToString(TblVillageLogs[2, row].Value);
+                    TxtVillageLogsVillageName.Text = Convert.ToString(TblVillageLogs[3, row].Value);
+                    TxtVillageLogsVillageCode.Text = Convert.ToString(TblVillageLogs[4, row].Value);
+                    TxtVillageLogsNoOfHouses.Text = Convert.ToString(TblVillageLogs[5, row].Value);
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        private void TblHouseLogs_CellMouseDoubleClick(
+            object sender,
+            DataGridViewCellMouseEventArgs e
+        )
+        {
+            try
+            {
+                int row = e.RowIndex;
+
+                if (row >= 0)
+                {
+                    TxtHouseLogsHouseId.Text = Convert.ToString(TblHouseLogs[2, row].Value);
+                    TxtHouseLogsVillageName.Text = Convert.ToString(TblHouseLogs[3, row].Value);
+                    TxtHouseLogsNoOfPeople.Text = Convert.ToString(TblHouseLogs[4, row].Value);
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        private void TblPersonLogs_CellMouseDoubleClick(
+            object sender,
+            DataGridViewCellMouseEventArgs e
+        )
+        {
+            try
+            {
+                int row = e.RowIndex;
+
+                if (row >= 0)
+                {
+                    TxtPersonLogsPersonId.Text = Convert.ToString(TblPerson[2, row].Value);
+                    TxtPersonLogsHouseId.Text = Convert.ToString(TblPerson[3, row].Value);
+                    TxtPersonLogsVillageName.Text = Convert.ToString(TblPerson[4, row].Value);
+                    TxtPersonLogsName.Text = Convert.ToString(TblPerson[5, row].Value);
+                    TxtPersonLogsAge.Text = Convert.ToString(TblPerson[6, row].Value);
+                    TxtPersonLogsGender.Text = Convert.ToString(TblPerson[7, row].Value);
+                    TxtPersonLogsPhoneNo.Text = Convert.ToString(TblPerson[8, row].Value);
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        /**********************************************************************************************************/
+
+        // Person Tab Village ComboBox Selected Item Change Event to fill House Id Combobox
+
+        /// This function populates a dropdown list of house IDs based on the selected village name.
+        ///
+        /// Args:
+        ///   sender (object): The object that raised the event, in this case, the TxtPersonVillageName
+        /// ComboBox control.
+        ///   EventArgs: EventArgs is a class in C# that provides data for an event. It is used to pass
+        /// information about the event to the event handler. In this case, it is used to handle the
+        /// event when the selected item in the TxtPersonVillageName combo box is changed.
+        private void TxtPersonVillageName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (TxtPersonVillageName.SelectedItem != null)
+                {
+                    string vname = TxtPersonVillageName.SelectedItem.ToString();
+                    int vid = -1;
+
+                    using (var context = new sampledbEntities())
+                    {
+                        foreach (VILLAGE v in context.VILLAGES)
+                        {
+                            if (vname == v.VILLAGE_NAME)
+                            {
+                                vid = v.VILLAGE_ID;
+                            }
+                        }
+
+                        TxtPersonHouseId.DataSource = null;
+                        TxtPersonHouseId.Items.Clear();
+
+                        List<int> comboSource = new List<int>();
+
+                        foreach (House h in context.HOUSES)
+                        {
+                            if (h.VILLAGE_ID == vid)
+                            {
+                                comboSource.Add(h.HOUSE_ID);
+                            }
+                        }
+
+                        TxtPersonHouseId.DataSource = new BindingSource(comboSource, null);
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        /**********************************************************************************************************/
+
+        // Person Tab Text Change Events using RegEx
+
+        /// The above code contains event handlers that validate user input for person ID, phone number,
+        /// and name fields.
+        ///
+        /// Args:
+        ///   sender (object): The object that raised the event (in this case, a text box control).
+        ///   EventArgs: EventArgs is a class in C# that provides data for an event. It is used to pass
+        /// information about an event that has occurred, such as a button click or a text change. It
+        /// contains no data, but is used to signal that an event has occurred.
+        private void TxtPersonId_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Regex.IsMatch(TxtPersonId.Text, "[^0-9]") && TxtPersonId.Text != "")
+                {
+                    MessageBox.Show("Enter only Numbers !!");
+                    TxtPersonId.Text = TxtPersonId.Text.Remove(TxtPersonId.Text.Length - 1);
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        private void TxtPersonPhoneNo_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Regex.IsMatch(TxtPersonPhoneNo.Text, "[^0-9]") && TxtPersonPhoneNo.Text != "")
+                {
+                    MessageBox.Show("Enter only Numbers !!");
+                    TxtPersonPhoneNo.Text = TxtPersonPhoneNo.Text.Remove(
+                        TxtPersonPhoneNo.Text.Length - 1
+                    );
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        private void TxtPersonName_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!Regex.IsMatch(TxtPersonName.Text, @"[\p{L} ]+$") && TxtPersonName.Text != "")
+                {
+                    MessageBox.Show("Enter only Alphabet and Spaces!!");
+                    TxtPersonName.Text = TxtPersonName.Text.Remove(TxtPersonName.Text.Length - 1);
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        // House Tab Text Change Events using RegEx
+
+        /// The function checks if the input in a text box is a number and displays a message if it is
+        /// not.
+        ///
+        /// Args:
+        ///   sender (object): The object that raised the event, in this case, the text box control
+        /// TxtHouseId.
+        ///   EventArgs: EventArgs is a base class for classes containing event data, which are passed
+        /// as parameters to event handlers. It provides no event data itself, but serves as a base
+        /// class for event data classes.
+        private void TxtHouseId_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Regex.IsMatch(TxtHouseId.Text, "[^0-9]") && TxtHouseId.Text != "")
+                {
+                    MessageBox.Show("Enter only Numbers !!");
+                    TxtHouseId.Text = TxtHouseId.Text.Remove(TxtHouseId.Text.Length - 1);
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        // Village Tab Text Change Events using RegEx
+
+
+        /// The above code contains event handlers for text changed events in C# that validate user
+        /// input using regular expressions and display error messages if the input does not match the
+        /// expected format.
+        ///
+        /// Args:
+        ///   sender (object): The object that raised the event, in this case, the text box that
+        /// triggered the TextChanged event.
+        ///   EventArgs: EventArgs is a class in C# that provides data for an event. It is used as a
+        /// base class for classes that represent event data. It does not contain any data, but is used
+        /// to provide a consistent interface for event data classes. It is often used as a parameter
+        /// for event handlers.
+        private void TxtVillageId_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Regex.IsMatch(TxtVillageId.Text, "[^0-9]") && TxtVillageId.Text != "")
+                {
+                    MessageBox.Show("Enter only Numbers !!");
+                    TxtVillageId.Text = TxtVillageId.Text.Remove(TxtVillageId.Text.Length - 1);
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        private void TxtVillageName_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!Regex.IsMatch(TxtVillageName.Text, @"[\p{L} ]+$") && TxtVillageName.Text != "")
+                {
+                    MessageBox.Show("Enter only Alphabet and Spaces!!");
+                    TxtVillageName.Text = TxtVillageName.Text.Remove(
+                        TxtVillageName.Text.Length - 1
+                    );
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        private void TxtVillageCode_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!Regex.IsMatch(TxtVillageCode.Text, @"[\p{L}]+$") && TxtVillageCode.Text != "")
+                {
+                    MessageBox.Show("Enter only Alphabet!!");
+                    TxtVillageCode.Text = TxtVillageCode.Text.Remove(
+                        TxtVillageCode.Text.Length - 1
+                    );
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        /**********************************************************************************************************/
+
+        // TblPerson ContextMenu Events
+
+        /// The code contains event handlers for printing tables as PDF or Excel formats.
+        ///
+        /// Args:
+        ///   sender (object): The object that raised the event. In this case, it would be the button
+        /// that was clicked to trigger the event.
+        ///   EventArgs: EventArgs is a class in C# that provides data for an event. It contains no
+        /// data, but is used as a base class for creating event data classes. It is commonly used as a
+        /// parameter for event handlers.
+        private void TblPersonPrintAsPDF_Click(object sender, EventArgs e)
+        {
+            PrintToPDF(TblPerson);
+        }
+
+        private void TblPersonPrintAsExcel_Click(object sender, EventArgs e)
+        {
+            PrintToExcel(TblPerson);
+        }
+
+        // TblHouse ContextMenu Events
+
+        private void TblHousePrintAsPDF_Click(object sender, EventArgs e)
+        {
+            PrintToPDF(TblHouse);
+        }
+
+        private void TblHousePrintAsExcel_Click(object sender, EventArgs e)
+        {
+            PrintToExcel(TblHouse);
+        }
+
+        // TblVillage ContextMenu Events
+
+        private void TblVillagePrintAsPDF_Click(object sender, EventArgs e)
+        {
+            PrintToPDF(TblVillage);
+        }
+
+        private void TblVillagePrintAsExcel_Click(object sender, EventArgs e)
+        {
+            PrintToExcel(TblVillage);
+        }
+
+        // TblVillageLogs ContextMenu Event
+
+        private void TblVillageLogsPrintAsPDF_Click(object sender, EventArgs e)
+        {
+            PrintToPDF(TblVillageLogs);
+        }
+
+        private void TblVillageLogsPrintAsExcel_Click(object sender, EventArgs e)
+        {
+            PrintToExcel(TblVillageLogs);
+        }
+
+        // TblPersonLogs ContextMenu Event
+
+        private void TblHouseLogsPrintAsPDF_Click(object sender, EventArgs e)
+        {
+            PrintToPDF(TblHouseLogs);
+        }
+
+        private void TblHouseLogsPrintAsExcel_Click(object sender, EventArgs e)
+        {
+            PrintToExcel(TblHouseLogs);
+        }
+
+        // TblPersonLogs ContextMenu Event
+
+        private void TblPersonLogsPrintAsPDF_Click(object sender, EventArgs e)
+        {
+            PrintToPDF(TblPersonLogs);
+        }
+
+        private void TblPersonLogsPrintAsExcel_Click(object sender, EventArgs e)
+        {
+            PrintToExcel(TblPersonLogs);
+        }
+
+        /// This function saves the contents of a DataGridView to an Excel file.
+        ///
+        /// Args:
+        ///   DataGridView: A control in Windows Forms that displays data in a grid format, similar to a
+        /// table.
+        private void PrintToExcel(DataGridView Tbl)
+        {
+            try
+            {
+                SaveFileDialog FileDialog = new SaveFileDialog
+                {
+                    Filter = "Excel files (*.xlsx)|*.xlsx|Excel 2007 (*.xls)|*.xls",
+                    FilterIndex = 1
+                };
+
+                if (FileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string ExcelFilePath = FileDialog.FileName;
+
+                    if (File.Exists(ExcelFilePath))
+                    {
+                        File.Delete(ExcelFilePath);
+                    }
+
+                    if (Tbl.Rows.Count > 0)
+                    {
+                        /* The above code is creating a new instance of Microsoft Excel application, adding
+                        a new workbook to it, and creating a new worksheet within the workbook. */
+                        Microsoft.Office.Interop.Excel.Application XcelApp =
+                            new Microsoft.Office.Interop.Excel.Application();
+                        XcelApp.Application.Workbooks.Add();
+                        Microsoft.Office.Interop.Excel._Worksheet Worksheet =
+                            (Microsoft.Office.Interop.Excel._Worksheet)XcelApp.ActiveSheet;
+                        /* The above code is exporting data from a DataGridView (Tbl) to an Excel file
+                        using the Microsoft Excel Interop library. The first for loop is setting the
+                        header text of each column in the Excel file. The second for loop is iterating
+                        through each row and column of the DataGridView and setting the corresponding
+                        cell value in the Excel file. The Console.WriteLine statement is just for
+                        debugging purposes and can be removed. */
+                        for (int i = 1; i < Tbl.Columns.Count + 1; i++)
+                        {
+                            XcelApp.Cells[1, i] = Tbl.Columns[i - 1].HeaderText;
+                        }
+                        for (int i = 0; i < Tbl.Rows.Count; i++)
+                        {
+                            for (int j = 0; j < Tbl.Columns.Count; j++)
+                            {
+                                Console.WriteLine("i = " + i + " j = " + j);
+
+                                XcelApp.Cells[i + 2, j + 1] = Tbl.Rows[i].Cells[j].Value.ToString();
+                            }
+                        }
+                        XcelApp.Columns.AutoFit();
+
+                        /* The above code is saving an Excel worksheet to a specified file path and then
+                        quitting the Excel application. A message box is displayed to indicate that the
+                        Excel file has been saved. */
+                        Worksheet.SaveAs(ExcelFilePath);
+                        XcelApp.Quit();
+                        MessageBox.Show("Excel file saved!");
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(
+                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
+                );
+            }
+            catch (IOException ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "File Operation Failed\nMessage : " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+            }
+        }
+
+        private void PrintToPDF(DataGridView Tbl) { }
+
+        /**********************************************************************************************************/
+        /*****************************************INVENTORY-MODULE*************************************************/
+        /**********************************************************************************************************/
+        private void LoadDefaultTblMedicines()
+        {
+            TblMedicines.Rows.Clear();
+
+            using (var context = new sampledbEntities())
+            {
+                foreach (MEDICINE m in context.MEDICINES)
+                {
+                    DataGridViewRow row = new DataGridViewRow();
+                    row.CreateCells(TblMedicines);
+                    row.Cells[0].Value = m.MEDICINE_ID;
+                    row.Cells[1].Value = m.MEDICINE_NAME;
+                    row.Cells[2].Value = m.QUANTITY;
+                    row.Cells[3].Value = m.EXPIRY.ToString("dd-MM-yyyy");
+                    TblMedicines.Rows.Add(row);
+                }
+            }
+        }
+
+        private void LoadDefaultTblDisposables()
+        {
+            TblDisposables.Rows.Clear();
+
+            using (var context = new sampledbEntities())
+            {
+                foreach (DISPOSABLE d in context.DISPOSABLES)
+                {
+                    DataGridViewRow row = new DataGridViewRow();
+                    row.CreateCells(TblDisposables);
+                    row.Cells[0].Value = d.DISPOSABLE_ID;
+                    row.Cells[1].Value = d.DISPOSABLE_NAME;
+                    row.Cells[2].Value = d.QUANTITY;
+                    TblDisposables.Rows.Add(row);
+                }
+            }
+        }
+
+        private void LoadDefaultTblStationary()
+        {
+            TblStationary.Rows.Clear();
+
+            using (var context = new sampledbEntities())
+            {
+                foreach (STATIONARY m in context.STATIONARies)
+                {
+                    DataGridViewRow row = new DataGridViewRow();
+                    row.CreateCells(TblStationary);
+                    row.Cells[0].Value = m.STATIONARY_ID;
+                    row.Cells[1].Value = m.STATIONARY_NAME;
+                    row.Cells[2].Value = m.QUANTITY;
+                    TblStationary.Rows.Add(row);
+                }
+            }
+        }
+
+        private void LoadDefaultTblMiscellaneous()
+        {
+            TblMiscellaneous.Rows.Clear();
+
+            using (var context = new sampledbEntities())
+            {
+                foreach (MISCELLANEOU m in context.MISCELLANEOUS)
+                {
+                    DataGridViewRow row = new DataGridViewRow();
+                    row.CreateCells(TblMiscellaneous);
+                    row.Cells[0].Value = m.MISCELLANEOUS_ID;
+                    row.Cells[1].Value = m.MISCELLANEOUS_NAME;
+                    row.Cells[2].Value = m.QUANTITY;
+                    TblMiscellaneous.Rows.Add(row);
+                }
+            }
+        }
+
+        /**********************************************************************************************************/
+
+        private void TabMedicines_Reset()
+        {
+            TxtMedicineId.Text = "";
+            TxtMedicineName.Text = "";
+            TxtMedicineQuantity.Text = "";
+            TxtMedicineExpiryDate.Text = "";
+
+            LoadDefaultTblMedicines();
+        }
+
+        private void TabDisposables_Reset()
+        {
+            TxtDisposableId.Text = "";
+            TxtDisposableName.Text = "";
+            TxtDisposableQuantity.Text = "";
+
+            LoadDefaultTblDisposables();
+        }
+
+        private void TabStationary_Reset()
+        {
+            TxtStationaryId.Text = "";
+            TxtStationaryName.Text = "";
+            TxtStationaryQuantity.Text = "";
+
+            LoadDefaultTblStationary();
+        }
+
+        private void TabMiscellaneous_Reset()
+        {
+            TxtMiscellaneousId.Text = "";
+            TxtMiscellaneousName.Text = "";
+            TxtMiscellaneousQuantity.Text = "";
+
+            LoadDefaultTblMiscellaneous();
+        }
+
+        /**********************************************************************************************************/
+
+        // Medicines Tab button Events
+
+        private void BtnMedicineInsert_Click(object sender, EventArgs e) { }
+
+        private void BtnMedicineUpdate_Click(object sender, EventArgs e) { }
+
+        private void BtnMedicineDelete_Click(object sender, EventArgs e) { }
+
+        private void BtnMedicineSearcch_Click(object sender, EventArgs e)
+        {
+            TblMedicines.Rows.Clear();
+
+            string mid = TxtMedicineId.Text.Trim().ToUpper();
+            string mname = TxtMedicineName.Text.Trim().ToUpper();
+            string expiry = TxtMedicineExpiryDate.Value.ToString().Trim().ToUpper();
+
+            string sql =
+                "SELECT * FROM MEDICINES WHERE MEDICINE_ID LIKE '%"
+                + mid
+                + "%' AND MEDICINE_NAME LIKE '%"
+                + mname
+                + "%' AND EXPIRY LIKE '%"
+                + expiry
+                + "%'";
+
+            string connstring =
+                "data source=.;initial catalog=sampledb; integrated security=True; MultipleActiveResultSets=True;";
+
+            using (var Conn = new SqlConnection(connstring))
+            {
+                Conn.Open();
+
+                SqlCommand cmd = new SqlCommand(sql, Conn);
+
+                using (SqlDataReader dr = cmd.ExecuteReader())
+                {
+                    if (dr.HasRows)
+                    {
+                        while (dr.Read())
+                        {
+                            DataGridViewRow row = new DataGridViewRow();
+                            row.CreateCells(TblMedicines);
+                            row.Cells[0].Value = dr["MEDICINE_ID"];
+                            row.Cells[1].Value = dr["MEDICINE_NAME"];
+                            row.Cells[2].Value = dr["QUANTITY"];
+                            row.Cells[3].Value = dr["EXPIRY"];
+                            TblMedicines.Rows.Add(row);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show(
+                            "No Record To Display!",
+                            "",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information
+                        );
+                        TabVillage_Reset();
+                    }
+                }
+            }
+        }
+
+        private void BtnMedicineReset_Click(object sender, EventArgs e)
+        {
+            TabMedicines_Reset();
+        }
+
+        /**********************************************************************************************************/
+
+        // Disposable Tab button Events
+
+        private void BtnDisposableInsert_Click(object sender, EventArgs e) { }
+
+        private void BtnDisposableUpdate_Click(object sender, EventArgs e) { }
+
+        private void BtnDisposableDelete_Click(object sender, EventArgs e) { }
+
+        private void BtnDisposableSearch_Click(object sender, EventArgs e) { }
+
+        private void BtnDisposableReset_Click(object sender, EventArgs e)
+        {
+            TabDisposables_Reset();
+        }
+
+        /**********************************************************************************************************/
+
+        // Stationary Tab button Events
+
+        private void BtnStstionaryInsert_Click(object sender, EventArgs e) { }
+
+        private void BtnStstionaryUpdate_Click(object sender, EventArgs e) { }
+
+        private void BtnStstionaryDelete_Click(object sender, EventArgs e) { }
+
+        private void BtnStstionarySearch_Click(object sender, EventArgs e) { }
+
+        private void BtnStstionaryReset_Click(object sender, EventArgs e)
+        {
+            TabStationary_Reset();
+        }
+
+        /**********************************************************************************************************/
+
+        // Miscellaneous Tab button Events
+
+        private void BtnMiscellaneousInsert_Click(object sender, EventArgs e) { }
+
+        private void BtnMiscellaneousUpdate_Click(object sender, EventArgs e) { }
+
+        private void BtnMiscellaneousDelete_Click(object sender, EventArgs e) { }
+
+        private void BtnMiscellaneousSearch_Click(object sender, EventArgs e) { }
+
+        private void BtnMiscellaneousReset_Click(object sender, EventArgs e)
+        {
+            TabMiscellaneous_Reset();
+        }
+
+        /**********************************************************************************************************/
     }
 }
