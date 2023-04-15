@@ -1,6 +1,4 @@
-﻿using iTextSharp.text;
-using iTextSharp.text.pdf;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.IO;
@@ -14,10 +12,12 @@ namespace OPD_Section
     public partial class MainFrame : Form
     {
 
-        /*******************************************************************************************************************************************************************/
+        /**********************************************************************************************************/
 
         // DataGridView Load Events
 
+        /// These are functions that load default data into different tables in a sample database using
+        /// Entity Framework in C#.
         private void LoadDefaultTblVillage()
         {
 
@@ -38,7 +38,6 @@ namespace OPD_Section
             }
 
         }
-
         private void LoadDefaultTblHouse()
         {
 
@@ -67,7 +66,6 @@ namespace OPD_Section
                 }
             }
         }
-
         private void LoadDefaultTblPerson()
         {
 
@@ -197,6 +195,7 @@ namespace OPD_Section
 
         // Combobox Load Events
 
+        /// These are two functions that load a list of village names into two different combo boxes.
         private void LoadTxtHouseVillageName()
         {
             TxtHouseVillageName.DataSource = null;
@@ -214,7 +213,6 @@ namespace OPD_Section
 
             TxtHouseVillageName.DataSource = new BindingSource(comboSource, null);
         }
-
         private void LoadTxtPersonVillageName()
         {
             TxtPersonVillageName.Items.Clear();
@@ -235,6 +233,9 @@ namespace OPD_Section
         /**********************************************************************************************************/
 
         // Tab Reset Events
+
+        /// The above code contains functions to reset the input fields and load default values for
+        /// different tabs in a database management system.
         private void TabVillage_Reset()
         {
             TxtVillageId.Text = "";
@@ -267,6 +268,7 @@ namespace OPD_Section
 
             LoadDefaultTblPerson();
         }
+
         private void TabVillageLogs_Reset()
         {
             TxtVillageLogsVillageId.Text = "";
@@ -300,6 +302,16 @@ namespace OPD_Section
         /**********************************************************************************************************/
 
         // Village Tab button Events
+
+        /// This code contains functions for inserting, updating, deleting, searching, and resetting
+        /// data in a database table for villages.
+        /// 
+        /// Args:
+        ///   sender (object): The object that raised the event.
+        ///   EventArgs: EventArgs is a class in C# that provides data for an event. It is used as a
+        /// parameter for event handlers to provide information about the event that occurred. It does
+        /// not contain any specific data, but it is a base class for other event argument classes that
+        /// can provide more specific information about the event
         private async void BtnVillageInsert_Click(object sender, EventArgs e)
         {
 
@@ -515,6 +527,17 @@ namespace OPD_Section
         /**********************************************************************************************************/
 
         // Village Logs Tab button Events
+
+        /// This function searches for village logs based on user input and displays the results in a
+        /// DataGridView.
+        /// 
+        /// Args:
+        ///   sender (object): The object that raised the event (in this case, the button that was
+        /// clicked).
+        ///   EventArgs: EventArgs is an event data class that is used to pass event data to an event
+        /// handler. It contains no data and is typically used for events that do not require additional
+        /// information to be passed to the handler. In this case, it is not used in the method itself,
+        /// but is required as a parameter
         private void BtnVillageLogsSearch_Click(object sender, EventArgs e)
         {
 
@@ -570,6 +593,16 @@ namespace OPD_Section
         /**********************************************************************************************************/
 
         // House Tab button Events
+
+        /// The code contains button events for inserting, updating, deleting, searching, and resetting
+        /// data in a database table for houses.
+        /// 
+        /// Args:
+        ///   sender (object): The object that raised the event.
+        ///   EventArgs: EventArgs is a class in C# that provides data for an event. It is used as a
+        /// parameter for event handlers to provide information about the event that occurred. It does
+        /// not contain any specific data, but is a base class for other event argument classes that can
+        /// be used to provide more specific information about
         private async void BtnHouseInsert_Click(object sender, EventArgs e)
         {
             MessageBox.Show(" Values for House Id and No. of People is Ignored !!" +
@@ -804,6 +837,17 @@ namespace OPD_Section
         /**********************************************************************************************************/
 
         // House Logs Tab button Events
+
+        /// This function searches for house logs based on the inputted house ID and village name, and
+        /// displays the results in a DataGridView.
+        /// 
+        /// Args:
+        ///   sender (object): The object that raised the event (in this case, the button that was
+        /// clicked).
+        ///   EventArgs: EventArgs is a class in C# that provides data for an event. It is used as a
+        /// parameter for event handlers to provide information about the event that occurred. It does
+        /// not contain any specific data, but it is a base class for other event argument classes that
+        /// can contain specific data related to the event
         private void BtnHouseLogsSearch_Click(object sender, EventArgs e)
         {
             TblHouseLogs.Rows.Clear();
@@ -884,6 +928,18 @@ namespace OPD_Section
         /**********************************************************************************************************/
 
         // Person Tab button Events
+
+        /// This code contains event handlers for inserting, updating, deleting, searching, and
+        /// resetting records in a database table for persons, as well as for searching and resetting
+        /// records in a log table for persons.
+        /// 
+        /// Args:
+        ///   sender (object): The object that raised the event. In this case, it could be a button or
+        /// any other control that has an event handler attached to it.
+        ///   EventArgs: EventArgs is a class in C# that provides data for an event. It is used as a
+        /// parameter for event handlers to provide information about the event that occurred. It does
+        /// not contain any specific data, but is used as a base class for other event argument classes
+        /// that provide more specific information about the event
         private async void BtnPersonInsert_Click(object sender, EventArgs e)
         {
 
@@ -1181,6 +1237,7 @@ namespace OPD_Section
         /**********************************************************************************************************/
 
         // House Logs Tab button Events
+
         private void BtnPersonLogsSearch_Click(object sender, EventArgs e)
         {
             TblPersonLogs.Rows.Clear();
@@ -1285,6 +1342,17 @@ namespace OPD_Section
         /**********************************************************************************************************/
 
         // DataGridView Cell Mouse Double Click Events
+
+        /// These are event handlers for double-clicking on cells in various DataGridViews to populate
+        /// text boxes with the corresponding data.
+        /// 
+        /// Args:
+        ///   sender (object): The object that raised the event. In this case, it is the DataGridView
+        /// control.
+        ///   DataGridViewCellMouseEventArgs: DataGridViewCellMouseEventArgs is an event argument class
+        /// that is used to provide data for the events that are related to mouse actions on a
+        /// DataGridView control. It contains information about the row and column index of the cell
+        /// that was clicked, the location of the mouse pointer, and the type of mouse button that was
         private void TblVillage_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             int row = e.RowIndex;
@@ -1324,9 +1392,57 @@ namespace OPD_Section
             }
         }
 
+        private void TblVillageLogs_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int row = e.RowIndex;
+
+            if (row >= 0)
+            {
+                TxtVillageLogsVillageId.Text = Convert.ToString(TblVillageLogs[2, row].Value);
+                TxtVillageLogsVillageName.Text = Convert.ToString(TblVillageLogs[3, row].Value);
+                TxtVillageLogsVillageCode.Text = Convert.ToString(TblVillageLogs[4, row].Value);
+                TxtVillageLogsNoOfHouses.Text = Convert.ToString(TblVillageLogs[5, row].Value);
+            }
+        }
+        private void TblHouseLogs_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int row = e.RowIndex;
+
+            if (row >= 0)
+            {
+                TxtHouseLogsHouseId.Text = Convert.ToString(TblHouseLogs[2, row].Value);
+                TxtHouseLogsVillageName.Text = Convert.ToString(TblHouseLogs[3, row].Value);
+                TxtHouseLogsNoOfPeople.Text = Convert.ToString(TblHouseLogs[4, row].Value);
+            }
+        }
+        private void TblPersonLogs_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int row = e.RowIndex;
+
+            if (row >= 0)
+            {
+                TxtPersonLogsPersonId.Text = Convert.ToString(TblPerson[2, row].Value);
+                TxtPersonLogsHouseId.Text = Convert.ToString(TblPerson[3, row].Value);
+                TxtPersonLogsVillageName.Text = Convert.ToString(TblPerson[4, row].Value);
+                TxtPersonLogsName.Text = Convert.ToString(TblPerson[5, row].Value);
+                TxtPersonLogsAge.Text = Convert.ToString(TblPerson[6, row].Value);
+                TxtPersonLogsGender.Text = Convert.ToString(TblPerson[7, row].Value);
+                TxtPersonLogsPhoneNo.Text = Convert.ToString(TblPerson[8, row].Value);
+            }
+        }
+
         /**********************************************************************************************************/
 
         // Person Tab Village ComboBox Selected Item Change Event to fill House Id Combobox
+
+        /// This function populates a dropdown list of house IDs based on the selected village name.
+        /// 
+        /// Args:
+        ///   sender (object): The object that raised the event, in this case, the TxtPersonVillageName
+        /// ComboBox control.
+        ///   EventArgs: EventArgs is a class in C# that provides data for an event. It is used to pass
+        /// information about the event to the event handler. In this case, it is used to handle the
+        /// event when the selected item in the TxtPersonVillageName combo box is changed.
         private void TxtPersonVillageName_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (TxtPersonVillageName.SelectedItem != null)
@@ -1365,6 +1481,15 @@ namespace OPD_Section
         /**********************************************************************************************************/
 
         // Person Tab Text Change Events using RegEx
+
+        /// The above code contains event handlers that validate user input for person ID, phone number,
+        /// and name fields.
+        /// 
+        /// Args:
+        ///   sender (object): The object that raised the event (in this case, a text box control).
+        ///   EventArgs: EventArgs is a class in C# that provides data for an event. It is used to pass
+        /// information about an event that has occurred, such as a button click or a text change. It
+        /// contains no data, but is used to signal that an event has occurred.
         private void TxtPersonId_TextChanged(object sender, EventArgs e)
         {
             if (Regex.IsMatch(TxtPersonId.Text, "[^0-9]") && TxtPersonId.Text != "")
@@ -1392,6 +1517,16 @@ namespace OPD_Section
         }
 
         // House Tab Text Change Events using RegEx
+
+        /// The function checks if the input in a text box is a number and displays a message if it is
+        /// not.
+        /// 
+        /// Args:
+        ///   sender (object): The object that raised the event, in this case, the text box control
+        /// TxtHouseId.
+        ///   EventArgs: EventArgs is a base class for classes containing event data, which are passed
+        /// as parameters to event handlers. It provides no event data itself, but serves as a base
+        /// class for event data classes.
         private void TxtHouseId_TextChanged(object sender, EventArgs e)
         {
             if (Regex.IsMatch(TxtHouseId.Text, "[^0-9]") && TxtHouseId.Text != "")
@@ -1402,6 +1537,19 @@ namespace OPD_Section
         }
 
         // Village Tab Text Change Events using RegEx
+
+
+        /// The above code contains event handlers for text changed events in C# that validate user
+        /// input using regular expressions and display error messages if the input does not match the
+        /// expected format.
+        /// 
+        /// Args:
+        ///   sender (object): The object that raised the event, in this case, the text box that
+        /// triggered the TextChanged event.
+        ///   EventArgs: EventArgs is a class in C# that provides data for an event. It is used as a
+        /// base class for classes that represent event data. It does not contain any data, but is used
+        /// to provide a consistent interface for event data classes. It is often used as a parameter
+        /// for event handlers.
         private void TxtVillageId_TextChanged(object sender, EventArgs e)
         {
             if (Regex.IsMatch(TxtVillageId.Text, "[^0-9]") && TxtVillageId.Text != "")
@@ -1410,6 +1558,7 @@ namespace OPD_Section
                 TxtVillageId.Text = TxtVillageId.Text.Remove(TxtVillageId.Text.Length - 1);
             }
         }
+
         private void TxtVillageName_TextChanged(object sender, EventArgs e)
         {
             if (!Regex.IsMatch(TxtVillageName.Text, @"[\p{L} ]+$") && TxtVillageName.Text != "")
@@ -1419,6 +1568,7 @@ namespace OPD_Section
 
             }
         }
+
         private void TxtVillageCode_TextChanged(object sender, EventArgs e)
         {
             if (!Regex.IsMatch(TxtVillageCode.Text, @"[\p{L}]+$") && TxtVillageCode.Text != "")
@@ -1432,6 +1582,15 @@ namespace OPD_Section
         /**********************************************************************************************************/
 
         // TblPerson ContextMenu Events
+
+        /// The code contains event handlers for printing tables as PDF or Excel formats.
+        /// 
+        /// Args:
+        ///   sender (object): The object that raised the event. In this case, it would be the button
+        /// that was clicked to trigger the event.
+        ///   EventArgs: EventArgs is a class in C# that provides data for an event. It contains no
+        /// data, but is used as a base class for creating event data classes. It is commonly used as a
+        /// parameter for event handlers.
         private void TblPersonPrintAsPDF_Click(object sender, EventArgs e)
         {
             PrintToPDF(TblPerson);
@@ -1442,6 +1601,7 @@ namespace OPD_Section
         }
 
         // TblHouse ContextMenu Events
+
         private void TblHousePrintAsPDF_Click(object sender, EventArgs e)
         {
             PrintToPDF(TblHouse);
@@ -1452,6 +1612,7 @@ namespace OPD_Section
         }
 
         // TblVillage ContextMenu Events
+
         private void TblVillagePrintAsPDF_Click(object sender, EventArgs e)
         {
             PrintToPDF(TblVillage);
@@ -1462,6 +1623,7 @@ namespace OPD_Section
         }
 
         // TblVillageLogs ContextMenu Event
+
         private void TblVillageLogsPrintAsPDF_Click(object sender, EventArgs e)
         {
             PrintToPDF(TblVillageLogs);
@@ -1472,6 +1634,7 @@ namespace OPD_Section
         }
 
         // TblPersonLogs ContextMenu Event
+
         private void TblHouseLogsPrintAsPDF_Click(object sender, EventArgs e)
         {
             PrintToPDF(TblHouseLogs);
@@ -1482,6 +1645,7 @@ namespace OPD_Section
         }
 
         // TblPersonLogs ContextMenu Event
+
         private void TblPersonLogsPrintAsPDF_Click(object sender, EventArgs e)
         {
             PrintToPDF(TblPersonLogs);
@@ -1491,8 +1655,11 @@ namespace OPD_Section
             PrintToExcel(TblPersonLogs);
         }
 
-
-
+        /// This function saves the contents of a DataGridView to an Excel file.
+        /// 
+        /// Args:
+        ///   DataGridView: A control in Windows Forms that displays data in a grid format, similar to a
+        /// table.
         private void PrintToExcel(DataGridView Tbl)
         {
             SaveFileDialog FileDialog = new SaveFileDialog
@@ -1510,11 +1677,19 @@ namespace OPD_Section
                     File.Delete(ExcelFilePath);
                 }
 
-                if (TblVillage.Rows.Count > 0)
+                if (Tbl.Rows.Count > 0)
                 {
+                    /* The above code is creating a new instance of Microsoft Excel application, adding
+                    a new workbook to it, and creating a new worksheet within the workbook. */
                     Microsoft.Office.Interop.Excel.Application XcelApp = new Microsoft.Office.Interop.Excel.Application();
                     XcelApp.Application.Workbooks.Add();
                     Microsoft.Office.Interop.Excel._Worksheet Worksheet = (Microsoft.Office.Interop.Excel._Worksheet)XcelApp.ActiveSheet;
+                    /* The above code is exporting data from a DataGridView (Tbl) to an Excel file
+                    using the Microsoft Excel Interop library. The first for loop is setting the
+                    header text of each column in the Excel file. The second for loop is iterating
+                    through each row and column of the DataGridView and setting the corresponding
+                    cell value in the Excel file. The Console.WriteLine statement is just for
+                    debugging purposes and can be removed. */
                     for (int i = 1; i < Tbl.Columns.Count + 1; i++)
                     {
                         XcelApp.Cells[1, i] = Tbl.Columns[i - 1].HeaderText;
@@ -1531,6 +1706,9 @@ namespace OPD_Section
                     }
                     XcelApp.Columns.AutoFit();
 
+                    /* The above code is saving an Excel worksheet to a specified file path and then
+                    quitting the Excel application. A message box is displayed to indicate that the
+                    Excel file has been saved. */
                     Worksheet.SaveAs(ExcelFilePath);
                     XcelApp.Quit();
                     MessageBox.Show("Excel file saved!");
@@ -1538,74 +1716,14 @@ namespace OPD_Section
             }
         }
 
+        /// This function exports data from a DataGridView to a PDF file.
+        /// 
+        /// Args:
+        ///   DataGridView: A control in Windows Forms that displays data in a grid format. It is used
+        /// to display and edit tabular data.
         private void PrintToPDF(DataGridView Tbl)
         {
-            if (dataGridView1.Rows.Count > 0)
-            {
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "PDF (*.pdf)|*.pdf";
-                bool ErrorMessage = false;
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    if (File.Exists(save.FileName))
-                    {
-                        try
-                        {
-                            File.Delete(save.FileName);
-                        }
-                        catch (Exception ex)
-                        {
 
-                            ErrorMessage = true;
-                            MessageBox.Show("Unable to Write Data on Disk!" + ex.Message);
-                        }
-                    }
-                    if (!ErrorMessage)
-                    {
-                        try
-                        {
-                            PdfPTable pTable = new PdfPTable(Tbl.Columns.Count);
-                            pTable.DefaultCell.Padding = 2;
-                            pTable.WidthPercentage = 100;
-                            pTable.HorizontalAlignment = Element.ALIGN_LEFT;
-
-                            foreach (DataGridViewColumn col in Tbl.Columns)
-                            {
-                                PdfPCell pCell = new PdfPCell(new Phrase(col.HeaderText));
-                                pTable.AddCell(pCell);
-                            }
-                            foreach (DataGridViewRow viewRow in Tbl.Rows)
-                            {
-                                foreach (DataGridViewCell dcell in viewRow.Cells)
-                                {
-                                    pTable.AddCell(dcell.Value.ToString());
-                                }
-                            }
-
-                            using (FileStream fileStream = new FileStream(save.FileName, FileMode.Create))
-                            {
-                                Document document = new Document(PageSize.A4, 12f, 20f, 20f, 12f);
-                                document.Open();
-                                document.Add(pTable);
-                                document.Close();
-                                fileStream.Close();
-                            }
-                            MessageBox.Show("Operation Successfully Performed", "Information");
-
-                        }
-                        catch (Exception ex)
-                        {
-
-                            MessageBox.Show("An Error Occurred While Exporting Data!" + ex.Message);
-                        }
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("No Record Found", "Information");
-
-            }
         }
 
         /**********************************************************************************************************/

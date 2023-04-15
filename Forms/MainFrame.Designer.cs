@@ -1882,6 +1882,7 @@
             this.TblVillageLogs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TblVillageLogs.Size = new System.Drawing.Size(1299, 750);
             this.TblVillageLogs.TabIndex = 0;
+            this.TblVillageLogs.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TblVillageLogs_CellMouseDoubleClick);
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -2144,6 +2145,7 @@
             this.TblHouseLogs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TblHouseLogs.Size = new System.Drawing.Size(1299, 750);
             this.TblHouseLogs.TabIndex = 0;
+            this.TblHouseLogs.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TblHouseLogs_CellMouseDoubleClick);
             // 
             // dataGridViewTextBoxColumn11
             // 
@@ -2526,6 +2528,7 @@
             this.TblPersonLogs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TblPersonLogs.Size = new System.Drawing.Size(1294, 750);
             this.TblPersonLogs.TabIndex = 0;
+            this.TblPersonLogs.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TblPersonLogs_CellMouseDoubleClick);
             // 
             // Column8
             // 
