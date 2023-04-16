@@ -159,7 +159,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.button1.Location = new System.Drawing.Point(0, 0);
@@ -172,7 +172,7 @@
             // 
             // BackBtnVisitDetails
             // 
-            this.BackBtnVisitDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.BackBtnVisitDetails.BackColor = System.Drawing.SystemColors.ControlLight;
             this.BackBtnVisitDetails.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BackBtnVisitDetails.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.BackBtnVisitDetails.Location = new System.Drawing.Point(0, 0);

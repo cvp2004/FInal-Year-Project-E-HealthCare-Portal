@@ -69,8 +69,14 @@ namespace OPD_Section.Forms
                 {
                     personid = res["PERSON_ID"].ToString();
                     personname = res["PERSON_NAME"].ToString();
-                    visitdate = res["DATE"].ToString();
-                    visittime = res["TIME"].ToString();
+
+                    string datetime = res["DATE"].ToString();
+                    DateTime dt = DateTime.Parse(datetime);
+
+                    //visitdate = res["DATE"].ToString();
+                    //visittime = res["TIME"].ToString(); 
+                    visitdate = dt.Date.ToString("dd/MM/yyyy");
+                    visittime = dt.ToString("hh:mm:ss tt");
                 }
             }
             else
@@ -205,8 +211,13 @@ namespace OPD_Section.Forms
                 {
                     personid = res["PERSON_ID"].ToString();
                     personname = res["PERSON_NAME"].ToString();
-                    visitdate = res["DATE"].ToString();
-                    visittime = res["TIME"].ToString();
+                    string datetime = res["DATE"].ToString();
+                    DateTime dt = DateTime.Parse(datetime);
+
+                    //visitdate = res["DATE"].ToString();
+                    //visittime = res["TIME"].ToString(); 
+                    visitdate = dt.Date.ToString("dd/MM/yyyy");
+                    visittime = dt.ToString("hh:mm:ss tt");
                 }
             }
             else
@@ -483,10 +494,10 @@ namespace OPD_Section.Forms
 
                 */
                 string line1 = "Patient Name\t : " + "\t" + personname;
-                string line2 = "Petient ID\t\t  : " + "\t" + personid + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  Village\t\t\t  : " + "\t" + villagename;
+                string line2 = "Petient ID\t\t  : " + "\t" + personid + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  Village\t\t\t  : " + "\t" + villagename;
                 string line3 = "House No.\t\t : " + "\t" + houseid + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  Age\t\t\t\t   : " + "\t" + age;
                 string line4 = "Gender\t\t\t  : " + "\t" + gender + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t Phone No.\t\t : " + "\t" + contact;
-                string line5 = "Visit Time\t\t : " + "\t" + visittime + "\t\t\t\t\t\t\t\t\t\t\t\tVisit Date\t\t  : " + "\t" + visitdate;
+                string line5 = "Visit Time\t\t : " + "\t" + visittime + "\t\t\t\t\t\t\t\t\t\t\t\t\t\tVisit Date\t\t  : " + "\t" + visitdate;
 
                 int TextSize = 10;
                 int lm = 50;
