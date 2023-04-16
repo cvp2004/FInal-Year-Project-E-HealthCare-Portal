@@ -372,12 +372,6 @@ namespace OPD_Section
             this.label1 = new System.Windows.Forms.Label();
             this.SplitContainer = new System.Windows.Forms.SplitContainer();
 
-            this.DateTimeTimer = new System.Windows.Forms.Timer(this.components);
-            this.OuterImageList = new System.Windows.Forms.ImageList(this.components);
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
-            this.imageList3 = new System.Windows.Forms.ImageList(this.components);
-            this.imageList4 = new System.Windows.Forms.ImageList(this.components);
             this.TblMedicinesContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.TblMedicinesPrintAsPDF = new System.Windows.Forms.ToolStripMenuItem();
             this.TblMedicinesPrintAsExcel = new System.Windows.Forms.ToolStripMenuItem();
@@ -4293,7 +4287,6 @@ namespace OPD_Section
             this.label1.Size = new System.Drawing.Size(1393, 121);
             this.label1.TabIndex = 0;
             this.label1.Text = "E HEALTH-CARE PORTAL";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // SplitContainer
             // 
@@ -4800,31 +4793,6 @@ namespace OPD_Section
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
 
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
-        private System.Windows.Forms.ContextMenuStrip TblVillageLogsContextMenuStrip;
-        private System.Windows.Forms.ToolStripMenuItem TblVillageLogsPrintAsPDF;
-        private System.Windows.Forms.ToolStripMenuItem TblVillageLogsPrintAsExcel;
-        private System.Windows.Forms.ContextMenuStrip TblHouseLogsContextMenuStrip;
-        private System.Windows.Forms.ToolStripMenuItem TblHouseLogsPrintAsPDF;
-        private System.Windows.Forms.ToolStripMenuItem TblHouseLogsPrintAsExcel;
-        private System.Windows.Forms.ContextMenuStrip TblPersonLogsContextMenuStrip;
-        private System.Windows.Forms.ToolStripMenuItem TblPersonLogsPrintAsPDF;
-        private System.Windows.Forms.ToolStripMenuItem TblPersonLogsPrintAsExcel;
-        private System.Windows.Forms.TextBox TxtHouseLogsVillageName;
-        private System.Windows.Forms.TextBox TxtPersonLogsVillageName;
-        private System.Windows.Forms.TextBox TxtPersonLogsHouseId;
-        private System.Windows.Forms.TextBox TxtPersonLogsAge;
-        private System.Windows.Forms.TextBox TxtPersonLogsGender;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage MedicinesTab;
         private System.Windows.Forms.SplitContainer splitContainer5;
