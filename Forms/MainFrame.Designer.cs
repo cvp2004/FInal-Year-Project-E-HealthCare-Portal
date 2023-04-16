@@ -267,6 +267,7 @@
             this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DisposablesTab = new System.Windows.Forms.TabPage();
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
+            this.TxtDisposableQuantity = new System.Windows.Forms.NumericUpDown();
             this.BtnDisposableReset = new System.Windows.Forms.Button();
             this.BtnDisposableSearch = new System.Windows.Forms.Button();
             this.BtnDisposableUpdate = new System.Windows.Forms.Button();
@@ -275,6 +276,7 @@
             this.panel35 = new System.Windows.Forms.Panel();
             this.panel36 = new System.Windows.Forms.Panel();
             this.panel37 = new System.Windows.Forms.Panel();
+            this.TxtDisposableName = new System.Windows.Forms.TextBox();
             this.TxtDisposableId = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
@@ -286,6 +288,7 @@
             this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StationaryTab = new System.Windows.Forms.TabPage();
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
+            this.TxtStationaryQuantity = new System.Windows.Forms.NumericUpDown();
             this.BtnStstionaryReset = new System.Windows.Forms.Button();
             this.BtnStstionarySearch = new System.Windows.Forms.Button();
             this.BtnStstionaryUpdate = new System.Windows.Forms.Button();
@@ -294,6 +297,7 @@
             this.panel41 = new System.Windows.Forms.Panel();
             this.panel42 = new System.Windows.Forms.Panel();
             this.panel43 = new System.Windows.Forms.Panel();
+            this.TxtStationaryName = new System.Windows.Forms.TextBox();
             this.TxtStationaryId = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
@@ -309,6 +313,7 @@
             this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MiscellaneousTab = new System.Windows.Forms.TabPage();
             this.splitContainer9 = new System.Windows.Forms.SplitContainer();
+            this.TxtMiscellaneousQuantity = new System.Windows.Forms.NumericUpDown();
             this.BtnMiscellaneousReset = new System.Windows.Forms.Button();
             this.BtnMiscellaneousSearch = new System.Windows.Forms.Button();
             this.BtnMiscellaneousUpdate = new System.Windows.Forms.Button();
@@ -317,6 +322,7 @@
             this.panel38 = new System.Windows.Forms.Panel();
             this.panel39 = new System.Windows.Forms.Panel();
             this.panel40 = new System.Windows.Forms.Panel();
+            this.TxtMiscellaneousName = new System.Windows.Forms.TextBox();
             this.TxtMiscellaneousId = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
@@ -375,12 +381,6 @@
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.imageList3 = new System.Windows.Forms.ImageList(this.components);
             this.imageList4 = new System.Windows.Forms.ImageList(this.components);
-            this.TxtDisposableName = new System.Windows.Forms.TextBox();
-            this.TxtDisposableQuantity = new System.Windows.Forms.NumericUpDown();
-            this.TxtStationaryQuantity = new System.Windows.Forms.NumericUpDown();
-            this.TxtMiscellaneousQuantity = new System.Windows.Forms.NumericUpDown();
-            this.TxtMiscellaneousName = new System.Windows.Forms.TextBox();
-            this.TxtStationaryName = new System.Windows.Forms.TextBox();
             this.LowerPanel.SuspendLayout();
             this.OuterTabControl.SuspendLayout();
             this.OPDTab.SuspendLayout();
@@ -452,18 +452,21 @@
             this.splitContainer6.Panel1.SuspendLayout();
             this.splitContainer6.Panel2.SuspendLayout();
             this.splitContainer6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtDisposableQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TblDisposables)).BeginInit();
             this.StationaryTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).BeginInit();
             this.splitContainer7.Panel1.SuspendLayout();
             this.splitContainer7.Panel2.SuspendLayout();
             this.splitContainer7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtStationaryQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TblStationary)).BeginInit();
             this.MiscellaneousTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).BeginInit();
             this.splitContainer9.Panel1.SuspendLayout();
             this.splitContainer9.Panel2.SuspendLayout();
             this.splitContainer9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtMiscellaneousQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TblMiscellaneous)).BeginInit();
             this.InventoryLogsTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).BeginInit();
@@ -477,9 +480,6 @@
             this.SplitContainer.Panel1.SuspendLayout();
             this.SplitContainer.Panel2.SuspendLayout();
             this.SplitContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtDisposableQuantity)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtStationaryQuantity)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtMiscellaneousQuantity)).BeginInit();
             this.SuspendLayout();
             // 
             // LowerPanel
@@ -3084,6 +3084,7 @@
             this.TblMedicines.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TblMedicines.Size = new System.Drawing.Size(1319, 803);
             this.TblMedicines.TabIndex = 0;
+            this.TblMedicines.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TblMedicines_CellMouseDoubleClick);
             // 
             // dataGridViewTextBoxColumn25
             // 
@@ -3162,6 +3163,19 @@
             this.splitContainer6.SplitterDistance = 420;
             this.splitContainer6.SplitterWidth = 5;
             this.splitContainer6.TabIndex = 1;
+            // 
+            // TxtDisposableQuantity
+            // 
+            this.TxtDisposableQuantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtDisposableQuantity.Location = new System.Drawing.Point(16, 314);
+            this.TxtDisposableQuantity.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.TxtDisposableQuantity.Name = "TxtDisposableQuantity";
+            this.TxtDisposableQuantity.Size = new System.Drawing.Size(516, 30);
+            this.TxtDisposableQuantity.TabIndex = 6;
             // 
             // BtnDisposableReset
             // 
@@ -3242,6 +3256,18 @@
             this.panel37.Size = new System.Drawing.Size(516, 2);
             this.panel37.TabIndex = 3;
             // 
+            // TxtDisposableName
+            // 
+            this.TxtDisposableName.BackColor = System.Drawing.Color.White;
+            this.TxtDisposableName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtDisposableName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtDisposableName.HideSelection = false;
+            this.TxtDisposableName.Location = new System.Drawing.Point(17, 229);
+            this.TxtDisposableName.Name = "TxtDisposableName";
+            this.TxtDisposableName.Size = new System.Drawing.Size(516, 27);
+            this.TxtDisposableName.TabIndex = 0;
+            this.TxtDisposableName.TextChanged += new System.EventHandler(this.TxtDisposableName_TextChanged);
+            // 
             // TxtDisposableId
             // 
             this.TxtDisposableId.BackColor = System.Drawing.Color.White;
@@ -3252,6 +3278,7 @@
             this.TxtDisposableId.Name = "TxtDisposableId";
             this.TxtDisposableId.Size = new System.Drawing.Size(516, 27);
             this.TxtDisposableId.TabIndex = 0;
+            this.TxtDisposableId.TextChanged += new System.EventHandler(this.TxtDisposableId_TextChanged);
             // 
             // label44
             // 
@@ -3313,6 +3340,7 @@
             this.TblDisposables.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TblDisposables.Size = new System.Drawing.Size(1319, 803);
             this.TblDisposables.TabIndex = 0;
+            this.TblDisposables.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TblDisposables_CellMouseDoubleClick);
             // 
             // dataGridViewTextBoxColumn29
             // 
@@ -3384,6 +3412,14 @@
             this.splitContainer7.SplitterDistance = 425;
             this.splitContainer7.SplitterWidth = 5;
             this.splitContainer7.TabIndex = 1;
+            // 
+            // TxtStationaryQuantity
+            // 
+            this.TxtStationaryQuantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtStationaryQuantity.Location = new System.Drawing.Point(16, 314);
+            this.TxtStationaryQuantity.Name = "TxtStationaryQuantity";
+            this.TxtStationaryQuantity.Size = new System.Drawing.Size(516, 30);
+            this.TxtStationaryQuantity.TabIndex = 20;
             // 
             // BtnStstionaryReset
             // 
@@ -3464,6 +3500,18 @@
             this.panel43.Size = new System.Drawing.Size(516, 2);
             this.panel43.TabIndex = 13;
             // 
+            // TxtStationaryName
+            // 
+            this.TxtStationaryName.BackColor = System.Drawing.Color.White;
+            this.TxtStationaryName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtStationaryName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtStationaryName.HideSelection = false;
+            this.TxtStationaryName.Location = new System.Drawing.Point(16, 229);
+            this.TxtStationaryName.Name = "TxtStationaryName";
+            this.TxtStationaryName.Size = new System.Drawing.Size(516, 27);
+            this.TxtStationaryName.TabIndex = 7;
+            this.TxtStationaryName.TextChanged += new System.EventHandler(this.TxtStationaryName_TextChanged);
+            // 
             // TxtStationaryId
             // 
             this.TxtStationaryId.BackColor = System.Drawing.Color.White;
@@ -3474,6 +3522,7 @@
             this.TxtStationaryId.Name = "TxtStationaryId";
             this.TxtStationaryId.Size = new System.Drawing.Size(516, 27);
             this.TxtStationaryId.TabIndex = 7;
+            this.TxtStationaryId.TextChanged += new System.EventHandler(this.TxtStationaryId_TextChanged);
             // 
             // label49
             // 
@@ -3542,6 +3591,7 @@
             this.TblStationary.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TblStationary.Size = new System.Drawing.Size(1314, 803);
             this.TblStationary.TabIndex = 0;
+            this.TblStationary.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TblStationary_CellMouseDoubleClick);
             // 
             // dataGridViewTextBoxColumn32
             // 
@@ -3641,6 +3691,14 @@
             this.splitContainer9.SplitterWidth = 5;
             this.splitContainer9.TabIndex = 2;
             // 
+            // TxtMiscellaneousQuantity
+            // 
+            this.TxtMiscellaneousQuantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtMiscellaneousQuantity.Location = new System.Drawing.Point(16, 315);
+            this.TxtMiscellaneousQuantity.Name = "TxtMiscellaneousQuantity";
+            this.TxtMiscellaneousQuantity.Size = new System.Drawing.Size(516, 30);
+            this.TxtMiscellaneousQuantity.TabIndex = 21;
+            // 
             // BtnMiscellaneousReset
             // 
             this.BtnMiscellaneousReset.AutoSize = true;
@@ -3720,6 +3778,18 @@
             this.panel40.Size = new System.Drawing.Size(516, 2);
             this.panel40.TabIndex = 13;
             // 
+            // TxtMiscellaneousName
+            // 
+            this.TxtMiscellaneousName.BackColor = System.Drawing.Color.White;
+            this.TxtMiscellaneousName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtMiscellaneousName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtMiscellaneousName.HideSelection = false;
+            this.TxtMiscellaneousName.Location = new System.Drawing.Point(16, 229);
+            this.TxtMiscellaneousName.Name = "TxtMiscellaneousName";
+            this.TxtMiscellaneousName.Size = new System.Drawing.Size(516, 27);
+            this.TxtMiscellaneousName.TabIndex = 7;
+            this.TxtMiscellaneousName.TextChanged += new System.EventHandler(this.TxtMiscellaneousName_TextChanged);
+            // 
             // TxtMiscellaneousId
             // 
             this.TxtMiscellaneousId.BackColor = System.Drawing.Color.White;
@@ -3730,6 +3800,7 @@
             this.TxtMiscellaneousId.Name = "TxtMiscellaneousId";
             this.TxtMiscellaneousId.Size = new System.Drawing.Size(516, 27);
             this.TxtMiscellaneousId.TabIndex = 7;
+            this.TxtMiscellaneousId.TextChanged += new System.EventHandler(this.TxtMiscellaneousId_TextChanged);
             // 
             // label48
             // 
@@ -3794,6 +3865,7 @@
             this.TblMiscellaneous.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TblMiscellaneous.Size = new System.Drawing.Size(1314, 803);
             this.TblMiscellaneous.TabIndex = 0;
+            this.TblMiscellaneous.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TblMiscellaneous_CellMouseDoubleClick);
             // 
             // dataGridViewTextBoxColumn46
             // 
@@ -4338,63 +4410,6 @@
             this.imageList4.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList4.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // TxtDisposableName
-            // 
-            this.TxtDisposableName.BackColor = System.Drawing.Color.White;
-            this.TxtDisposableName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtDisposableName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtDisposableName.HideSelection = false;
-            this.TxtDisposableName.Location = new System.Drawing.Point(17, 229);
-            this.TxtDisposableName.Name = "TxtDisposableName";
-            this.TxtDisposableName.Size = new System.Drawing.Size(516, 27);
-            this.TxtDisposableName.TabIndex = 0;
-            // 
-            // TxtDisposableQuantity
-            // 
-            this.TxtDisposableQuantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtDisposableQuantity.Location = new System.Drawing.Point(16, 314);
-            this.TxtDisposableQuantity.Name = "TxtDisposableQuantity";
-            this.TxtDisposableQuantity.Size = new System.Drawing.Size(516, 30);
-            this.TxtDisposableQuantity.TabIndex = 6;
-            // 
-            // TxtStationaryQuantity
-            // 
-            this.TxtStationaryQuantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtStationaryQuantity.Location = new System.Drawing.Point(16, 314);
-            this.TxtStationaryQuantity.Name = "TxtStationaryQuantity";
-            this.TxtStationaryQuantity.Size = new System.Drawing.Size(516, 30);
-            this.TxtStationaryQuantity.TabIndex = 20;
-            // 
-            // TxtMiscellaneousQuantity
-            // 
-            this.TxtMiscellaneousQuantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtMiscellaneousQuantity.Location = new System.Drawing.Point(16, 315);
-            this.TxtMiscellaneousQuantity.Name = "TxtMiscellaneousQuantity";
-            this.TxtMiscellaneousQuantity.Size = new System.Drawing.Size(516, 30);
-            this.TxtMiscellaneousQuantity.TabIndex = 21;
-            // 
-            // TxtMiscellaneousName
-            // 
-            this.TxtMiscellaneousName.BackColor = System.Drawing.Color.White;
-            this.TxtMiscellaneousName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtMiscellaneousName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtMiscellaneousName.HideSelection = false;
-            this.TxtMiscellaneousName.Location = new System.Drawing.Point(16, 229);
-            this.TxtMiscellaneousName.Name = "TxtMiscellaneousName";
-            this.TxtMiscellaneousName.Size = new System.Drawing.Size(516, 27);
-            this.TxtMiscellaneousName.TabIndex = 7;
-            // 
-            // TxtStationaryName
-            // 
-            this.TxtStationaryName.BackColor = System.Drawing.Color.White;
-            this.TxtStationaryName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtStationaryName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtStationaryName.HideSelection = false;
-            this.TxtStationaryName.Location = new System.Drawing.Point(16, 229);
-            this.TxtStationaryName.Name = "TxtStationaryName";
-            this.TxtStationaryName.Size = new System.Drawing.Size(516, 27);
-            this.TxtStationaryName.TabIndex = 7;
-            // 
             // MainFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -4487,6 +4502,7 @@
             this.splitContainer6.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
             this.splitContainer6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TxtDisposableQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TblDisposables)).EndInit();
             this.StationaryTab.ResumeLayout(false);
             this.splitContainer7.Panel1.ResumeLayout(false);
@@ -4494,6 +4510,7 @@
             this.splitContainer7.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
             this.splitContainer7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TxtStationaryQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TblStationary)).EndInit();
             this.MiscellaneousTab.ResumeLayout(false);
             this.splitContainer9.Panel1.ResumeLayout(false);
@@ -4501,6 +4518,7 @@
             this.splitContainer9.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).EndInit();
             this.splitContainer9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TxtMiscellaneousQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TblMiscellaneous)).EndInit();
             this.InventoryLogsTab.ResumeLayout(false);
             this.splitContainer8.Panel1.ResumeLayout(false);
@@ -4516,9 +4534,6 @@
             this.SplitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SplitContainer)).EndInit();
             this.SplitContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.TxtDisposableQuantity)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtStationaryQuantity)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtMiscellaneousQuantity)).EndInit();
             this.ResumeLayout(false);
 
         }

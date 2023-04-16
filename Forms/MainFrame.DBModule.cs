@@ -54,15 +54,11 @@ namespace OPD_Section
                     }
                 }
             }
-            catch (SqlException e)
+            catch (Exception ex)
             {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Operation Failed\nMessage : " + e.Message
-                );
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + e.Message);
+                ex = ex.GetBaseException();
+
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
 
@@ -95,15 +91,11 @@ namespace OPD_Section
                     }
                 }
             }
-            catch (SqlException e)
+            catch (Exception ex)
             {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Operation Failed\nMessage : " + e.Message
-                );
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + e.Message);
+                ex = ex.GetBaseException();
+
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
 
@@ -134,15 +126,11 @@ namespace OPD_Section
                     }
                 }
             }
-            catch (SqlException e)
+            catch (Exception ex)
             {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Operation Failed\nMessage : " + e.Message
-                );
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + e.Message);
+                ex = ex.GetBaseException();
+
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
 
@@ -168,15 +156,11 @@ namespace OPD_Section
                     }
                 }
             }
-            catch (SqlException e)
+            catch (Exception ex)
             {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Operation Failed\nMessage : " + e.Message
-                );
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + e.Message);
+                ex = ex.GetBaseException();
+
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
 
@@ -209,15 +193,11 @@ namespace OPD_Section
                     }
                 }
             }
-            catch (SqlException e)
+            catch (Exception ex)
             {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Operation Failed\nMessage : " + e.Message
-                );
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + e.Message);
+                ex = ex.GetBaseException();
+
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
 
@@ -269,15 +249,11 @@ namespace OPD_Section
                     }
                 }
             }
-            catch (SqlException e)
+            catch (Exception ex)
             {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Operation Failed\nMessage : " + e.Message
-                );
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + e.Message);
+                ex = ex.GetBaseException();
+
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
 
@@ -305,15 +281,11 @@ namespace OPD_Section
 
                 TxtHouseVillageName.DataSource = new BindingSource(comboSource, null);
             }
-            catch (SqlException e)
+            catch (Exception ex)
             {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Operation Failed\nMessage : " + e.Message
-                );
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + e.Message);
+                ex = ex.GetBaseException();
+
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
 
@@ -335,15 +307,11 @@ namespace OPD_Section
 
                 TxtPersonVillageName.DataSource = new BindingSource(comboSource, null);
             }
-            catch (SqlException e)
+            catch (Exception ex)
             {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Operation Failed\nMessage : " + e.Message
-                );
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + e.Message);
+                ex = ex.GetBaseException();
+
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
 
@@ -364,15 +332,11 @@ namespace OPD_Section
 
                 LoadDefaultTblVillage();
             }
-            catch (SqlException e)
+            catch (Exception ex)
             {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Operation Failed\nMessage : " + e.Message
-                );
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + e.Message);
+                ex = ex.GetBaseException();
+
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
 
@@ -388,15 +352,11 @@ namespace OPD_Section
 
                 LoadDefaultTblHouse();
             }
-            catch (SqlException e)
+            catch (Exception ex)
             {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Operation Failed\nMessage : " + e.Message
-                );
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + e.Message);
+                ex = ex.GetBaseException();
+
+                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
 
@@ -414,14 +374,10 @@ namespace OPD_Section
 
                 LoadDefaultTblPerson();
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -437,14 +393,10 @@ namespace OPD_Section
 
                 LoadDefaultTblVillageLogs();
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -459,14 +411,10 @@ namespace OPD_Section
 
                 LoadDefaultTblHouseLogs();
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -485,14 +433,10 @@ namespace OPD_Section
 
                 LoadDefaultTblPersonLogs();
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -604,14 +548,10 @@ namespace OPD_Section
                     LoadDefaultTblVillage();
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -717,14 +657,10 @@ namespace OPD_Section
                     LoadDefaultTblVillage();
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -790,14 +726,10 @@ namespace OPD_Section
                     }
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -858,14 +790,10 @@ namespace OPD_Section
                     }
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -876,14 +804,10 @@ namespace OPD_Section
             {
                 TabVillage_Reset();
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -960,14 +884,10 @@ namespace OPD_Section
                     }
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -978,14 +898,10 @@ namespace OPD_Section
             {
                 TabVillageLogs_Reset();
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -1071,14 +987,10 @@ namespace OPD_Section
                     );
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -1172,14 +1084,10 @@ namespace OPD_Section
                     );
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -1246,14 +1154,10 @@ namespace OPD_Section
                     }
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -1342,14 +1246,10 @@ namespace OPD_Section
                     }
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -1360,14 +1260,10 @@ namespace OPD_Section
             {
                 TabHouse_Reset();
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -1469,14 +1365,10 @@ namespace OPD_Section
                     }
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -1487,14 +1379,10 @@ namespace OPD_Section
             {
                 TabHouseLogs_Reset();
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -1645,14 +1533,10 @@ namespace OPD_Section
                     );
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -1770,14 +1654,10 @@ namespace OPD_Section
 
                 LoadDefaultTblPerson();
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -1842,14 +1722,10 @@ namespace OPD_Section
                     }
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -1990,14 +1866,10 @@ namespace OPD_Section
                     }
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -2008,14 +1880,10 @@ namespace OPD_Section
             {
                 TabPerson_Reset();
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -2142,14 +2010,10 @@ namespace OPD_Section
                     }
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -2160,14 +2024,10 @@ namespace OPD_Section
             {
                 TabPersonLogs_Reset();
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -2200,14 +2060,10 @@ namespace OPD_Section
                     TxtVillageNoOfHouses.Text = Convert.ToString(TblVillage[3, row].Value);
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -2225,14 +2081,10 @@ namespace OPD_Section
                     TxtHouseNoOfPeople.Text = Convert.ToString(TblHouse[2, row].Value);
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -2258,14 +2110,10 @@ namespace OPD_Section
                     TxtPersonPhoneNo.Text = Convert.ToString(TblPerson[6, row].Value);
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -2284,14 +2132,10 @@ namespace OPD_Section
                     TxtVillageLogsNoOfHouses.Text = Convert.ToString(TblVillageLogs[5, row].Value);
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -2309,14 +2153,10 @@ namespace OPD_Section
                     TxtHouseLogsNoOfPeople.Text = Convert.ToString(TblHouseLogs[4, row].Value);
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -2338,14 +2178,10 @@ namespace OPD_Section
                     TxtPersonLogsPhoneNo.Text = Convert.ToString(TblPerson[8, row].Value);
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -2398,14 +2234,10 @@ namespace OPD_Section
                     }
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -2432,14 +2264,10 @@ namespace OPD_Section
                     TxtPersonId.Text = TxtPersonId.Text.Remove(TxtPersonId.Text.Length - 1);
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -2456,14 +2284,10 @@ namespace OPD_Section
                     );
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -2478,14 +2302,10 @@ namespace OPD_Section
                     TxtPersonName.Text = TxtPersonName.Text.Remove(TxtPersonName.Text.Length - 1);
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -2511,14 +2331,10 @@ namespace OPD_Section
                     TxtHouseId.Text = TxtHouseId.Text.Remove(TxtHouseId.Text.Length - 1);
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -2547,14 +2363,10 @@ namespace OPD_Section
                     TxtVillageId.Text = TxtVillageId.Text.Remove(TxtVillageId.Text.Length - 1);
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -2571,14 +2383,10 @@ namespace OPD_Section
                     );
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -2595,14 +2403,10 @@ namespace OPD_Section
                     );
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
@@ -2752,18 +2556,10 @@ namespace OPD_Section
                     }
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(
-                    "!!Database Error!!\n" + "Database Operation Failed\nMessage : " + ex.Message
-                );
-            }
-            catch (IOException ex)
-            {
-                MessageBox.Show("!!Error!!\n" + "File Operation Failed\nMessage : " + ex.Message);
-            }
             catch (Exception ex)
             {
+                ex = ex.GetBaseException();
+
                 MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
             }
         }
