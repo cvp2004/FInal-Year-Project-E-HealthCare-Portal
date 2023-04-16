@@ -453,18 +453,9 @@ namespace OPD_Section.Forms
             this.Close();
         }
 
-
-
-
-
-
-
-
         // Print
         private void button1_Click(object sender, EventArgs e)
         {
-
-
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.Filter = "Data Files (*.pdf)|*.pdf";
             sfd.AddExtension = true;
