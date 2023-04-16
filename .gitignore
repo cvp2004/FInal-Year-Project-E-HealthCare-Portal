@@ -396,3 +396,18 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/.vs/OPD_Section/v17/.suo
+/obj/Debug/OPD_Section.csproj.AssemblyReference.cache
+/obj/Debug/OPD_Section.csproj.FileListAbsolute.txt
+/obj/Debug/OPD_Section.csproj.ResolveComReference.cache
+/.vs/OPD_Section/FileContentIndex/12f1c16e-58e9-4a87-9d22-d68c05f2de5d.vsidx
+/.vs/OPD_Section/FileContentIndex/17c7364a-edc3-4852-98a6-947a814adea2.vsidx
+/.vs/OPD_Section/FileContentIndex/13840901-f2cc-4158-b86d-559ee961f599.vsidx
+/.vs/OPD_Section/FileContentIndex/664b63ec-0487-44f4-8021-7df81da833e0.vsidx
+/.vs/OPD_Section/FileContentIndex/ad65da94-a84d-49c1-8269-6aa907c1b0f6.vsidx
+/.vs/OPD_Section/FileContentIndex/9dc5f627-bfcd-4f0f-b84a-7f1011608996.vsidx
+/.vs/OPD_Section/FileContentIndex/29160c2a-52b9-43dc-81c3-be9a32457735.vsidx
+/.vs/OPD_Section/FileContentIndex/a82df3e2-c2a2-458a-981d-4a108df1fb98.vsidx
+/.vs/OPD_Section/FileContentIndex/40bbefb7-3c8a-4e24-8d50-9db97f67f9a7.vsidx
+/.vs/OPD_Section/FileContentIndex/75e03288-8e68-47ce-badb-641aa13f3c50.vsidx
+/.vs/OPD_Section/FileContentIndex/e54f599d-4aca-4bfb-b8ee-a3b1d1688207.vsidx
