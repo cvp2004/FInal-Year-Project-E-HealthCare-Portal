@@ -31,7 +31,6 @@ namespace OPD_Section
                     row.Cells[0].Value = m.MEDICINE_ID;
                     row.Cells[1].Value = m.MEDICINE_NAME;
                     row.Cells[2].Value = m.QUANTITY;
-                    row.Cells[3].Value = m.EXPIRY.ToString("dd-MM-yyyy");
                     TblMedicines.Rows.Add(row);
                 }
             }
@@ -95,7 +94,6 @@ namespace OPD_Section
             TxtMedicineId.Text = "";
             TxtMedicineName.Text = "";
             TxtMedicineQuantity.Text = "";
-            TxtMedicineExpiryDate.Text = "";
 
             LoadDefaultTblMedicines();
         }
