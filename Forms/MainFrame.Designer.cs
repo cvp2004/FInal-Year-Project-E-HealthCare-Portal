@@ -1,4 +1,4 @@
-﻿namespace OPD_Section
+namespace OPD_Section
 {
     partial class MainFrame
     {
@@ -30,13 +30,41 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrame));
+            this.TblVillageContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.TblVillagePrintAsPDF = new System.Windows.Forms.ToolStripMenuItem();
+            this.TblVillagePrintAsExcel = new System.Windows.Forms.ToolStripMenuItem();
+            this.TblHouseContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.TblHousePrintAsPDF = new System.Windows.Forms.ToolStripMenuItem();
+            this.TblHousePrintAsExcel = new System.Windows.Forms.ToolStripMenuItem();
+            this.TblPersonContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.TblPersonPrintAsPDF = new System.Windows.Forms.ToolStripMenuItem();
+            this.TblPersonPrintAsExcel = new System.Windows.Forms.ToolStripMenuItem();
+            this.TblVillageLogsContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.TblVillageLogsPrintAsPDF = new System.Windows.Forms.ToolStripMenuItem();
+            this.TblVillageLogsPrintAsExcel = new System.Windows.Forms.ToolStripMenuItem();
+            this.TblHouseLogsContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.TblHouseLogsPrintAsPDF = new System.Windows.Forms.ToolStripMenuItem();
+            this.TblHouseLogsPrintAsExcel = new System.Windows.Forms.ToolStripMenuItem();
+            this.TblPersonLogsContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.TblPersonLogsPrintAsPDF = new System.Windows.Forms.ToolStripMenuItem();
+            this.TblPersonLogsPrintAsExcel = new System.Windows.Forms.ToolStripMenuItem();
+            this.InnerImageList = new System.Windows.Forms.ImageList(this.components);
+            this.DateTimeTimer = new System.Windows.Forms.Timer(this.components);
+            this.OuterImageList = new System.Windows.Forms.ImageList(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
+            this.imageList3 = new System.Windows.Forms.ImageList(this.components);
+            this.imageList4 = new System.Windows.Forms.ImageList(this.components);
             this.LowerPanel = new System.Windows.Forms.Panel();
             this.OuterTabControl = new System.Windows.Forms.TabControl();
             this.HomeTab = new System.Windows.Forms.TabPage();
             this.OPDTab = new System.Windows.Forms.TabPage();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.VISIT_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PERSON_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PERSON_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TIME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_newrecord = new System.Windows.Forms.Button();
             this.btn_archieve = new System.Windows.Forms.Button();
             this.txt_personname = new System.Windows.Forms.TextBox();
@@ -46,12 +74,6 @@
             this.txt_visitid = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.VISIT_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PERSON_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PERSON_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TIME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DBTab = new System.Windows.Forms.TabPage();
             this.InnerTabControl = new System.Windows.Forms.TabControl();
             this.VillagesTab = new System.Windows.Forms.TabPage();
@@ -79,9 +101,6 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TblVillageContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.TblVillagePrintAsPDF = new System.Windows.Forms.ToolStripMenuItem();
-            this.TblVillagePrintAsExcel = new System.Windows.Forms.ToolStripMenuItem();
             this.HousesTab = new System.Windows.Forms.TabPage();
             this.HousesSplitContainer = new System.Windows.Forms.SplitContainer();
             this.TxtHouseVillageName = new System.Windows.Forms.ComboBox();
@@ -103,9 +122,6 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TblHouseContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.TblHousePrintAsPDF = new System.Windows.Forms.ToolStripMenuItem();
-            this.TblHousePrintAsExcel = new System.Windows.Forms.ToolStripMenuItem();
             this.PeopleTab = new System.Windows.Forms.TabPage();
             this.PeopleSplitContainer = new System.Windows.Forms.SplitContainer();
             this.TxtPersonHouseId = new System.Windows.Forms.ComboBox();
@@ -143,9 +159,6 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TblPersonContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.TblPersonPrintAsPDF = new System.Windows.Forms.ToolStripMenuItem();
-            this.TblPersonPrintAsExcel = new System.Windows.Forms.ToolStripMenuItem();
             this.LogsTab = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -172,9 +185,6 @@
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TblVillageLogsContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.TblVillageLogsPrintAsPDF = new System.Windows.Forms.ToolStripMenuItem();
-            this.TblVillageLogsPrintAsExcel = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.BtnHouseLogsReset = new System.Windows.Forms.Button();
@@ -195,9 +205,6 @@
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TblHouseLogsContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.TblHouseLogsPrintAsPDF = new System.Windows.Forms.ToolStripMenuItem();
-            this.TblHouseLogsPrintAsExcel = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.panel24 = new System.Windows.Forms.Panel();
@@ -234,10 +241,6 @@
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TblPersonLogsContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.TblPersonLogsPrintAsPDF = new System.Windows.Forms.ToolStripMenuItem();
-            this.TblPersonLogsPrintAsExcel = new System.Windows.Forms.ToolStripMenuItem();
-            this.InnerImageList = new System.Windows.Forms.ImageList(this.components);
             this.InventoryTab = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.MedicinesTab = new System.Windows.Forms.TabPage();
@@ -368,6 +371,7 @@
             this.LblDate = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.SplitContainer = new System.Windows.Forms.SplitContainer();
+
             this.DateTimeTimer = new System.Windows.Forms.Timer(this.components);
             this.OuterImageList = new System.Windows.Forms.ImageList(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
@@ -389,15 +393,10 @@
             this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+
             this.LowerPanel.SuspendLayout();
             this.OuterTabControl.SuspendLayout();
             this.OPDTab.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
-            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.DBTab.SuspendLayout();
             this.InnerTabControl.SuspendLayout();
@@ -407,14 +406,12 @@
             this.VillagesSplitContainer.Panel2.SuspendLayout();
             this.VillagesSplitContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TblVillage)).BeginInit();
-            this.TblVillageContextMenuStrip.SuspendLayout();
             this.HousesTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HousesSplitContainer)).BeginInit();
             this.HousesSplitContainer.Panel1.SuspendLayout();
             this.HousesSplitContainer.Panel2.SuspendLayout();
             this.HousesSplitContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TblHouse)).BeginInit();
-            this.TblHouseContextMenuStrip.SuspendLayout();
             this.PeopleTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PeopleSplitContainer)).BeginInit();
             this.PeopleSplitContainer.Panel1.SuspendLayout();
@@ -422,7 +419,6 @@
             this.PeopleSplitContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TxtPersonAge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TblPerson)).BeginInit();
-            this.TblPersonContextMenuStrip.SuspendLayout();
             this.LogsTab.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -431,20 +427,19 @@
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TblVillageLogs)).BeginInit();
-            this.TblVillageLogsContextMenuStrip.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TblHouseLogs)).BeginInit();
-            this.TblHouseLogsContextMenuStrip.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
             this.splitContainer4.Panel1.SuspendLayout();
             this.splitContainer4.Panel2.SuspendLayout();
             this.splitContainer4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TblPersonLogs)).BeginInit();
+
             this.TblPersonLogsContextMenuStrip.SuspendLayout();
             this.InventoryTab.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -483,6 +478,7 @@
             this.splitContainer8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+
             this.UpperPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SplitContainer)).BeginInit();
             this.SplitContainer.Panel1.SuspendLayout();
@@ -494,6 +490,197 @@
             this.TblMiscellaneousContextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
+            // TblVillageContextMenuStrip
+            // 
+            this.TblVillageContextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.TblVillageContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TblVillagePrintAsPDF,
+            this.TblVillagePrintAsExcel});
+            this.TblVillageContextMenuStrip.Name = "TblVillageContextMenuStrip";
+            this.TblVillageContextMenuStrip.Size = new System.Drawing.Size(165, 52);
+            // 
+            // TblVillagePrintAsPDF
+            // 
+            this.TblVillagePrintAsPDF.Name = "TblVillagePrintAsPDF";
+            this.TblVillagePrintAsPDF.Size = new System.Drawing.Size(164, 24);
+            this.TblVillagePrintAsPDF.Text = "Print as PDF";
+            this.TblVillagePrintAsPDF.Click += new System.EventHandler(this.TblVillagePrintAsPDF_Click);
+            // 
+            // TblVillagePrintAsExcel
+            // 
+            this.TblVillagePrintAsExcel.Name = "TblVillagePrintAsExcel";
+            this.TblVillagePrintAsExcel.Size = new System.Drawing.Size(164, 24);
+            this.TblVillagePrintAsExcel.Text = "Print as Excel";
+            this.TblVillagePrintAsExcel.Click += new System.EventHandler(this.TblVillagePrintAsExcel_Click);
+            // 
+            // TblHouseContextMenuStrip
+            // 
+            this.TblHouseContextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.TblHouseContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TblHousePrintAsPDF,
+            this.TblHousePrintAsExcel});
+            this.TblHouseContextMenuStrip.Name = "TblHouseContextMenuStrip";
+            this.TblHouseContextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.TblHouseContextMenuStrip.ShowImageMargin = false;
+            this.TblHouseContextMenuStrip.Size = new System.Drawing.Size(142, 52);
+            // 
+            // TblHousePrintAsPDF
+            // 
+            this.TblHousePrintAsPDF.Name = "TblHousePrintAsPDF";
+            this.TblHousePrintAsPDF.Size = new System.Drawing.Size(141, 24);
+            this.TblHousePrintAsPDF.Text = "Print as PDF";
+            this.TblHousePrintAsPDF.Click += new System.EventHandler(this.TblHousePrintAsPDF_Click);
+            // 
+            // TblHousePrintAsExcel
+            // 
+            this.TblHousePrintAsExcel.Name = "TblHousePrintAsExcel";
+            this.TblHousePrintAsExcel.Size = new System.Drawing.Size(141, 24);
+            this.TblHousePrintAsExcel.Text = "Print As Excel";
+            this.TblHousePrintAsExcel.Click += new System.EventHandler(this.TblHousePrintAsExcel_Click);
+            // 
+            // TblPersonContextMenuStrip
+            // 
+            this.TblPersonContextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.TblPersonContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TblPersonPrintAsPDF,
+            this.TblPersonPrintAsExcel});
+            this.TblPersonContextMenuStrip.Name = "contextMenuStrip1";
+            this.TblPersonContextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.TblPersonContextMenuStrip.ShowImageMargin = false;
+            this.TblPersonContextMenuStrip.Size = new System.Drawing.Size(140, 52);
+            // 
+            // TblPersonPrintAsPDF
+            // 
+            this.TblPersonPrintAsPDF.Name = "TblPersonPrintAsPDF";
+            this.TblPersonPrintAsPDF.Size = new System.Drawing.Size(139, 24);
+            this.TblPersonPrintAsPDF.Text = "Print as PDF";
+            this.TblPersonPrintAsPDF.Click += new System.EventHandler(this.TblPersonPrintAsPDF_Click);
+            // 
+            // TblPersonPrintAsExcel
+            // 
+            this.TblPersonPrintAsExcel.Name = "TblPersonPrintAsExcel";
+            this.TblPersonPrintAsExcel.Size = new System.Drawing.Size(139, 24);
+            this.TblPersonPrintAsExcel.Text = "Print as Excel";
+            this.TblPersonPrintAsExcel.Click += new System.EventHandler(this.TblPersonPrintAsExcel_Click);
+            // 
+            // TblVillageLogsContextMenuStrip
+            // 
+            this.TblVillageLogsContextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.TblVillageLogsContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TblVillageLogsPrintAsPDF,
+            this.TblVillageLogsPrintAsExcel});
+            this.TblVillageLogsContextMenuStrip.Name = "contextMenuStrip1";
+            this.TblVillageLogsContextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.TblVillageLogsContextMenuStrip.ShowImageMargin = false;
+            this.TblVillageLogsContextMenuStrip.Size = new System.Drawing.Size(140, 52);
+            // 
+            // TblVillageLogsPrintAsPDF
+            // 
+            this.TblVillageLogsPrintAsPDF.Name = "TblVillageLogsPrintAsPDF";
+            this.TblVillageLogsPrintAsPDF.Size = new System.Drawing.Size(139, 24);
+            this.TblVillageLogsPrintAsPDF.Text = "Print as PDF";
+            this.TblVillageLogsPrintAsPDF.Click += new System.EventHandler(this.TblVillageLogsPrintAsPDF_Click);
+            // 
+            // TblVillageLogsPrintAsExcel
+            // 
+            this.TblVillageLogsPrintAsExcel.Name = "TblVillageLogsPrintAsExcel";
+            this.TblVillageLogsPrintAsExcel.Size = new System.Drawing.Size(139, 24);
+            this.TblVillageLogsPrintAsExcel.Text = "Print as Excel";
+            this.TblVillageLogsPrintAsExcel.Click += new System.EventHandler(this.TblVillageLogsPrintAsExcel_Click);
+            // 
+            // TblHouseLogsContextMenuStrip
+            // 
+            this.TblHouseLogsContextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.TblHouseLogsContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TblHouseLogsPrintAsPDF,
+            this.TblHouseLogsPrintAsExcel});
+            this.TblHouseLogsContextMenuStrip.Name = "TblVillageContextMenuStrip";
+            this.TblHouseLogsContextMenuStrip.Size = new System.Drawing.Size(165, 52);
+            // 
+            // TblHouseLogsPrintAsPDF
+            // 
+            this.TblHouseLogsPrintAsPDF.Name = "TblHouseLogsPrintAsPDF";
+            this.TblHouseLogsPrintAsPDF.Size = new System.Drawing.Size(164, 24);
+            this.TblHouseLogsPrintAsPDF.Text = "Print as PDF";
+            this.TblHouseLogsPrintAsPDF.Click += new System.EventHandler(this.TblHouseLogsPrintAsPDF_Click);
+            // 
+            // TblHouseLogsPrintAsExcel
+            // 
+            this.TblHouseLogsPrintAsExcel.Name = "TblHouseLogsPrintAsExcel";
+            this.TblHouseLogsPrintAsExcel.Size = new System.Drawing.Size(164, 24);
+            this.TblHouseLogsPrintAsExcel.Text = "Print as Excel";
+            this.TblHouseLogsPrintAsExcel.Click += new System.EventHandler(this.TblHouseLogsPrintAsExcel_Click);
+            // 
+            // TblPersonLogsContextMenuStrip
+            // 
+            this.TblPersonLogsContextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.TblPersonLogsContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TblPersonLogsPrintAsPDF,
+            this.TblPersonLogsPrintAsExcel});
+            this.TblPersonLogsContextMenuStrip.Name = "TblHouseContextMenuStrip";
+            this.TblPersonLogsContextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.TblPersonLogsContextMenuStrip.ShowImageMargin = false;
+            this.TblPersonLogsContextMenuStrip.Size = new System.Drawing.Size(142, 52);
+            // 
+            // TblPersonLogsPrintAsPDF
+            // 
+            this.TblPersonLogsPrintAsPDF.Name = "TblPersonLogsPrintAsPDF";
+            this.TblPersonLogsPrintAsPDF.Size = new System.Drawing.Size(141, 24);
+            this.TblPersonLogsPrintAsPDF.Text = "Print as PDF";
+            this.TblPersonLogsPrintAsPDF.Click += new System.EventHandler(this.TblPersonLogsPrintAsPDF_Click);
+            // 
+            // TblPersonLogsPrintAsExcel
+            // 
+            this.TblPersonLogsPrintAsExcel.Name = "TblPersonLogsPrintAsExcel";
+            this.TblPersonLogsPrintAsExcel.Size = new System.Drawing.Size(141, 24);
+            this.TblPersonLogsPrintAsExcel.Text = "Print As Excel";
+            this.TblPersonLogsPrintAsExcel.Click += new System.EventHandler(this.TblPersonLogsPrintAsExcel_Click);
+            // 
+            // InnerImageList
+            // 
+            this.InnerImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("InnerImageList.ImageStream")));
+            this.InnerImageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.InnerImageList.Images.SetKeyName(0, "icons8-village-60.png");
+            this.InnerImageList.Images.SetKeyName(1, "icons8-home-page-48.png");
+            this.InnerImageList.Images.SetKeyName(2, "icons8-account-48.png");
+            // 
+            // DateTimeTimer
+            // 
+            this.DateTimeTimer.Tick += new System.EventHandler(this.DateTimeTImer_Tick);
+            // 
+            // OuterImageList
+            // 
+            this.OuterImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("OuterImageList.ImageStream")));
+            this.OuterImageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.OuterImageList.Images.SetKeyName(0, "icons8-home-page-48.png");
+            this.OuterImageList.Images.SetKeyName(1, "icons8-clinic-50.png");
+            this.OuterImageList.Images.SetKeyName(2, "icons8-database-50.png");
+            this.OuterImageList.Images.SetKeyName(3, "icons8-warehouse-50.png");
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // imageList2
+            // 
+            this.imageList2.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList2.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // imageList3
+            // 
+            this.imageList3.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList3.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList3.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // imageList4
+            // 
+            this.imageList4.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList4.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList4.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // LowerPanel
             // 
             this.LowerPanel.BackColor = System.Drawing.Color.White;
@@ -502,7 +689,7 @@
             this.LowerPanel.Location = new System.Drawing.Point(0, 0);
             this.LowerPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LowerPanel.Name = "LowerPanel";
-            this.LowerPanel.Size = new System.Drawing.Size(1770, 904);
+            this.LowerPanel.Size = new System.Drawing.Size(1924, 904);
             this.LowerPanel.TabIndex = 0;
             // 
             // OuterTabControl
@@ -518,7 +705,7 @@
             this.OuterTabControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OuterTabControl.Name = "OuterTabControl";
             this.OuterTabControl.SelectedIndex = 0;
-            this.OuterTabControl.Size = new System.Drawing.Size(1770, 904);
+            this.OuterTabControl.Size = new System.Drawing.Size(1924, 904);
             this.OuterTabControl.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.OuterTabControl.TabIndex = 0;
             // 
@@ -528,182 +715,38 @@
             this.HomeTab.Location = new System.Drawing.Point(4, 44);
             this.HomeTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.HomeTab.Name = "HomeTab";
-            this.HomeTab.Size = new System.Drawing.Size(1762, 856);
+            this.HomeTab.Size = new System.Drawing.Size(1916, 856);
             this.HomeTab.TabIndex = 3;
             this.HomeTab.Text = "   Home Page   ";
             this.HomeTab.UseVisualStyleBackColor = true;
             // 
             // OPDTab
             // 
-            this.OPDTab.Controls.Add(this.panel5);
+            this.OPDTab.Controls.Add(this.dataGridView1);
+            this.OPDTab.Controls.Add(this.btn_newrecord);
+            this.OPDTab.Controls.Add(this.btn_archieve);
+            this.OPDTab.Controls.Add(this.txt_personname);
+            this.OPDTab.Controls.Add(this.label4);
+            this.OPDTab.Controls.Add(this.txt_personid);
+            this.OPDTab.Controls.Add(this.label3);
+            this.OPDTab.Controls.Add(this.txt_visitid);
+            this.OPDTab.Controls.Add(this.label2);
+            this.OPDTab.Controls.Add(this.label6);
             this.OPDTab.ImageKey = "icons8-clinic-50.png";
             this.OPDTab.Location = new System.Drawing.Point(4, 44);
             this.OPDTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OPDTab.Name = "OPDTab";
             this.OPDTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.OPDTab.Size = new System.Drawing.Size(1762, 856);
+            this.OPDTab.Size = new System.Drawing.Size(1916, 856);
             this.OPDTab.TabIndex = 1;
             this.OPDTab.Text = "   OPD Clinic   ";
             this.OPDTab.UseVisualStyleBackColor = true;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.splitContainer1);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(3, 2);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1756, 852);
-            this.panel5.TabIndex = 1;
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.panel6);
-            this.splitContainer1.Panel1.Controls.Add(this.txt_personname);
-            this.splitContainer1.Panel1.Controls.Add(this.label4);
-            this.splitContainer1.Panel1.Controls.Add(this.txt_personid);
-            this.splitContainer1.Panel1.Controls.Add(this.label3);
-            this.splitContainer1.Panel1.Controls.Add(this.txt_visitid);
-            this.splitContainer1.Panel1.Controls.Add(this.label2);
-            this.splitContainer1.Panel1.Controls.Add(this.label6);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
-            this.splitContainer1.Size = new System.Drawing.Size(1756, 852);
-            this.splitContainer1.SplitterDistance = 454;
-            this.splitContainer1.SplitterWidth = 5;
-            this.splitContainer1.TabIndex = 0;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.btn_newrecord);
-            this.panel6.Controls.Add(this.btn_archieve);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 629);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(454, 223);
-            this.panel6.TabIndex = 40;
-            // 
-            // btn_newrecord
-            // 
-            this.btn_newrecord.BackColor = System.Drawing.Color.Gold;
-            this.btn_newrecord.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_newrecord.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btn_newrecord.Location = new System.Drawing.Point(0, 0);
-            this.btn_newrecord.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_newrecord.Name = "btn_newrecord";
-            this.btn_newrecord.Size = new System.Drawing.Size(290, 223);
-            this.btn_newrecord.TabIndex = 37;
-            this.btn_newrecord.Text = "VISIT DETAILS";
-            this.btn_newrecord.UseVisualStyleBackColor = false;
-            this.btn_newrecord.Click += new System.EventHandler(this.btn_newrecord_Click_1);
-            // 
-            // btn_archieve
-            // 
-            this.btn_archieve.BackColor = System.Drawing.Color.Gold;
-            this.btn_archieve.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_archieve.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btn_archieve.Location = new System.Drawing.Point(66, 0);
-            this.btn_archieve.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_archieve.Name = "btn_archieve";
-            this.btn_archieve.Size = new System.Drawing.Size(388, 223);
-            this.btn_archieve.TabIndex = 39;
-            this.btn_archieve.Text = "ARCHIEVE";
-            this.btn_archieve.UseVisualStyleBackColor = false;
-            this.btn_archieve.Click += new System.EventHandler(this.btn_archieve_Click);
-            // 
-            // txt_personname
-            // 
-            this.txt_personname.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_personname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_personname.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.txt_personname.Location = new System.Drawing.Point(29, 394);
-            this.txt_personname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_personname.Name = "txt_personname";
-            this.txt_personname.Size = new System.Drawing.Size(155, 34);
-            this.txt_personname.TabIndex = 35;
-            this.txt_personname.TextChanged += new System.EventHandler(this.txt_personname_TextChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(24, 366);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(147, 25);
-            this.label4.TabIndex = 34;
-            this.label4.Text = "Person Name";
-            // 
-            // txt_personid
-            // 
-            this.txt_personid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_personid.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.txt_personid.Location = new System.Drawing.Point(29, 271);
-            this.txt_personid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_personid.Name = "txt_personid";
-            this.txt_personid.Size = new System.Drawing.Size(155, 34);
-            this.txt_personid.TabIndex = 33;
-            this.txt_personid.TextChanged += new System.EventHandler(this.txt_personid_TextChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(24, 243);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 25);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Person ID";
-            // 
-            // txt_visitid
-            // 
-            this.txt_visitid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_visitid.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_visitid.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.txt_visitid.Location = new System.Drawing.Point(29, 144);
-            this.txt_visitid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_visitid.Name = "txt_visitid";
-            this.txt_visitid.Size = new System.Drawing.Size(155, 34);
-            this.txt_visitid.TabIndex = 31;
-            this.txt_visitid.TextChanged += new System.EventHandler(this.txt_visitid_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(24, 116);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 25);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Visit ID";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(21, 49);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(226, 37);
-            this.label6.TabIndex = 29;
-            this.label6.Text = "OPD Section";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -713,16 +756,17 @@
             this.PERSON_NAME,
             this.DATE,
             this.TIME});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dataGridView1.Location = new System.Drawing.Point(483, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView1.RowTemplate.Height = 50;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1297, 852);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.Size = new System.Drawing.Size(1430, 852);
+            this.dataGridView1.TabIndex = 50;
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
             // VISIT_ID
@@ -760,6 +804,104 @@
             this.TIME.Name = "TIME";
             this.TIME.ReadOnly = true;
             // 
+            // btn_newrecord
+            // 
+            this.btn_newrecord.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_newrecord.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btn_newrecord.Location = new System.Drawing.Point(150, 491);
+            this.btn_newrecord.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_newrecord.Name = "btn_newrecord";
+            this.btn_newrecord.Size = new System.Drawing.Size(276, 60);
+            this.btn_newrecord.TabIndex = 58;
+            this.btn_newrecord.Text = "VISIT DETAILS";
+            this.btn_newrecord.UseVisualStyleBackColor = false;
+            this.btn_newrecord.Click += new System.EventHandler(this.btn_newrecord_Click);
+            // 
+            // btn_archieve
+            // 
+            this.btn_archieve.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_archieve.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btn_archieve.Location = new System.Drawing.Point(150, 589);
+            this.btn_archieve.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_archieve.Name = "btn_archieve";
+            this.btn_archieve.Size = new System.Drawing.Size(276, 58);
+            this.btn_archieve.TabIndex = 59;
+            this.btn_archieve.Text = "ARCHIEVE";
+            this.btn_archieve.UseVisualStyleBackColor = false;
+            this.btn_archieve.Click += new System.EventHandler(this.btn_archieve_Click);
+            // 
+            // txt_personname
+            // 
+            this.txt_personname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_personname.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            this.txt_personname.Location = new System.Drawing.Point(89, 387);
+            this.txt_personname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_personname.Name = "txt_personname";
+            this.txt_personname.Size = new System.Drawing.Size(368, 34);
+            this.txt_personname.TabIndex = 57;
+            this.txt_personname.TextChanged += new System.EventHandler(this.txt_personname_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(84, 359);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(147, 25);
+            this.label4.TabIndex = 56;
+            this.label4.Text = "Person Name";
+            // 
+            // txt_personid
+            // 
+            this.txt_personid.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            this.txt_personid.Location = new System.Drawing.Point(89, 264);
+            this.txt_personid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_personid.Name = "txt_personid";
+            this.txt_personid.Size = new System.Drawing.Size(368, 34);
+            this.txt_personid.TabIndex = 55;
+            this.txt_personid.TextChanged += new System.EventHandler(this.txt_personid_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(84, 236);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(114, 25);
+            this.label3.TabIndex = 54;
+            this.label3.Text = "Person ID";
+            // 
+            // txt_visitid
+            // 
+            this.txt_visitid.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_visitid.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            this.txt_visitid.Location = new System.Drawing.Point(89, 137);
+            this.txt_visitid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_visitid.Name = "txt_visitid";
+            this.txt_visitid.Size = new System.Drawing.Size(368, 34);
+            this.txt_visitid.TabIndex = 53;
+            this.txt_visitid.TextChanged += new System.EventHandler(this.txt_visitid_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(84, 109);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(86, 25);
+            this.label2.TabIndex = 52;
+            this.label2.Text = "Visit ID";
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(133, 29);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(226, 37);
+            this.label6.TabIndex = 51;
+            this.label6.Text = "OPD Section";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // DBTab
             // 
             this.DBTab.Controls.Add(this.InnerTabControl);
@@ -768,7 +910,7 @@
             this.DBTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DBTab.Name = "DBTab";
             this.DBTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.DBTab.Size = new System.Drawing.Size(1762, 856);
+            this.DBTab.Size = new System.Drawing.Size(1916, 856);
             this.DBTab.TabIndex = 0;
             this.DBTab.Text = "   Database Records   ";
             this.DBTab.UseVisualStyleBackColor = true;
@@ -785,7 +927,7 @@
             this.InnerTabControl.Location = new System.Drawing.Point(3, 2);
             this.InnerTabControl.Name = "InnerTabControl";
             this.InnerTabControl.SelectedIndex = 0;
-            this.InnerTabControl.Size = new System.Drawing.Size(1756, 852);
+            this.InnerTabControl.Size = new System.Drawing.Size(1910, 852);
             this.InnerTabControl.TabIndex = 1;
             // 
             // VillagesTab
@@ -796,7 +938,7 @@
             this.VillagesTab.Location = new System.Drawing.Point(4, 39);
             this.VillagesTab.Name = "VillagesTab";
             this.VillagesTab.Padding = new System.Windows.Forms.Padding(3);
-            this.VillagesTab.Size = new System.Drawing.Size(1748, 809);
+            this.VillagesTab.Size = new System.Drawing.Size(1902, 809);
             this.VillagesTab.TabIndex = 0;
             this.VillagesTab.Text = "   Villages   ";
             this.VillagesTab.UseVisualStyleBackColor = true;
@@ -837,7 +979,7 @@
             // 
             this.VillagesSplitContainer.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.VillagesSplitContainer.Panel2.Controls.Add(this.TblVillage);
-            this.VillagesSplitContainer.Size = new System.Drawing.Size(1742, 803);
+            this.VillagesSplitContainer.Size = new System.Drawing.Size(1896, 803);
             this.VillagesSplitContainer.SplitterDistance = 420;
             this.VillagesSplitContainer.SplitterWidth = 5;
             this.VillagesSplitContainer.TabIndex = 0;
@@ -1051,7 +1193,7 @@
             this.TblVillage.RowTemplate.ReadOnly = true;
             this.TblVillage.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.TblVillage.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TblVillage.Size = new System.Drawing.Size(1313, 799);
+            this.TblVillage.Size = new System.Drawing.Size(1467, 799);
             this.TblVillage.TabIndex = 0;
             this.TblVillage.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TblVillage_CellMouseDoubleClick);
             // 
@@ -1082,29 +1224,6 @@
             this.Column3.MinimumWidth = 200;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            // 
-            // TblVillageContextMenuStrip
-            // 
-            this.TblVillageContextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.TblVillageContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TblVillagePrintAsPDF,
-            this.TblVillagePrintAsExcel});
-            this.TblVillageContextMenuStrip.Name = "TblVillageContextMenuStrip";
-            this.TblVillageContextMenuStrip.Size = new System.Drawing.Size(165, 52);
-            // 
-            // TblVillagePrintAsPDF
-            // 
-            this.TblVillagePrintAsPDF.Name = "TblVillagePrintAsPDF";
-            this.TblVillagePrintAsPDF.Size = new System.Drawing.Size(164, 24);
-            this.TblVillagePrintAsPDF.Text = "Print as PDF";
-            this.TblVillagePrintAsPDF.Click += new System.EventHandler(this.TblVillagePrintAsPDF_Click);
-            // 
-            // TblVillagePrintAsExcel
-            // 
-            this.TblVillagePrintAsExcel.Name = "TblVillagePrintAsExcel";
-            this.TblVillagePrintAsExcel.Size = new System.Drawing.Size(164, 24);
-            this.TblVillagePrintAsExcel.Text = "Print as Excel";
-            this.TblVillagePrintAsExcel.Click += new System.EventHandler(this.TblVillagePrintAsExcel_Click);
             // 
             // HousesTab
             // 
@@ -1349,31 +1468,6 @@
             this.dataGridViewTextBoxColumn3.MinimumWidth = 200;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // TblHouseContextMenuStrip
-            // 
-            this.TblHouseContextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.TblHouseContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TblHousePrintAsPDF,
-            this.TblHousePrintAsExcel});
-            this.TblHouseContextMenuStrip.Name = "TblHouseContextMenuStrip";
-            this.TblHouseContextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.TblHouseContextMenuStrip.ShowImageMargin = false;
-            this.TblHouseContextMenuStrip.Size = new System.Drawing.Size(142, 52);
-            // 
-            // TblHousePrintAsPDF
-            // 
-            this.TblHousePrintAsPDF.Name = "TblHousePrintAsPDF";
-            this.TblHousePrintAsPDF.Size = new System.Drawing.Size(141, 24);
-            this.TblHousePrintAsPDF.Text = "Print as PDF";
-            this.TblHousePrintAsPDF.Click += new System.EventHandler(this.TblHousePrintAsPDF_Click);
-            // 
-            // TblHousePrintAsExcel
-            // 
-            this.TblHousePrintAsExcel.Name = "TblHousePrintAsExcel";
-            this.TblHousePrintAsExcel.Size = new System.Drawing.Size(141, 24);
-            this.TblHousePrintAsExcel.Text = "Print As Excel";
-            this.TblHousePrintAsExcel.Click += new System.EventHandler(this.TblHousePrintAsExcel_Click);
             // 
             // PeopleTab
             // 
@@ -1785,31 +1879,6 @@
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
             // 
-            // TblPersonContextMenuStrip
-            // 
-            this.TblPersonContextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.TblPersonContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TblPersonPrintAsPDF,
-            this.TblPersonPrintAsExcel});
-            this.TblPersonContextMenuStrip.Name = "contextMenuStrip1";
-            this.TblPersonContextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.TblPersonContextMenuStrip.ShowImageMargin = false;
-            this.TblPersonContextMenuStrip.Size = new System.Drawing.Size(140, 52);
-            // 
-            // TblPersonPrintAsPDF
-            // 
-            this.TblPersonPrintAsPDF.Name = "TblPersonPrintAsPDF";
-            this.TblPersonPrintAsPDF.Size = new System.Drawing.Size(139, 24);
-            this.TblPersonPrintAsPDF.Text = "Print as PDF";
-            this.TblPersonPrintAsPDF.Click += new System.EventHandler(this.TblPersonPrintAsPDF_Click);
-            // 
-            // TblPersonPrintAsExcel
-            // 
-            this.TblPersonPrintAsExcel.Name = "TblPersonPrintAsExcel";
-            this.TblPersonPrintAsExcel.Size = new System.Drawing.Size(139, 24);
-            this.TblPersonPrintAsExcel.Text = "Print as Excel";
-            this.TblPersonPrintAsExcel.Click += new System.EventHandler(this.TblPersonPrintAsExcel_Click);
-            // 
             // LogsTab
             // 
             this.LogsTab.Controls.Add(this.tabControl1);
@@ -2111,31 +2180,6 @@
             this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
             this.dataGridViewTextBoxColumn24.ReadOnly = true;
             // 
-            // TblVillageLogsContextMenuStrip
-            // 
-            this.TblVillageLogsContextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.TblVillageLogsContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TblVillageLogsPrintAsPDF,
-            this.TblVillageLogsPrintAsExcel});
-            this.TblVillageLogsContextMenuStrip.Name = "contextMenuStrip1";
-            this.TblVillageLogsContextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.TblVillageLogsContextMenuStrip.ShowImageMargin = false;
-            this.TblVillageLogsContextMenuStrip.Size = new System.Drawing.Size(140, 52);
-            // 
-            // TblVillageLogsPrintAsPDF
-            // 
-            this.TblVillageLogsPrintAsPDF.Name = "TblVillageLogsPrintAsPDF";
-            this.TblVillageLogsPrintAsPDF.Size = new System.Drawing.Size(139, 24);
-            this.TblVillageLogsPrintAsPDF.Text = "Print as PDF";
-            this.TblVillageLogsPrintAsPDF.Click += new System.EventHandler(this.TblVillageLogsPrintAsPDF_Click);
-            // 
-            // TblVillageLogsPrintAsExcel
-            // 
-            this.TblVillageLogsPrintAsExcel.Name = "TblVillageLogsPrintAsExcel";
-            this.TblVillageLogsPrintAsExcel.Size = new System.Drawing.Size(139, 24);
-            this.TblVillageLogsPrintAsExcel.Text = "Print as Excel";
-            this.TblVillageLogsPrintAsExcel.Click += new System.EventHandler(this.TblVillageLogsPrintAsExcel_Click);
-            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.splitContainer3);
@@ -2365,29 +2409,6 @@
             this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
             this.dataGridViewTextBoxColumn22.ReadOnly = true;
             this.dataGridViewTextBoxColumn22.Width = 249;
-            // 
-            // TblHouseLogsContextMenuStrip
-            // 
-            this.TblHouseLogsContextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.TblHouseLogsContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TblHouseLogsPrintAsPDF,
-            this.TblHouseLogsPrintAsExcel});
-            this.TblHouseLogsContextMenuStrip.Name = "TblVillageContextMenuStrip";
-            this.TblHouseLogsContextMenuStrip.Size = new System.Drawing.Size(165, 52);
-            // 
-            // TblHouseLogsPrintAsPDF
-            // 
-            this.TblHouseLogsPrintAsPDF.Name = "TblHouseLogsPrintAsPDF";
-            this.TblHouseLogsPrintAsPDF.Size = new System.Drawing.Size(164, 24);
-            this.TblHouseLogsPrintAsPDF.Text = "Print as PDF";
-            this.TblHouseLogsPrintAsPDF.Click += new System.EventHandler(this.TblHouseLogsPrintAsPDF_Click);
-            // 
-            // TblHouseLogsPrintAsExcel
-            // 
-            this.TblHouseLogsPrintAsExcel.Name = "TblHouseLogsPrintAsExcel";
-            this.TblHouseLogsPrintAsExcel.Size = new System.Drawing.Size(164, 24);
-            this.TblHouseLogsPrintAsExcel.Text = "Print as Excel";
-            this.TblHouseLogsPrintAsExcel.Click += new System.EventHandler(this.TblHouseLogsPrintAsExcel_Click);
             // 
             // tabPage3
             // 
@@ -2781,39 +2802,6 @@
             this.dataGridViewTextBoxColumn20.ReadOnly = true;
             this.dataGridViewTextBoxColumn20.Width = 150;
             // 
-            // TblPersonLogsContextMenuStrip
-            // 
-            this.TblPersonLogsContextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.TblPersonLogsContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TblPersonLogsPrintAsPDF,
-            this.TblPersonLogsPrintAsExcel});
-            this.TblPersonLogsContextMenuStrip.Name = "TblHouseContextMenuStrip";
-            this.TblPersonLogsContextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.TblPersonLogsContextMenuStrip.ShowImageMargin = false;
-            this.TblPersonLogsContextMenuStrip.Size = new System.Drawing.Size(142, 52);
-            // 
-            // TblPersonLogsPrintAsPDF
-            // 
-            this.TblPersonLogsPrintAsPDF.Name = "TblPersonLogsPrintAsPDF";
-            this.TblPersonLogsPrintAsPDF.Size = new System.Drawing.Size(141, 24);
-            this.TblPersonLogsPrintAsPDF.Text = "Print as PDF";
-            this.TblPersonLogsPrintAsPDF.Click += new System.EventHandler(this.TblPersonLogsPrintAsPDF_Click);
-            // 
-            // TblPersonLogsPrintAsExcel
-            // 
-            this.TblPersonLogsPrintAsExcel.Name = "TblPersonLogsPrintAsExcel";
-            this.TblPersonLogsPrintAsExcel.Size = new System.Drawing.Size(141, 24);
-            this.TblPersonLogsPrintAsExcel.Text = "Print As Excel";
-            this.TblPersonLogsPrintAsExcel.Click += new System.EventHandler(this.TblPersonLogsPrintAsExcel_Click);
-            // 
-            // InnerImageList
-            // 
-            this.InnerImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("InnerImageList.ImageStream")));
-            this.InnerImageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.InnerImageList.Images.SetKeyName(0, "icons8-village-60.png");
-            this.InnerImageList.Images.SetKeyName(1, "icons8-home-page-48.png");
-            this.InnerImageList.Images.SetKeyName(2, "icons8-account-48.png");
-            // 
             // InventoryTab
             // 
             this.InventoryTab.Controls.Add(this.tabControl2);
@@ -2821,7 +2809,7 @@
             this.InventoryTab.Location = new System.Drawing.Point(4, 44);
             this.InventoryTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.InventoryTab.Name = "InventoryTab";
-            this.InventoryTab.Size = new System.Drawing.Size(1762, 856);
+            this.InventoryTab.Size = new System.Drawing.Size(1916, 856);
             this.InventoryTab.TabIndex = 2;
             this.InventoryTab.Text = "   Inventory   ";
             this.InventoryTab.UseVisualStyleBackColor = true;
@@ -4255,7 +4243,7 @@
             this.UpperPanel.Location = new System.Drawing.Point(0, 0);
             this.UpperPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.UpperPanel.Name = "UpperPanel";
-            this.UpperPanel.Size = new System.Drawing.Size(1770, 150);
+            this.UpperPanel.Size = new System.Drawing.Size(1924, 150);
             this.UpperPanel.TabIndex = 2;
             // 
             // BtnExit
@@ -4263,7 +4251,7 @@
             this.BtnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.BtnExit.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnExit.Location = new System.Drawing.Point(1576, 89);
+            this.BtnExit.Location = new System.Drawing.Point(1730, 89);
             this.BtnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Size = new System.Drawing.Size(167, 44);
@@ -4300,11 +4288,12 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 64.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(179, 0);
+            this.label1.Location = new System.Drawing.Point(256, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1393, 121);
             this.label1.TabIndex = 0;
             this.label1.Text = "E HEALTH-CARE PORTAL";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // SplitContainer
             // 
@@ -4324,7 +4313,7 @@
             // 
             this.SplitContainer.Panel2.AutoScroll = true;
             this.SplitContainer.Panel2.Controls.Add(this.LowerPanel);
-            this.SplitContainer.Size = new System.Drawing.Size(1770, 1055);
+            this.SplitContainer.Size = new System.Drawing.Size(1924, 1055);
             this.SplitContainer.SplitterDistance = 150;
             this.SplitContainer.SplitterWidth = 1;
             this.SplitContainer.TabIndex = 1;
@@ -4489,23 +4478,23 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1770, 1055);
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
             this.Controls.Add(this.SplitContainer);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainFrame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainFrame_Load);
+            this.TblVillageContextMenuStrip.ResumeLayout(false);
+            this.TblHouseContextMenuStrip.ResumeLayout(false);
+            this.TblPersonContextMenuStrip.ResumeLayout(false);
+            this.TblVillageLogsContextMenuStrip.ResumeLayout(false);
+            this.TblHouseLogsContextMenuStrip.ResumeLayout(false);
+            this.TblPersonLogsContextMenuStrip.ResumeLayout(false);
             this.LowerPanel.ResumeLayout(false);
             this.OuterTabControl.ResumeLayout(false);
             this.OPDTab.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel1.PerformLayout();
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
+            this.OPDTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.DBTab.ResumeLayout(false);
             this.InnerTabControl.ResumeLayout(false);
@@ -4516,7 +4505,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.VillagesSplitContainer)).EndInit();
             this.VillagesSplitContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TblVillage)).EndInit();
-            this.TblVillageContextMenuStrip.ResumeLayout(false);
             this.HousesTab.ResumeLayout(false);
             this.HousesSplitContainer.Panel1.ResumeLayout(false);
             this.HousesSplitContainer.Panel1.PerformLayout();
@@ -4524,7 +4512,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.HousesSplitContainer)).EndInit();
             this.HousesSplitContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TblHouse)).EndInit();
-            this.TblHouseContextMenuStrip.ResumeLayout(false);
             this.PeopleTab.ResumeLayout(false);
             this.PeopleSplitContainer.Panel1.ResumeLayout(false);
             this.PeopleSplitContainer.Panel1.PerformLayout();
@@ -4533,7 +4520,6 @@
             this.PeopleSplitContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TxtPersonAge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TblPerson)).EndInit();
-            this.TblPersonContextMenuStrip.ResumeLayout(false);
             this.LogsTab.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -4543,7 +4529,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TblVillageLogs)).EndInit();
-            this.TblVillageLogsContextMenuStrip.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel1.PerformLayout();
@@ -4551,7 +4536,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TblHouseLogs)).EndInit();
-            this.TblHouseLogsContextMenuStrip.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.splitContainer4.Panel1.ResumeLayout(false);
             this.splitContainer4.Panel1.PerformLayout();
@@ -4559,6 +4543,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
             this.splitContainer4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TblPersonLogs)).EndInit();
+
             this.TblPersonLogsContextMenuStrip.ResumeLayout(false);
             this.InventoryTab.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
@@ -4602,6 +4587,7 @@
             this.splitContainer8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+
             this.UpperPanel.ResumeLayout(false);
             this.UpperPanel.PerformLayout();
             this.SplitContainer.Panel1.ResumeLayout(false);
@@ -4617,35 +4603,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel LowerPanel;
-        private System.Windows.Forms.TabControl OuterTabControl;
-        private System.Windows.Forms.TabPage HomeTab;
-        private System.Windows.Forms.TabPage OPDTab;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button btn_newrecord;
-        private System.Windows.Forms.Button btn_archieve;
-        private System.Windows.Forms.TextBox txt_personname;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt_personid;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_visitid;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VISIT_ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PERSON_ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PERSON_NAME;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DATE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TIME;
-        private System.Windows.Forms.TabPage InventoryTab;
-        private System.Windows.Forms.Panel UpperPanel;
-        private System.Windows.Forms.Button BtnExit;
-        private System.Windows.Forms.Label LblTime;
-        private System.Windows.Forms.Label LblDate;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.SplitContainer SplitContainer;
         private System.Windows.Forms.Timer DateTimeTimer;
         private System.Windows.Forms.ContextMenuStrip TblVillageContextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem TblVillagePrintAsPDF;
@@ -4662,6 +4619,19 @@
         private System.Windows.Forms.ImageList imageList2;
         private System.Windows.Forms.ImageList imageList3;
         private System.Windows.Forms.ImageList imageList4;
+        private System.Windows.Forms.ContextMenuStrip TblVillageLogsContextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem TblVillageLogsPrintAsPDF;
+        private System.Windows.Forms.ToolStripMenuItem TblVillageLogsPrintAsExcel;
+        private System.Windows.Forms.ContextMenuStrip TblHouseLogsContextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem TblHouseLogsPrintAsPDF;
+        private System.Windows.Forms.ToolStripMenuItem TblHouseLogsPrintAsExcel;
+        private System.Windows.Forms.ContextMenuStrip TblPersonLogsContextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem TblPersonLogsPrintAsPDF;
+        private System.Windows.Forms.ToolStripMenuItem TblPersonLogsPrintAsExcel;
+        private System.Windows.Forms.Panel LowerPanel;
+        private System.Windows.Forms.TabControl OuterTabControl;
+        private System.Windows.Forms.TabPage HomeTab;
+        private System.Windows.Forms.TabPage OPDTab;
         private System.Windows.Forms.TabPage DBTab;
         private System.Windows.Forms.TabControl InnerTabControl;
         private System.Windows.Forms.TabPage VillagesTab;
@@ -4767,6 +4737,12 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.DataGridView TblVillageLogs;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.Button BtnHouseLogsReset;
@@ -4775,12 +4751,18 @@
         private System.Windows.Forms.Panel panel22;
         private System.Windows.Forms.Panel panel23;
         private System.Windows.Forms.TextBox TxtHouseLogsNoOfPeople;
+        private System.Windows.Forms.TextBox TxtHouseLogsVillageName;
         private System.Windows.Forms.TextBox TxtHouseLogsHouseId;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.DataGridView TblHouseLogs;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.SplitContainer splitContainer4;
         private System.Windows.Forms.Panel panel24;
@@ -4794,6 +4776,10 @@
         private System.Windows.Forms.Panel panel30;
         private System.Windows.Forms.TextBox TxtPersonLogsPhoneNo;
         private System.Windows.Forms.TextBox TxtPersonLogsName;
+        private System.Windows.Forms.TextBox TxtPersonLogsGender;
+        private System.Windows.Forms.TextBox TxtPersonLogsAge;
+        private System.Windows.Forms.TextBox TxtPersonLogsVillageName;
+        private System.Windows.Forms.TextBox TxtPersonLogsHouseId;
         private System.Windows.Forms.TextBox TxtPersonLogsPersonId;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
@@ -4813,6 +4799,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
@@ -4976,5 +4963,28 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        
+        private System.Windows.Forms.TabPage InventoryTab;
+        private System.Windows.Forms.Panel UpperPanel;
+        private System.Windows.Forms.Button BtnExit;
+        private System.Windows.Forms.Label LblTime;
+        private System.Windows.Forms.Label LblDate;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.SplitContainer SplitContainer;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VISIT_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PERSON_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PERSON_NAME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DATE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TIME;
+        private System.Windows.Forms.Button btn_newrecord;
+        private System.Windows.Forms.Button btn_archieve;
+        private System.Windows.Forms.TextBox txt_personname;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txt_personid;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txt_visitid;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label6;
     }
 }
