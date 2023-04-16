@@ -242,29 +242,22 @@
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.MedicinesTab = new System.Windows.Forms.TabPage();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
-            this.TxtMedicineExpiryDate = new System.Windows.Forms.DateTimePicker();
             this.TxtMedicineQuantity = new System.Windows.Forms.NumericUpDown();
             this.BtnMedicineReset = new System.Windows.Forms.Button();
             this.BtnMedicineSearcch = new System.Windows.Forms.Button();
             this.BtnMedicineUpdate = new System.Windows.Forms.Button();
             this.BtnMedicineDelete = new System.Windows.Forms.Button();
             this.BtnMedicineInsert = new System.Windows.Forms.Button();
-            this.panel31 = new System.Windows.Forms.Panel();
             this.panel32 = new System.Windows.Forms.Panel();
             this.panel33 = new System.Windows.Forms.Panel();
             this.panel34 = new System.Windows.Forms.Panel();
             this.TxtMedicineName = new System.Windows.Forms.TextBox();
             this.TxtMedicineId = new System.Windows.Forms.TextBox();
-            this.label39 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.TblMedicines = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DisposablesTab = new System.Windows.Forms.TabPage();
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
             this.TxtDisposableQuantity = new System.Windows.Forms.NumericUpDown();
@@ -381,6 +374,21 @@
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.imageList3 = new System.Windows.Forms.ImageList(this.components);
             this.imageList4 = new System.Windows.Forms.ImageList(this.components);
+            this.TblMedicinesContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.TblMedicinesPrintAsPDF = new System.Windows.Forms.ToolStripMenuItem();
+            this.TblMedicinesPrintAsExcel = new System.Windows.Forms.ToolStripMenuItem();
+            this.TblDisposablesContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.TblDisposablesPrintAsPDF = new System.Windows.Forms.ToolStripMenuItem();
+            this.TblDisposablesPrintAsExcel = new System.Windows.Forms.ToolStripMenuItem();
+            this.TblStationaryContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.TblStationaryPrintAsPDF = new System.Windows.Forms.ToolStripMenuItem();
+            this.TblStationaryPrintAsExcel = new System.Windows.Forms.ToolStripMenuItem();
+            this.TblMiscellaneousContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.TblMiscellaneousPrintAsPDF = new System.Windows.Forms.ToolStripMenuItem();
+            this.TblMiscellaneousPrintAsExcel = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LowerPanel.SuspendLayout();
             this.OuterTabControl.SuspendLayout();
             this.OPDTab.SuspendLayout();
@@ -480,6 +488,10 @@
             this.SplitContainer.Panel1.SuspendLayout();
             this.SplitContainer.Panel2.SuspendLayout();
             this.SplitContainer.SuspendLayout();
+            this.TblMedicinesContextMenuStrip.SuspendLayout();
+            this.TblDisposablesContextMenuStrip.SuspendLayout();
+            this.TblStationaryContextMenuStrip.SuspendLayout();
+            this.TblMiscellaneousContextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // LowerPanel
@@ -2856,20 +2868,17 @@
             // 
             this.splitContainer5.Panel1.AutoScroll = true;
             this.splitContainer5.Panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.splitContainer5.Panel1.Controls.Add(this.TxtMedicineExpiryDate);
             this.splitContainer5.Panel1.Controls.Add(this.TxtMedicineQuantity);
             this.splitContainer5.Panel1.Controls.Add(this.BtnMedicineReset);
             this.splitContainer5.Panel1.Controls.Add(this.BtnMedicineSearcch);
             this.splitContainer5.Panel1.Controls.Add(this.BtnMedicineUpdate);
             this.splitContainer5.Panel1.Controls.Add(this.BtnMedicineDelete);
             this.splitContainer5.Panel1.Controls.Add(this.BtnMedicineInsert);
-            this.splitContainer5.Panel1.Controls.Add(this.panel31);
             this.splitContainer5.Panel1.Controls.Add(this.panel32);
             this.splitContainer5.Panel1.Controls.Add(this.panel33);
             this.splitContainer5.Panel1.Controls.Add(this.panel34);
             this.splitContainer5.Panel1.Controls.Add(this.TxtMedicineName);
             this.splitContainer5.Panel1.Controls.Add(this.TxtMedicineId);
-            this.splitContainer5.Panel1.Controls.Add(this.label39);
             this.splitContainer5.Panel1.Controls.Add(this.label40);
             this.splitContainer5.Panel1.Controls.Add(this.label41);
             this.splitContainer5.Panel1.Controls.Add(this.label42);
@@ -2884,13 +2893,6 @@
             this.splitContainer5.SplitterWidth = 5;
             this.splitContainer5.TabIndex = 0;
             // 
-            // TxtMedicineExpiryDate
-            // 
-            this.TxtMedicineExpiryDate.Location = new System.Drawing.Point(16, 392);
-            this.TxtMedicineExpiryDate.Name = "TxtMedicineExpiryDate";
-            this.TxtMedicineExpiryDate.Size = new System.Drawing.Size(516, 34);
-            this.TxtMedicineExpiryDate.TabIndex = 6;
-            // 
             // TxtMedicineQuantity
             // 
             this.TxtMedicineQuantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -2902,7 +2904,7 @@
             // BtnMedicineReset
             // 
             this.BtnMedicineReset.AutoSize = true;
-            this.BtnMedicineReset.Location = new System.Drawing.Point(151, 608);
+            this.BtnMedicineReset.Location = new System.Drawing.Point(151, 549);
             this.BtnMedicineReset.Name = "BtnMedicineReset";
             this.BtnMedicineReset.Size = new System.Drawing.Size(244, 41);
             this.BtnMedicineReset.TabIndex = 4;
@@ -2913,7 +2915,7 @@
             // BtnMedicineSearcch
             // 
             this.BtnMedicineSearcch.AutoSize = true;
-            this.BtnMedicineSearcch.Location = new System.Drawing.Point(288, 535);
+            this.BtnMedicineSearcch.Location = new System.Drawing.Point(288, 476);
             this.BtnMedicineSearcch.Name = "BtnMedicineSearcch";
             this.BtnMedicineSearcch.Size = new System.Drawing.Size(244, 41);
             this.BtnMedicineSearcch.TabIndex = 4;
@@ -2924,7 +2926,7 @@
             // BtnMedicineUpdate
             // 
             this.BtnMedicineUpdate.AutoSize = true;
-            this.BtnMedicineUpdate.Location = new System.Drawing.Point(288, 459);
+            this.BtnMedicineUpdate.Location = new System.Drawing.Point(288, 400);
             this.BtnMedicineUpdate.Name = "BtnMedicineUpdate";
             this.BtnMedicineUpdate.Size = new System.Drawing.Size(244, 41);
             this.BtnMedicineUpdate.TabIndex = 4;
@@ -2936,7 +2938,7 @@
             // BtnMedicineDelete
             // 
             this.BtnMedicineDelete.AutoSize = true;
-            this.BtnMedicineDelete.Location = new System.Drawing.Point(16, 535);
+            this.BtnMedicineDelete.Location = new System.Drawing.Point(16, 476);
             this.BtnMedicineDelete.Name = "BtnMedicineDelete";
             this.BtnMedicineDelete.Size = new System.Drawing.Size(244, 41);
             this.BtnMedicineDelete.TabIndex = 4;
@@ -2947,21 +2949,13 @@
             // BtnMedicineInsert
             // 
             this.BtnMedicineInsert.AutoSize = true;
-            this.BtnMedicineInsert.Location = new System.Drawing.Point(16, 459);
+            this.BtnMedicineInsert.Location = new System.Drawing.Point(16, 400);
             this.BtnMedicineInsert.Name = "BtnMedicineInsert";
             this.BtnMedicineInsert.Size = new System.Drawing.Size(244, 41);
             this.BtnMedicineInsert.TabIndex = 4;
             this.BtnMedicineInsert.Text = "INSERT";
             this.BtnMedicineInsert.UseVisualStyleBackColor = true;
             this.BtnMedicineInsert.Click += new System.EventHandler(this.BtnMedicineInsert_Click);
-            // 
-            // panel31
-            // 
-            this.panel31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel31.Location = new System.Drawing.Point(16, 426);
-            this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(516, 2);
-            this.panel31.TabIndex = 3;
             // 
             // panel32
             // 
@@ -3008,15 +3002,6 @@
             this.TxtMedicineId.Name = "TxtMedicineId";
             this.TxtMedicineId.Size = new System.Drawing.Size(516, 27);
             this.TxtMedicineId.TabIndex = 0;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(11, 365);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(131, 25);
-            this.label39.TabIndex = 2;
-            this.label39.Text = "Expiry Date";
             // 
             // label40
             // 
@@ -3067,8 +3052,7 @@
             this.TblMedicines.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn25,
             this.dataGridViewTextBoxColumn26,
-            this.dataGridViewTextBoxColumn27,
-            this.dataGridViewTextBoxColumn28});
+            this.dataGridViewTextBoxColumn27});
             this.TblMedicines.ContextMenuStrip = this.TblVillageContextMenuStrip;
             this.TblMedicines.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TblMedicines.Location = new System.Drawing.Point(0, 0);
@@ -3085,34 +3069,6 @@
             this.TblMedicines.Size = new System.Drawing.Size(1319, 803);
             this.TblMedicines.TabIndex = 0;
             this.TblMedicines.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TblMedicines_CellMouseDoubleClick);
-            // 
-            // dataGridViewTextBoxColumn25
-            // 
-            this.dataGridViewTextBoxColumn25.HeaderText = "MEDICINE ID";
-            this.dataGridViewTextBoxColumn25.MinimumWidth = 200;
-            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            this.dataGridViewTextBoxColumn25.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn26
-            // 
-            this.dataGridViewTextBoxColumn26.HeaderText = "MEDICINE NAME";
-            this.dataGridViewTextBoxColumn26.MinimumWidth = 200;
-            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
-            this.dataGridViewTextBoxColumn26.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn27
-            // 
-            this.dataGridViewTextBoxColumn27.HeaderText = "QUANTITY";
-            this.dataGridViewTextBoxColumn27.MinimumWidth = 200;
-            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
-            this.dataGridViewTextBoxColumn27.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn28
-            // 
-            this.dataGridViewTextBoxColumn28.HeaderText = "EXPIRY DATE";
-            this.dataGridViewTextBoxColumn28.MinimumWidth = 200;
-            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
-            this.dataGridViewTextBoxColumn28.ReadOnly = true;
             // 
             // DisposablesTab
             // 
@@ -4410,6 +4366,125 @@
             this.imageList4.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList4.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // TblMedicinesContextMenuStrip
+            // 
+            this.TblMedicinesContextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.TblMedicinesContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TblMedicinesPrintAsPDF,
+            this.TblMedicinesPrintAsExcel});
+            this.TblMedicinesContextMenuStrip.Name = "contextMenuStrip1";
+            this.TblMedicinesContextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.TblMedicinesContextMenuStrip.ShowImageMargin = false;
+            this.TblMedicinesContextMenuStrip.Size = new System.Drawing.Size(140, 52);
+            // 
+            // TblMedicinesPrintAsPDF
+            // 
+            this.TblMedicinesPrintAsPDF.Name = "TblMedicinesPrintAsPDF";
+            this.TblMedicinesPrintAsPDF.Size = new System.Drawing.Size(139, 24);
+            this.TblMedicinesPrintAsPDF.Text = "Print as PDF";
+            this.TblMedicinesPrintAsPDF.Click += new System.EventHandler(this.TblMedicinesPrintAsPDF_Click);
+            // 
+            // TblMedicinesPrintAsExcel
+            // 
+            this.TblMedicinesPrintAsExcel.Name = "TblMedicinesPrintAsExcel";
+            this.TblMedicinesPrintAsExcel.Size = new System.Drawing.Size(139, 24);
+            this.TblMedicinesPrintAsExcel.Text = "Print as Excel";
+            this.TblMedicinesPrintAsExcel.Click += new System.EventHandler(this.TblMedicinesPrintAsExcel_Click);
+            // 
+            // TblDisposablesContextMenuStrip
+            // 
+            this.TblDisposablesContextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.TblDisposablesContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TblDisposablesPrintAsPDF,
+            this.TblDisposablesPrintAsExcel});
+            this.TblDisposablesContextMenuStrip.Name = "TblVillageContextMenuStrip";
+            this.TblDisposablesContextMenuStrip.Size = new System.Drawing.Size(165, 52);
+            // 
+            // TblDisposablesPrintAsPDF
+            // 
+            this.TblDisposablesPrintAsPDF.Name = "TblDisposablesPrintAsPDF";
+            this.TblDisposablesPrintAsPDF.Size = new System.Drawing.Size(164, 24);
+            this.TblDisposablesPrintAsPDF.Text = "Print as PDF";
+            this.TblDisposablesPrintAsPDF.Click += new System.EventHandler(this.TblDisposablesPrintAsPDF_Click);
+            // 
+            // TblDisposablesPrintAsExcel
+            // 
+            this.TblDisposablesPrintAsExcel.Name = "TblDisposablesPrintAsExcel";
+            this.TblDisposablesPrintAsExcel.Size = new System.Drawing.Size(164, 24);
+            this.TblDisposablesPrintAsExcel.Text = "Print as Excel";
+            this.TblDisposablesPrintAsExcel.Click += new System.EventHandler(this.TblDisposablesPrintAsExcel_Click);
+            // 
+            // TblStationaryContextMenuStrip
+            // 
+            this.TblStationaryContextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.TblStationaryContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TblStationaryPrintAsPDF,
+            this.TblStationaryPrintAsExcel});
+            this.TblStationaryContextMenuStrip.Name = "TblHouseContextMenuStrip";
+            this.TblStationaryContextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.TblStationaryContextMenuStrip.ShowImageMargin = false;
+            this.TblStationaryContextMenuStrip.Size = new System.Drawing.Size(142, 52);
+            // 
+            // TblStationaryPrintAsPDF
+            // 
+            this.TblStationaryPrintAsPDF.Name = "TblStationaryPrintAsPDF";
+            this.TblStationaryPrintAsPDF.Size = new System.Drawing.Size(141, 24);
+            this.TblStationaryPrintAsPDF.Text = "Print as PDF";
+            this.TblStationaryPrintAsPDF.Click += new System.EventHandler(this.TblStationaryPrintAsPDF_Click);
+            // 
+            // TblStationaryPrintAsExcel
+            // 
+            this.TblStationaryPrintAsExcel.Name = "TblStationaryPrintAsExcel";
+            this.TblStationaryPrintAsExcel.Size = new System.Drawing.Size(141, 24);
+            this.TblStationaryPrintAsExcel.Text = "Print As Excel";
+            this.TblStationaryPrintAsExcel.Click += new System.EventHandler(this.TblStationaryPrintAsExcel_Click);
+            // 
+            // TblMiscellaneousContextMenuStrip
+            // 
+            this.TblMiscellaneousContextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.TblMiscellaneousContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TblMiscellaneousPrintAsPDF,
+            this.TblMiscellaneousPrintAsExcel});
+            this.TblMiscellaneousContextMenuStrip.Name = "contextMenuStrip1";
+            this.TblMiscellaneousContextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.TblMiscellaneousContextMenuStrip.ShowImageMargin = false;
+            this.TblMiscellaneousContextMenuStrip.Size = new System.Drawing.Size(140, 52);
+            // 
+            // TblMiscellaneousPrintAsPDF
+            // 
+            this.TblMiscellaneousPrintAsPDF.Name = "TblMiscellaneousPrintAsPDF";
+            this.TblMiscellaneousPrintAsPDF.Size = new System.Drawing.Size(139, 24);
+            this.TblMiscellaneousPrintAsPDF.Text = "Print as PDF";
+            this.TblMiscellaneousPrintAsPDF.Click += new System.EventHandler(this.TblMiscellaneousPrintAsPDF_Click);
+            // 
+            // TblMiscellaneousPrintAsExcel
+            // 
+            this.TblMiscellaneousPrintAsExcel.Name = "TblMiscellaneousPrintAsExcel";
+            this.TblMiscellaneousPrintAsExcel.Size = new System.Drawing.Size(139, 24);
+            this.TblMiscellaneousPrintAsExcel.Text = "Print as Excel";
+            this.TblMiscellaneousPrintAsExcel.Click += new System.EventHandler(this.TblMiscellaneousPrintAsExcel_Click);
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.HeaderText = "MEDICINE ID";
+            this.dataGridViewTextBoxColumn25.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            this.dataGridViewTextBoxColumn25.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.HeaderText = "MEDICINE NAME";
+            this.dataGridViewTextBoxColumn26.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            this.dataGridViewTextBoxColumn26.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            this.dataGridViewTextBoxColumn27.HeaderText = "QUANTITY";
+            this.dataGridViewTextBoxColumn27.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            this.dataGridViewTextBoxColumn27.ReadOnly = true;
+            // 
             // MainFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -4419,7 +4494,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainFrame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "MainFrame";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainFrame_Load);
             this.LowerPanel.ResumeLayout(false);
@@ -4534,6 +4608,10 @@
             this.SplitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SplitContainer)).EndInit();
             this.SplitContainer.ResumeLayout(false);
+            this.TblMedicinesContextMenuStrip.ResumeLayout(false);
+            this.TblDisposablesContextMenuStrip.ResumeLayout(false);
+            this.TblStationaryContextMenuStrip.ResumeLayout(false);
+            this.TblMiscellaneousContextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -4768,13 +4846,11 @@
         private System.Windows.Forms.Button BtnMedicineUpdate;
         private System.Windows.Forms.Button BtnMedicineDelete;
         private System.Windows.Forms.Button BtnMedicineInsert;
-        private System.Windows.Forms.Panel panel31;
         private System.Windows.Forms.Panel panel32;
         private System.Windows.Forms.Panel panel33;
         private System.Windows.Forms.Panel panel34;
         private System.Windows.Forms.TextBox TxtMedicineName;
         private System.Windows.Forms.TextBox TxtMedicineId;
-        private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label42;
@@ -4848,10 +4924,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn43;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn44;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn45;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
@@ -4879,7 +4951,6 @@
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.DateTimePicker TxtMedicineExpiryDate;
         private System.Windows.Forms.NumericUpDown TxtMedicineQuantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn46;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn49;
@@ -4890,5 +4961,20 @@
         private System.Windows.Forms.NumericUpDown TxtMiscellaneousQuantity;
         private System.Windows.Forms.TextBox TxtMiscellaneousName;
         private System.Windows.Forms.TextBox TxtStationaryName;
+        private System.Windows.Forms.ContextMenuStrip TblMedicinesContextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem TblMedicinesPrintAsPDF;
+        private System.Windows.Forms.ToolStripMenuItem TblMedicinesPrintAsExcel;
+        private System.Windows.Forms.ContextMenuStrip TblDisposablesContextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem TblDisposablesPrintAsPDF;
+        private System.Windows.Forms.ToolStripMenuItem TblDisposablesPrintAsExcel;
+        private System.Windows.Forms.ContextMenuStrip TblStationaryContextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem TblStationaryPrintAsPDF;
+        private System.Windows.Forms.ToolStripMenuItem TblStationaryPrintAsExcel;
+        private System.Windows.Forms.ContextMenuStrip TblMiscellaneousContextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem TblMiscellaneousPrintAsPDF;
+        private System.Windows.Forms.ToolStripMenuItem TblMiscellaneousPrintAsExcel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
     }
 }
