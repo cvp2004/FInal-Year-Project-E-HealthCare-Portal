@@ -261,6 +261,9 @@ namespace OPD_Section
             this.label42 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.TblMedicines = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DisposablesTab = new System.Windows.Forms.TabPage();
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
             this.TxtDisposableQuantity = new System.Windows.Forms.NumericUpDown();
@@ -300,13 +303,6 @@ namespace OPD_Section
             this.label53 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
             this.TblStationary = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MiscellaneousTab = new System.Windows.Forms.TabPage();
             this.splitContainer9 = new System.Windows.Forms.SplitContainer();
             this.TxtMiscellaneousQuantity = new System.Windows.Forms.NumericUpDown();
@@ -371,7 +367,6 @@ namespace OPD_Section
             this.LblDate = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.SplitContainer = new System.Windows.Forms.SplitContainer();
-
             this.TblMedicinesContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.TblMedicinesPrintAsPDF = new System.Windows.Forms.ToolStripMenuItem();
             this.TblMedicinesPrintAsExcel = new System.Windows.Forms.ToolStripMenuItem();
@@ -384,10 +379,15 @@ namespace OPD_Section
             this.TblMiscellaneousContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.TblMiscellaneousPrintAsPDF = new System.Windows.Forms.ToolStripMenuItem();
             this.TblMiscellaneousPrintAsExcel = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-
+            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TblVillageContextMenuStrip.SuspendLayout();
+            this.TblHouseContextMenuStrip.SuspendLayout();
+            this.TblPersonContextMenuStrip.SuspendLayout();
+            this.TblVillageLogsContextMenuStrip.SuspendLayout();
+            this.TblHouseLogsContextMenuStrip.SuspendLayout();
+            this.TblPersonLogsContextMenuStrip.SuspendLayout();
             this.LowerPanel.SuspendLayout();
             this.OuterTabControl.SuspendLayout();
             this.OPDTab.SuspendLayout();
@@ -433,8 +433,6 @@ namespace OPD_Section
             this.splitContainer4.Panel2.SuspendLayout();
             this.splitContainer4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TblPersonLogs)).BeginInit();
-
-            this.TblPersonLogsContextMenuStrip.SuspendLayout();
             this.InventoryTab.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.MedicinesTab.SuspendLayout();
@@ -472,7 +470,6 @@ namespace OPD_Section
             this.splitContainer8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
-
             this.UpperPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SplitContainer)).BeginInit();
             this.SplitContainer.Panel1.SuspendLayout();
@@ -1226,7 +1223,7 @@ namespace OPD_Section
             this.HousesTab.Location = new System.Drawing.Point(4, 39);
             this.HousesTab.Name = "HousesTab";
             this.HousesTab.Padding = new System.Windows.Forms.Padding(3);
-            this.HousesTab.Size = new System.Drawing.Size(1748, 809);
+            this.HousesTab.Size = new System.Drawing.Size(1902, 809);
             this.HousesTab.TabIndex = 1;
             this.HousesTab.Text = "   Houses   ";
             this.HousesTab.UseVisualStyleBackColor = true;
@@ -1264,7 +1261,7 @@ namespace OPD_Section
             // 
             this.HousesSplitContainer.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.HousesSplitContainer.Panel2.Controls.Add(this.TblHouse);
-            this.HousesSplitContainer.Size = new System.Drawing.Size(1742, 803);
+            this.HousesSplitContainer.Size = new System.Drawing.Size(1896, 803);
             this.HousesSplitContainer.SplitterDistance = 420;
             this.HousesSplitContainer.SplitterWidth = 5;
             this.HousesSplitContainer.TabIndex = 1;
@@ -1438,7 +1435,7 @@ namespace OPD_Section
             this.TblHouse.RowHeadersWidth = 51;
             this.TblHouse.RowTemplate.Height = 50;
             this.TblHouse.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TblHouse.Size = new System.Drawing.Size(1313, 799);
+            this.TblHouse.Size = new System.Drawing.Size(1467, 799);
             this.TblHouse.TabIndex = 0;
             this.TblHouse.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TblHouse_CellMouseDoubleClick);
             // 
@@ -1470,7 +1467,7 @@ namespace OPD_Section
             this.PeopleTab.Location = new System.Drawing.Point(4, 39);
             this.PeopleTab.Name = "PeopleTab";
             this.PeopleTab.Padding = new System.Windows.Forms.Padding(3);
-            this.PeopleTab.Size = new System.Drawing.Size(1748, 809);
+            this.PeopleTab.Size = new System.Drawing.Size(1902, 809);
             this.PeopleTab.TabIndex = 2;
             this.PeopleTab.Text = "   People   ";
             this.PeopleTab.UseVisualStyleBackColor = true;
@@ -1520,7 +1517,7 @@ namespace OPD_Section
             this.PeopleSplitContainer.Panel2.AutoScroll = true;
             this.PeopleSplitContainer.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.PeopleSplitContainer.Panel2.Controls.Add(this.TblPerson);
-            this.PeopleSplitContainer.Size = new System.Drawing.Size(1742, 803);
+            this.PeopleSplitContainer.Size = new System.Drawing.Size(1896, 803);
             this.PeopleSplitContainer.SplitterDistance = 425;
             this.PeopleSplitContainer.SplitterWidth = 5;
             this.PeopleSplitContainer.TabIndex = 1;
@@ -1820,7 +1817,7 @@ namespace OPD_Section
             this.TblPerson.RowHeadersWidth = 51;
             this.TblPerson.RowTemplate.Height = 50;
             this.TblPerson.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TblPerson.Size = new System.Drawing.Size(1308, 799);
+            this.TblPerson.Size = new System.Drawing.Size(1462, 799);
             this.TblPerson.TabIndex = 0;
             this.TblPerson.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TblPerson_CellMouseDoubleClick);
             // 
@@ -1879,7 +1876,7 @@ namespace OPD_Section
             this.LogsTab.Location = new System.Drawing.Point(4, 39);
             this.LogsTab.Name = "LogsTab";
             this.LogsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.LogsTab.Size = new System.Drawing.Size(1748, 809);
+            this.LogsTab.Size = new System.Drawing.Size(1902, 809);
             this.LogsTab.TabIndex = 3;
             this.LogsTab.Text = "   Logs   ";
             this.LogsTab.UseVisualStyleBackColor = true;
@@ -1895,7 +1892,7 @@ namespace OPD_Section
             this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1742, 803);
+            this.tabControl1.Size = new System.Drawing.Size(1896, 803);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -1906,7 +1903,7 @@ namespace OPD_Section
             this.tabPage1.Location = new System.Drawing.Point(4, 39);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1734, 760);
+            this.tabPage1.Size = new System.Drawing.Size(1888, 760);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "   Village Logs   ";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1944,7 +1941,7 @@ namespace OPD_Section
             // 
             this.splitContainer2.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer2.Panel2.Controls.Add(this.TblVillageLogs);
-            this.splitContainer2.Size = new System.Drawing.Size(1728, 754);
+            this.splitContainer2.Size = new System.Drawing.Size(1882, 754);
             this.splitContainer2.SplitterDistance = 420;
             this.splitContainer2.SplitterWidth = 5;
             this.splitContainer2.TabIndex = 0;
@@ -2122,7 +2119,7 @@ namespace OPD_Section
             this.TblVillageLogs.RowTemplate.ReadOnly = true;
             this.TblVillageLogs.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.TblVillageLogs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TblVillageLogs.Size = new System.Drawing.Size(1299, 750);
+            this.TblVillageLogs.Size = new System.Drawing.Size(1453, 750);
             this.TblVillageLogs.TabIndex = 0;
             this.TblVillageLogs.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TblVillageLogs_CellMouseDoubleClick);
             // 
@@ -2181,7 +2178,7 @@ namespace OPD_Section
             this.tabPage2.Location = new System.Drawing.Point(4, 39);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1734, 760);
+            this.tabPage2.Size = new System.Drawing.Size(1888, 760);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "   House Logs   ";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -2216,7 +2213,7 @@ namespace OPD_Section
             // 
             this.splitContainer3.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer3.Panel2.Controls.Add(this.TblHouseLogs);
-            this.splitContainer3.Size = new System.Drawing.Size(1728, 754);
+            this.splitContainer3.Size = new System.Drawing.Size(1882, 754);
             this.splitContainer3.SplitterDistance = 420;
             this.splitContainer3.SplitterWidth = 5;
             this.splitContainer3.TabIndex = 1;
@@ -2360,7 +2357,7 @@ namespace OPD_Section
             this.TblHouseLogs.RowHeadersWidth = 51;
             this.TblHouseLogs.RowTemplate.Height = 50;
             this.TblHouseLogs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TblHouseLogs.Size = new System.Drawing.Size(1299, 750);
+            this.TblHouseLogs.Size = new System.Drawing.Size(1453, 750);
             this.TblHouseLogs.TabIndex = 0;
             this.TblHouseLogs.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TblHouseLogs_CellMouseDoubleClick);
             // 
@@ -2411,7 +2408,7 @@ namespace OPD_Section
             this.tabPage3.Location = new System.Drawing.Point(4, 39);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1734, 760);
+            this.tabPage3.Size = new System.Drawing.Size(1888, 760);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "   People Logs   ";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -2458,7 +2455,7 @@ namespace OPD_Section
             this.splitContainer4.Panel2.AutoScroll = true;
             this.splitContainer4.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer4.Panel2.Controls.Add(this.TblPersonLogs);
-            this.splitContainer4.Size = new System.Drawing.Size(1728, 754);
+            this.splitContainer4.Size = new System.Drawing.Size(1882, 754);
             this.splitContainer4.SplitterDistance = 425;
             this.splitContainer4.SplitterWidth = 5;
             this.splitContainer4.TabIndex = 1;
@@ -2720,7 +2717,7 @@ namespace OPD_Section
             this.TblPersonLogs.RowHeadersWidth = 51;
             this.TblPersonLogs.RowTemplate.Height = 50;
             this.TblPersonLogs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TblPersonLogs.Size = new System.Drawing.Size(1294, 750);
+            this.TblPersonLogs.Size = new System.Drawing.Size(1448, 750);
             this.TblPersonLogs.TabIndex = 0;
             this.TblPersonLogs.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TblPersonLogs_CellMouseDoubleClick);
             // 
@@ -2821,7 +2818,7 @@ namespace OPD_Section
             this.tabControl2.Location = new System.Drawing.Point(0, 0);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1762, 856);
+            this.tabControl2.Size = new System.Drawing.Size(1916, 856);
             this.tabControl2.TabIndex = 2;
             // 
             // MedicinesTab
@@ -2832,7 +2829,7 @@ namespace OPD_Section
             this.MedicinesTab.Location = new System.Drawing.Point(4, 39);
             this.MedicinesTab.Name = "MedicinesTab";
             this.MedicinesTab.Padding = new System.Windows.Forms.Padding(3);
-            this.MedicinesTab.Size = new System.Drawing.Size(1754, 813);
+            this.MedicinesTab.Size = new System.Drawing.Size(1908, 813);
             this.MedicinesTab.TabIndex = 0;
             this.MedicinesTab.Text = "   Medicines   ";
             this.MedicinesTab.UseVisualStyleBackColor = true;
@@ -2870,7 +2867,7 @@ namespace OPD_Section
             // 
             this.splitContainer5.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer5.Panel2.Controls.Add(this.TblMedicines);
-            this.splitContainer5.Size = new System.Drawing.Size(1748, 807);
+            this.splitContainer5.Size = new System.Drawing.Size(1902, 807);
             this.splitContainer5.SplitterDistance = 420;
             this.splitContainer5.SplitterWidth = 5;
             this.splitContainer5.TabIndex = 0;
@@ -3048,9 +3045,30 @@ namespace OPD_Section
             this.TblMedicines.RowTemplate.ReadOnly = true;
             this.TblMedicines.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.TblMedicines.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TblMedicines.Size = new System.Drawing.Size(1319, 803);
+            this.TblMedicines.Size = new System.Drawing.Size(1473, 803);
             this.TblMedicines.TabIndex = 0;
             this.TblMedicines.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TblMedicines_CellMouseDoubleClick);
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.HeaderText = "MEDICINE ID";
+            this.dataGridViewTextBoxColumn25.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            this.dataGridViewTextBoxColumn25.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.HeaderText = "MEDICINE NAME";
+            this.dataGridViewTextBoxColumn26.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            this.dataGridViewTextBoxColumn26.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            this.dataGridViewTextBoxColumn27.HeaderText = "QUANTITY";
+            this.dataGridViewTextBoxColumn27.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            this.dataGridViewTextBoxColumn27.ReadOnly = true;
             // 
             // DisposablesTab
             // 
@@ -3059,7 +3077,7 @@ namespace OPD_Section
             this.DisposablesTab.Location = new System.Drawing.Point(4, 39);
             this.DisposablesTab.Name = "DisposablesTab";
             this.DisposablesTab.Padding = new System.Windows.Forms.Padding(3);
-            this.DisposablesTab.Size = new System.Drawing.Size(1754, 813);
+            this.DisposablesTab.Size = new System.Drawing.Size(1908, 813);
             this.DisposablesTab.TabIndex = 1;
             this.DisposablesTab.Text = "   Disposables   ";
             this.DisposablesTab.UseVisualStyleBackColor = true;
@@ -3097,7 +3115,7 @@ namespace OPD_Section
             // 
             this.splitContainer6.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer6.Panel2.Controls.Add(this.TblDisposables);
-            this.splitContainer6.Size = new System.Drawing.Size(1748, 807);
+            this.splitContainer6.Size = new System.Drawing.Size(1902, 807);
             this.splitContainer6.SplitterDistance = 420;
             this.splitContainer6.SplitterWidth = 5;
             this.splitContainer6.TabIndex = 1;
@@ -3276,7 +3294,7 @@ namespace OPD_Section
             this.TblDisposables.RowHeadersWidth = 51;
             this.TblDisposables.RowTemplate.Height = 50;
             this.TblDisposables.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TblDisposables.Size = new System.Drawing.Size(1319, 803);
+            this.TblDisposables.Size = new System.Drawing.Size(1473, 803);
             this.TblDisposables.TabIndex = 0;
             this.TblDisposables.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TblDisposables_CellMouseDoubleClick);
             // 
@@ -3308,7 +3326,7 @@ namespace OPD_Section
             this.StationaryTab.Location = new System.Drawing.Point(4, 39);
             this.StationaryTab.Name = "StationaryTab";
             this.StationaryTab.Padding = new System.Windows.Forms.Padding(3);
-            this.StationaryTab.Size = new System.Drawing.Size(1754, 813);
+            this.StationaryTab.Size = new System.Drawing.Size(1908, 813);
             this.StationaryTab.TabIndex = 2;
             this.StationaryTab.Text = "   Stationary   ";
             this.StationaryTab.UseVisualStyleBackColor = true;
@@ -3346,7 +3364,7 @@ namespace OPD_Section
             this.splitContainer7.Panel2.AutoScroll = true;
             this.splitContainer7.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer7.Panel2.Controls.Add(this.TblStationary);
-            this.splitContainer7.Size = new System.Drawing.Size(1748, 807);
+            this.splitContainer7.Size = new System.Drawing.Size(1902, 807);
             this.splitContainer7.SplitterDistance = 425;
             this.splitContainer7.SplitterWidth = 5;
             this.splitContainer7.TabIndex = 1;
@@ -3512,11 +3530,7 @@ namespace OPD_Section
             this.TblStationary.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn32,
             this.dataGridViewTextBoxColumn33,
-            this.dataGridViewTextBoxColumn34,
-            this.dataGridViewTextBoxColumn35,
-            this.dataGridViewTextBoxColumn36,
-            this.dataGridViewTextBoxColumn37,
-            this.dataGridViewTextBoxColumn38});
+            this.dataGridViewTextBoxColumn34});
             this.TblStationary.ContextMenuStrip = this.TblPersonContextMenuStrip;
             this.TblStationary.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TblStationary.Location = new System.Drawing.Point(0, 0);
@@ -3527,58 +3541,9 @@ namespace OPD_Section
             this.TblStationary.RowHeadersWidth = 51;
             this.TblStationary.RowTemplate.Height = 50;
             this.TblStationary.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TblStationary.Size = new System.Drawing.Size(1314, 803);
+            this.TblStationary.Size = new System.Drawing.Size(1468, 803);
             this.TblStationary.TabIndex = 0;
             this.TblStationary.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TblStationary_CellMouseDoubleClick);
-            // 
-            // dataGridViewTextBoxColumn32
-            // 
-            this.dataGridViewTextBoxColumn32.HeaderText = "PERSON ID";
-            this.dataGridViewTextBoxColumn32.MinimumWidth = 150;
-            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
-            this.dataGridViewTextBoxColumn32.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn33
-            // 
-            this.dataGridViewTextBoxColumn33.HeaderText = "HOUSE ID";
-            this.dataGridViewTextBoxColumn33.MinimumWidth = 150;
-            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
-            this.dataGridViewTextBoxColumn33.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn34
-            // 
-            this.dataGridViewTextBoxColumn34.HeaderText = "VILLAGE";
-            this.dataGridViewTextBoxColumn34.MinimumWidth = 200;
-            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
-            this.dataGridViewTextBoxColumn34.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn35
-            // 
-            this.dataGridViewTextBoxColumn35.HeaderText = "NAME";
-            this.dataGridViewTextBoxColumn35.MinimumWidth = 200;
-            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
-            this.dataGridViewTextBoxColumn35.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn36
-            // 
-            this.dataGridViewTextBoxColumn36.HeaderText = "AGE";
-            this.dataGridViewTextBoxColumn36.MinimumWidth = 100;
-            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
-            this.dataGridViewTextBoxColumn36.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn37
-            // 
-            this.dataGridViewTextBoxColumn37.HeaderText = "GENDER";
-            this.dataGridViewTextBoxColumn37.MinimumWidth = 150;
-            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
-            this.dataGridViewTextBoxColumn37.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn38
-            // 
-            this.dataGridViewTextBoxColumn38.HeaderText = "PHONE NO.";
-            this.dataGridViewTextBoxColumn38.MinimumWidth = 150;
-            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
-            this.dataGridViewTextBoxColumn38.ReadOnly = true;
             // 
             // MiscellaneousTab
             // 
@@ -3586,7 +3551,7 @@ namespace OPD_Section
             this.MiscellaneousTab.Location = new System.Drawing.Point(4, 39);
             this.MiscellaneousTab.Name = "MiscellaneousTab";
             this.MiscellaneousTab.Padding = new System.Windows.Forms.Padding(3);
-            this.MiscellaneousTab.Size = new System.Drawing.Size(1754, 813);
+            this.MiscellaneousTab.Size = new System.Drawing.Size(1908, 813);
             this.MiscellaneousTab.TabIndex = 4;
             this.MiscellaneousTab.Text = "   Miscellaneous   ";
             this.MiscellaneousTab.UseVisualStyleBackColor = true;
@@ -3624,7 +3589,7 @@ namespace OPD_Section
             this.splitContainer9.Panel2.AutoScroll = true;
             this.splitContainer9.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer9.Panel2.Controls.Add(this.TblMiscellaneous);
-            this.splitContainer9.Size = new System.Drawing.Size(1748, 807);
+            this.splitContainer9.Size = new System.Drawing.Size(1902, 807);
             this.splitContainer9.SplitterDistance = 425;
             this.splitContainer9.SplitterWidth = 5;
             this.splitContainer9.TabIndex = 2;
@@ -3801,7 +3766,7 @@ namespace OPD_Section
             this.TblMiscellaneous.RowHeadersWidth = 51;
             this.TblMiscellaneous.RowTemplate.Height = 50;
             this.TblMiscellaneous.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TblMiscellaneous.Size = new System.Drawing.Size(1314, 803);
+            this.TblMiscellaneous.Size = new System.Drawing.Size(1468, 803);
             this.TblMiscellaneous.TabIndex = 0;
             this.TblMiscellaneous.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TblMiscellaneous_CellMouseDoubleClick);
             // 
@@ -3832,7 +3797,7 @@ namespace OPD_Section
             this.InventoryLogsTab.Location = new System.Drawing.Point(4, 39);
             this.InventoryLogsTab.Name = "InventoryLogsTab";
             this.InventoryLogsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.InventoryLogsTab.Size = new System.Drawing.Size(1754, 813);
+            this.InventoryLogsTab.Size = new System.Drawing.Size(1908, 813);
             this.InventoryLogsTab.TabIndex = 3;
             this.InventoryLogsTab.Text = "   Logs   ";
             this.InventoryLogsTab.UseVisualStyleBackColor = true;
@@ -3882,7 +3847,7 @@ namespace OPD_Section
             this.splitContainer8.Panel2.AutoScroll = true;
             this.splitContainer8.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer8.Panel2.Controls.Add(this.dataGridView5);
-            this.splitContainer8.Size = new System.Drawing.Size(1748, 807);
+            this.splitContainer8.Size = new System.Drawing.Size(1902, 807);
             this.splitContainer8.SplitterDistance = 425;
             this.splitContainer8.SplitterWidth = 5;
             this.splitContainer8.TabIndex = 2;
@@ -4173,7 +4138,7 @@ namespace OPD_Section
             this.dataGridView5.RowHeadersWidth = 51;
             this.dataGridView5.RowTemplate.Height = 50;
             this.dataGridView5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView5.Size = new System.Drawing.Size(1314, 803);
+            this.dataGridView5.Size = new System.Drawing.Size(1468, 803);
             this.dataGridView5.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn39
@@ -4311,43 +4276,6 @@ namespace OPD_Section
             this.SplitContainer.SplitterWidth = 1;
             this.SplitContainer.TabIndex = 1;
             // 
-            // DateTimeTimer
-            // 
-            this.DateTimeTimer.Tick += new System.EventHandler(this.DateTimeTImer_Tick);
-            // 
-            // OuterImageList
-            // 
-            this.OuterImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("OuterImageList.ImageStream")));
-            this.OuterImageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.OuterImageList.Images.SetKeyName(0, "icons8-home-page-48.png");
-            this.OuterImageList.Images.SetKeyName(1, "icons8-clinic-50.png");
-            this.OuterImageList.Images.SetKeyName(2, "icons8-database-50.png");
-            this.OuterImageList.Images.SetKeyName(3, "icons8-warehouse-50.png");
-            // 
-            // imageList1
-            // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // imageList2
-            // 
-            this.imageList2.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList2.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // imageList3
-            // 
-            this.imageList3.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList3.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList3.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // imageList4
-            // 
-            this.imageList4.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList4.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList4.TransparentColor = System.Drawing.Color.Transparent;
-            // 
             // TblMedicinesContextMenuStrip
             // 
             this.TblMedicinesContextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -4446,26 +4374,26 @@ namespace OPD_Section
             this.TblMiscellaneousPrintAsExcel.Text = "Print as Excel";
             this.TblMiscellaneousPrintAsExcel.Click += new System.EventHandler(this.TblMiscellaneousPrintAsExcel_Click);
             // 
-            // dataGridViewTextBoxColumn25
+            // dataGridViewTextBoxColumn32
             // 
-            this.dataGridViewTextBoxColumn25.HeaderText = "MEDICINE ID";
-            this.dataGridViewTextBoxColumn25.MinimumWidth = 200;
-            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            this.dataGridViewTextBoxColumn25.ReadOnly = true;
+            this.dataGridViewTextBoxColumn32.HeaderText = "ITEM ID";
+            this.dataGridViewTextBoxColumn32.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
+            this.dataGridViewTextBoxColumn32.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn26
+            // dataGridViewTextBoxColumn33
             // 
-            this.dataGridViewTextBoxColumn26.HeaderText = "MEDICINE NAME";
-            this.dataGridViewTextBoxColumn26.MinimumWidth = 200;
-            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
-            this.dataGridViewTextBoxColumn26.ReadOnly = true;
+            this.dataGridViewTextBoxColumn33.HeaderText = "ITEM NAME";
+            this.dataGridViewTextBoxColumn33.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
+            this.dataGridViewTextBoxColumn33.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn27
+            // dataGridViewTextBoxColumn34
             // 
-            this.dataGridViewTextBoxColumn27.HeaderText = "QUANTITY";
-            this.dataGridViewTextBoxColumn27.MinimumWidth = 200;
-            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
-            this.dataGridViewTextBoxColumn27.ReadOnly = true;
+            this.dataGridViewTextBoxColumn34.HeaderText = "QUANTITY";
+            this.dataGridViewTextBoxColumn34.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
+            this.dataGridViewTextBoxColumn34.ReadOnly = true;
             // 
             // MainFrame
             // 
@@ -4536,8 +4464,6 @@ namespace OPD_Section
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
             this.splitContainer4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TblPersonLogs)).EndInit();
-
-            this.TblPersonLogsContextMenuStrip.ResumeLayout(false);
             this.InventoryTab.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.MedicinesTab.ResumeLayout(false);
@@ -4580,7 +4506,6 @@ namespace OPD_Section
             this.splitContainer8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-
             this.UpperPanel.ResumeLayout(false);
             this.UpperPanel.PerformLayout();
             this.SplitContainer.Panel1.ResumeLayout(false);
@@ -4831,13 +4756,6 @@ namespace OPD_Section
         private System.Windows.Forms.SplitContainer splitContainer7;
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.DataGridView TblStationary;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn38;
         private System.Windows.Forms.TabPage MiscellaneousTab;
         private System.Windows.Forms.SplitContainer splitContainer9;
         private System.Windows.Forms.Label label71;
@@ -4954,5 +4872,8 @@ namespace OPD_Section
         private System.Windows.Forms.TextBox txt_visitid;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
     }
 }
