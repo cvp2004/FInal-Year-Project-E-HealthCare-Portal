@@ -113,7 +113,6 @@ namespace OPD_Section
             }
             else
             {
-                int n = dataGridView1.Rows.Add();
                 
                 using (var presc = new sampledbEntities())
                 {
@@ -125,10 +124,21 @@ namespace OPD_Section
                         }
                     }
                 }
-                dataGridView1.Rows[n].Cells["med_id"].Value = med_id;
-                dataGridView1.Rows[n].Cells["med_name"].Value = textBox1.Text;
-                dataGridView1.Rows[n].Cells["med_quant"].Value = numericUpDown1.Text;
-               
+                if(med_id != "")
+                {
+                    int n = dataGridView1.Rows.Add();
+                    dataGridView1.Rows[n].Cells["med_id"].Value = med_id;
+                    dataGridView1.Rows[n].Cells["med_name"].Value = textBox1.Text;
+                    dataGridView1.Rows[n].Cells["med_quant"].Value = numericUpDown1.Text;
+                }
+                else
+                {
+                    string message = "Medicine Not Found!";
+                        string title = "Data Not Found!";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+                    DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Error, MessageBoxDefaultButton.Button3);
+                }
+
                 textBox1.Text = "";
                 numericUpDown1.Text = "";
             }
