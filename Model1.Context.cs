@@ -30,6 +30,7 @@ namespace OPD_Section
         public virtual DbSet<DISPOSABLE> DISPOSABLES { get; set; }
         public virtual DbSet<House> HOUSES { get; set; }
         public virtual DbSet<LOGS_HOUSES> LOGS_HOUSES { get; set; }
+        public virtual DbSet<LOGS_INVENTORY> LOGS_INVENTORY { get; set; }
         public virtual DbSet<LOGS_PERSONS> LOGS_PERSONS { get; set; }
         public virtual DbSet<LOGS_VILLAGES> LOGS_VILLAGES { get; set; }
         public virtual DbSet<MEDICINE> MEDICINES { get; set; }

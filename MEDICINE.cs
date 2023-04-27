@@ -23,7 +23,6 @@ namespace OPD_Section
         public int MEDICINE_ID { get; set; }
         public string MEDICINE_NAME { get; set; }
         public Nullable<int> QUANTITY { get; set; }
-        public System.DateTime EXPIRY { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PRESCRIPTION> PRESCRIPTIONS { get; set; }

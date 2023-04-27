@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using Cell = iText.Layout.Element.Cell;
+using Table = iText.Layout.Element.Table;
 
 namespace OPD_Section.Forms
 {
@@ -465,8 +467,8 @@ namespace OPD_Section.Forms
                 PdfWriter writer = new PdfWriter(sfd.FileName);
                 PdfDocument pdf = new PdfDocument(writer);
                 Document document = new Document(pdf);
-                /*                PdfFont TimesnewRoman = PdfFontFactory.CreateFont(StandardFonts.TIMES_ROMAN);*/
-                Paragraph header = new Paragraph("VISIT REPORT")
+                //PdfFont TimesnewRoman = PdfFontFactory.CreateFont(StandardFonts.TIMES_ROMAN);
+                /*Paragraph header = new Paragraph("VISIT REPORT")
                    .SetTextAlignment(TextAlignment.CENTER)
                    .SetFontSize(30)
                    .SetBold()
@@ -477,7 +479,7 @@ namespace OPD_Section.Forms
                    .SetTextAlignment(TextAlignment.CENTER)
                    .SetFontSize(10)
                    .SetFontColor(ColorConstants.BLACK);
-                //.SetFont(TimesnewRoman);
+                //.SetFont(TimesnewRoman);*/
 
                 LineSeparator ls = new LineSeparator(new SolidLine());
                 /*
@@ -491,8 +493,8 @@ namespace OPD_Section.Forms
                                 string line8 = "Visit Time\t\t : " + "\t" + visittime;
                                 string line9 = "Visit Date\t\t  : " + "\t" + visitdate;
 
-
                 */
+
                 string line1 = "Patient Name\t : " + "\t" + personname;
                 string line2 = "Petient ID\t\t  : " + "\t" + personid + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  Village\t\t\t  : " + "\t" + villagename;
                 string line3 = "House No.\t\t : " + "\t" + houseid + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  Age\t\t\t\t   : " + "\t" + age;
@@ -717,18 +719,16 @@ namespace OPD_Section.Forms
                 }
 
 
-                document.Add(header);
-                document.Add(subheader);
                 document.Add(ls);
                 document.Add(l1);
                 document.Add(l2);
                 document.Add(l3);
                 document.Add(l4);
                 document.Add(l5);
-                /*  document.Add(l6);
-                  document.Add(l7);
-                  document.Add(l8);
-                  document.Add(l9);*/
+                /* document.Add(l6);
+                 document.Add(l7);
+                 document.Add(l8);
+                 document.Add(l9);*/
                 document.Add(symhead);
                 document.Add(Symptom_table);
                 document.Add(prehead);
@@ -745,6 +745,7 @@ namespace OPD_Section.Forms
 
 
             }
+
 
         }
 

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="sampledbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="SAMPLEDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="DISPOSABLES">
           <Key>
             <PropertyRef Name="DISPOSABLE_ID" />
@@ -30,6 +30,18 @@
           <Property Name="HOUSE_ID" Type="int" Nullable="false" />
           <Property Name="VILLAGE_ID" Type="int" Nullable="false" />
           <Property Name="NO_OF_PEOPLE" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LOGS_INVENTORY">
+          <Key>
+            <PropertyRef Name="LOG_ID" />
+          </Key>
+          <Property Name="LOG_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TABLE_TYPE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="OP_TYPE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="QUANTITY_CHANGE" Type="int" Nullable="false" />
+          <Property Name="ITEM_ID" Type="int" Nullable="false" />
+          <Property Name="ITEM_NAME" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="QUANTITY" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="LOGS_PERSONS">
           <Key>
@@ -62,7 +74,6 @@
           <Property Name="MEDICINE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MEDICINE_NAME" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="QUANTITY" Type="int" />
-          <Property Name="EXPIRY" Type="date" Nullable="false" />
         </EntityType>
         <EntityType Name="MISCELLANEOUS">
           <Key>
@@ -225,7 +236,9 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_NOTES_VISIT_ID">
-          <End Role="VISITS" Type="Self.VISITS" Multiplicity="1" />
+          <End Role="VISITS" Type="Self.VISITS" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="NOTES" Type="Self.NOTES" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="VISITS">
@@ -261,7 +274,9 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PRESCRIPTIONS_VISIT_ID">
-          <End Role="VISITS" Type="Self.VISITS" Multiplicity="1" />
+          <End Role="VISITS" Type="Self.VISITS" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="PRESCRIPTIONS" Type="Self.PRESCRIPTIONS" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="VISITS">
@@ -273,7 +288,9 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_SYMPTOMS_VISIT_ID">
-          <End Role="VISITS" Type="Self.VISITS" Multiplicity="1" />
+          <End Role="VISITS" Type="Self.VISITS" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="SYMPTOMS" Type="Self.SYMPTOMS" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="VISITS">
@@ -285,7 +302,9 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_VISITS_PERSON_ID">
-          <End Role="PERSONS" Type="Self.PERSONS" Multiplicity="1" />
+          <End Role="PERSONS" Type="Self.PERSONS" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="VISITS" Type="Self.VISITS" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="PERSONS">
@@ -327,10 +346,11 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
           <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
         </Function>
         <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-        <EntityContainer Name="sampledbModelStoreContainer">
+        <EntityContainer Name="SAMPLEDBModelStoreContainer">
           <EntitySet Name="DISPOSABLES" EntityType="Self.DISPOSABLES" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HOUSES" EntityType="Self.HOUSES" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LOGS_HOUSES" EntityType="Self.LOGS_HOUSES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LOGS_INVENTORY" EntityType="Self.LOGS_INVENTORY" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LOGS_PERSONS" EntityType="Self.LOGS_PERSONS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LOGS_VILLAGES" EntityType="Self.LOGS_VILLAGES" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MEDICINES" EntityType="Self.MEDICINES" Schema="dbo" store:Type="Tables" />
@@ -415,7 +435,7 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="sampledbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="SAMPLEDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="DISPOSABLE">
           <Key>
             <PropertyRef Name="DISPOSABLE_ID" />
@@ -443,6 +463,18 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
           <Property Name="HOUSE_ID" Type="Int32" Nullable="false" />
           <Property Name="VILLAGE_ID" Type="Int32" Nullable="false" />
           <Property Name="NO_OF_PEOPLE" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LOGS_INVENTORY">
+          <Key>
+            <PropertyRef Name="LOG_ID" />
+          </Key>
+          <Property Name="LOG_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TABLE_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="OP_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="QUANTITY_CHANGE" Type="Int32" Nullable="false" />
+          <Property Name="ITEM_ID" Type="Int32" Nullable="false" />
+          <Property Name="ITEM_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="QUANTITY" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="LOGS_PERSONS">
           <Key>
@@ -475,7 +507,6 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
           <Property Name="MEDICINE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MEDICINE_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="QUANTITY" Type="Int32" />
-          <Property Name="EXPIRY" Type="DateTime" Nullable="false" Precision="0" />
           <NavigationProperty Name="PRESCRIPTIONS" Relationship="Self.FK_PRESCRIPTIONS_MEDICINE_ID" FromRole="MEDICINES" ToRole="PRESCRIPTIONS" />
         </EntityType>
         <EntityType Name="MISCELLANEOU">
@@ -664,7 +695,9 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_NOTES_VISIT_ID">
-          <End Role="VISITS" Type="Self.VISIT" Multiplicity="1" />
+          <End Role="VISITS" Type="Self.VISIT" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="NOTES" Type="Self.NOTE" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="VISITS">
@@ -676,7 +709,9 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_VISITS_PERSON_ID">
-          <End Role="PERSONS" Type="Self.PERSON" Multiplicity="1" />
+          <End Role="PERSONS" Type="Self.PERSON" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="VISITS" Type="Self.VISIT" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="PERSONS">
@@ -688,7 +723,9 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PRESCRIPTIONS_VISIT_ID">
-          <End Role="VISITS" Type="Self.VISIT" Multiplicity="1" />
+          <End Role="VISITS" Type="Self.VISIT" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="PRESCRIPTIONS" Type="Self.PRESCRIPTION" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="VISITS">
@@ -700,7 +737,9 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_SYMPTOMS_VISIT_ID">
-          <End Role="VISITS" Type="Self.VISIT" Multiplicity="1" />
+          <End Role="VISITS" Type="Self.VISIT" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="SYMPTOMS" Type="Self.SYMPTOM" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="VISITS">
@@ -715,6 +754,7 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
           <EntitySet Name="DISPOSABLES" EntityType="Self.DISPOSABLE" />
           <EntitySet Name="HOUSES" EntityType="Self.House" />
           <EntitySet Name="LOGS_HOUSES" EntityType="Self.LOGS_HOUSES" />
+          <EntitySet Name="LOGS_INVENTORY" EntityType="Self.LOGS_INVENTORY" />
           <EntitySet Name="LOGS_PERSONS" EntityType="Self.LOGS_PERSONS" />
           <EntitySet Name="LOGS_VILLAGES" EntityType="Self.LOGS_VILLAGES" />
           <EntitySet Name="MEDICINES" EntityType="Self.MEDICINE" />
@@ -776,11 +816,11 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
             <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
           </FunctionImport>
-          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(sampledbModel.sp_helpdiagramdefinition_Result)">
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(SAMPLEDBModel.sp_helpdiagramdefinition_Result)">
             <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
           </FunctionImport>
-          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(sampledbModel.sp_helpdiagrams_Result)">
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(SAMPLEDBModel.sp_helpdiagrams_Result)">
             <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
           </FunctionImport>
@@ -807,9 +847,9 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="sampledbModelStoreContainer" CdmEntityContainer="sampledbEntities">
+        <EntityContainerMapping StorageEntityContainer="SAMPLEDBModelStoreContainer" CdmEntityContainer="sampledbEntities">
           <EntitySetMapping Name="DISPOSABLES">
-            <EntityTypeMapping TypeName="sampledbModel.DISPOSABLE">
+            <EntityTypeMapping TypeName="SAMPLEDBModel.DISPOSABLE">
               <MappingFragment StoreEntitySet="DISPOSABLES">
                 <ScalarProperty Name="DISPOSABLE_ID" ColumnName="DISPOSABLE_ID" />
                 <ScalarProperty Name="DISPOSABLE_NAME" ColumnName="DISPOSABLE_NAME" />
@@ -818,7 +858,7 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="HOUSES">
-            <EntityTypeMapping TypeName="sampledbModel.House">
+            <EntityTypeMapping TypeName="SAMPLEDBModel.House">
               <MappingFragment StoreEntitySet="HOUSES">
                 <ScalarProperty Name="HOUSE_ID" ColumnName="HOUSE_ID" />
                 <ScalarProperty Name="VILLAGE_ID" ColumnName="VILLAGE_ID" />
@@ -827,7 +867,7 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LOGS_HOUSES">
-            <EntityTypeMapping TypeName="sampledbModel.LOGS_HOUSES">
+            <EntityTypeMapping TypeName="SAMPLEDBModel.LOGS_HOUSES">
               <MappingFragment StoreEntitySet="LOGS_HOUSES">
                 <ScalarProperty Name="LOG_ID" ColumnName="LOG_ID" />
                 <ScalarProperty Name="OP_TYPE" ColumnName="OP_TYPE" />
@@ -837,8 +877,21 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="LOGS_INVENTORY">
+            <EntityTypeMapping TypeName="SAMPLEDBModel.LOGS_INVENTORY">
+              <MappingFragment StoreEntitySet="LOGS_INVENTORY">
+                <ScalarProperty Name="LOG_ID" ColumnName="LOG_ID" />
+                <ScalarProperty Name="TABLE_TYPE" ColumnName="TABLE_TYPE" />
+                <ScalarProperty Name="OP_TYPE" ColumnName="OP_TYPE" />
+                <ScalarProperty Name="QUANTITY_CHANGE" ColumnName="QUANTITY_CHANGE" />
+                <ScalarProperty Name="ITEM_ID" ColumnName="ITEM_ID" />
+                <ScalarProperty Name="ITEM_NAME" ColumnName="ITEM_NAME" />
+                <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="LOGS_PERSONS">
-            <EntityTypeMapping TypeName="sampledbModel.LOGS_PERSONS">
+            <EntityTypeMapping TypeName="SAMPLEDBModel.LOGS_PERSONS">
               <MappingFragment StoreEntitySet="LOGS_PERSONS">
                 <ScalarProperty Name="LOG_ID" ColumnName="LOG_ID" />
                 <ScalarProperty Name="OP_TYPE" ColumnName="OP_TYPE" />
@@ -852,7 +905,7 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LOGS_VILLAGES">
-            <EntityTypeMapping TypeName="sampledbModel.LOGS_VILLAGES">
+            <EntityTypeMapping TypeName="SAMPLEDBModel.LOGS_VILLAGES">
               <MappingFragment StoreEntitySet="LOGS_VILLAGES">
                 <ScalarProperty Name="LOG_ID" ColumnName="LOG_ID" />
                 <ScalarProperty Name="OP_TYPE" ColumnName="OP_TYPE" />
@@ -864,17 +917,16 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="MEDICINES">
-            <EntityTypeMapping TypeName="sampledbModel.MEDICINE">
+            <EntityTypeMapping TypeName="SAMPLEDBModel.MEDICINE">
               <MappingFragment StoreEntitySet="MEDICINES">
                 <ScalarProperty Name="MEDICINE_ID" ColumnName="MEDICINE_ID" />
                 <ScalarProperty Name="MEDICINE_NAME" ColumnName="MEDICINE_NAME" />
                 <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
-                <ScalarProperty Name="EXPIRY" ColumnName="EXPIRY" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="MISCELLANEOUS">
-            <EntityTypeMapping TypeName="sampledbModel.MISCELLANEOU">
+            <EntityTypeMapping TypeName="SAMPLEDBModel.MISCELLANEOU">
               <MappingFragment StoreEntitySet="MISCELLANEOUS">
                 <ScalarProperty Name="MISCELLANEOUS_ID" ColumnName="MISCELLANEOUS_ID" />
                 <ScalarProperty Name="MISCELLANEOUS_NAME" ColumnName="MISCELLANEOUS_NAME" />
@@ -883,7 +935,7 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="NOTES">
-            <EntityTypeMapping TypeName="sampledbModel.NOTE">
+            <EntityTypeMapping TypeName="SAMPLEDBModel.NOTE">
               <MappingFragment StoreEntitySet="NOTES">
                 <ScalarProperty Name="NOTE_ID" ColumnName="NOTE_ID" />
                 <ScalarProperty Name="VISIT_ID" ColumnName="VISIT_ID" />
@@ -892,7 +944,7 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PERSONS">
-            <EntityTypeMapping TypeName="sampledbModel.PERSON">
+            <EntityTypeMapping TypeName="SAMPLEDBModel.PERSON">
               <MappingFragment StoreEntitySet="PERSONS">
                 <ScalarProperty Name="PERSON_ID" ColumnName="PERSON_ID" />
                 <ScalarProperty Name="HOUSE_ID" ColumnName="HOUSE_ID" />
@@ -904,7 +956,7 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PRESCRIPTIONS">
-            <EntityTypeMapping TypeName="sampledbModel.PRESCRIPTION">
+            <EntityTypeMapping TypeName="SAMPLEDBModel.PRESCRIPTION">
               <MappingFragment StoreEntitySet="PRESCRIPTIONS">
                 <ScalarProperty Name="PRESCRIPTION_ID" ColumnName="PRESCRIPTION_ID" />
                 <ScalarProperty Name="VISIT_ID" ColumnName="VISIT_ID" />
@@ -915,7 +967,7 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="STATIONARies">
-            <EntityTypeMapping TypeName="sampledbModel.STATIONARY">
+            <EntityTypeMapping TypeName="SAMPLEDBModel.STATIONARY">
               <MappingFragment StoreEntitySet="STATIONARY">
                 <ScalarProperty Name="STATIONARY_ID" ColumnName="STATIONARY_ID" />
                 <ScalarProperty Name="STATIONARY_NAME" ColumnName="STATIONARY_NAME" />
@@ -924,7 +976,7 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="SYMPTOMS">
-            <EntityTypeMapping TypeName="sampledbModel.SYMPTOM">
+            <EntityTypeMapping TypeName="SAMPLEDBModel.SYMPTOM">
               <MappingFragment StoreEntitySet="SYMPTOMS">
                 <ScalarProperty Name="SYMPTOM_ID" ColumnName="SYMPTOM_ID" />
                 <ScalarProperty Name="VISIT_ID" ColumnName="VISIT_ID" />
@@ -934,7 +986,7 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="sampledbModel.sysdiagram">
+            <EntityTypeMapping TypeName="SAMPLEDBModel.sysdiagram">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -945,7 +997,7 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="VILLAGES">
-            <EntityTypeMapping TypeName="sampledbModel.VILLAGE">
+            <EntityTypeMapping TypeName="SAMPLEDBModel.VILLAGE">
               <MappingFragment StoreEntitySet="VILLAGES">
                 <ScalarProperty Name="VILLAGE_ID" ColumnName="VILLAGE_ID" />
                 <ScalarProperty Name="VILLAGE_NAME" ColumnName="VILLAGE_NAME" />
@@ -955,7 +1007,7 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="VISITS">
-            <EntityTypeMapping TypeName="sampledbModel.VISIT">
+            <EntityTypeMapping TypeName="SAMPLEDBModel.VISIT">
               <MappingFragment StoreEntitySet="VISITS">
                 <ScalarProperty Name="VISIT_ID" ColumnName="VISIT_ID" />
                 <ScalarProperty Name="PERSON_ID" ColumnName="PERSON_ID" />
@@ -966,7 +1018,7 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="NOTES_ARCHIVE">
-            <EntityTypeMapping TypeName="sampledbModel.NOTES_ARCHIVE">
+            <EntityTypeMapping TypeName="SAMPLEDBModel.NOTES_ARCHIVE">
               <MappingFragment StoreEntitySet="NOTES_ARCHIVE">
                 <ScalarProperty Name="NOTE_ID" ColumnName="NOTE_ID" />
                 <ScalarProperty Name="VISIT_ID" ColumnName="VISIT_ID" />
@@ -975,7 +1027,7 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PRESCRIPTIONS_ARCHIVE">
-            <EntityTypeMapping TypeName="sampledbModel.PRESCRIPTIONS_ARCHIVE">
+            <EntityTypeMapping TypeName="SAMPLEDBModel.PRESCRIPTIONS_ARCHIVE">
               <MappingFragment StoreEntitySet="PRESCRIPTIONS_ARCHIVE">
                 <ScalarProperty Name="PRESCRIPTION_ID" ColumnName="PRESCRIPTION_ID" />
                 <ScalarProperty Name="VISIT_ID" ColumnName="VISIT_ID" />
@@ -986,7 +1038,7 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="SYMPTOMS_ARCHIVE">
-            <EntityTypeMapping TypeName="sampledbModel.SYMPTOMS_ARCHIVE">
+            <EntityTypeMapping TypeName="SAMPLEDBModel.SYMPTOMS_ARCHIVE">
               <MappingFragment StoreEntitySet="SYMPTOMS_ARCHIVE">
                 <ScalarProperty Name="SYMPTOM_ID" ColumnName="SYMPTOM_ID" />
                 <ScalarProperty Name="VISIT_ID" ColumnName="VISIT_ID" />
@@ -996,7 +1048,7 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="VISITS_ARCHIVE">
-            <EntityTypeMapping TypeName="sampledbModel.VISITS_ARCHIVE">
+            <EntityTypeMapping TypeName="SAMPLEDBModel.VISITS_ARCHIVE">
               <MappingFragment StoreEntitySet="VISITS_ARCHIVE">
                 <ScalarProperty Name="VISIT_ID" ColumnName="VISIT_ID" />
                 <ScalarProperty Name="PERSON_ID" ColumnName="PERSON_ID" />
@@ -1007,27 +1059,27 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="VIEW_PERSON_UID">
-            <EntityTypeMapping TypeName="sampledbModel.VIEW_PERSON_UID">
+            <EntityTypeMapping TypeName="SAMPLEDBModel.VIEW_PERSON_UID">
               <MappingFragment StoreEntitySet="VIEW_PERSON_UID">
                 <ScalarProperty Name="PERSON_ID" ColumnName="PERSON_ID" />
                 <ScalarProperty Name="UID" ColumnName="UID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="sampledbModel.Store.sp_alterdiagram" />
-          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="sampledbModel.Store.sp_creatediagram" />
-          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="sampledbModel.Store.sp_dropdiagram" />
-          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="sampledbModel.Store.sp_helpdiagramdefinition">
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="SAMPLEDBModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="SAMPLEDBModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="SAMPLEDBModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="SAMPLEDBModel.Store.sp_helpdiagramdefinition">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="sampledbModel.sp_helpdiagramdefinition_Result">
+              <ComplexTypeMapping TypeName="SAMPLEDBModel.sp_helpdiagramdefinition_Result">
                 <ScalarProperty Name="version" ColumnName="version" />
                 <ScalarProperty Name="definition" ColumnName="definition" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="sampledbModel.Store.sp_helpdiagrams">
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="SAMPLEDBModel.Store.sp_helpdiagrams">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="sampledbModel.sp_helpdiagrams_Result">
+              <ComplexTypeMapping TypeName="SAMPLEDBModel.sp_helpdiagrams_Result">
                 <ScalarProperty Name="Database" ColumnName="Database" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -1036,8 +1088,8 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="sampledbModel.Store.sp_renamediagram" />
-          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="sampledbModel.Store.sp_upgraddiagrams" />
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="SAMPLEDBModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="SAMPLEDBModel.Store.sp_upgraddiagrams" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
