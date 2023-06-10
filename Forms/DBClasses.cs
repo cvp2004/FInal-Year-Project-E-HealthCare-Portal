@@ -49,10 +49,6 @@ namespace OPD_Section.Forms
             return res;
         }
 
-
-
-
-
         // GETTING DATA!
         public SqlDataReader getData(string query)
         {

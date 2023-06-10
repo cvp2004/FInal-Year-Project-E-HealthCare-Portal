@@ -5,16 +5,20 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OPD_Section", "OPD_Section.csproj", "{3A6ACB92-E21F-4090-B334-4535AEB2DDD2}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "EHP_Setup", "..\EHP_Setup\EHP_Setup.vdproj", "{AAE13893-3B82-4DFC-A4F2-AD996F5EB6E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3A6ACB92-E21F-4090-B334-4535AEB2DDD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3A6ACB92-E21F-4090-B334-4535AEB2DDD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A6ACB92-E21F-4090-B334-4535AEB2DDD2}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{3A6ACB92-E21F-4090-B334-4535AEB2DDD2}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{3A6ACB92-E21F-4090-B334-4535AEB2DDD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A6ACB92-E21F-4090-B334-4535AEB2DDD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAE13893-3B82-4DFC-A4F2-AD996F5EB6E5}.Debug|Any CPU.ActiveCfg = Debug
+		{AAE13893-3B82-4DFC-A4F2-AD996F5EB6E5}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -20,7 +20,7 @@ namespace OPD_Section
         public int QUANTITY { get; set; }
         public string MEDICINE_NAME { get; set; }
     
-        public virtual MEDICINE MEDICINE { get; set; }
+        public virtual MEDICINES_ARCHIVE MEDICINES_ARCHIVE { get; set; }
         public virtual VISIT VISIT { get; set; }
     }
 }

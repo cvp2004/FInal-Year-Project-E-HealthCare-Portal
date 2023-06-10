@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using OPD_Section.Forms;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Threading;
-using OPD_Section.Forms;
-using System.Reflection.Emit;
+using System.Windows.Forms;
 
 namespace OPD_Section
 {
@@ -40,52 +33,52 @@ namespace OPD_Section
 
             using (var presc = new sampledbEntities())
             {
-                foreach(var med in presc.MEDICINES)
+                foreach (var med in presc.MEDICINES)
                 {
                     textBox1.Items.Add(med.MEDICINE_NAME);
                 }
             }
 
-                if (data.medicine_name.Count != 0)
+            if (data.medicine_name.Count != 0)
+            {
+                try
                 {
-                    try
+                    for (int i = 0; i < data.medicine_name.Count; i++)
                     {
-                        for (int i = 0; i < data.medicine_name.Count; i++)
-                        {
-                            int n = dataGridView1.Rows.Add();
-                            dataGridView1.Rows[n].Cells["med_id"].Value = data.medicine_id[i];
-                            dataGridView1.Rows[n].Cells["med_name"].Value = data.medicine_name[i];
-                            dataGridView1.Rows[n].Cells["med_quant"].Value = data.medicine_quantity[i];
-                        }
+                        int n = dataGridView1.Rows.Add();
+                        dataGridView1.Rows[n].Cells["med_id"].Value = data.medicine_id[i];
+                        dataGridView1.Rows[n].Cells["med_name"].Value = data.medicine_name[i];
+                        dataGridView1.Rows[n].Cells["med_quant"].Value = data.medicine_quantity[i];
+                    }
 
-                        data.medicine_name.Clear();
-                        data.medicine_quantity.Clear();
-                    }
-                    catch (Exception E)
-                    {
-                        E.ToString();
-                        MessageBox.Show("Some Unknown Error Occured!");
-                    }
+                    data.medicine_name.Clear();
+                    data.medicine_quantity.Clear();
                 }
+                catch (Exception E)
+                {
+                    E.ToString();
+                    MessageBox.Show("Some Unknown Error Occured!");
+                }
+            }
 
 
             dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Times New Roman", 16, FontStyle.Bold);
         }
 
 
-/*
-        private void BtnSymptomNext_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            th = new Thread(OpenNew);
-            th.SetApartmentState(ApartmentState.STA);
-            th.Start();
-        }*/
+        /*
+                private void BtnSymptomNext_Click(object sender, EventArgs e)
+                {
+                    this.Close();
+                    th = new Thread(OpenNew);
+                    th.SetApartmentState(ApartmentState.STA);
+                    th.Start();
+                }*/
 
-      /*  public void OpenNew()
-        {
-            Application.Run(new Notes(data));
-        }*/
+        /*  public void OpenNew()
+          {
+              Application.Run(new Notes(data));
+          }*/
 
 
 
@@ -113,7 +106,7 @@ namespace OPD_Section
             }
             else
             {
-                
+
                 using (var presc = new sampledbEntities())
                 {
                     foreach (var med in presc.MEDICINES)
@@ -124,7 +117,7 @@ namespace OPD_Section
                         }
                     }
                 }
-                if(med_id != "")
+                if (med_id != "")
                 {
                     int n = dataGridView1.Rows.Add();
                     dataGridView1.Rows[n].Cells["med_id"].Value = med_id;
@@ -134,7 +127,7 @@ namespace OPD_Section
                 else
                 {
                     string message = "Medicine Not Found!";
-                        string title = "Data Not Found!";
+                    string title = "Data Not Found!";
                     MessageBoxButtons buttons = MessageBoxButtons.OK;
                     DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Error, MessageBoxDefaultButton.Button3);
                 }
@@ -185,10 +178,10 @@ namespace OPD_Section
                 for (int col = 0; col < dataGridView1.Rows[rows].Cells.Count; col++)
                 {
                     if (col == 0)
-                    {   
+                    {
                         data.medicine_id.Add(dataGridView1.Rows[rows].Cells[col].Value.ToString());
                     }
-                    else if(col == 1)
+                    else if (col == 1)
                     {
                         data.medicine_name.Add(dataGridView1.Rows[rows].Cells[col].Value.ToString().ToUpper());
                     }
@@ -200,16 +193,16 @@ namespace OPD_Section
                 }
             }
 
-           /* data.medicine_name = mname;
-            data.medicine_quantity = mquant;
-*/
+            /* data.medicine_name = mname;
+             data.medicine_quantity = mquant;
+ */
 
-                this.Close();
-                th = new Thread(OpenNotes);
-                th.SetApartmentState(ApartmentState.STA);
-                th.Start();
-           
-           
+            this.Close();
+            th = new Thread(OpenNotes);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+
+
         }
 
 
@@ -264,10 +257,10 @@ namespace OPD_Section
             if (result == DialogResult.Yes)
             {
                 this.Close();
-                th = new Thread(OpenMainFrame);
-                th.SetApartmentState(ApartmentState.STA);
-                th.Start();
-                data.Destroy();
+                /*                th = new Thread(OpenMainFrame);
+                                th.SetApartmentState(ApartmentState.STA);
+                                th.Start();
+                                data.Destroy();*/
             }
 
         }

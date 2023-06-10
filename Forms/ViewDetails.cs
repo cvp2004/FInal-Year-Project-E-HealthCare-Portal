@@ -1,4 +1,7 @@
-﻿using iText.Kernel.Colors;
+﻿using iText.IO.Font.Constants;
+using iText.IO.Image;
+using iText.Kernel.Colors;
+using iText.Kernel.Font;
 using iText.Kernel.Pdf;
 using iText.Kernel.Pdf.Canvas.Draw;
 using iText.Layout;
@@ -458,295 +461,329 @@ namespace OPD_Section.Forms
         // Print
         private void button1_Click(object sender, EventArgs e)
         {
-            SaveFileDialog sfd = new SaveFileDialog();
-            sfd.Filter = "Data Files (*.pdf)|*.pdf";
-            sfd.AddExtension = true;
-            if (sfd.ShowDialog() == DialogResult.OK)
+            try
             {
-
-                PdfWriter writer = new PdfWriter(sfd.FileName);
-                PdfDocument pdf = new PdfDocument(writer);
-                Document document = new Document(pdf);
-                //PdfFont TimesnewRoman = PdfFontFactory.CreateFont(StandardFonts.TIMES_ROMAN);
-                /*Paragraph header = new Paragraph("VISIT REPORT")
-                   .SetTextAlignment(TextAlignment.CENTER)
-                   .SetFontSize(30)
-                   .SetBold()
-                   .SetFontColor(ColorConstants.BLACK);
-                //.SetFont(TimesnewRoman);
-
-                Paragraph subheader = new Paragraph("E-HealthCare Portal")
-                   .SetTextAlignment(TextAlignment.CENTER)
-                   .SetFontSize(10)
-                   .SetFontColor(ColorConstants.BLACK);
-                //.SetFont(TimesnewRoman);*/
-
-                LineSeparator ls = new LineSeparator(new SolidLine());
-                /*
-                                string line1 = "Patient Name\t : " + "\t" + personname;
-                                string line2 = "Petient ID\t\t  : " + "\t" + personid;
-                                string line3 = "Village\t\t\t  : " + "\t" + villagename;
-                                string line4 = "House No.\t\t : " + "\t" + houseid;
-                                string line5 = "Age\t\t\t\t   : " + "\t" + age;
-                                string line6 = "Gender\t\t\t  : " + "\t" + gender;
-                                string line7 = "Phone No.\t\t : " + "\t" + contact;
-                                string line8 = "Visit Time\t\t : " + "\t" + visittime;
-                                string line9 = "Visit Date\t\t  : " + "\t" + visitdate;
-
-                */
-
-                string line1 = "Patient Name\t : " + "\t" + personname;
-                string line2 = "Petient ID\t\t  : " + "\t" + personid + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  Village\t\t\t  : " + "\t" + villagename;
-                string line3 = "House No.\t\t : " + "\t" + houseid + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  Age\t\t\t\t   : " + "\t" + age;
-                string line4 = "Gender\t\t\t  : " + "\t" + gender + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t Phone No.\t\t : " + "\t" + contact;
-                string line5 = "Visit Time\t\t : " + "\t" + visittime + "\t\t\t\t\t\t\t\t\t\t\t\t\t\tVisit Date\t\t  : " + "\t" + visitdate;
-
-                int TextSize = 10;
-                int lm = 50;
-                int tm = 10;
-                var align = TextAlignment.JUSTIFIED;
-
-                Paragraph l1 = new Paragraph(line1)
-                            .SetTextAlignment(TextAlignment.CENTER)
-                            .SetFontSize(TextSize)
-                            .SetFontColor(ColorConstants.BLACK)
-                            //.SetFont(TimesnewRoman)
-                            .SetMarginTop(tm);
-                Paragraph l2 = new Paragraph(line2)
-                            .SetTextAlignment(align)
-                            .SetFontSize(TextSize)
-                            .SetFontColor(ColorConstants.BLACK)
-                            //.SetFont(TimesnewRoman)
-                            .SetMarginLeft(lm)
-                            .SetMarginTop(tm);
-                Paragraph l3 = new Paragraph(line3)
-                            .SetTextAlignment(align)
-                            .SetFontSize(TextSize)
-                            .SetFontColor(ColorConstants.BLACK)
-                            //.SetFont(TimesnewRoman)
-                            .SetMarginLeft(lm)
-                            .SetMarginTop(tm);
-                Paragraph l4 = new Paragraph(line4)
-                            .SetTextAlignment(align)
-                            .SetFontSize(TextSize)
-                            .SetFontColor(ColorConstants.BLACK)
-                            //.SetFont(TimesnewRoman)
-                            .SetMarginLeft(lm)
-                            .SetMarginTop(tm);
-                Paragraph l5 = new Paragraph(line5)
-                            .SetTextAlignment(align)
-                            .SetFontSize(TextSize)
-                            .SetFontColor(ColorConstants.BLACK)
-                            //.SetFont(TimesnewRoman)
-                            .SetMarginLeft(lm)
-                            .SetMarginTop(tm);
-                /*   Paragraph l6 = new Paragraph(line6)
-                               .SetTextAlignment(align)
-                               .SetFontSize(TextSize)
-                               .SetFontColor(ColorConstants.BLACK)
-                               .SetFont(TimesnewRoman)
-                               .SetMarginLeft(lm)
-                               .SetMarginTop(tm);
-                   Paragraph l7 = new Paragraph(line7)
-                               .SetTextAlignment(align)
-                               .SetFontSize(TextSize)
-                               .SetFontColor(ColorConstants.BLACK)
-                               .SetFont(TimesnewRoman)
-                               .SetMarginLeft(lm)
-                               .SetMarginTop(tm);
-                   Paragraph l8 = new Paragraph(line8)
-                               .SetTextAlignment(align)
-                               .SetFontSize(TextSize)
-                               .SetFontColor(ColorConstants.BLACK)
-                               .SetFont(TimesnewRoman)
-                               .SetMarginLeft(lm)
-                               .SetMarginTop(tm);
-                   Paragraph l9 = new Paragraph(line9)
-                               .SetTextAlignment(align)
-                               .SetFontSize(TextSize)
-                               .SetFontColor(ColorConstants.BLACK)
-                               .SetFont(TimesnewRoman)
-                               .SetMarginLeft(lm)
-                               .SetMarginTop(tm);
-   */
-
-
-                Paragraph symhead = new Paragraph("Symptoms")
-                            .SetTextAlignment(TextAlignment.CENTER)
-                            .SetFontSize(15)
-                            .SetFontColor(ColorConstants.BLACK)
-                            //.SetFont(TimesnewRoman)
-                            .SetMargin(10);
-
-
-                // Symptoms TABLE:-
-                Table Symptom_table = new Table(2, false);
-                Symptom_table.SetWidth(525);
-
-                Cell symcell1 = new Cell(1, 1)
-                   .SetBackgroundColor(ColorConstants.LIGHT_GRAY)
-                   .SetTextAlignment(TextAlignment.CENTER)
-                   .Add(new Paragraph("Symptom Name"))
-                   .SetWidth(100)
-                   //.SetFont(TimesnewRoman)
-                   .SetFontSize(10);
-                Cell symcell2 = new Cell(1, 1)
-                   .SetBackgroundColor(ColorConstants.LIGHT_GRAY)
-                   .SetTextAlignment(TextAlignment.CENTER)
-                   .Add(new Paragraph("Symptom Description"))
-                   //.SetFont(TimesnewRoman)
-                   .SetFontSize(10);
-
-                Symptom_table.AddCell(symcell1);
-                Symptom_table.AddCell(symcell2);
-
-                for (int i = 0; i < symptom_description.Count; i++)
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Filter = "Data Files (*.pdf)|*.pdf";
+                sfd.AddExtension = true;
+                if (sfd.ShowDialog() == DialogResult.OK)
                 {
-                    Cell cell1 = new Cell(1, 1)
+
+                    PdfWriter writer = new PdfWriter(sfd.FileName);
+                    PdfDocument pdf = new PdfDocument(writer);
+                    Document document = new Document(pdf);
+                    PdfFont TimesnewRoman = PdfFontFactory.CreateFont(StandardFonts.TIMES_ROMAN);
+
+                    ImageData imageData = ImageDataFactory.Create("Letter Header_page-0001.jpg");
+                    // Create layout image object and provide parameters. Page number = 1
+                    /*                    Image image = new Image(imageData).ScaleAbsolute(100, 200).SetFixedPosition(1, 25, 25);*/
+                    // This adds the image to the page
+                    Image image = new Image(imageData).SetWidth(800).SetHeight(150).SetAutoScaleWidth(true);
+
+
+                    /*Paragraph header = new Paragraph("VISIT REPORT")
                        .SetTextAlignment(TextAlignment.CENTER)
-                       .Add(new Paragraph(symptom_name[i]))
-                       //.SetFont(TimesnewRoman)
-                       .SetFontSize(10);
-                    Cell cell2 = new Cell(1, 1)
+                       .SetFontSize(30)
+                       .SetBold()
+                       .SetFontColor(ColorConstants.BLACK)
+                       .SetFont(TimesnewRoman);
+
+                    Paragraph subheader = new Paragraph("E-HealthCare Portal")
                        .SetTextAlignment(TextAlignment.CENTER)
-                       .Add(new Paragraph(symptom_description[i]))
-                       //.SetFont(TimesnewRoman)
+                       .SetFontSize(10)
+                       .SetFontColor(ColorConstants.BLACK)
+                       .SetFont(TimesnewRoman);*/
+
+                    LineSeparator ls = new LineSeparator(new SolidLine());
+                    /*
+                                    string line1 = "Patient Name\t : " + "\t" + personname;
+                                    string line2 = "Petient ID\t\t  : " + "\t" + personid;
+                                    string line3 = "Village\t\t\t  : " + "\t" + villagename;
+                                    string line4 = "House No.\t\t : " + "\t" + houseid;
+                                    string line5 = "Age\t\t\t\t   : " + "\t" + age;
+                                    string line6 = "Gender\t\t\t  : " + "\t" + gender;
+                                    string line7 = "Phone No.\t\t : " + "\t" + contact;
+                                    string line8 = "Visit Time\t\t : " + "\t" + visittime;
+                                    string line9 = "Visit Date\t\t  : " + "\t" + visitdate;
+
+                    */
+
+                    string line1 = String.Format("Patient Name \t : \t {0, -25}", personname);
+                    string line2 = String.Format("   Patient ID \t : \t {0, -25} \t\t\t\t\t\t\t\t Village \t\t  : \t {1, -25}", personid, villagename);
+                    string line3 = String.Format("    House No. \t : \t {0, -25} \t\t\t\t\t\t\t\t Age \t\t\t  : \t {1, -25}", houseid, age);
+                    string line4 = String.Format("      Gender \t\t  : \t {0, -25} \t\t\t\t\t\t  Phone No.  \t: \t {1, -25}", gender, contact);
+                    string line5 = String.Format("  Visit Time \t : \t {0, -25} \t\t\t\t\t   Visit Date \t : \t {1, -25}", visittime, visitdate);
+
+                    int TextSize = 12;
+                    int lm = 50;
+                    int tm = 10;
+                    var align = TextAlignment.JUSTIFIED;
+
+                    Paragraph l1 = new Paragraph(line1)
+                                .SetTextAlignment(TextAlignment.CENTER)
+                                .SetFontSize(TextSize)
+                                .SetFontColor(ColorConstants.BLACK)
+                                .SetFont(TimesnewRoman)
+                                .SetMarginTop(tm);
+                    Paragraph l2 = new Paragraph(line2)
+                                .SetTextAlignment(align)
+                                .SetFontSize(TextSize)
+                                .SetFontColor(ColorConstants.BLACK)
+                                .SetFont(TimesnewRoman)
+                                .SetMarginLeft(lm)
+                                .SetMarginTop(tm);
+                    Paragraph l3 = new Paragraph(line3)
+                                .SetTextAlignment(align)
+                                .SetFontSize(TextSize)
+                                .SetFontColor(ColorConstants.BLACK)
+                                .SetFont(TimesnewRoman)
+                                .SetMarginLeft(lm)
+                                .SetMarginTop(tm);
+                    Paragraph l4 = new Paragraph(line4)
+                                .SetTextAlignment(align)
+                                .SetFontSize(TextSize)
+                                .SetFontColor(ColorConstants.BLACK)
+                                .SetFont(TimesnewRoman)
+                                .SetMarginLeft(lm)
+                                .SetMarginTop(tm);
+                    Paragraph l5 = new Paragraph(line5)
+                                .SetTextAlignment(align)
+                                .SetFontSize(TextSize)
+                                .SetFontColor(ColorConstants.BLACK)
+                                .SetFont(TimesnewRoman)
+                                .SetMarginLeft(lm)
+                                .SetMarginTop(tm);
+                    /*   Paragraph l6 = new Paragraph(line6)
+                                   .SetTextAlignment(align)
+                                   .SetFontSize(TextSize)
+                                   .SetFontColor(ColorConstants.BLACK)
+                                   .SetFont(TimesnewRoman)
+                                   .SetMarginLeft(lm)
+                                   .SetMarginTop(tm);
+                       Paragraph l7 = new Paragraph(line7)
+                                   .SetTextAlignment(align)
+                                   .SetFontSize(TextSize)
+                                   .SetFontColor(ColorConstants.BLACK)
+                                   .SetFont(TimesnewRoman)
+                                   .SetMarginLeft(lm)
+                                   .SetMarginTop(tm);
+                       Paragraph l8 = new Paragraph(line8)
+                                   .SetTextAlignment(align)
+                                   .SetFontSize(TextSize)
+                                   .SetFontColor(ColorConstants.BLACK)
+                                   .SetFont(TimesnewRoman)
+                                   .SetMarginLeft(lm)
+                                   .SetMarginTop(tm);
+                       Paragraph l9 = new Paragraph(line9)
+                                   .SetTextAlignment(align)
+                                   .SetFontSize(TextSize)
+                                   .SetFontColor(ColorConstants.BLACK)
+                                   .SetFont(TimesnewRoman)
+                                   .SetMarginLeft(lm)
+                                   .SetMarginTop(tm);
+       */
+
+
+                    Paragraph symhead = new Paragraph("Symptoms")
+                                .SetTextAlignment(TextAlignment.CENTER)
+                                .SetFontSize(15)
+                                .SetFontColor(ColorConstants.BLACK)
+                                .SetFont(TimesnewRoman)
+                                .SetMargin(10);
+
+
+                    // Symptoms TABLE:-
+                    Table Symptom_table = new Table(2, false);
+                    Symptom_table.SetWidth(525);
+
+                    Cell symcell1 = new Cell(1, 1)
+                       .SetBackgroundColor(ColorConstants.LIGHT_GRAY)
+                       .SetTextAlignment(TextAlignment.CENTER)
+                       .Add(new Paragraph("Symptom Name"))
+                       .SetWidth(100)
+                       .SetFont(TimesnewRoman)
                        .SetFontSize(10);
-                    Symptom_table.AddCell(cell1);
-                    Symptom_table.AddCell(cell2);
+                    Cell symcell2 = new Cell(1, 1)
+                       .SetBackgroundColor(ColorConstants.LIGHT_GRAY)
+                       .SetTextAlignment(TextAlignment.CENTER)
+                       .Add(new Paragraph("Symptom Description"))
+                       .SetFont(TimesnewRoman)
+                       .SetFontSize(10);
+
+                    Symptom_table.AddCell(symcell1);
+                    Symptom_table.AddCell(symcell2);
+
+                    for (int i = 0; i < symptom_description.Count; i++)
+                    {
+                        Cell cell1 = new Cell(1, 1)
+                           .SetTextAlignment(TextAlignment.CENTER)
+                           .Add(new Paragraph(symptom_name[i]))
+                           .SetFont(TimesnewRoman)
+                           .SetFontSize(10);
+                        Cell cell2 = new Cell(1, 1)
+                           .SetTextAlignment(TextAlignment.CENTER)
+                           .Add(new Paragraph(symptom_description[i]))
+                           .SetFont(TimesnewRoman)
+                           .SetFontSize(10);
+                        Symptom_table.AddCell(cell1);
+                        Symptom_table.AddCell(cell2);
+
+                    }
+
+
+                    Paragraph prehead = new Paragraph("Prescription")
+                                 .SetTextAlignment(TextAlignment.CENTER)
+                                 .SetFontSize(15)
+                                 .SetFontColor(ColorConstants.BLACK)
+                                 .SetFont(TimesnewRoman)
+                                 .SetMargin(10);
+
+
+                    // Prescription TABLE:-
+                    Table Prescription_table = new Table(3, false);
+                    Prescription_table.SetWidth(525);
+
+                    Cell precell1 = new Cell(1, 1)
+                      .SetBackgroundColor(ColorConstants.LIGHT_GRAY)
+                      .SetTextAlignment(TextAlignment.CENTER)
+                      .Add(new Paragraph("Medicine Id"))
+                      .SetWidth(100)
+                      .SetFont(TimesnewRoman)
+                      .SetFontSize(10);
+                    Cell precell2 = new Cell(1, 1)
+                       .SetBackgroundColor(ColorConstants.LIGHT_GRAY)
+                       .SetTextAlignment(TextAlignment.CENTER)
+                       .Add(new Paragraph("Medicine Name"))
+                       .SetWidth(300)
+                       .SetFont(TimesnewRoman)
+                       .SetFontSize(10);
+                    Cell precell3 = new Cell(1, 1)
+                       .SetBackgroundColor(ColorConstants.LIGHT_GRAY)
+                       .SetTextAlignment(TextAlignment.CENTER)
+                       .Add(new Paragraph("Medicine Quantity"))
+                       .SetWidth(100)
+                       .SetFont(TimesnewRoman)
+                       .SetFontSize(10);
+                    Prescription_table.AddCell(precell1);
+                    Prescription_table.AddCell(precell2);
+                    Prescription_table.AddCell(precell3);
+
+                    for (int i = 0; i < medicine_name.Count; i++)
+                    {
+                        Cell cell1 = new Cell(1, 1)
+                           .SetTextAlignment(TextAlignment.CENTER)
+                           .Add(new Paragraph(medicine_id[i]))
+                           .SetFont(TimesnewRoman)
+                           .SetFontSize(10);
+                        Cell cell2 = new Cell(1, 1)
+                           .SetTextAlignment(TextAlignment.CENTER)
+                           .Add(new Paragraph(medicine_name[i]))
+                           .SetFont(TimesnewRoman)
+                           .SetFontSize(10);
+                        Cell cell3 = new Cell(1, 1)
+                           .SetTextAlignment(TextAlignment.CENTER)
+                           .Add(new Paragraph(medicine_quantity[i]))
+                           .SetFont(TimesnewRoman)
+                           .SetFontSize(10);
+                        Prescription_table.AddCell(cell1);
+                        Prescription_table.AddCell(cell2);
+                        Prescription_table.AddCell(cell3);
+
+                    }
+
+
+
+
+                    Paragraph notehead = new Paragraph("Notes")
+                                 .SetTextAlignment(TextAlignment.CENTER)
+                                 .SetFontSize(15)
+                                 .SetFontColor(ColorConstants.BLACK)
+                                 .SetFont(TimesnewRoman)
+                                 .SetMargin(10);
+
+
+                    // Notes TABLE:-
+                    Table Note_table = new Table(2, false);
+                    Note_table.SetWidth(525);
+
+                    Cell notecell1 = new Cell(1, 1)
+                       .SetBackgroundColor(ColorConstants.LIGHT_GRAY)
+                       .SetTextAlignment(TextAlignment.CENTER)
+                       .Add(new Paragraph("Sr.No."))
+                       .SetWidth(100)
+                       .SetFont(TimesnewRoman)
+                       .SetFontSize(10);
+                    Cell notecell2 = new Cell(1, 1)
+                       .SetBackgroundColor(ColorConstants.LIGHT_GRAY)
+                       .SetTextAlignment(TextAlignment.CENTER)
+                       .Add(new Paragraph("Note Description"))
+                       .SetFont(TimesnewRoman)
+                       .SetFontSize(10);
+
+                    Note_table.AddCell(notecell1);
+                    Note_table.AddCell(notecell2);
+
+                    for (int i = 0; i < notes.Count; i++)
+                    {
+                        Cell cell1 = new Cell(1, 1)
+                           .SetTextAlignment(TextAlignment.CENTER)
+                           .Add(new Paragraph((i + 1).ToString()))
+                           //   .SetFont(TimesnewRoman)
+                           .SetFontSize(10);
+                        //  .SetFont(TimesnewRoman);
+                        Cell cell2 = new Cell(1, 1)
+                           .SetTextAlignment(TextAlignment.JUSTIFIED)
+                           .Add(new Paragraph(notes[i]))
+                           //  .SetFont(TimesnewRoman)
+                           .SetFontSize(10);
+                        Note_table.AddCell(cell1);
+                        Note_table.AddCell(cell2);
+
+                    }
+
+                    document.Add(image);
+                    /*document.Add(header);
+                    document.Add(subheader);*/
+                    document.Add(ls);
+                    try
+                    {
+                        document.Add(l1);
+                    }
+                    catch (NullReferenceException)
+                    {
+                        Console.WriteLine(e);
+                    }
+                    document.Add(l2);
+                    document.Add(l3);
+                    document.Add(l4);
+                    document.Add(l5);
+                    /* document.Add(l6);
+                     document.Add(l7);
+                     document.Add(l8);
+                     document.Add(l9);*/
+                    document.Add(symhead);
+                    document.Add(Symptom_table);
+                    document.Add(prehead);
+                    document.Add(Prescription_table);
+                    document.Add(notehead);
+                    document.Add(Note_table);
+                    document.Close();
+
+                    string message = "Your PDF is Saved Succesfully!";
+                    string title = "SUCCESS!";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+                    DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button3);
+
+
 
                 }
-
-
-
-
-
-
-                Paragraph prehead = new Paragraph("Prescription")
-                             .SetTextAlignment(TextAlignment.CENTER)
-                             .SetFontSize(15)
-                             .SetFontColor(ColorConstants.BLACK)
-                             //.SetFont(TimesnewRoman)
-                             .SetMargin(10);
-
-
-                // Prescription TABLE:-
-                Table Prescription_table = new Table(2, false);
-                Prescription_table.SetWidth(525);
-
-                Cell precell1 = new Cell(1, 1)
-                   .SetBackgroundColor(ColorConstants.LIGHT_GRAY)
-                   .SetTextAlignment(TextAlignment.CENTER)
-                   .Add(new Paragraph("Medicine Name"))
-                   .SetWidth(100)
-                   //.SetFont(TimesnewRoman)
-                   .SetFontSize(10);
-                Cell precell2 = new Cell(1, 1)
-                   .SetBackgroundColor(ColorConstants.LIGHT_GRAY)
-                   .SetTextAlignment(TextAlignment.CENTER)
-                   .Add(new Paragraph("Medicine Quantity"))
-                   //.SetFont(TimesnewRoman)
-                   .SetFontSize(10);
-
-                Prescription_table.AddCell(precell1);
-                Prescription_table.AddCell(precell2);
-
-                for (int i = 0; i < medicine_name.Count; i++)
-                {
-                    Cell cell1 = new Cell(1, 1)
-                       .SetTextAlignment(TextAlignment.CENTER)
-                       .Add(new Paragraph(medicine_name[i]))
-                       ///  .SetFont(TimesnewRoman)
-                       .SetFontSize(10);
-                    Cell cell2 = new Cell(1, 1)
-                       .SetTextAlignment(TextAlignment.CENTER)
-                       .Add(new Paragraph(medicine_quantity[i]))
-                       // .SetFont(TimesnewRoman)
-                       .SetFontSize(10);
-                    Prescription_table.AddCell(cell1);
-                    Prescription_table.AddCell(cell2);
-
-                }
-
-
-
-
-                Paragraph notehead = new Paragraph("Notes")
-                             .SetTextAlignment(TextAlignment.CENTER)
-                             .SetFontSize(15)
-                             .SetFontColor(ColorConstants.BLACK)
-                             //     .SetFont(TimesnewRoman)
-                             .SetMargin(10);
-
-
-                // Notes TABLE:-
-                Table Note_table = new Table(2, false);
-                Note_table.SetWidth(525);
-
-                Cell notecell1 = new Cell(1, 1)
-                   .SetBackgroundColor(ColorConstants.LIGHT_GRAY)
-                   .SetTextAlignment(TextAlignment.CENTER)
-                   .Add(new Paragraph("Sr.No."))
-                   .SetWidth(100)
-                   //.SetFont(TimesnewRoman)
-                   .SetFontSize(10);
-                Cell notecell2 = new Cell(1, 1)
-                   .SetBackgroundColor(ColorConstants.LIGHT_GRAY)
-                   .SetTextAlignment(TextAlignment.CENTER)
-                   .Add(new Paragraph("Note Description"))
-                   //.SetFont(TimesnewRoman)
-                   .SetFontSize(10);
-
-                Note_table.AddCell(notecell1);
-                Note_table.AddCell(notecell2);
-
-                for (int i = 0; i < notes.Count; i++)
-                {
-                    Cell cell1 = new Cell(1, 1)
-                       .SetTextAlignment(TextAlignment.CENTER)
-                       .Add(new Paragraph((i + 1).ToString()))
-                    //   .SetFont(TimesnewRoman)
-                       .SetFontSize(10);
-                    //  .SetFont(TimesnewRoman);
-                    Cell cell2 = new Cell(1, 1)
-                       .SetTextAlignment(TextAlignment.CENTER)
-                       .Add(new Paragraph(notes[i]))
-                       //  .SetFont(TimesnewRoman)
-                       .SetFontSize(10);
-                    Note_table.AddCell(cell1);
-                    Note_table.AddCell(cell2);
-
-                }
-
-
-                document.Add(ls);
-                document.Add(l1);
-                document.Add(l2);
-                document.Add(l3);
-                document.Add(l4);
-                document.Add(l5);
-                /* document.Add(l6);
-                 document.Add(l7);
-                 document.Add(l8);
-                 document.Add(l9);*/
-                document.Add(symhead);
-                document.Add(Symptom_table);
-                document.Add(prehead);
-                document.Add(Prescription_table);
-                document.Add(notehead);
-                document.Add(Note_table);
-                document.Close();
-
-                string message = "Your PDF is Saved Succesfully!";
-                string title = "SUCCESS!";
-                MessageBoxButtons buttons = MessageBoxButtons.OK;
-                DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button3);
-
 
 
             }
-
-
+            catch (System.IO.IOException)
+            {
+                MessageBox.Show("File Operation Failed !!\nPlease Check if the File is currently Open");
+            }
         }
 
         private void button1_Click_1(object sender, EventArgs e)

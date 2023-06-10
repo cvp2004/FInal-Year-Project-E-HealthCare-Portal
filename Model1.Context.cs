@@ -34,6 +34,7 @@ namespace OPD_Section
         public virtual DbSet<LOGS_PERSONS> LOGS_PERSONS { get; set; }
         public virtual DbSet<LOGS_VILLAGES> LOGS_VILLAGES { get; set; }
         public virtual DbSet<MEDICINE> MEDICINES { get; set; }
+        public virtual DbSet<MEDICINES_ARCHIVE> MEDICINES_ARCHIVE { get; set; }
         public virtual DbSet<MISCELLANEOU> MISCELLANEOUS { get; set; }
         public virtual DbSet<NOTE> NOTES { get; set; }
         public virtual DbSet<PERSON> PERSONS { get; set; }

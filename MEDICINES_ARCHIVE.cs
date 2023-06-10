@@ -12,10 +12,19 @@ namespace OPD_Section
     using System;
     using System.Collections.Generic;
     
-    public partial class MEDICINE
+    public partial class MEDICINES_ARCHIVE
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public MEDICINES_ARCHIVE()
+        {
+            this.PRESCRIPTIONS = new HashSet<PRESCRIPTION>();
+        }
+    
         public int MEDICINE_ID { get; set; }
         public string MEDICINE_NAME { get; set; }
         public Nullable<int> QUANTITY { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PRESCRIPTION> PRESCRIPTIONS { get; set; }
     }
 }

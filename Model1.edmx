@@ -38,7 +38,7 @@
           <Property Name="LOG_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TABLE_TYPE" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="OP_TYPE" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="QUANTITY_CHANGE" Type="int" Nullable="false" />
+          <Property Name="QUANTITY_CHANGE" Type="int" />
           <Property Name="ITEM_ID" Type="int" Nullable="false" />
           <Property Name="ITEM_NAME" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="QUANTITY" Type="int" Nullable="false" />
@@ -72,6 +72,14 @@
             <PropertyRef Name="MEDICINE_ID" />
           </Key>
           <Property Name="MEDICINE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MEDICINE_NAME" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="QUANTITY" Type="int" />
+        </EntityType>
+        <EntityType Name="MEDICINES_ARCHIVE">
+          <Key>
+            <PropertyRef Name="MEDICINE_ID" />
+          </Key>
+          <Property Name="MEDICINE_ID" Type="int" Nullable="false" />
           <Property Name="MEDICINE_NAME" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="QUANTITY" Type="int" />
         </EntityType>
@@ -262,10 +270,10 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PRESCRIPTIONS_MEDICINE_ID">
-          <End Role="MEDICINES" Type="Self.MEDICINES" Multiplicity="1" />
+          <End Role="MEDICINES_ARCHIVE" Type="Self.MEDICINES_ARCHIVE" Multiplicity="1" />
           <End Role="PRESCRIPTIONS" Type="Self.PRESCRIPTIONS" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="MEDICINES">
+            <Principal Role="MEDICINES_ARCHIVE">
               <PropertyRef Name="MEDICINE_ID" />
             </Principal>
             <Dependent Role="PRESCRIPTIONS">
@@ -354,6 +362,7 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
           <EntitySet Name="LOGS_PERSONS" EntityType="Self.LOGS_PERSONS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LOGS_VILLAGES" EntityType="Self.LOGS_VILLAGES" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MEDICINES" EntityType="Self.MEDICINES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MEDICINES_ARCHIVE" EntityType="Self.MEDICINES_ARCHIVE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MISCELLANEOUS" EntityType="Self.MISCELLANEOUS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NOTES" EntityType="Self.NOTES" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PERSONS" EntityType="Self.PERSONS" Schema="dbo" store:Type="Tables" />
@@ -415,7 +424,7 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
             <End Role="PERSONS" EntitySet="PERSONS" />
           </AssociationSet>
           <AssociationSet Name="FK_PRESCRIPTIONS_MEDICINE_ID" Association="Self.FK_PRESCRIPTIONS_MEDICINE_ID">
-            <End Role="MEDICINES" EntitySet="MEDICINES" />
+            <End Role="MEDICINES_ARCHIVE" EntitySet="MEDICINES_ARCHIVE" />
             <End Role="PRESCRIPTIONS" EntitySet="PRESCRIPTIONS" />
           </AssociationSet>
           <AssociationSet Name="FK_PRESCRIPTIONS_VISIT_ID" Association="Self.FK_PRESCRIPTIONS_VISIT_ID">
@@ -471,7 +480,7 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
           <Property Name="LOG_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TABLE_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="OP_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="QUANTITY_CHANGE" Type="Int32" Nullable="false" />
+          <Property Name="QUANTITY_CHANGE" Type="Int32" />
           <Property Name="ITEM_ID" Type="Int32" Nullable="false" />
           <Property Name="ITEM_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="QUANTITY" Type="Int32" Nullable="false" />
@@ -507,7 +516,15 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
           <Property Name="MEDICINE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MEDICINE_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="QUANTITY" Type="Int32" />
-          <NavigationProperty Name="PRESCRIPTIONS" Relationship="Self.FK_PRESCRIPTIONS_MEDICINE_ID" FromRole="MEDICINES" ToRole="PRESCRIPTIONS" />
+        </EntityType>
+        <EntityType Name="MEDICINES_ARCHIVE">
+          <Key>
+            <PropertyRef Name="MEDICINE_ID" />
+          </Key>
+          <Property Name="MEDICINE_ID" Type="Int32" Nullable="false" />
+          <Property Name="MEDICINE_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="QUANTITY" Type="Int32" />
+          <NavigationProperty Name="PRESCRIPTIONS" Relationship="Self.FK_PRESCRIPTIONS_MEDICINE_ID" FromRole="MEDICINES_ARCHIVE" ToRole="PRESCRIPTIONS" />
         </EntityType>
         <EntityType Name="MISCELLANEOU">
           <Key>
@@ -548,7 +565,7 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
           <Property Name="MEDICINE_ID" Type="Int32" Nullable="false" />
           <Property Name="QUANTITY" Type="Int32" Nullable="false" />
           <Property Name="MEDICINE_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="MEDICINE" Relationship="Self.FK_PRESCRIPTIONS_MEDICINE_ID" FromRole="PRESCRIPTIONS" ToRole="MEDICINES" />
+          <NavigationProperty Name="MEDICINES_ARCHIVE" Relationship="Self.FK_PRESCRIPTIONS_MEDICINE_ID" FromRole="PRESCRIPTIONS" ToRole="MEDICINES_ARCHIVE" />
           <NavigationProperty Name="VISIT" Relationship="Self.FK_PRESCRIPTIONS_VISIT_ID" FromRole="PRESCRIPTIONS" ToRole="VISITS" />
         </EntityType>
         <EntityType Name="STATIONARY">
@@ -683,10 +700,10 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PRESCRIPTIONS_MEDICINE_ID">
-          <End Role="MEDICINES" Type="Self.MEDICINE" Multiplicity="1" />
+          <End Role="MEDICINES_ARCHIVE" Type="Self.MEDICINES_ARCHIVE" Multiplicity="1" />
           <End Role="PRESCRIPTIONS" Type="Self.PRESCRIPTION" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="MEDICINES">
+            <Principal Role="MEDICINES_ARCHIVE">
               <PropertyRef Name="MEDICINE_ID" />
             </Principal>
             <Dependent Role="PRESCRIPTIONS">
@@ -758,6 +775,7 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
           <EntitySet Name="LOGS_PERSONS" EntityType="Self.LOGS_PERSONS" />
           <EntitySet Name="LOGS_VILLAGES" EntityType="Self.LOGS_VILLAGES" />
           <EntitySet Name="MEDICINES" EntityType="Self.MEDICINE" />
+          <EntitySet Name="MEDICINES_ARCHIVE" EntityType="Self.MEDICINES_ARCHIVE" />
           <EntitySet Name="MISCELLANEOUS" EntityType="Self.MISCELLANEOU" />
           <EntitySet Name="NOTES" EntityType="Self.NOTE" />
           <EntitySet Name="PERSONS" EntityType="Self.PERSON" />
@@ -781,7 +799,7 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
             <End Role="PERSONS" EntitySet="PERSONS" />
           </AssociationSet>
           <AssociationSet Name="FK_PRESCRIPTIONS_MEDICINE_ID" Association="Self.FK_PRESCRIPTIONS_MEDICINE_ID">
-            <End Role="MEDICINES" EntitySet="MEDICINES" />
+            <End Role="MEDICINES_ARCHIVE" EntitySet="MEDICINES_ARCHIVE" />
             <End Role="PRESCRIPTIONS" EntitySet="PRESCRIPTIONS" />
           </AssociationSet>
           <AssociationSet Name="FK_NOTES_VISIT_ID" Association="Self.FK_NOTES_VISIT_ID">
@@ -919,6 +937,15 @@ warning 6002: The table/view 'SAMPLEDB.dbo.VIEW_PERSON_UID' does not have a prim
           <EntitySetMapping Name="MEDICINES">
             <EntityTypeMapping TypeName="SAMPLEDBModel.MEDICINE">
               <MappingFragment StoreEntitySet="MEDICINES">
+                <ScalarProperty Name="MEDICINE_ID" ColumnName="MEDICINE_ID" />
+                <ScalarProperty Name="MEDICINE_NAME" ColumnName="MEDICINE_NAME" />
+                <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MEDICINES_ARCHIVE">
+            <EntityTypeMapping TypeName="SAMPLEDBModel.MEDICINES_ARCHIVE">
+              <MappingFragment StoreEntitySet="MEDICINES_ARCHIVE">
                 <ScalarProperty Name="MEDICINE_ID" ColumnName="MEDICINE_ID" />
                 <ScalarProperty Name="MEDICINE_NAME" ColumnName="MEDICINE_NAME" />
                 <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />

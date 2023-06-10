@@ -57,7 +57,6 @@ namespace OPD_Section
             this.imageList4 = new System.Windows.Forms.ImageList(this.components);
             this.LowerPanel = new System.Windows.Forms.Panel();
             this.OuterTabControl = new System.Windows.Forms.TabControl();
-            this.HomeTab = new System.Windows.Forms.TabPage();
             this.OPDTab = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.VISIT_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -340,42 +339,14 @@ namespace OPD_Section
             this.TblMiscellaneousPrintAsPDF = new System.Windows.Forms.ToolStripMenuItem();
             this.TblMiscellaneousPrintAsExcel = new System.Windows.Forms.ToolStripMenuItem();
             this.InventoryLogsTab = new System.Windows.Forms.TabPage();
-            this.splitContainer8 = new System.Windows.Forms.SplitContainer();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.panel45 = new System.Windows.Forms.Panel();
-            this.panel46 = new System.Windows.Forms.Panel();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.panel47 = new System.Windows.Forms.Panel();
-            this.panel48 = new System.Windows.Forms.Panel();
-            this.panel49 = new System.Windows.Forms.Panel();
-            this.panel50 = new System.Windows.Forms.Panel();
-            this.panel51 = new System.Windows.Forms.Panel();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label56 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TblInventoryLogs = new System.Windows.Forms.DataGridView();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UpperPanel = new System.Windows.Forms.Panel();
             this.BtnExit = new System.Windows.Forms.Button();
             this.LblTime = new System.Windows.Forms.Label();
@@ -468,12 +439,7 @@ namespace OPD_Section
             ((System.ComponentModel.ISupportInitialize)(this.TblMiscellaneous)).BeginInit();
             this.TblMiscellaneousContextMenuStrip.SuspendLayout();
             this.InventoryLogsTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).BeginInit();
-            this.splitContainer8.Panel1.SuspendLayout();
-            this.splitContainer8.Panel2.SuspendLayout();
-            this.splitContainer8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TblInventoryLogs)).BeginInit();
             this.UpperPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SplitContainer)).BeginInit();
             this.SplitContainer.Panel1.SuspendLayout();
@@ -685,7 +651,6 @@ namespace OPD_Section
             // 
             // OuterTabControl
             // 
-            this.OuterTabControl.Controls.Add(this.HomeTab);
             this.OuterTabControl.Controls.Add(this.OPDTab);
             this.OuterTabControl.Controls.Add(this.DBTab);
             this.OuterTabControl.Controls.Add(this.InventoryTab);
@@ -699,17 +664,6 @@ namespace OPD_Section
             this.OuterTabControl.Size = new System.Drawing.Size(1924, 904);
             this.OuterTabControl.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.OuterTabControl.TabIndex = 0;
-            // 
-            // HomeTab
-            // 
-            this.HomeTab.ImageKey = "icons8-home-page-48.png";
-            this.HomeTab.Location = new System.Drawing.Point(4, 44);
-            this.HomeTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.HomeTab.Name = "HomeTab";
-            this.HomeTab.Size = new System.Drawing.Size(1916, 856);
-            this.HomeTab.TabIndex = 3;
-            this.HomeTab.Text = "   Home Page   ";
-            this.HomeTab.UseVisualStyleBackColor = true;
             // 
             // OPDTab
             // 
@@ -3927,7 +3881,7 @@ namespace OPD_Section
             // 
             // InventoryLogsTab
             // 
-            this.InventoryLogsTab.Controls.Add(this.splitContainer8);
+            this.InventoryLogsTab.Controls.Add(this.TblInventoryLogs);
             this.InventoryLogsTab.Location = new System.Drawing.Point(4, 39);
             this.InventoryLogsTab.Name = "InventoryLogsTab";
             this.InventoryLogsTab.Padding = new System.Windows.Forms.Padding(3);
@@ -3935,394 +3889,86 @@ namespace OPD_Section
             this.InventoryLogsTab.TabIndex = 3;
             this.InventoryLogsTab.Text = "   Logs   ";
             this.InventoryLogsTab.UseVisualStyleBackColor = true;
-            // 
-            // splitContainer8
-            // 
-            this.splitContainer8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.splitContainer8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer8.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer8.Location = new System.Drawing.Point(3, 3);
-            this.splitContainer8.Name = "splitContainer8";
-            // 
-            // splitContainer8.Panel1
-            // 
-            this.splitContainer8.Panel1.AutoScroll = true;
-            this.splitContainer8.Panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.splitContainer8.Panel1.Controls.Add(this.comboBox5);
-            this.splitContainer8.Panel1.Controls.Add(this.comboBox6);
-            this.splitContainer8.Panel1.Controls.Add(this.panel45);
-            this.splitContainer8.Panel1.Controls.Add(this.panel46);
-            this.splitContainer8.Panel1.Controls.Add(this.numericUpDown2);
-            this.splitContainer8.Panel1.Controls.Add(this.comboBox7);
-            this.splitContainer8.Panel1.Controls.Add(this.button16);
-            this.splitContainer8.Panel1.Controls.Add(this.button17);
-            this.splitContainer8.Panel1.Controls.Add(this.button18);
-            this.splitContainer8.Panel1.Controls.Add(this.button19);
-            this.splitContainer8.Panel1.Controls.Add(this.button20);
-            this.splitContainer8.Panel1.Controls.Add(this.panel47);
-            this.splitContainer8.Panel1.Controls.Add(this.panel48);
-            this.splitContainer8.Panel1.Controls.Add(this.panel49);
-            this.splitContainer8.Panel1.Controls.Add(this.panel50);
-            this.splitContainer8.Panel1.Controls.Add(this.panel51);
-            this.splitContainer8.Panel1.Controls.Add(this.textBox10);
-            this.splitContainer8.Panel1.Controls.Add(this.textBox11);
-            this.splitContainer8.Panel1.Controls.Add(this.textBox12);
-            this.splitContainer8.Panel1.Controls.Add(this.label56);
-            this.splitContainer8.Panel1.Controls.Add(this.label57);
-            this.splitContainer8.Panel1.Controls.Add(this.label58);
-            this.splitContainer8.Panel1.Controls.Add(this.label59);
-            this.splitContainer8.Panel1.Controls.Add(this.label60);
-            this.splitContainer8.Panel1.Controls.Add(this.label61);
-            this.splitContainer8.Panel1.Controls.Add(this.label62);
-            this.splitContainer8.Panel1.Controls.Add(this.label63);
-            // 
-            // splitContainer8.Panel2
-            // 
-            this.splitContainer8.Panel2.AutoScroll = true;
-            this.splitContainer8.Panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.splitContainer8.Panel2.Controls.Add(this.dataGridView5);
-            this.splitContainer8.Size = new System.Drawing.Size(1902, 807);
-            this.splitContainer8.SplitterDistance = 425;
-            this.splitContainer8.SplitterWidth = 5;
-            this.splitContainer8.TabIndex = 2;
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(21, 272);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(515, 33);
-            this.comboBox5.TabIndex = 11;
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(22, 199);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(515, 33);
-            this.comboBox6.TabIndex = 10;
-            // 
-            // panel45
-            // 
-            this.panel45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel45.Location = new System.Drawing.Point(21, 232);
-            this.panel45.Name = "panel45";
-            this.panel45.Size = new System.Drawing.Size(515, 2);
-            this.panel45.TabIndex = 9;
-            // 
-            // panel46
-            // 
-            this.panel46.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel46.Location = new System.Drawing.Point(20, 305);
-            this.panel46.Name = "panel46";
-            this.panel46.Size = new System.Drawing.Size(515, 2);
-            this.panel46.TabIndex = 7;
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(20, 412);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(515, 34);
-            this.numericUpDown2.TabIndex = 6;
-            this.numericUpDown2.ThousandsSeparator = true;
-            this.numericUpDown2.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // comboBox7
-            // 
-            this.comboBox7.DisplayMember = "HOUSE_ID";
-            this.comboBox7.DropDownHeight = 100;
-            this.comboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.IntegralHeight = false;
-            this.comboBox7.Items.AddRange(new object[] {
-            "MALE",
-            "FEMALE",
-            "OTHER"});
-            this.comboBox7.Location = new System.Drawing.Point(20, 484);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(515, 33);
-            this.comboBox7.TabIndex = 5;
-            this.comboBox7.ValueMember = "HOUSE_ID";
-            // 
-            // button16
-            // 
-            this.button16.AutoSize = true;
-            this.button16.Location = new System.Drawing.Point(156, 734);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(244, 41);
-            this.button16.TabIndex = 4;
-            this.button16.Text = "RESET";
-            this.button16.UseVisualStyleBackColor = true;
-            // 
-            // button17
-            // 
-            this.button17.AutoSize = true;
-            this.button17.Location = new System.Drawing.Point(290, 675);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(247, 41);
-            this.button17.TabIndex = 4;
-            this.button17.Text = "SEARCH";
-            this.button17.UseVisualStyleBackColor = true;
-            // 
-            // button18
-            // 
-            this.button18.AutoSize = true;
-            this.button18.Location = new System.Drawing.Point(290, 616);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(247, 41);
-            this.button18.TabIndex = 4;
-            this.button18.Text = "UPDATE";
-            this.button18.UseVisualStyleBackColor = true;
-            // 
-            // button19
-            // 
-            this.button19.AutoSize = true;
-            this.button19.Location = new System.Drawing.Point(19, 675);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(244, 41);
-            this.button19.TabIndex = 4;
-            this.button19.Text = "DELETE";
-            this.button19.UseVisualStyleBackColor = true;
-            // 
-            // button20
-            // 
-            this.button20.AutoSize = true;
-            this.button20.Location = new System.Drawing.Point(19, 616);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(244, 41);
-            this.button20.TabIndex = 4;
-            this.button20.Text = "INSERT";
-            this.button20.UseVisualStyleBackColor = true;
-            // 
-            // panel47
-            // 
-            this.panel47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel47.Location = new System.Drawing.Point(20, 518);
-            this.panel47.Name = "panel47";
-            this.panel47.Size = new System.Drawing.Size(515, 2);
-            this.panel47.TabIndex = 3;
-            // 
-            // panel48
-            // 
-            this.panel48.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel48.Location = new System.Drawing.Point(20, 447);
-            this.panel48.Name = "panel48";
-            this.panel48.Size = new System.Drawing.Size(515, 2);
-            this.panel48.TabIndex = 3;
-            // 
-            // panel49
-            // 
-            this.panel49.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel49.Location = new System.Drawing.Point(20, 589);
-            this.panel49.Name = "panel49";
-            this.panel49.Size = new System.Drawing.Size(515, 2);
-            this.panel49.TabIndex = 3;
-            // 
-            // panel50
-            // 
-            this.panel50.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel50.Location = new System.Drawing.Point(20, 376);
-            this.panel50.Name = "panel50";
-            this.panel50.Size = new System.Drawing.Size(515, 2);
-            this.panel50.TabIndex = 3;
-            // 
-            // panel51
-            // 
-            this.panel51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel51.Location = new System.Drawing.Point(20, 158);
-            this.panel51.Name = "panel51";
-            this.panel51.Size = new System.Drawing.Size(515, 2);
-            this.panel51.TabIndex = 3;
-            // 
-            // textBox10
-            // 
-            this.textBox10.BackColor = System.Drawing.Color.White;
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox10.HideSelection = false;
-            this.textBox10.Location = new System.Drawing.Point(20, 560);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(515, 27);
-            this.textBox10.TabIndex = 0;
-            // 
-            // textBox11
-            // 
-            this.textBox11.BackColor = System.Drawing.Color.White;
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox11.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox11.HideSelection = false;
-            this.textBox11.Location = new System.Drawing.Point(20, 347);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(515, 27);
-            this.textBox11.TabIndex = 0;
-            // 
-            // textBox12
-            // 
-            this.textBox12.BackColor = System.Drawing.Color.White;
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox12.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox12.HideSelection = false;
-            this.textBox12.Location = new System.Drawing.Point(20, 129);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(516, 27);
-            this.textBox12.TabIndex = 0;
-            // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(15, 458);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(88, 25);
-            this.label56.TabIndex = 2;
-            this.label56.Text = "Gender";
-            // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(15, 384);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(51, 25);
-            this.label57.TabIndex = 2;
-            this.label57.Text = "Age";
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(15, 531);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(165, 25);
-            this.label58.TabIndex = 2;
-            this.label58.Text = "Phone Number";
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(15, 318);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(71, 25);
-            this.label59.TabIndex = 2;
-            this.label59.Text = "Name";
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(15, 170);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(77, 25);
-            this.label60.TabIndex = 2;
-            this.label60.Text = "Village";
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(15, 243);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(107, 25);
-            this.label61.TabIndex = 2;
-            this.label61.Text = "House ID";
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(11, 98);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(114, 25);
-            this.label62.TabIndex = 2;
-            this.label62.Text = "Person ID";
-            // 
-            // label63
-            // 
-            this.label63.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.Location = new System.Drawing.Point(2, 30);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(534, 37);
-            this.label63.TabIndex = 1;
-            this.label63.Text = "PERSON DETAILS";
-            this.label63.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dataGridView5
-            // 
-            this.dataGridView5.AllowUserToAddRows = false;
-            this.dataGridView5.AllowUserToDeleteRows = false;
-            this.dataGridView5.AllowUserToOrderColumns = true;
-            this.dataGridView5.AllowUserToResizeRows = false;
-            this.dataGridView5.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView5.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn39,
-            this.dataGridViewTextBoxColumn40,
-            this.dataGridViewTextBoxColumn41,
-            this.dataGridViewTextBoxColumn42,
-            this.dataGridViewTextBoxColumn43,
-            this.dataGridViewTextBoxColumn44,
-            this.dataGridViewTextBoxColumn45});
-            this.dataGridView5.ContextMenuStrip = this.TblPersonContextMenuStrip;
-            this.dataGridView5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView5.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView5.MultiSelect = false;
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.ReadOnly = true;
-            this.dataGridView5.RowHeadersVisible = false;
-            this.dataGridView5.RowHeadersWidth = 51;
-            this.dataGridView5.RowTemplate.Height = 50;
-            this.dataGridView5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView5.Size = new System.Drawing.Size(1468, 803);
-            this.dataGridView5.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn39
-            // 
-            this.dataGridViewTextBoxColumn39.HeaderText = "PERSON ID";
-            this.dataGridViewTextBoxColumn39.MinimumWidth = 150;
-            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
-            this.dataGridViewTextBoxColumn39.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn40
-            // 
-            this.dataGridViewTextBoxColumn40.HeaderText = "HOUSE ID";
-            this.dataGridViewTextBoxColumn40.MinimumWidth = 150;
-            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
-            this.dataGridViewTextBoxColumn40.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn41
-            // 
-            this.dataGridViewTextBoxColumn41.HeaderText = "VILLAGE";
-            this.dataGridViewTextBoxColumn41.MinimumWidth = 200;
-            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
-            this.dataGridViewTextBoxColumn41.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn42
-            // 
-            this.dataGridViewTextBoxColumn42.HeaderText = "NAME";
-            this.dataGridViewTextBoxColumn42.MinimumWidth = 200;
-            this.dataGridViewTextBoxColumn42.Name = "dataGridViewTextBoxColumn42";
-            this.dataGridViewTextBoxColumn42.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn43
-            // 
-            this.dataGridViewTextBoxColumn43.HeaderText = "AGE";
-            this.dataGridViewTextBoxColumn43.MinimumWidth = 100;
-            this.dataGridViewTextBoxColumn43.Name = "dataGridViewTextBoxColumn43";
-            this.dataGridViewTextBoxColumn43.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn44
-            // 
-            this.dataGridViewTextBoxColumn44.HeaderText = "GENDER";
-            this.dataGridViewTextBoxColumn44.MinimumWidth = 150;
-            this.dataGridViewTextBoxColumn44.Name = "dataGridViewTextBoxColumn44";
-            this.dataGridViewTextBoxColumn44.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn45
-            // 
-            this.dataGridViewTextBoxColumn45.HeaderText = "PHONE NO.";
-            this.dataGridViewTextBoxColumn45.MinimumWidth = 150;
-            this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
-            this.dataGridViewTextBoxColumn45.ReadOnly = true;
+            this.InventoryLogsTab.Enter += new System.EventHandler(this.InventoryLogsTab_Enter);
+            // 
+            // TblInventoryLogs
+            // 
+            this.TblInventoryLogs.AllowUserToAddRows = false;
+            this.TblInventoryLogs.AllowUserToDeleteRows = false;
+            this.TblInventoryLogs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TblInventoryLogs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column11,
+            this.Column12,
+            this.Column17,
+            this.Column13,
+            this.Column14,
+            this.Column15,
+            this.Column16});
+            this.TblInventoryLogs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TblInventoryLogs.Location = new System.Drawing.Point(3, 3);
+            this.TblInventoryLogs.Name = "TblInventoryLogs";
+            this.TblInventoryLogs.ReadOnly = true;
+            this.TblInventoryLogs.RowHeadersVisible = false;
+            this.TblInventoryLogs.RowHeadersWidth = 51;
+            this.TblInventoryLogs.RowTemplate.Height = 24;
+            this.TblInventoryLogs.Size = new System.Drawing.Size(1902, 807);
+            this.TblInventoryLogs.TabIndex = 0;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "LOG ID";
+            this.Column11.MinimumWidth = 100;
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Width = 264;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "TABLE_TYPE";
+            this.Column12.MinimumWidth = 150;
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Width = 264;
+            // 
+            // Column17
+            // 
+            this.Column17.HeaderText = "OPERATION";
+            this.Column17.MinimumWidth = 200;
+            this.Column17.Name = "Column17";
+            this.Column17.ReadOnly = true;
+            this.Column17.Width = 264;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "QUANTITY CHANGE";
+            this.Column13.MinimumWidth = 100;
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            this.Column13.Width = 265;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "ITEM ID";
+            this.Column14.MinimumWidth = 100;
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            this.Column14.Width = 264;
+            // 
+            // Column15
+            // 
+            this.Column15.HeaderText = "ITEM NAME";
+            this.Column15.MinimumWidth = 200;
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            this.Column15.Width = 264;
+            // 
+            // Column16
+            // 
+            this.Column16.HeaderText = "QUANTITY";
+            this.Column16.MinimumWidth = 100;
+            this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
+            this.Column16.Width = 264;
             // 
             // UpperPanel
             // 
@@ -4518,13 +4164,7 @@ namespace OPD_Section
             ((System.ComponentModel.ISupportInitialize)(this.TblMiscellaneous)).EndInit();
             this.TblMiscellaneousContextMenuStrip.ResumeLayout(false);
             this.InventoryLogsTab.ResumeLayout(false);
-            this.splitContainer8.Panel1.ResumeLayout(false);
-            this.splitContainer8.Panel1.PerformLayout();
-            this.splitContainer8.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).EndInit();
-            this.splitContainer8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TblInventoryLogs)).EndInit();
             this.UpperPanel.ResumeLayout(false);
             this.UpperPanel.PerformLayout();
             this.SplitContainer.Panel1.ResumeLayout(false);
@@ -4563,7 +4203,6 @@ namespace OPD_Section
         private System.Windows.Forms.ToolStripMenuItem TblPersonLogsPrintAsExcel;
         private System.Windows.Forms.Panel LowerPanel;
         private System.Windows.Forms.TabControl OuterTabControl;
-        private System.Windows.Forms.TabPage HomeTab;
         private System.Windows.Forms.TabPage OPDTab;
         private System.Windows.Forms.TabPage DBTab;
         private System.Windows.Forms.TabControl InnerTabControl;
@@ -4776,42 +4415,6 @@ namespace OPD_Section
         private System.Windows.Forms.Label label71;
         private System.Windows.Forms.DataGridView TblMiscellaneous;
         private System.Windows.Forms.TabPage InventoryLogsTab;
-        private System.Windows.Forms.SplitContainer splitContainer8;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.Panel panel45;
-        private System.Windows.Forms.Panel panel46;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Panel panel47;
-        private System.Windows.Forms.Panel panel48;
-        private System.Windows.Forms.Panel panel49;
-        private System.Windows.Forms.Panel panel50;
-        private System.Windows.Forms.Panel panel51;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.Label label61;
-        private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.DataGridView dataGridView5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn39;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn40;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn41;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn42;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn43;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn44;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn45;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
@@ -4890,5 +4493,13 @@ namespace OPD_Section
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
+        private System.Windows.Forms.DataGridView TblInventoryLogs;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
     }
 }

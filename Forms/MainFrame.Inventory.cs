@@ -13,6 +13,7 @@ namespace OPD_Section
             LoadDefaultTblDisposables();
             LoadDefaultTblStationary();
             LoadDefaultTblMiscellaneous();
+            LoadDefaultTblInventoryLogs();
         }
 
         /**********************************************************************************************************/
@@ -83,6 +84,27 @@ namespace OPD_Section
                     row.Cells[1].Value = m.MISCELLANEOUS_NAME;
                     row.Cells[2].Value = m.QUANTITY;
                     TblMiscellaneous.Rows.Add(row);
+                }
+            }
+        }
+        private void LoadDefaultTblInventoryLogs()
+        {
+            TblInventoryLogs.Rows.Clear();
+
+            using (var context = new sampledbEntities())
+            {
+                foreach (LOGS_INVENTORY l in context.LOGS_INVENTORY)
+                {
+                    DataGridViewRow row = new DataGridViewRow();
+                    row.CreateCells(TblInventoryLogs);
+                    row.Cells[0].Value = l.LOG_ID;
+                    row.Cells[1].Value = l.TABLE_TYPE;
+                    row.Cells[2].Value = l.OP_TYPE;
+                    row.Cells[3].Value = l.QUANTITY_CHANGE;
+                    row.Cells[4].Value = l.ITEM_ID;
+                    row.Cells[5].Value = l.ITEM_NAME;
+                    row.Cells[6].Value = l.QUANTITY;
+                    TblInventoryLogs.Rows.Add(row);
                 }
             }
         }
@@ -1426,6 +1448,13 @@ namespace OPD_Section
         private void TblMiscellaneousPrintAsPDF_Click(object sender, EventArgs e)
         {
             PrintToPDF(TblMiscellaneous);
+        }
+
+        private void InventoryLogsTab_Enter(object sender, EventArgs e)
+        {
+
+            LoadDefaultTblInventoryLogs();
+
         }
 
     }

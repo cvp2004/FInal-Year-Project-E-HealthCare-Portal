@@ -1,16 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using OPD_Section.Forms;
+using System;
 using System.Threading;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using OPD_Section.Forms;
-using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
+using System.Windows.Forms;
 
 namespace OPD_Section
 {
@@ -35,7 +26,7 @@ namespace OPD_Section
             InitializeComponent();
         }
 
-  
+
 
 
 
@@ -59,7 +50,7 @@ namespace OPD_Section
                     data.symptom_description.Clear();
                     data.symptom_name.Clear();
                 }
-                catch(Exception E)
+                catch (Exception E)
                 {
                     E.ToString();
                     MessageBox.Show("Some Unknown Error Occured!");
@@ -67,12 +58,12 @@ namespace OPD_Section
             }
 
 
-            
+
         }
 
-     
 
-   
+
+
 
         // ADD BUTTON!
         private void BtnSymptomAdd_Click_2(object sender, EventArgs e)
@@ -143,23 +134,23 @@ namespace OPD_Section
                     {
                         //sdesc[rows] = dataGridView1.Rows[rows].Cells[col].Value.ToString().ToUpper();
                         data.symptom_description.Add(dataGridView1.Rows[rows].Cells[col].Value.ToString().ToUpper());
-                        
+
                     }
-                    
+
                 }
             }
 
-                /*data.symptom_name= sname;
-                data.symptom_description = sdesc;*/
-                
-                this.Close();
-                th = new Thread(OpenPrescription);
-                th.SetApartmentState(ApartmentState.STA);
-                th.Start();
+            /*data.symptom_name= sname;
+            data.symptom_description = sdesc;*/
+
+            this.Close();
+            th = new Thread(OpenPrescription);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
 
 
         }
-        
+
 
 
         // OPEN PRESCRIPTION
@@ -232,16 +223,21 @@ namespace OPD_Section
             DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Question, MessageBoxDefaultButton.Button3);
             if (result == DialogResult.Yes)
             {
-                this.Close();
+                this.Close();/*
                 th = new Thread(OpenMainFrame);
                 th.SetApartmentState(ApartmentState.STA);
                 th.Start();
-                data.Destroy();
+                data.Destroy();*/
             }
         }
 
-      
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

@@ -253,7 +253,7 @@ namespace OPD_Section
             {
                 ex = ex.GetBaseException();
 
-                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+                MessageBox.Show("!!Error!!\n" + "Operation Failed 11\nMessage : " + ex.Message);
             }
         }
 
@@ -293,6 +293,9 @@ namespace OPD_Section
         {
             try
             {
+
+                TxtPersonVillageName.DataSource = null;
+
                 TxtPersonVillageName.Items.Clear();
 
                 List<string> comboSource = new List<string>();
@@ -311,7 +314,7 @@ namespace OPD_Section
             {
                 ex = ex.GetBaseException();
 
-                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+                MessageBox.Show("!!Error!!\n" + "Operation Failed 33\nMessage : " + ex.Message);
             }
         }
 
@@ -372,13 +375,14 @@ namespace OPD_Section
                 TxtPersonGender.SelectedIndex = -1;
                 TxtPersonPhoneNo.Text = "";
 
+                LoadTxtPersonVillageName();
                 LoadDefaultTblPerson();
             }
             catch (Exception ex)
             {
                 ex = ex.GetBaseException();
 
-                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+                MessageBox.Show("!!Error!!\n" + "Operation Failed 22\nMessage : " + ex.Message);
             }
         }
 
@@ -437,7 +441,7 @@ namespace OPD_Section
             {
                 ex = ex.GetBaseException();
 
-                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+                MessageBox.Show("!!Error!!\n" + "Operation Failed11\nMessage : " + ex.Message);
             }
         }
 
@@ -1884,7 +1888,7 @@ namespace OPD_Section
             {
                 ex = ex.GetBaseException();
 
-                MessageBox.Show("!!Error!!\n" + "Operation Failed\nMessage : " + ex.Message);
+                MessageBox.Show("!!Error!!\n" + "Operation Failed 11\nMessage : " + ex.Message);
             }
         }
 

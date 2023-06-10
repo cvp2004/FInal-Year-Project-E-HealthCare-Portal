@@ -37,17 +37,18 @@
             this.PERSON_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TIME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(676, 672);
+            this.button1.Location = new System.Drawing.Point(754, 33);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(347, 72);
+            this.button1.Size = new System.Drawing.Size(216, 57);
             this.button1.TabIndex = 1;
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
@@ -88,7 +89,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1709, 516);
+            this.dataGridView1.Size = new System.Drawing.Size(1709, 676);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
@@ -127,19 +128,29 @@
             this.TIME.Name = "TIME";
             this.TIME.ReadOnly = true;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 676);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1709, 114);
+            this.panel1.TabIndex = 3;
+            // 
             // Archieve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1709, 790);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
             this.Name = "Archieve";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Archieve";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Archieve_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -152,5 +163,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PERSON_NAME;
         private System.Windows.Forms.DataGridViewTextBoxColumn DATE;
         private System.Windows.Forms.DataGridViewTextBoxColumn TIME;
+        private System.Windows.Forms.Panel panel1;
     }
 }

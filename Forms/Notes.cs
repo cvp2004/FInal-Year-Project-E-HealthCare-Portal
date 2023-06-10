@@ -1,16 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
+﻿using OPD_Section.Forms;
+using System;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using OPD_Section.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 
@@ -33,13 +24,13 @@ namespace OPD_Section
             data = d;
         }
 
-        
+
 
 
         // LOADING NOTES FORM
         private void Notes_Load(object sender, EventArgs e)
         {
-            if(data.notes.Count != 0)
+            if (data.notes.Count != 0)
             {
                 try
                 {
@@ -51,7 +42,7 @@ namespace OPD_Section
                     }
                     data.notes.Clear();
                 }
-                catch(Exception E)
+                catch (Exception E)
                 {
                     E.ToString();
                     MessageBox.Show("Some Unknown Error Occured!");
@@ -83,7 +74,7 @@ namespace OPD_Section
         }
 
 
-       
+
 
         private void BtnSymptomNext_Click(object sender, EventArgs e)
         {
@@ -111,7 +102,7 @@ namespace OPD_Section
             {
                 label4.Hide();
             }
-   
+
 
             if (richTextBox1.Text == "")
             {
@@ -125,7 +116,7 @@ namespace OPD_Section
                 richTextBox1.Text = "";
             }
 
-            
+
         }
 
 
@@ -153,23 +144,23 @@ namespace OPD_Section
         {
 
             for (int rows = 0; rows < dataGridView1.Rows.Count; rows++)
-            {    
+            {
                 data.notes.Add(dataGridView1.Rows[rows].Cells[1].Value.ToString().ToUpper());
             }
 
-           // data.notes = notes;
+            // data.notes = notes;
 
-            
-                this.Close();
-                th = new Thread(OpenReport);
-                th.SetApartmentState(ApartmentState.STA);
-                th.Start();
-            
+
+            this.Close();
+            th = new Thread(OpenReport);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+
 
         }
 
 
-        
+
         // CANCLE BUTTON!
         private void BtnSymptomCancle_Click_1(object sender, EventArgs e)
         {
@@ -181,10 +172,10 @@ namespace OPD_Section
             if (result == DialogResult.Yes)
             {
                 this.Close();
-                th = new Thread(OpenMainFrame);
-                th.SetApartmentState(ApartmentState.STA);
-                th.Start();
-                data.Destroy();
+                /*                th = new Thread(OpenMainFrame);
+                                th.SetApartmentState(ApartmentState.STA);
+                                th.Start();
+                                data.Destroy();*/
             }
 
         }

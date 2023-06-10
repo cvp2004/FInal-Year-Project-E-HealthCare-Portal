@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Threading;
-using OPD_Section.Forms;
-using System.Data.Entity;
+﻿using OPD_Section.Forms;
+using System;
 using System.Data.SqlClient;
+using System.Threading;
+using System.Windows.Forms;
 namespace OPD_Section
 {
 
@@ -41,7 +33,7 @@ namespace OPD_Section
                 HNO_combo.Text = data.house_no;
                 PID_combo.Text = data.person_id;
             }
-            
+
         }
 
 
@@ -77,7 +69,7 @@ namespace OPD_Section
             }
 
 
-            if (PID_combo.Text != "") 
+            if (PID_combo.Text != "")
             {
                 try
                 {
@@ -124,7 +116,7 @@ namespace OPD_Section
                     }
                     db.CloseConnection();
                 }
-                catch(Exception E)
+                catch (Exception E)
                 {
                     E.ToString();
                     MessageBox.Show("Some Unknown Error Occured!");
@@ -143,7 +135,7 @@ namespace OPD_Section
         }
 
 
-             
+
 
 
 
@@ -165,7 +157,7 @@ namespace OPD_Section
                 DBClasses db = new DBClasses();
                 db.CreateConnection();
                 SqlDataReader res = db.getData("Select * from Persons Where House_ID = " + hid + ";");
-                if(res.HasRows)
+                if (res.HasRows)
                 {
                     while (res.Read())
                     {
@@ -184,14 +176,14 @@ namespace OPD_Section
                     string title = "Not Found!";
                     MessageBoxButtons buttons = MessageBoxButtons.OK;
                     DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
-                    if(result == DialogResult.OK)
+                    if (result == DialogResult.OK)
                     {
                         V_combo.Text = "";
                         HNO_combo.Text = "";
                         PID_combo.Text = "";
                     }
                 }
-                
+
 
             }
             catch (Exception E)
@@ -211,7 +203,7 @@ namespace OPD_Section
             try
             {
                 string pid = PID_combo.Text;
-                if(pid == "Select House No. First")
+                if (pid == "Select House No. First")
                 {
                     MessageBox.Show(pid);
                     return;
@@ -232,11 +224,11 @@ namespace OPD_Section
                 //data.contact = Convert.ToString(res["PHONE_NO"]);
 
                 string message = "\t   Person Details\t\n\n" +
-                    "\tName = "+data.name+"\n" +
-                    "\tAge = "+data.age+"\n" +
-                    "\tGender = "+data.gender+"\n"+
-                    "\tContact = "+data.contact+"";
-                                        
+                    "\tName = " + data.name + "\n" +
+                    "\tAge = " + data.age + "\n" +
+                    "\tGender = " + data.gender + "\n" +
+                    "\tContact = " + data.contact + "";
+
                 string title = "Do You Want To Continue?";
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                 DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Question, MessageBoxDefaultButton.Button3);
@@ -257,10 +249,10 @@ namespace OPD_Section
                 }
                 db.CloseConnection();
             }
-            catch(Exception E)
+            catch (Exception E)
             {
                 E.ToString();
-                MessageBox.Show("Some Unknown Error Occured!");   
+                MessageBox.Show("Some Unknown Error Occured!");
             }
         }
 
@@ -282,7 +274,7 @@ namespace OPD_Section
                 int vid = Convert.ToInt32(res["VILLAGE_ID"]);
                 //res.Close();
                 SqlDataReader res1 = db.getData("Select * from Houses WHERE Village_ID = " + vid + ";");
-                if(res1.HasRows)
+                if (res1.HasRows)
                 {
                     while (res1.Read())
                     {
@@ -294,16 +286,16 @@ namespace OPD_Section
                 {
                     MessageBox.Show("No Data Found For Houses!");
                 }
-               
+
                 db.CloseConnection();
             }
-            catch(Exception E)
+            catch (Exception E)
             {
                 MessageBox.Show("Some Unknown Error Occured!");
             }
-           
+
         }
-       
+
 
 
 
@@ -327,10 +319,10 @@ namespace OPD_Section
             if (result == DialogResult.Yes)
             {
                 this.Close();
-                th = new Thread(OpenMainFrame);
-                th.SetApartmentState(ApartmentState.STA);
-                th.Start();
-                data.Destroy();
+                /*                th = new Thread(OpenMainFrame);
+                                th.SetApartmentState(ApartmentState.STA);
+                                th.Start();
+                                data.Destroy();*/
             }
 
 
@@ -350,10 +342,10 @@ namespace OPD_Section
             if (result == DialogResult.Yes)
             {
                 this.Close();
-                th = new Thread(OpenMainFrame);
-                th.SetApartmentState(ApartmentState.STA);
-                th.Start();
-                data.Destroy();
+                /*                th = new Thread(OpenMainFrame);
+                                th.SetApartmentState(ApartmentState.STA);
+                                th.Start();
+                                data.Destroy();*/
             }
 
         }

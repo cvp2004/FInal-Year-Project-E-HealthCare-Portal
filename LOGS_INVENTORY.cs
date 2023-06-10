@@ -17,7 +17,7 @@ namespace OPD_Section
         public int LOG_ID { get; set; }
         public string TABLE_TYPE { get; set; }
         public string OP_TYPE { get; set; }
-        public int QUANTITY_CHANGE { get; set; }
+        public Nullable<int> QUANTITY_CHANGE { get; set; }
         public int ITEM_ID { get; set; }
         public string ITEM_NAME { get; set; }
         public int QUANTITY { get; set; }
